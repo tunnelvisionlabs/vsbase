@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Tvl.VisualStudio.OutputWindow.Interfaces</id>
+    <version>0.0.0</version>
+    <authors>Sam Harwell</authors>
+    <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      This package provides the immutable interfaces for MEF-support for Visual Studio's output window.
+    </description>
+    <summary>MEF-support for Visual Studio Output Window Panes</summary>
+    <tags>vs2010 vs2012 vs2013</tags>
+    <dependencies>
+      <!--
+      Exposed Dependencies (Tvl.VisualStudio.OutputWindow.Interfaces.dll):
+        (none)
+      -->
+    </dependencies>
+    <references>
+      <reference file="Tvl.VisualStudio.OutputWindow.Interfaces.dll"/>
+    </references>
+  </metadata>
+  <files>
+    <!-- Assemblies -->
+    <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.xml" target="lib\net40"/>
+
+    <!-- Code Contracts Assemblies -->
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.OutputWindow.Interfaces.Contracts.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.OutputWindow.Interfaces.Contracts.pdb" target="lib\net40"/>
+
+    <!-- Source Code -->
+    <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
+  </files>
+</package>
