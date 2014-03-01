@@ -28,6 +28,7 @@
     </TransformComponentArguments>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\ShellServices.10\ShellServices.10.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
@@ -85,12 +86,14 @@
   <ItemGroup>
     <Folder Include="Content" />
     <Folder Include="Content\Packages" />
+    <Folder Include="Content\Packages\OutputWindow" />
     <Folder Include="Content\Packages\ShellServices" />
     <Folder Include="Content\Packages\ShellServices\VersionHistory\" />
     <Folder Include="icons" />
     <Folder Include="Media" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\Packages\OutputWindow\OutputWindow.aml" />
     <None Include="Content\Packages\Packages.aml" />
     <None Include="Content\Packages\ShellServices\ShellServices.aml" />
     <None Include="Content\Packages\ShellServices\VersionHistory\v1.0.0.0.aml" />
@@ -104,6 +107,12 @@
     <Content Include="icons\Help.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj">
+      <Name>OutputWindow.Interfaces</Name>
+      <Project>{52c5e011-ea71-4799-924b-845ce1c9ca06}</Project>
+      <Private>False</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\ShellServices.10\ShellServices.10.csproj">
       <Name>ShellServices.10</Name>
       <Project>{3539ac4e-0666-4a6e-873d-03fd8f2d8cbd}</Project>
