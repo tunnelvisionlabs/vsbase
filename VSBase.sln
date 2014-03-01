@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DF5B52
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{16CE8FAB-F192-4E9C-88D0-3365475E519A}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "VSBaseDocumentation", "VSBaseDocumentation\VSBaseDocumentation.shfbproj", "{6A379261-D0A2-427C-8E7F-48895E875B1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,11 +32,15 @@ Global
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A379261-D0A2-427C-8E7F-48895E875B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A379261-D0A2-427C-8E7F-48895E875B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A379261-D0A2-427C-8E7F-48895E875B1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD} = {E5F869CB-056B-430A-8A7F-2EDEC7CC005F}
+		{6A379261-D0A2-427C-8E7F-48895E875B1B} = {16CE8FAB-F192-4E9C-88D0-3365475E519A}
 	EndGlobalSection
 EndGlobal

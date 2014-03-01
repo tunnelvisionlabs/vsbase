@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="c2cfc56d-e966-492a-9b12-66c7d01e7146" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>Shell Services utility library for Visual Studio extension developers.</para>
+    </summary>
+
+    <introduction>
+      <para>
+        The Shell Services package provides extension methods to simplify access to services provided by
+        service providers, as well as access to global services provided by the Visual Studio IDE.
+      </para>
+    </introduction>
+
+    <section address="Installation">
+      <title>Installation and Distribution</title>
+      <content>
+        <para>
+          This package may be installed through NuGet. The package ID is <codeInline>Tvl.VisualStudio.ShellServices.10</codeInline>.
+        </para>
+        <para>
+          This package does not export any MEF artifacts, so it is safe for side-by-side loading scenarios.
+          A copy of the assembly should be included in the distribution of your Visual Studio extension.
+          When the package is installed through NuGet, the assembly will be included in the resulting VSIX
+          file by default.
+        </para>
+        <para>
+          It is highly recommended that you take advantage of the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideBindingPathAttribute</codeEntityReference>
+          in your extension to ensure that Visual Studio will be able to locate this assembly at runtime.
+        </para>
+      </content>
+    </section>
+
+    <section address="Use">
+      <title>Using the Extension Methods</title>
+      <content>
+        <para>
+          Extension methods for the following types are included.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="true">T:System.IServiceProvider</codeEntityReference>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="true">T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider</codeEntityReference>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="true">T:Microsoft.VisualStudio.Shell.SVsServiceProvider</codeEntityReference>
+            </para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+
+    <section address="Implementation">
+      <title>Implementation Details</title>
+      <content>
+        <para>
+          This package simplifies access to these global services by ensuring the correct access method is used.
+          For example, consider the differences required for accessing each of the following services.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg</codeEntityReference>: This global
+              service is accessed by simply requesting an instance of <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.SVsAddProjectItemDlg</codeEntityReference>
+              from the service provider. This naming pattern is common in the Visual Studio SDK, but not all-inclusive.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider</codeEntityReference>: This global
+              service is accessed by simply requesting an instance of the interface from the service provider.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsNavigationTool</codeEntityReference>: This global
+              service is accessed by requesting an instance of <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.SVsClassView</codeEntityReference>
+              from the service provider. This interface is the best representation of the <markup><strong>Class View</strong>
+              </markup> pane,
+              despite the fact that <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsClassView</codeEntityReference> is
+              another available interface.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Micrsoft.VisualStudio.Shell.Interop.IVsFontAndColorUtilities</codeEntityReference>: This global
+              service is accessed by requesting an instance of <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.SVsFontAndColorStorage</codeEntityReference>,
+              and is one of two global service interfaces provided by this object (the other is <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage</codeEntityReference>).
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager</codeEntityReference>: This global
+              service is accessed by first obtaining the <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2</codeEntityReference>
+              service, and calling the <codeEntityReference>M:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2.GetExpansionManager</codeEntityReference>
+              method on the result.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2</codeEntityReference>: This global
+              service is accessed by simply requesting an instance of <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.VsTextManagerClass</codeEntityReference>
+              from the service provider. The pattern is similar to <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg</codeEntityReference>
+              above, but the naming convention is different.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference>T:Microsoft.VisualStudio.Language.Intellisense.IGlyphService</codeEntityReference>: This global
+              service is accessed by first obtaining an instance of <codeEntityReference>T:Microsoft.VisualStudio.ComponentModelHost.IComponentModel</codeEntityReference>
+              from the service provider, and then calling the <codeEntityReference>M:Microsoft.VisualStudio.ComponentModelHost.IComponentModel.GetService``1</codeEntityReference>
+              method. This pattern is common for global services that are provided through the Managed Extensibility Framework (MEF) rather than
+              through the traditional Visual Studio service mechanisms.
+            </para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
