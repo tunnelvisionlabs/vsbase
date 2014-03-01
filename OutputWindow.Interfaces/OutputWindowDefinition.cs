@@ -17,6 +17,30 @@
     /// [Name("Custom")]
     /// private static readonly OutputWindowDefinition CustomOutputWindowDefinition;
     /// </code>
+    ///
+    /// <para>
+    /// The following example shows how to export a custom output window pane
+    /// with the canonical name <strong>Custom</strong> and a localized display
+    /// name defined in an <c>SR</c> resources class.
+    /// </para>
+    ///
+    /// <code language="cs">
+    /// [Export]
+    /// [Name("Custom")]
+    /// private static readonly OutputWindowDefinition _customOutputWindowDefinition =
+    ///     new CustomOutputWindowDefinition();
+    ///
+    /// private sealed class CustomOutputWindowDefinition : OutputWindowDefinition
+    /// {
+    ///   public override string DisplayName
+    ///   {
+    ///     get
+    ///     {
+    ///       return SR.CustomOutputWindowName;
+    ///     }
+    ///   }
+    /// }
+    /// </code>
     /// </example>
     public class OutputWindowDefinition
     {
