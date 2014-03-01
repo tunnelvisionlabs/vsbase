@@ -1,6 +1,8 @@
 ﻿namespace Tvl.VisualStudio.OutputWindow
 {
     using System;
+    using System.Reflection;
+    using System.Runtime.InteropServices;
     using Microsoft.VisualStudio.Shell;
 
     /// <summary>
@@ -13,12 +15,24 @@
     /// This would register the "PackageFolder" (i.e. the location of the pkgdef file) as a directory to be probed
     /// for assemblies to load.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
+    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
     {
         private static string GetPathToKey(RegistrationContext context)
         {
-            return string.Concat(@"BindingPaths\", context.ComponentType.GUID.ToString("B").ToUpperInvariant());
+            Guid componentGuid = GetAssemblyGuid(context.CodeBase);
+            return string.Concat(@"BindingPaths\", componentGuid.ToString("B").ToUpperInvariant());
+        }
+
+        private static Guid GetAssemblyGuid(string codeBase)
+        {
+            string assemblyFile = new Uri(codeBase).LocalPath;
+            Assembly assembly = Assembly.LoadFrom(codeBase);
+            object[] attributesData = assembly.GetCustomAttributes(typeof(GuidAttribute), false);
+            if (attributesData.Length == 0)
+                throw new ArgumentException("The specified assembly did not contain a [Guid] attribute.");
+
+            return new Guid(((GuidAttribute)attributesData[0]).Value);
         }
 
         public override void Register(RegistrationContext context)

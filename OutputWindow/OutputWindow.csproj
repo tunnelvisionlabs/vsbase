@@ -195,7 +195,6 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="OutputWindowPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvideBindingPathAttribute.cs" />
   </ItemGroup>
