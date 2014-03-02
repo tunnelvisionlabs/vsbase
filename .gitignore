@@ -1,0 +1,11 @@
+# Build output
+bin/
+obj/
+/VSBaseDocumentation/Help/
+
+# Solution packages directory
+/packages/
+
+# Per-user files created by Visual Studio
+*.user
+*.suo
