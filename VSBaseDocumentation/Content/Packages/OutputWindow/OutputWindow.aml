@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="9452cedb-1942-4d9b-b911-7ef1e882f421" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <!--<summary>
+      <para>MEF Output Window services library for Visual Studio extension developers.</para>
+    </summary>-->
+
+    <introduction>
+      <para>
+        The Output Window package provides support for extensions to create and use the Output Window
+        in Visual Studio using MEF.
+      </para>
+    </introduction>
+
+    <section address="Installation">
+      <title>Installation and Distribution</title>
+      <content>
+        <para>
+          This package is available through NuGet under the following package IDs.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.OutputWindow</codeInline>: This package should be installed into the project
+              that creates your VSIX file. If your Visual Studio extension is not broken into multiple sub-projects,
+              this is the only Output Window package you will need to explicitly install to use these features.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>: This package should be installed for
+              any project that uses the Output Window service.
+            </para>
+          </listItem>
+        </list>
+        <para>
+          After installing the appropriate NuGet package(s), you will need to configure your extension to
+          inform Visual Studio of the dependency by including the following block in your <localUri>source.extension.vsixmanifest</localUri>
+          file.
+        </para>
+        <code language="xml">
+          <![CDATA[<Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
+  <Name>Visual Studio Output Window Services</Name>
+  <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
+</Reference>]]></code>
+        <alert class="note">
+          <para>
+            A future release of this extension may include a feature to configure the <localUri>source.extension.vsixmanifest</localUri>
+            file automatically.
+          </para>
+        </alert>
+      </content>
+    </section>
+
+    <section address="Use">
+      <title>Using the Output Window Service</title>
+      <content>
+        <para>
+          This service allows extension developers to declare custom output window panes, as
+          well as write content to the standard panes provided by visual studio (e.g. Debug
+          or General).
+        </para>
+      </content>
+      <sections>
+        <section>
+          <title>Writing to the Output Window</title>
+          <content>
+            <para>
+              Writing content to the output window consists of the following steps.
+            </para>
+            <list class="ordered">
+              <listItem>
+                <para>
+                  Get an instance of <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService</codeEntityReference>.
+                  This is typically performed by using the MEF <codeInline>[Import]</codeInline> attribute, as described in the documentation
+                  for <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService</codeEntityReference>.
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  Obtain the desired <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowPane</codeEntityReference> from
+                  the output window service by calling
+                  <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService.TryGetPane(System.String)</codeEntityReference>.
+                  The sections below describe the predefined panes, as well as the process for creating custom panes.
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  Write the message(s) to the output window by calling
+                  <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowPane.WriteLine(System.String)</codeEntityReference>
+                  or <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowPane.Write(System.String)</codeEntityReference>.
+                </para>
+              </listItem>
+            </list>
+          </content>
+        </section>
+        <section>
+          <title>Predefined Output Window Panes</title>
+          <content>
+            <para>
+              The output window service provides access to several output window panes defined by Visual Studio, as well
+              as two additional panes created by this extension (used in a variety of other extensions created by Tunnel
+              Vision Labs). These panes my be accessed by passing one of the <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.PredefinedOutputWindowPanes</codeEntityReference>
+              fields for the name parameter to <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService.TryGetPane(System.String)</codeEntityReference>.
+            </para>
+          </content>
+        </section>
+        <section>
+          <title>Declaring Custom Output Window Panes</title>
+          <content>
+            <para>
+              Custom output window panes may be declared by exporting the <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition</codeEntityReference>
+              contract using MEF. Output window panes declared in this manner initially hidden from the Output Window each time Visual Studio starts.
+              The pane will become available in the Output Window automatically the first time <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService.TryGetPane(System.String)</codeEntityReference> is called with the name of the custom pane.
+              For more information and examples, see the documentation for <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition</codeEntityReference>.
+            </para>
+          </content>
+        </section>
+      </sections>
+    </section>
+
+    <section address="Debugging">
+      <title>Debugging Extensions</title>
+      <content>
+        <para>
+          While Visual Studio's VSIX Installer automatically installs nested VSIX references (which is the method by which
+          the Output Window Services extension is delivered), the Visual Studio SDK will not perform this installation
+          automatically in the experimental instance. After launching the experimental instance for the first time (or
+          after you reset it), you will need to install the <externalLink>
+            <linkText>Visual Studio Output Window Service</linkText>
+            <linkUri>TODO</linkUri>
+          </externalLink> extension from the Visual Studio Gallery and restart the experimental instance before your
+          extension will work.
+        </para>
+        <alert class="note">
+          <para>
+            A future release of this extension may improve support in this area by updating the <codeInline>.targets</codeInline>
+            file included in the implementation to automatically deploy the nested VSIX to the experimental instance
+            for debugging purposes. Stay tuned!
+          </para>
+        </alert>
+      </content>
+    </section>
+
+    <section address="Implementation">
+      <title>Implementation Details</title>
+      <content>
+        <para>
+          Since this extension exports a new MEF service for use across multiple extensions and multiple versions of
+          Visual Studio, extremely careful consideration must be given to several implementation details to ensure
+          consumers will not encounter conflicts in the future or be <externalLink>
+            <linkText>subjected to cumbersome workarounds</linkText>
+            <linkUri>http://blogs.msdn.com/b/jaredpar/archive/2012/05/07/authoring-a-utility-library-for-visual-studio.aspx</linkUri>
+          </externalLink>.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <legacyBold>Assembly Versioning:</legacyBold> To ensure long-term compatibility of this extension with many other
+              extensions, all communication between the MEF-exported Output Window service and consumers of the API is performed
+              through a dedicated interfaces assembly, <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>. Following
+              the initial release of this extension, the contracts defined by this assembly (e.g. the strong name and API) will
+              <legacyItalic>never change</legacyItalic>. If the source for this assembly is ever updated, it will only be in ways
+              that are guaranteed to not cause problems for existing installations, such as updated XML documentation or updating
+              the NuGet packaging to simplify the installation process.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <legacyBold>Assembly Binding:</legacyBold> Since the <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>
+              assembly does not appear in a <codeInline>&lt;MefComponent&gt;</codeInline> element within <localUri>source.extension.vsixmanifest</localUri>,
+              there are a number of situations with traditional deployments where Visual Studio may be unable to locate the assembly
+              at runtime. To avoid this situation, the <codeInline>Tvl.VisualStudio.OutputWindow</codeInline> extension created
+              for the implementation of the Output Window Service registers its installation folder in the Visual Studio binding path
+              using the <codeInline>[ProvideBindingPath]</codeInline> registration attribute. This feature ensures that the
+              Output Window interfaces assembly will be available to all Visual Studio extensions, regardless of the manner in which
+              they are deployed.
+            </para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
