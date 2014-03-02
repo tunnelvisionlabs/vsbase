@@ -27,11 +27,143 @@
           When the package is installed through NuGet, the assembly will be included in the resulting VSIX
           file by default.
         </para>
-        <para>
-          It is highly recommended that you take advantage of the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideBindingPathAttribute</codeEntityReference>
-          in your extension to ensure that Visual Studio will be able to locate this assembly at runtime.
-        </para>
       </content>
+      <sections>
+        <section>
+          <title>Assembly Binding Considerations</title>
+          <content>
+            <para>
+              Special steps are required to ensure that Visual Studio will be able to locate this utility
+              assembly at runtime. The specific configuration steps to take depend on the minimum version
+              of Visual Studio your extension will support.
+            </para>
+            <alert class="note">
+              <para>
+                These configuration steps should be performed in the project that creates your VSIX extension,
+                even if another assembly actually references the Shell Services utility assembly.
+              </para>
+            </alert>
+            <list class="ordered">
+              <listItem>
+                <para>
+                  Regardless of the version of Visual Studio you are supporting, you need to make sure your
+                  extension is configured to generate a <codeInline>pkgdef</codeInline> file. Open your extension's
+                  project file in an XML editor and ensure that the following two properties are set to
+                  <codeInline>true</codeInline>.
+                </para>
+                <code language="xml">
+                  <![CDATA[
+                  <GeneratePkgDefFile>true</GeneratePkgDefFile>
+                  <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+                  ]]>
+                </code>
+              </listItem>
+              <listItem>
+                <para>
+                  The second step to configuring the extension is updating your <localUri>source.extension.vsixmanifest</localUri>
+                  file to include a line to inform Visual Studio that your extension includes a <codeInline>pkgdef</codeInline>
+                  file. If you are using version 1 of this file (i.e. the file starts with <codeInline><![CDATA[<Vsix Version="1.0.0"]]></codeInline>),
+                  make sure the following line is included inside the <codeInline><![CDATA[<Content>]]></codeInline> element.
+                </para>
+                <code language="xml">
+                  <![CDATA[
+                  <VsPackage>|%CurrentProject%|</VsPackage>
+                  ]]>
+                </code>
+                <para>
+                  If your extension uses version 2 of this file, <placeholder>[TODO: fill this in]</placeholder>.
+                </para>
+              </listItem>
+            </list>
+          </content>
+          <sections>
+            <section>
+              <title>Visual Studio 2012 and Newer</title>
+              <content>
+                <para>
+                  If your extension only supports Visual Studio 2012 and newer, the
+                  <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute</codeEntityReference>
+                  provides the most efficient method for registering the utility assembly with Visual Studio.
+                  To use this attribute, simply add a reference to the <externalLink>
+                    <linkText>VSSDK.Shell.11</linkText>
+                    <linkUri>https://www.nuget.org/packages/VSSDK.Shell.11/</linkUri>
+                  </externalLink> (for extensions targeting Visual Studio 2012 and newer) or <externalLink>
+                    <linkText>VSSDK.Shell.12</linkText>
+                    <linkUri>https://www.nuget.org/packages/VSSDK.Shell.12/</linkUri>
+                  </externalLink> (for extensions targeting Visual Studio 2013 and newer) NuGet package.
+                </para>
+                <code language="csharp">
+                  <![CDATA[[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.ShellServices.10",
+    Version = "1.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll")]]]>
+                </code>
+              </content>
+            </section>
+            <section>
+              <title>Visual Studio 2010 and Newer</title>
+              <content>
+                <para>
+                  If your extension supports Visual Studio 2010, you will need to include a copy of the
+                  following registration attribute in your extension code.
+                </para>
+                <code language="csharp">
+                  <![CDATA[using System;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using Microsoft.VisualStudio.Shell;
+
+[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
+internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
+{
+    private static string GetPathToKey(RegistrationContext context)
+    {
+        Guid componentGuid = GetAssemblyGuid(context.CodeBase);
+        return string.Concat(@"BindingPaths\", componentGuid.ToString("B").ToUpperInvariant());
+    }
+
+    private static Guid GetAssemblyGuid(string codeBase)
+    {
+        string assemblyFile = new Uri(codeBase).LocalPath;
+        Assembly assembly = Assembly.LoadFrom(codeBase);
+        object[] attributesData = assembly.GetCustomAttributes(typeof(GuidAttribute), false);
+        if (attributesData.Length == 0)
+            throw new ArgumentException("The specified assembly did not contain a [Guid] attribute.");
+
+        return new Guid(((GuidAttribute)attributesData[0]).Value);
+    }
+
+    public override void Register(RegistrationContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        using (Key childKey = context.CreateKey(GetPathToKey(context)))
+        {
+            childKey.SetValue(context.ComponentPath, string.Empty);
+        }
+    }
+
+    public override void Unregister(RegistrationContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.RemoveKey(GetPathToKey(context));
+    }
+}
+]]>
+                </code>
+                <para>
+                  To use the attribute make sure your <localUri>AssemblyInfo.cs</localUri> contains the following
+                  line.
+                </para>
+                <code language="csharp"><![CDATA[[assembly: ProvideBindingPath]]]></code>
+              </content>
+            </section>
+          </sections>
+        </section>
+      </sections>
     </section>
 
     <section address="Use">
