@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Welcome" Url="html/262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" />
+  <HelpTOCNode Id="077aef1b-6dbf-4442-b840-57256e5152c1" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
+    <HelpTOCNode Id="db752ca9-badf-4334-baa9-e6ea368acde6" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm">
+      <HelpTOCNode Id="e11a098a-8d7b-490d-81ac-6541735fd557" Title="Version History" Url="html/ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm">
+        <HelpTOCNode Title="Version 1.0.0.0" Url="html/02a44dd4-efaf-4844-99cb-13db77fb4c02.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="Output Window Service" Url="html/9452cedb-1942-4d9b-b911-7ef1e882f421.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="db1feb7a-68d5-4f4c-91c7-ee3e0de26fa0" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
+    <HelpTOCNode Id="341c1c68-cf75-4617-809a-09a87767ab6b" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm">
+      <HelpTOCNode Id="6543e428-517a-41a4-ac15-a70b82c7828d" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+        <HelpTOCNode Id="35367cbe-a02c-4b0f-b29d-dec23e45165c" Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+          <HelpTOCNode Title="Activate Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Activate.htm" />
+          <HelpTOCNode Title="Hide Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Hide.htm" />
+          <HelpTOCNode Title="Write Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Write.htm" />
+          <HelpTOCNode Title="WriteLine Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_WriteLine.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="1e3939f2-c1fa-4e63-91c7-bfa053f63bc7" Title="IOutputWindowPane Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+          <HelpTOCNode Title="Name Property " Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Name.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d97c71ae-cc95-465a-9735-5d0fca703dde" Title="IOutputWindowService Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
+        <HelpTOCNode Id="b58f1627-c782-4b68-ab51-8f4e4aca7c5e" Title="IOutputWindowService Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
+          <HelpTOCNode Title="TryGetPane Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService_TryGetPane.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="960dca8d-0248-4529-b114-bdb340a4b6b6" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
+        <HelpTOCNode Title="OutputWindowDefinition Constructor " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition__ctor.htm" />
+        <HelpTOCNode Title="OutputWindowDefinition Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
+        <HelpTOCNode Id="e2e87e19-bb86-4b9c-8d07-28194f663a50" Title="OutputWindowDefinition Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
+          <HelpTOCNode Title="DisplayName Property " Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition_DisplayName.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e56848fc-24cc-4bf5-be75-d4a1a61642e1" Title="PredefinedOutputWindowPanes Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
+        <HelpTOCNode Id="ea56995a-61b2-43b8-8239-9a78e0afaae3" Title="PredefinedOutputWindowPanes Fields" Url="html/Fields_T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
+          <HelpTOCNode Title="Build Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Build.htm" />
+          <HelpTOCNode Title="Debug Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Debug.htm" />
+          <HelpTOCNode Title="General Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" />
+          <HelpTOCNode Title="TvlDiagnostics Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlDiagnostics.htm" />
+          <HelpTOCNode Title="TvlIntellisense Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlIntellisense.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cc25c329-e2fa-41f9-9ffe-9572bab8f776" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
+      <HelpTOCNode Id="efc8ff78-dedb-4175-8bc1-f9da7956517c" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+        <HelpTOCNode Id="62a591c4-e932-4a2b-beee-462a4e2efcfc" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+          <HelpTOCNode Title="AsVsServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_AsVsServiceProvider.htm" />
+          <HelpTOCNode Id="28d7c907-956b-4661-bc46-c2717757f127" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm">
+            <HelpTOCNode Title="GetService(TService) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__1.htm" />
+            <HelpTOCNode Title="GetService(TServiceClass, TServiceInterface) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="TryGetGlobalService(TServiceClass, TServiceInterface) Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
+          <HelpTOCNode Title="TryGetOleServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetOleServiceProvider.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="664a8959-cad8-4d5f-8252-bcea8932f2aa" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+        <HelpTOCNode Id="cfb1b2d6-519b-4e59-896a-92aee850eec2" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+          <HelpTOCNode Title="GetActivityLog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetActivityLog.htm" />
+          <HelpTOCNode Title="GetAddProjectItemDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddProjectItemDialog.htm" />
+          <HelpTOCNode Title="GetAddWebReferenceDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddWebReferenceDialog.htm" />
+          <HelpTOCNode Title="GetAppCommandLine Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAppCommandLine.htm" />
+          <HelpTOCNode Title="GetAssemblyNameUnification Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAssemblyNameUnification.htm" />
+          <HelpTOCNode Title="GetCallBrowser Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCallBrowser.htm" />
+          <HelpTOCNode Title="GetClassView Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetClassView.htm" />
+          <HelpTOCNode Title="GetCodeDefView Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCodeDefView.htm" />
+          <HelpTOCNode Title="GetCodeShareHandler Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCodeShareHandler.htm" />
+          <HelpTOCNode Title="GetCommandNameMapping Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandNameMapping.htm" />
+          <HelpTOCNode Title="GetCommandWindow Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindow.htm" />
+          <HelpTOCNode Title="GetCommandWindowsCollection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindowsCollection.htm" />
+          <HelpTOCNode Title="GetComponentModel Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModel.htm" />
+          <HelpTOCNode Title="GetComponentSelectorDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog.htm" />
+          <HelpTOCNode Title="GetComponentSelectorDialog2 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog2.htm" />
+          <HelpTOCNode Title="GetConfigurationManagerDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetConfigurationManagerDialog.htm" />
+          <HelpTOCNode Title="GetCreateAggregateProject Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCreateAggregateProject.htm" />
+          <HelpTOCNode Title="GetDebuggableProtocol Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetDebuggableProtocol.htm" />
+          <HelpTOCNode Title="GetDebugLaunch Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetDebugLaunch.htm" />
+          <HelpTOCNode Title="GetDetermineWizardTrust Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetDetermineWizardTrust.htm" />
+          <HelpTOCNode Title="GetDiscoveryService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetDiscoveryService.htm" />
+          <HelpTOCNode Title="GetEnumHierarchyItemsFactory Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetEnumHierarchyItemsFactory.htm" />
+          <HelpTOCNode Title="GetErrorList Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetErrorList.htm" />
+          <HelpTOCNode Title="GetExpansionManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetExpansionManager.htm" />
+          <HelpTOCNode Title="GetExternalFilesManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetExternalFilesManager.htm" />
+          <HelpTOCNode Title="GetFileChange Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFileChange.htm" />
+          <HelpTOCNode Title="GetFilterAddProjectItemDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFilterAddProjectItemDialog.htm" />
+          <HelpTOCNode Title="GetFilterKeys Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFilterKeys.htm" />
+          <HelpTOCNode Title="GetFindSymbol Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFindSymbol.htm" />
+          <HelpTOCNode Title="GetFontAndColorCacheManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorCacheManager.htm" />
+          <HelpTOCNode Title="GetFontAndColorStorage Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorStorage.htm" />
+          <HelpTOCNode Title="GetFontAndColorUtilities Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorUtilities.htm" />
+          <HelpTOCNode Title="GetGlyphService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetGlyphService.htm" />
+          <HelpTOCNode Title="GetHelpSystem Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHelpSystem.htm" />
+          <HelpTOCNode Title="GetHtmlConverter Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHtmlConverter.htm" />
+          <HelpTOCNode Title="GetIme Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetIme.htm" />
+          <HelpTOCNode Title="GetIntelliMouseHandler Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetIntelliMouseHandler.htm" />
+          <HelpTOCNode Title="GetIntellisenseEngine Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetIntellisenseEngine.htm" />
+          <HelpTOCNode Title="GetIntellisenseProjectHost Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetIntellisenseProjectHost.htm" />
+          <HelpTOCNode Title="GetIntellisenseProjectManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetIntellisenseProjectManager.htm" />
+          <HelpTOCNode Title="GetInvisibleEditorManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetInvisibleEditorManager.htm" />
+          <HelpTOCNode Title="GetLaunchPad Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPad.htm" />
+          <HelpTOCNode Title="GetLaunchPadFactory Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPadFactory.htm" />
+          <HelpTOCNode Title="GetMDTypeResolutionService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMDTypeResolutionService.htm" />
+          <HelpTOCNode Title="GetMenuEditor Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMenuEditor.htm" />
+          <HelpTOCNode Title="GetMonitorSelection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMonitorSelection.htm" />
+          <HelpTOCNode Title="GetMonitorUserContext Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMonitorUserContext.htm" />
+          <HelpTOCNode Title="GetObjectBrowser Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetObjectBrowser.htm" />
+          <HelpTOCNode Title="GetObjectManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetObjectManager.htm" />
+          <HelpTOCNode Title="GetObjectSearch Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetObjectSearch.htm" />
+          <HelpTOCNode Title="GetObjectSearchPane Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetObjectSearchPane.htm" />
+          <HelpTOCNode Title="GetOleComponentManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetOleComponentManager.htm" />
+          <HelpTOCNode Title="GetOleServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetOleServiceProvider.htm" />
+          <HelpTOCNode Title="GetOpenProjectOrSolutionDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetOpenProjectOrSolutionDialog.htm" />
+          <HelpTOCNode Title="GetOutputWindow Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetOutputWindow.htm" />
+          <HelpTOCNode Title="GetParseCommandLine Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetParseCommandLine.htm" />
+          <HelpTOCNode Title="GetPathVariableResolver Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetPathVariableResolver.htm" />
+          <HelpTOCNode Title="GetPreviewChangesService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetPreviewChangesService.htm" />
+          <HelpTOCNode Title="GetProfileDataManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetProfileDataManager.htm" />
+          <HelpTOCNode Title="GetProfilesManagerUI Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetProfilesManagerUI.htm" />
+          <HelpTOCNode Title="GetPropertyPageFrame Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetPropertyPageFrame.htm" />
+          <HelpTOCNode Title="GetQueryEditQuerySave Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetQueryEditQuerySave.htm" />
+          <HelpTOCNode Title="GetRegisterEditors Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRegisterEditors.htm" />
+          <HelpTOCNode Title="GetRegisterNewDialogFilters Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRegisterNewDialogFilters.htm" />
+          <HelpTOCNode Title="GetRegisterPriorityCommandTarget Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRegisterPriorityCommandTarget.htm" />
+          <HelpTOCNode Title="GetRegisterProjectDebugTargetProvider Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRegisterProjectDebugTargetProvider.htm" />
+          <HelpTOCNode Title="GetRegisterProjectTypes Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRegisterProjectTypes.htm" />
+          <HelpTOCNode Title="GetResourceManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetResourceManager.htm" />
+          <HelpTOCNode Title="GetResourceView Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetResourceView.htm" />
+          <HelpTOCNode Title="GetRunningDocumentTable Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetRunningDocumentTable.htm" />
+          <HelpTOCNode Title="GetSettingsReader Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSettingsReader.htm" />
+          <HelpTOCNode Title="GetShell Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetShell.htm" />
+          <HelpTOCNode Title="GetShellDebugger Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetShellDebugger.htm" />
+          <HelpTOCNode Title="GetShellMonitorSelection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetShellMonitorSelection.htm" />
+          <HelpTOCNode Title="GetSmartOpenScope Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSmartOpenScope.htm" />
+          <HelpTOCNode Title="GetSolution Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSolution.htm" />
+          <HelpTOCNode Title="GetSolutionBuildManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSolutionBuildManager.htm" />
+          <HelpTOCNode Title="GetSolutionObject Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSolutionObject.htm" />
+          <HelpTOCNode Title="GetSolutionPersistence Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSolutionPersistence.htm" />
+          <HelpTOCNode Title="GetSourceControlManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSourceControlManager.htm" />
+          <HelpTOCNode Title="GetSourceControlToolsOptions Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSourceControlToolsOptions.htm" />
+          <HelpTOCNode Title="GetSqlClrReferences Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSqlClrReferences.htm" />
+          <HelpTOCNode Title="GetStartPageDownload Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetStartPageDownload.htm" />
+          <HelpTOCNode Title="GetStatusBar Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetStatusBar.htm" />
+          <HelpTOCNode Title="GetStrongNameKeys Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetStrongNameKeys.htm" />
+          <HelpTOCNode Title="GetStructuredFileIO Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetStructuredFileIO.htm" />
+          <HelpTOCNode Title="GetSymbolicNavigationManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetSymbolicNavigationManager.htm" />
+          <HelpTOCNode Title="GetTargetFrameworkAssemblies Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTargetFrameworkAssemblies.htm" />
+          <HelpTOCNode Title="GetTaskList Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTaskList.htm" />
+          <HelpTOCNode Title="GetTextManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTextManager.htm" />
+          <HelpTOCNode Title="GetTextManager2 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTextManager2.htm" />
+          <HelpTOCNode Title="GetTextOut Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTextOut.htm" />
+          <HelpTOCNode Title="GetThreadedWaitDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetThreadedWaitDialog.htm" />
+          <HelpTOCNode Title="GetThreadPool Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetThreadPool.htm" />
+          <HelpTOCNode Title="GetToolbox Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolbox.htm" />
+          <HelpTOCNode Title="GetToolboxActiveXDataProvider Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolboxActiveXDataProvider.htm" />
+          <HelpTOCNode Title="GetToolboxDataProviderRegistry Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolboxDataProviderRegistry.htm" />
+          <HelpTOCNode Title="GetToolsOptions Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolsOptions.htm" />
+          <HelpTOCNode Title="GetTrackProjectDocuments2 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments2.htm" />
+          <HelpTOCNode Title="GetTrackProjectDocuments3 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments3.htm" />
+          <HelpTOCNode Title="GetTrackSelection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackSelection.htm" />
+          <HelpTOCNode Title="GetUIHierarchyWindowClipboardHelper Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIHierarchyWindowClipboardHelper.htm" />
+          <HelpTOCNode Title="GetUIShell Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShell.htm" />
+          <HelpTOCNode Title="GetUIShellDocumentWindowManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellDocumentWindowManager.htm" />
+          <HelpTOCNode Title="GetUIShellOpenDocument Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellOpenDocument.htm" />
+          <HelpTOCNode Title="GetUpgradeLogger Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUpgradeLogger.htm" />
+          <HelpTOCNode Title="GetWebBrowsingService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebBrowsingService.htm" />
+          <HelpTOCNode Title="GetWebFavorites Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebFavorites.htm" />
+          <HelpTOCNode Title="GetWebPreview Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebPreview.htm" />
+          <HelpTOCNode Title="GetWebProxy Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebProxy.htm" />
+          <HelpTOCNode Title="GetWebUrlMru Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebUrlMru.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

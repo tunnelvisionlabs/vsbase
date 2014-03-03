@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOCNode Id="6543e428-517a-41a4-ac15-a70b82c7828d" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+  <HelpTOCNode Id="35367cbe-a02c-4b0f-b29d-dec23e45165c" Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" HasChildren="true" />
+  <HelpTOCNode Id="1e3939f2-c1fa-4e63-91c7-bfa053f63bc7" Title="IOutputWindowPane Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" HasChildren="true" />
+</HelpTOCNode>
