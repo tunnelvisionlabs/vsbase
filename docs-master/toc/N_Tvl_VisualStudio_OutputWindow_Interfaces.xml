@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="341c1c68-cf75-4617-809a-09a87767ab6b" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm">
-  <HelpTOCNode Id="6543e428-517a-41a4-ac15-a70b82c7828d" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" HasChildren="true" />
-  <HelpTOCNode Id="d97c71ae-cc95-465a-9735-5d0fca703dde" Title="IOutputWindowService Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm" HasChildren="true" />
-  <HelpTOCNode Id="960dca8d-0248-4529-b114-bdb340a4b6b6" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" HasChildren="true" />
-  <HelpTOCNode Id="e56848fc-24cc-4bf5-be75-d4a1a61642e1" Title="PredefinedOutputWindowPanes Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm" HasChildren="true" />
+<HelpTOCNode Id="39e3bf2f-bd16-4fa2-b93f-2d0c9f6c2713" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm">
+  <HelpTOCNode Id="69c02d4f-b9bf-448b-917b-cb15fd486418" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" HasChildren="true" />
+  <HelpTOCNode Id="eb9f334a-e009-477d-97d0-d1740f43ff66" Title="IOutputWindowService Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm" HasChildren="true" />
+  <HelpTOCNode Id="24de9102-7a3b-4b25-846f-449837f557d9" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" HasChildren="true" />
+  <HelpTOCNode Id="33f89654-5de6-48c6-b8a9-6ecbe955d052" Title="PredefinedOutputWindowPanes Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm" HasChildren="true" />
 </HelpTOCNode>

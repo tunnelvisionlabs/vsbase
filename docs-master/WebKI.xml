@@ -136,6 +136,7 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm" />
   </HelpKINode>
   <HelpKINode Title="IOutputWindowService.TryGetPane method" Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService_TryGetPane.htm" />
+  <HelpKINode Title="license agreement" Url="html/3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" />
   <HelpKINode Title="Name property" Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Name.htm" />
   <HelpKINode Title="OutputWindowDefinition class">
     <HelpKINode Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
@@ -184,6 +185,7 @@
     <HelpKINode Title="1.0.0.0" Url="html/02a44dd4-efaf-4844-99cb-13db77fb4c02.htm" />
     <HelpKINode Title="history" Url="html/ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm" />
   </HelpKINode>
+  <HelpKINode Title="VS Base Extensions Library" Url="html/aea04c46-507f-4ccf-90aa-5d87a7999276.htm" />
   <HelpKINode Title="VsServiceProviderExtensions class">
     <HelpKINode Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" />
     <HelpKINode Title="about VsServiceProviderExtensions class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" />

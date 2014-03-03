@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="077aef1b-6dbf-4442-b840-57256e5152c1" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
-  <HelpTOCNode Id="db752ca9-badf-4334-baa9-e6ea368acde6" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
+<HelpTOCNode Id="477fda44-f86d-4646-835c-af93c14b98b4" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
+  <HelpTOCNode Id="434d0fbe-f135-4d2c-817c-40a162dd5bbd" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
   <HelpTOCNode Title="Output Window Service" Url="html/9452cedb-1942-4d9b-b911-7ef1e882f421.htm" />
 </HelpTOCNode>
