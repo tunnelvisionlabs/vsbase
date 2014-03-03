@@ -225,7 +225,7 @@ internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
           </listItem>
           <listItem>
             <para>
-              <codeEntityReference>T:Micrsoft.VisualStudio.Shell.Interop.IVsFontAndColorUtilities</codeEntityReference>: This global
+              <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorUtilities</codeEntityReference>: This global
               service is accessed by requesting an instance of <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.SVsFontAndColorStorage</codeEntityReference>,
               and is one of two global service interfaces provided by this object (the other is <codeEntityReference>T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage</codeEntityReference>).
             </para>
@@ -234,7 +234,7 @@ internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
             <para>
               <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager</codeEntityReference>: This global
               service is accessed by first obtaining the <codeEntityReference>T:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2</codeEntityReference>
-              service, and calling the <codeEntityReference>M:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2.GetExpansionManager</codeEntityReference>
+              service, and calling the <codeEntityReference>M:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager2.GetExpansionManager(Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager@)</codeEntityReference>
               method on the result.
             </para>
           </listItem>
