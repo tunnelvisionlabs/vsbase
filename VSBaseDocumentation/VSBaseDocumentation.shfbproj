@@ -94,6 +94,8 @@
     <Folder Include="Media" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\License.aml" />
+    <None Include="Content\MSHelpViewerRoot.aml" />
     <None Include="Content\Packages\OutputWindow\OutputWindow.aml" />
     <None Include="Content\Packages\Packages.aml" />
     <None Include="Content\Packages\ShellServices\ShellServices.aml" />

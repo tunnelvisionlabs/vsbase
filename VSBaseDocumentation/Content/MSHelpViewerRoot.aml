@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="aea04c46-507f-4ccf-90aa-5d87a7999276" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>Welcome to the Visual Studio Base Extensions Library</para>
+    </introduction>
+
+    <section>
+      <content>
+        <para>Select a topic from the table of contents.</para>
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784"/>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
+  <Topic id="aea04c46-507f-4ccf-90aa-5d87a7999276" visible="False" isMSHVRoot="true" isSelected="true" title="VS Base Extensions Library">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="VS Base Extensions Library" />
+    </HelpKeywords>
+  </Topic>
   <Topic id="262e0a6e-ce5a-4f40-8f5e-3889dbb63784" visible="True" isDefault="true" title="Welcome">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
+  <Topic id="3927d416-9f25-4fdd-9807-daa0bf4b054d" visible="True">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="license agreement" />
+    </HelpKeywords>
+  </Topic>
   <Topic id="69c59220-5eff-4177-a632-b7c1b4981501" visible="True" isExpanded="true" title="Packages">
-    <Topic id="c2cfc56d-e966-492a-9b12-66c7d01e7146" visible="True" isSelected="true" title="Shell Service Extensions">
+    <Topic id="c2cfc56d-e966-492a-9b12-66c7d01e7146" visible="True" isExpanded="true" title="Shell Service Extensions">
       <Topic id="ef23c357-11af-4eed-a698-0c5a84b8c8cc" visible="True" isExpanded="true" title="Version History">
         <HelpKeywords>
           <HelpKeyword index="K" term="version, history" />
