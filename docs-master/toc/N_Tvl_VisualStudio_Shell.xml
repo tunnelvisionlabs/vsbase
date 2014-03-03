@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="406e5c2b-bf39-42b9-a7c0-a36388768bc7" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
-  <HelpTOCNode Id="32e51900-7bfc-4fed-93ba-6b1828473ae4" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
-  <HelpTOCNode Id="cbb7719f-c503-4d95-baea-34674e1cb6f8" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" HasChildren="true" />
+<HelpTOCNode Id="351f252b-667c-421e-ade4-d4005bd4e198" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
+  <HelpTOCNode Id="f1e5a4c0-df39-466d-9baa-ab43e728944d" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
+  <HelpTOCNode Id="6272dadd-23a3-4fad-9666-93da97eccbf0" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" HasChildren="true" />
 </HelpTOCNode>

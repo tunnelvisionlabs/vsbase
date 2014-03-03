@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="b2e1a23a-6c9c-40e7-9ad6-984bc77d2680" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
-  <HelpTOCNode Id="39e3bf2f-bd16-4fa2-b93f-2d0c9f6c2713" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" />
-  <HelpTOCNode Id="406e5c2b-bf39-42b9-a7c0-a36388768bc7" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" />
+<HelpTOCNode Id="b1df0bfe-0bc5-415b-829c-debb8966ca0f" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
+  <HelpTOCNode Id="f72765eb-8cf0-4218-8617-252bdadb7dfa" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" />
+  <HelpTOCNode Id="351f252b-667c-421e-ade4-d4005bd4e198" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" />
 </HelpTOCNode>
