@@ -62,6 +62,13 @@
       <PlugInConfig id="Lightweight TOC" enabled="True" xmlns="">
         <configuration />
       </PlugInConfig>
+      <PlugInConfig id="Additional Reference Links" enabled="True">
+        <configuration>
+          <targets>
+            <target htmlSdkLinkType="None" help2SdkLinkType="Index" helpViewerSdkLinkType="Id" websiteSdkLinkType="Msdn" helpFileProject="..\AdditionalSdkDocumentation\AdditionalSdkDocumentation.shfbproj" />
+          </targets>
+        </configuration>
+      </PlugInConfig>
     </PlugInConfigurations>
     <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected</VisibleItems>
     <RootNamespaceTitle>API Reference</RootNamespaceTitle>
