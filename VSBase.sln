@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "VSBaseDocumentation", "VSBaseDocumentation\VSBaseDocumentation.shfbproj", "{6A379261-D0A2-427C-8E7F-48895E875B1B}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "AdditionalSdkDocumentation", "AdditionalSdkDocumentation\AdditionalSdkDocumentation.shfbproj", "{9985E075-5ACF-48A3-9402-3FC2F114D71D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,9 @@ Global
 		{6A379261-D0A2-427C-8E7F-48895E875B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A379261-D0A2-427C-8E7F-48895E875B1B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A379261-D0A2-427C-8E7F-48895E875B1B}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{9985E075-5ACF-48A3-9402-3FC2F114D71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9985E075-5ACF-48A3-9402-3FC2F114D71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9985E075-5ACF-48A3-9402-3FC2F114D71D}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +78,6 @@ Global
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD} = {E5F869CB-056B-430A-8A7F-2EDEC7CC005F}
 		{0C198DA7-9D1B-4DB6-B0AD-5B72331D2A20} = {6E9188B1-D508-4DCA-9634-39E05E593EB3}
 		{6A379261-D0A2-427C-8E7F-48895E875B1B} = {16CE8FAB-F192-4E9C-88D0-3365475E519A}
+		{9985E075-5ACF-48A3-9402-3FC2F114D71D} = {16CE8FAB-F192-4E9C-88D0-3365475E519A}
 	EndGlobalSection
 EndGlobal
