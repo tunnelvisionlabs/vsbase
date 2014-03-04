@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text.Utility", "Text.Utilit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell.Utility", "Shell.Utility\Shell.Utility.csproj", "{66D70F43-3051-4EDB-B730-9E6412332CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commenter.Extension", "Commenter.Extension\Commenter.Extension.csproj", "{C3E41787-3957-4CC2-AD04-B89C46BC32BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,12 +102,19 @@ Global
 		{66D70F43-3051-4EDB-B730-9E6412332CA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66D70F43-3051-4EDB-B730-9E6412332CA3}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
 		{66D70F43-3051-4EDB-B730-9E6412332CA3}.ReleaseNoDoc|Any CPU.Build.0 = Release|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC}.ReleaseNoDoc|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{56FD920C-1134-4F8C-BBE4-773642BDD112} = {A29EF3A2-9B8C-4081-95D8-4FC02E7B5859}
+		{C3E41787-3957-4CC2-AD04-B89C46BC32BC} = {A29EF3A2-9B8C-4081-95D8-4FC02E7B5859}
 		{52C5E011-EA71-4799-924B-845CE1C9CA06} = {E5F869CB-056B-430A-8A7F-2EDEC7CC005F}
 		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD} = {E5F869CB-056B-430A-8A7F-2EDEC7CC005F}
 		{AB447CC7-0D6F-4C0A-8783-293B5379464B} = {E5F869CB-056B-430A-8A7F-2EDEC7CC005F}

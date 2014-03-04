@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Tvl.VisualStudio.Commenter</id>
+    <version>0.0.0</version>
+    <authors>Sam Harwell</authors>
+    <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      This package provides MEF-support for the Comment and Uncomment commands.
+    </description>
+    <summary>MEF-support for the Comment and Uncomment commands</summary>
+    <tags>vs2010 vs2012 vs2013</tags>
+    <dependencies>
+      <!-- Visual Studio 2010 -->
+      <dependency id="VSSDK.IDE.10" version="[10.0.0,11.0.0)"/>
+      <!-- Output Window Interfaces -->
+      <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="[1.0.0,1.1.0)"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Reference assemblies -->
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Commenter.vsix" target="lib\net40"/>
+    <!-- Tools -->
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Commenter.props" target="build"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Commenter.targets" target="build"/>
+  </files>
+</package>

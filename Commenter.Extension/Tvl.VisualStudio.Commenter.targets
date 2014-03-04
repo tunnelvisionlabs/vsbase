@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <VSIXSourceItem Include="$(SolutionDir)packages\Tvl.VisualStudio.Commenter.1.0.0\lib\net40\Tvl.VisualStudio.Commenter.vsix">
+      <VSIXSubPath/>
+    </VSIXSourceItem>
+  </ItemGroup>
+</Project>
