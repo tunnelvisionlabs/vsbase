@@ -13,6 +13,9 @@
         The Shell Services package provides extension methods to simplify access to services provided by
         service providers, as well as access to global services provided by the Visual Studio IDE.
       </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
     </introduction>
 
     <section address="Installation">

@@ -13,6 +13,9 @@
         The Output Window package provides support for extensions to create and use the Output Window
         in Visual Studio using MEF.
       </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
     </introduction>
 
     <section address="Installation">
