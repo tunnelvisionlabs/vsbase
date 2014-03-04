@@ -226,6 +226,7 @@
       <Link>vsbase.snk</Link>
     </None>
     <None Include="packages.Text.Utility.config" />
+    <None Include="Tvl.VisualStudio.Text.Utility.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
