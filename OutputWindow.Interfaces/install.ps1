@@ -4,7 +4,7 @@ foreach ($reference in $project.Object.References)
 {
 	switch -regex ($reference.Name.ToLowerInvariant())
 	{
-	"^tvl\.visualstudio\.outputwindow.interfaces$"
+	"^tvl\.visualstudio\.outputwindow\.interfaces$"
 		{
 			$reference.CopyLocal = $false;
 		}
