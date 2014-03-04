@@ -40,6 +40,12 @@
               <link xlink:href="9452cedb-1942-4d9b-b911-7ef1e882f421"/>
             </para>
           </listItem>
+          <listItem>
+            <para>
+              <!-- Commenter Service -->
+              <link xlink:href="01698620-4fc8-4cb0-bb42-5b3a84b8dd66"/>
+            </para>
+          </listItem>
         </list>
       </content>
     </section>
@@ -62,6 +68,18 @@
             <para>
               <!-- Shell Service Extensions -->
               <link xlink:href="c2cfc56d-e966-492a-9b12-66c7d01e7146"/>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <!-- Shell Utility Library -->
+              <link xlink:href="3d25ef44-296a-4523-8286-ce65f8b47c76"/>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <!-- Text Utility Library -->
+              <link xlink:href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d"/>
             </para>
           </listItem>
         </list>

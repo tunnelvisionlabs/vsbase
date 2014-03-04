@@ -29,5 +29,8 @@
       </Topic>
     </Topic>
     <Topic id="9452cedb-1942-4d9b-b911-7ef1e882f421" visible="True" title="Output Window Service" />
+    <Topic id="3d25ef44-296a-4523-8286-ce65f8b47c76" visible="True" title="Shell Utility Library" />
+    <Topic id="07a54f98-14af-49e8-96b4-7a15a7fcfe2d" visible="True" title="Text Editor Utility Library" />
+    <Topic id="01698620-4fc8-4cb0-bb42-5b3a84b8dd66" visible="True" title="Commenter Service" />
   </Topic>
 </Topics>
