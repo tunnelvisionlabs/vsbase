@@ -4,20 +4,60 @@
     xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    <!--
-    <summary>
-      <para>Optional summary abstract</para>
-    </summary>
-    -->
+    <!--<summary>
+      <para>MEF Commenter services library for Visual Studio extension developers.</para>
+    </summary>-->
 
     <introduction>
-      <para>Required introduction</para>
+      <para>
+        The Commenter package provides support for extensions to support the Comment and Uncomment
+        commands in Visual Studio using MEF.
+      </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
     </introduction>
 
-    <section address="Section1">
-      <title>Optional section title</title>
+    <section address="Installation">
+      <title>Installation and Distribution</title>
       <content>
-        <para>Add one or more sections with content</para>
+        <para>
+          This package is available through NuGet under the following package IDs.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.Commenter</codeInline>: This package should be installed into the project
+              that creates your VSIX file. If your Visual Studio extension is not broken into multiple sub-projects,
+              this is the only Output Window package you will need to explicitly install to use these features.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.Commenter.Interfaces</codeInline>: This package should be installed for
+              any project that uses the Commenter Service.
+            </para>
+          </listItem>
+        </list>
+        <para>
+          After installing the appropriate NuGet package(s), you will need to configure your extension to
+          inform Visual Studio of the dependency by including the following block in your <localUri>source.extension.vsixmanifest</localUri>
+          file.
+        </para>
+        <code language="xml">
+          <![CDATA[
+          <Reference Id="Tvl.VisualStudio.Commenter.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
+            <Name>Visual Studio Commenter Services</Name>
+            <VsixPath>Tvl.VisualStudio.Commenter.vsix</VsixPath>
+          </Reference>
+          ]]>
+        </code>
+        <alert class="note">
+          <para>
+            A future release of this extension may include a feature to configure the <localUri>source.extension.vsixmanifest</localUri>
+            file automatically.
+          </para>
+        </alert>
       </content>
     </section>
 

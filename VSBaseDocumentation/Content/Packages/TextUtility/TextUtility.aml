@@ -11,13 +11,34 @@
     -->
 
     <introduction>
-      <para>Required introduction</para>
+      <para>
+        The Shell Utility Library provides helper classes for Visual Studio Extensions written in managed code
+        that interact with the text editor.
+      </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
     </introduction>
 
-    <section address="Section1">
-      <title>Optional section title</title>
+    <section address="Installation">
+      <title>Installation and Distribution</title>
       <content>
-        <para>Add one or more sections with content</para>
+        <para>
+          This package may be installed through NuGet. The package ID is <codeInline>Tvl.VisualStudio.Text.Utility</codeInline>.
+        </para>
+        <para>
+          This is a Utility Library package, as described on the <link xlink:href="69c59220-5eff-4177-a632-b7c1b4981501"/> page. If you are
+          registering this assembly using the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute</codeEntityReference>
+          attribute, use the following code to replace the described placeholders.
+        </para>
+        <code language="csharp">
+          <![CDATA[
+          [assembly: ProvideCodeBase(
+              AssemblyName = "Tvl.VisualStudio.Text.Utility",
+              Version = "1.0.0.0",
+              CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Text.Utility.dll")]
+          ]]>
+        </code>
       </content>
     </section>
 
