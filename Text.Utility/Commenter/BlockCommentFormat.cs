@@ -12,6 +12,7 @@
     /// The <see cref="AllowNesting"/> property specifies whether the language
     /// allows block comments in this format to be nested.
     /// </remarks>
+    /// <threadsafety/>
     public class BlockCommentFormat : CommentFormat
     {
         /// <summary>

@@ -10,6 +10,7 @@
     /// For the purpose of this implementation, a line comment is a comment that
     /// extends from a predefined prefix to the end of the current line.
     /// </remarks>
+    /// <threadsafety/>
     public class LineCommentFormat : CommentFormat
     {
         /// <summary>

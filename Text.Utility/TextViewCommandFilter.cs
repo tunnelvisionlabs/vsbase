@@ -13,6 +13,7 @@
     /// This class extends <see cref="CommandFilter"/> to support command filters for
     /// text view instances (<see cref="IVsTextView"/>).
     /// </summary>
+    /// <threadsafety/>
     [ComVisible(true)]
     public abstract class TextViewCommandFilter : CommandFilter
     {

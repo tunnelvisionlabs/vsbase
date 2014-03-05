@@ -15,6 +15,7 @@
     /// standard comment and uncomment handling for languages supporting one or more comment
     /// formats.
     /// </summary>
+    /// <threadsafety/>
     public class Commenter : ICommenter
     {
         /// <summary>
