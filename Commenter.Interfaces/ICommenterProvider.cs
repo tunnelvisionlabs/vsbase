@@ -8,6 +8,7 @@
     /// This interface defines a component which provides an <see cref="ICommenter"/>
     /// implementation for a <see cref="ITextView"/>.
     /// </summary>
+    /// <preliminary/>
     [ContractClass(typeof(Contracts.ICommenterProviderContracts))]
     public interface ICommenterProvider
     {

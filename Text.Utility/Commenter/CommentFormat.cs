@@ -5,6 +5,7 @@
     /// comment in a programming language.
     /// </summary>
     /// <threadsafety/>
+    /// <preliminary/>
     public abstract class CommentFormat
     {
     }

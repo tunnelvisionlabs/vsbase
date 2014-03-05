@@ -16,6 +16,7 @@
     /// formats.
     /// </summary>
     /// <threadsafety/>
+    /// <preliminary/>
     public class Commenter : ICommenter
     {
         /// <summary>

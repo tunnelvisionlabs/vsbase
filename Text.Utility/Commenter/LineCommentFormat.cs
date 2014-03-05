@@ -11,6 +11,7 @@
     /// extends from a predefined prefix to the end of the current line.
     /// </remarks>
     /// <threadsafety/>
+    /// <preliminary/>
     public class LineCommentFormat : CommentFormat
     {
         /// <summary>

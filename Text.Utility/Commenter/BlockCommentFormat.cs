@@ -13,6 +13,7 @@
     /// allows block comments in this format to be nested.
     /// </remarks>
     /// <threadsafety/>
+    /// <preliminary/>
     public class BlockCommentFormat : CommentFormat
     {
         /// <summary>

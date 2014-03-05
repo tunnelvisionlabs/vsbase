@@ -14,6 +14,7 @@
     /// text view instances (<see cref="IVsTextView"/>).
     /// </summary>
     /// <threadsafety/>
+    /// <preliminary/>
     [ComVisible(true)]
     public abstract class TextViewCommandFilter : CommandFilter
     {
