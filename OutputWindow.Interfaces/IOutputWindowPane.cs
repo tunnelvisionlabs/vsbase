@@ -12,6 +12,7 @@
     /// methods using a single call to <see cref="IVsOutputWindowPane.OutputStringThreadSafe"/>. No
     /// other assurances are made regarding the thread safety of methods in this interface.
     /// </threadsafety>
+    /// <preliminary/>
     [ContractClass(typeof(Contracts.IOutputWindowPaneContracts))]
     public interface IOutputWindowPane
     {

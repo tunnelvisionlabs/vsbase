@@ -42,6 +42,7 @@
     /// is safe for use in multi-threaded extension code. However, calls to this method from
     /// non-UI threads may block while the main thread processes the request.
     /// </threadsafety>
+    /// <preliminary/>
     [ContractClass(typeof(Contracts.IOutputWindowServiceContracts))]
     public interface IOutputWindowService
     {

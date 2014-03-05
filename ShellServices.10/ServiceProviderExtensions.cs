@@ -10,6 +10,8 @@
     /// <summary>
     /// Provides extension methods for <see cref="IServiceProvider"/> and <see cref="IOleServiceProvider"/>.
     /// </summary>
+    /// <threadsafety/>
+    /// <preliminary/>
     public static class ServiceProviderExtensions
     {
         /// <summary>
