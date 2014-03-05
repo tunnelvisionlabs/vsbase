@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        This page expands on the assembly versioning information originally described by
+        <externalLink>
+          <linkText>Schabse Laks</linkText>
+          <linkAlternateText>Extending Visual Studio, part 3: Assembly Versioning</linkAlternateText>
+          <linkUri>http://blog.slaks.net/2014-02-21/extending-visual-studio-part-3-assembly-versioning/</linkUri>
+        </externalLink>. In addition to a thorough breakdown of the advantages and
+        limitations created by different policies towards assembly versioning, this page
+        includes best practices for developing and consuming different kinds of assemblies.
+      </para>
+    </introduction>
+
+    <section address="AssemblyKinds">
+      <title>Assembly Types</title>
+      <content>
+        <definitionTable>
+          <definedTerm>Immutable Assembly</definedTerm>
+          <definition>
+            <para>
+              An assembly which, once released, never changes its public API or strong name.
+              New releases of an application ship the original version of any immutable assemblies
+              which are still in use.
+            </para>
+          </definition>
+
+          <definedTerm>Versioned Assembly</definedTerm>
+          <definition>
+            <para>
+              An assembly which may change over time, and new versions of the assembly include
+              only backwards-compatible changes. Extensible applications use assembly binding
+              redirection to ensure only the newest version of the assembly is used at runtime.
+            </para>
+          </definition>
+
+          <definedTerm>Unversioned Assembly</definedTerm>
+          <definition>
+            <para>
+              Unversioned assemblies are associated with a particular version of an extensible
+              application. Third-party assemblies may make use of APIs defined in unversioned
+              assemblies; however, this will limit the use of the third-party assembly to the
+              same specific version of the extensible application that the unversioned assembly
+              was build for.
+            </para>
+          </definition>
+        </definitionTable>
+      </content>
+
+      <sections>
+        <!--
+        TODO: move this from nested sections to top-level sections when the VS2013 style is
+        updated to properly handle the heading for nested sections.
+        -->
+        <section address="ImmutableAssemblies">
+          <title>Immutable Assemblies</title>
+          <content>
+            <para>
+              Immutable assemblies are the most straightforward assemblies to consume in an
+              extension. These dependencies introduce only a minimal amount of constraints on
+              assemblies which use them.
+            </para>
+          </content>
+          <sections>
+            <section>
+              <title>Examples</title>
+              <content>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>COM-Interop assemblies</legacyBold>, such as <localUri>EnvDTE.dll</localUri>
+                      or <localUri>Microsoft.VisualStudio.Shell.Interop.9.0.dll</localUri>.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>Expressly immutable assemblies</legacyBold>, such as
+                      <localUri>Microsoft.VisualStudio.Shell.Immutable.10.0.dll</localUri>.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>Interface assemblies for cross-version services</legacyBold>, such
+                      as the <localUri>Tvl.VisualStudio.OutputWindow.Interfaces.dll</localUri> assembly
+                      used by the Output Window Service.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Producers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>creating</legacyItalic>
+                  immutable assemblies for extensible applications.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>DO</legacyBold> limit the content of immutable assemblies only
+                      to the minimal amount of code required to ensure maximum portability. Bugs
+                      or limitations present in shipping versions of immutable assemblies cannot
+                      be corrected after release.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>DO NOT</legacyBold> ship two versions of an immutable assembly,
+                      i.e. the <legacyItalic>strong name</legacyItalic> of the assembly should
+                      never change. Remember that the strong name of an assembly is formed from
+                      both the <codeEntityReference>T:System.Reflection.AssemblyVersionAttribute</codeEntityReference>
+                      and the key used for signing the assembly.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>DO NOT</legacyBold> make changes to the public API of an immutable
+                      assembly. This includes changes which are generally considered non-breaking,
+                      such as the introduction of an interface that did not previously exist.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>AVOID</legacyBold> making changes to the internal implementation of
+                      items in an immutable assembly, and do not assume that the changes will take
+                      effect. Since the strong name of the assembly will not be changed by the update,
+                      there is no way to ensure that the application will load the updated version
+                      of the assembly at runtime.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      The source code for an immutable assembly may change, but generally only for
+                      the purpose of updating the documentation and/or distribution mechanism(s)
+                      for the assembly.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Consumers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>consuming</legacyItalic>
+                  immutable assemblies as part of extending an extensible application.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>AVOID</legacyBold> using APIs defined in immutable assemblies introduced
+                      later than the <legacyItalic>minimum</legacyItalic> version of the application you
+                      intend to support. Using an immutable assembly will limit your extension to working
+                      with versions of an application starting with the point when the assembly was first
+                      introduced. For example, using APIs defined in
+                      <localUri>Microsoft.VisualStudio.Shell.Interop.11.dll</localUri> will limit your
+                      extension to working with Visual Studio 2012 or newer. If you want to use these APIs
+                      when available, you can either develop your extension as a versioned or unversioned
+                      assembly, and distribute multiple versions of the extension according to the supported
+                      version of the application.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+          </sections>
+        </section>
+
+        <section address="VersionedAssemblies">
+          <title>Versioned Assemblies</title>
+          <content>
+            <para>
+              Versioned assemblies are straightforward to consume in an extension, and tend to have strict
+              backward compatibility guarantees even across multiple versions of the extensible application.
+              By taking advantage of assembly binding redirection, extensions developed for previous versions
+              of the application often continue working with new versions of the application.
+            </para>
+            <para>
+              Versioned assemblies have a more dramatic impact on service or utility extensions that are
+              intended for consumption by other extensions. Since assembly binding redirection is a runtime
+              feature, assemblies shared between multiple extensions must pay particular attention to the
+              types used in the exposed API of the assembly. If the exposed API includes a reference to a
+              versioned assembly, the shared assembly must be built multiple times, once for each version
+              of the versioned assembly that has shipped to date. For example, the
+              <link xlink:href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d"/> includes separate versions
+              referencing the multiple versions of <localUri>Microsoft.VisualStudio.Text.Logic.dll</localUri>
+              that have shipped to date.
+            </para>
+          </content>
+          <sections>
+            <section>
+              <title>Examples</title>
+              <content>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>Public assemblies for extension development</legacyBold>, such as
+                      <localUri>Microsoft.VisualStudio.CoreUtility.dll</localUri> and
+                      <localUri>Microsoft.VisualStudio.Text.Logic.dll</localUri>.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Producers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>creating</legacyItalic>
+                  versioned assemblies for extensible applications.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>DO</legacyBold> provide assembly binding redirection for the assembly to make
+                      sure the runtime always only loads the most recent version of the assembly, even if one or
+                      more assemblies in the application (or extensions) were compiled with a reference to a
+                      previous release.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Consumers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>consuming</legacyItalic>
+                  versioned assemblies as part of extending an extensible application.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      If your assembly will be used by other extensions and references members of the versioned
+                      assembly in its exposed API, <legacyBold>DO</legacyBold> create multiple versions of your
+                      assembly according to the versions of the versioned assembly that have been created to
+                      date. For example, the <link xlink:href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d"/> may be
+                      used by other Visual Studio extensions, and exposes the
+                      <localUri>Microsoft.VisualStudio.Text.Data.dll</localUri> versioned assembly in its API.
+                      For this reason, separate versions of this library are released for extensions targeting
+                      a minimum Visual Studio version of 2010, 2012, and 2013.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>AVOID</legacyBold> using APIs defined in versioned assemblies introduced
+                      later than the <legacyItalic>minimum</legacyItalic> version of the application you
+                      intend to support. Using a versioned assembly will limit your extension to working
+                      with versions of an application starting with the point when the assembly was first
+                      introduced. For example, using APIs defined in
+                      <localUri>Microsoft.VisualStudio.Shell.Interop.11.dll</localUri> will limit your
+                      extension to working with Visual Studio 2012 or newer. If you want to use these APIs
+                      when available, you can either develop your extension as a versioned or unversioned
+                      assembly, and distribute multiple versions of the extension according to the supported
+                      version of the application.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+          </sections>
+        </section>
+
+        <section address="UnversionedAssemblies">
+          <title>Unversioned Assemblies</title>
+          <content>
+            <para>
+              Unversioned assemblies are the easiest assemblies to develop and deploy for fixed versions of
+              an extensible application, but pose unique challenges when attempting to share an assembly
+              between multiple extensions all targeting the same application.
+            </para>
+          </content>
+          <sections>
+            <section>
+              <title>Examples</title>
+              <content>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>Private assemblies included with an extensible application</legacyBold>,
+                      such as <localUri>Microsoft.VisualStudio.Languages.CSharp.dll</localUri> and
+                      <localUri>Microsoft.VisualStudio.Language.CallHierarchy.dll</localUri>.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>Assemblies which reference an unversioned assembly</legacyBold>, such
+                      as the <externalLink>
+                        <linkText>Inheritance Margin</linkText>
+                        <linkUri>http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08</linkUri>
+                      </externalLink> extension which references the <localUri>Microsoft.VisualStudio.Languages.CSharp.dll</localUri>
+                      assembly.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>Shared assemblies designed for side-by-side loading</legacyBold>,
+                      such as <localUri>Tvl.VisualStudio.Text.Utility.10.0.dll</localUri> and
+                      <localUri>Tvl.VisualStudio.Shell.Utility.10.0.dll</localUri>.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Producers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>creating</legacyItalic>
+                  unversioned assemblies for extensible applications.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>DO</legacyBold> design your assembly to support side-by-side loading scenarios,
+                      with unique strong names given to different shipped versions of your assembly.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>DO NOT</legacyBold> export MEF components from unversioned assemblies. If the
+                      runtime loads multiple versions of your assembly (or a different version than you expected),
+                      extensions could suddenly fail en-masse. This avoids the problem described by <externalLink>
+                        <linkText>Jared Par</linkText>
+                        <linkAlternateText>Authoring a Utility Library for Visual Studio</linkAlternateText>
+                        <linkUri>http://blogs.msdn.com/b/jaredpar/archive/2012/05/07/authoring-a-utility-library-for-visual-studio.aspx</linkUri>
+                      </externalLink> as he developed a utility library for Visual Studio.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+            <section>
+              <title>Best Practices for Consumers</title>
+              <content>
+                <para>
+                  The following are some best practices for developers <legacyItalic>consuming</legacyItalic>
+                  unversioned assemblies as part of extending an extensible application.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>DO</legacyBold> create separate versions of your extension for each released
+                      version of the unversioned assembly that you intend to support, even if the use of the
+                      unversioned assembly is not exposed through the API.
+                    </para>
+                  </listItem>
+                </list>
+              </content>
+            </section>
+          </sections>
+        </section>
+      </sections>
+    </section>
+
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
