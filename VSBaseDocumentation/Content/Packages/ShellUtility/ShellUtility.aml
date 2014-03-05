@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="3d25ef44-296a-4523-8286-ce65f8b47c76" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+
+    <introduction>
+      <para>
+        The Shell Utility Library provides helper classes for Visual Studio Extensions written in managed code
+        that interact with the shell.
+      </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
+    </introduction>
+
+    <section address="Installation">
+      <title>Installation and Distribution</title>
+      <content>
+        <para>
+          This package may be installed through NuGet. The package ID is <codeInline>Tvl.VisualStudio.Shell.Utility</codeInline>.
+        </para>
+        <para>
+          This is a Utility Library package, as described on the <link xlink:href="69c59220-5eff-4177-a632-b7c1b4981501"/> page. If you are
+          registering this assembly using the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute</codeEntityReference>
+          attribute, use the following code to replace the described placeholders.
+        </para>
+        <code language="csharp">
+          <![CDATA[
+          [assembly: ProvideCodeBase(
+              AssemblyName = "Tvl.VisualStudio.Shell.Utility",
+              Version = "1.0.0.0",
+              CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Shell.Utility.dll")]
+          ]]>
+        </code>
+      </content>
+    </section>
+
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

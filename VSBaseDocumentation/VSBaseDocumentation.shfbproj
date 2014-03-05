@@ -29,6 +29,9 @@
     <DocumentationSources>
       <DocumentationSource sourceFile="..\ShellServices.10\ShellServices.10.csproj" xmlns="" />
       <DocumentationSource sourceFile="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj" />
+      <DocumentationSource sourceFile="..\Commenter.Interfaces\Commenter.Interfaces.csproj" />
+      <DocumentationSource sourceFile="..\Shell.Utility\Shell.Utility.csproj" />
+      <DocumentationSource sourceFile="..\Text.Utility\Text.Utility.csproj" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
@@ -94,6 +97,9 @@
   <ItemGroup>
     <Folder Include="Content" />
     <Folder Include="Content\Packages" />
+    <Folder Include="Content\Packages\Commenter" />
+    <Folder Include="Content\Packages\ShellUtility" />
+    <Folder Include="Content\Packages\TextUtility" />
     <Folder Include="Content\Packages\OutputWindow" />
     <Folder Include="Content\Packages\ShellServices" />
     <Folder Include="Content\Packages\ShellServices\VersionHistory\" />
@@ -103,11 +109,14 @@
   <ItemGroup>
     <None Include="Content\License.aml" />
     <None Include="Content\MSHelpViewerRoot.aml" />
+    <None Include="Content\Packages\Commenter\Commenter.aml" />
     <None Include="Content\Packages\OutputWindow\OutputWindow.aml" />
     <None Include="Content\Packages\Packages.aml" />
     <None Include="Content\Packages\ShellServices\ShellServices.aml" />
     <None Include="Content\Packages\ShellServices\VersionHistory\v1.0.0.0.aml" />
     <None Include="Content\Packages\ShellServices\VersionHistory\VersionHistory.aml" />
+    <None Include="Content\Packages\ShellUtility\ShellUtility.aml" />
+    <None Include="Content\Packages\TextUtility\TextUtility.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
   <ItemGroup>
@@ -117,17 +126,32 @@
     <Content Include="icons\Help.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
+      <Name>Commenter.Interfaces</Name>
+      <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj">
       <Name>OutputWindow.Interfaces</Name>
       <Project>{52c5e011-ea71-4799-924b-845ce1c9ca06}</Project>
       <Private>False</Private>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\Shell.Utility\Shell.Utility.csproj">
+      <Name>Shell.Utility</Name>
+      <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\ShellServices.10\ShellServices.10.csproj">
       <Name>ShellServices.10</Name>
       <Project>{3539ac4e-0666-4a6e-873d-03fd8f2d8cbd}</Project>
       <Private>False</Private>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Text.Utility\Text.Utility.csproj">
+      <Name>Text.Utility</Name>
+      <Project>{144c8488-5425-4759-8f44-0a67e0567a19}</Project>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <!-- Import the SHFB build targets -->

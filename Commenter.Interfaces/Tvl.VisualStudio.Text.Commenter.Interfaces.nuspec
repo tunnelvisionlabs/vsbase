@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Tvl.VisualStudio.Text.Commenter.Interfaces</id>
+    <version>0.0.0</version>
+    <authors>Sam Harwell</authors>
+    <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      This package provides the immutable interfaces for MEF-support for commenting and uncommenting code in Visual Studio.
+    </description>
+    <summary>MEF-support for Visual Studio Code Commenting</summary>
+    <tags>vs2010 vs2012 vs2013</tags>
+    <dependencies>
+      <!-- Visual Studio 2010 -->
+      <dependency id="VSSDK.IDE.10" version="[10.0.0,11.0.0)"/>
+      <!--
+      Exposed Dependencies (Tvl.VisualStudio.Text.Commenter.Interfaces.dll):
+        Microsoft.VisualStudio.Text.Data.dll
+        Microsoft.VisualStudio.Text.UI.dll
+      -->
+      <dependency id="VSSDK.Text.10" version="[10.0.0,11.0.0)"/>
+    </dependencies>
+    <references>
+      <reference file="Tvl.VisualStudio.Text.Commenter.Interfaces.dll"/>
+    </references>
+  </metadata>
+  <files>
+    <!-- Tools -->
+    <file src="install.ps1" target="tools"/>
+
+    <!-- Assemblies -->
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.xml" target="lib\net40"/>
+
+    <!-- Code Contracts Assemblies -->
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.pdb" target="lib\net40"/>
+
+    <!-- Source Code -->
+    <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
+  </files>
+</package>
