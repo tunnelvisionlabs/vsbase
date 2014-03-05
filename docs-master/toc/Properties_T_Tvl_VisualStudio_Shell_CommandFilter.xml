@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="7eaa0d97-fb7c-43a4-beaf-88f2c680a82a" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+<HelpTOCNode Id="864d33f7-10a9-4b3a-829e-e832c53ec5e8" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
   <HelpTOCNode Title="Enabled Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_Enabled.htm" />
   <HelpTOCNode Title="IsDisposed Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposed.htm" />
   <HelpTOCNode Title="IsDisposing Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposing.htm" />

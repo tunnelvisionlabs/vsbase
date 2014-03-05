@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="0aa791b3-0785-4723-8d03-b719639b80b4" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
+<HelpTOCNode Id="ef77ad3a-de4b-4b68-ae0e-8c8a6b148dad" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
   <HelpTOCNode Title="LineCommentFormat Constructor " Url="html/M_Tvl_VisualStudio_Text_Commenter_LineCommentFormat__ctor.htm" />
   <HelpTOCNode Title="LineCommentFormat Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
-  <HelpTOCNode Id="b05bae5f-ca97-45e0-b42d-9da651cee4b3" Title="LineCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="5bf0af4b-7b34-492a-a177-a13a62a4f4f4" Title="LineCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
 </HelpTOCNode>

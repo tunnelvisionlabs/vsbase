@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="becbe685-1460-4fc6-8c57-ae14e1a62131" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+<HelpTOCNode Id="8bd6e5e0-bfda-472a-b4fa-88ef648e67ce" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
   <HelpTOCNode Title="CommentBlock Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentBlock.htm" />
   <HelpTOCNode Title="CommentLines Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentLines.htm" />
   <HelpTOCNode Title="CommentSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpan.htm" />
   <HelpTOCNode Title="CommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpans.htm" />
   <HelpTOCNode Title="ScanToNonWhitespaceChar Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_ScanToNonWhitespaceChar.htm" />
   <HelpTOCNode Title="TrimSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TrimSpan.htm" />
-  <HelpTOCNode Id="dc2465e6-cfdb-4089-a7ed-eaaae46581eb" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" HasChildren="true" />
+  <HelpTOCNode Id="70549897-7455-47d9-8827-2320a8846766" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" HasChildren="true" />
   <HelpTOCNode Title="UncommentLines Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentLines.htm" />
   <HelpTOCNode Title="UncommentSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpan.htm" />
   <HelpTOCNode Title="UncommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpans.htm" />

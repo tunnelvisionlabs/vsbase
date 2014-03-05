@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="256482c5-1ebc-4ffd-afb5-353f53891a85" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm">
+<HelpTOCNode Id="87f971cc-6f10-4234-ad6e-ab4837ef24d3" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm">
   <HelpTOCNode Title="Commenter Constructor (ITextView, ITextUndoHistoryRegistry, IEnumerable(CommentFormat))" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" />
   <HelpTOCNode Title="Commenter Constructor (ITextView, ITextUndoHistoryRegistry, CommentFormat[])" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter__ctor_1.htm" />
 </HelpTOCNode>

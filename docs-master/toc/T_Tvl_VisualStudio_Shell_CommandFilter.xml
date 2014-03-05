@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="8bb82bf4-88c5-425f-910a-0f878331bdef" Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+<HelpTOCNode Id="6db37c84-d4a7-4d0a-bf9b-94c5c2754d9f" Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm">
   <HelpTOCNode Title="CommandFilter Constructor " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter__ctor.htm" />
-  <HelpTOCNode Id="7ef83ebd-8134-4acd-b157-9bad2df71cd2" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
-  <HelpTOCNode Id="7eaa0d97-fb7c-43a4-beaf-88f2c680a82a" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
+  <HelpTOCNode Id="8cb7b56e-87d3-4870-97a0-7aff2410355d" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
+  <HelpTOCNode Id="864d33f7-10a9-4b3a-829e-e832c53ec5e8" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
 </HelpTOCNode>

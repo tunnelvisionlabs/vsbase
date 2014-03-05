@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="d7a44583-2d03-445e-83bc-4900d836b4d5" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
-  <HelpTOCNode Id="3bbc1dac-68cd-4ecb-b588-a7ced21b3530" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
+<HelpTOCNode Id="5e6991a0-0b9e-48bd-bb95-28318804119e" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
+  <HelpTOCNode Id="66019f62-f340-43f6-babe-af0742e78737" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
   <HelpTOCNode Title="Output Window Service" Url="html/9452cedb-1942-4d9b-b911-7ef1e882f421.htm" />
   <HelpTOCNode Title="Shell Utility Library" Url="html/3d25ef44-296a-4523-8286-ce65f8b47c76.htm" />
   <HelpTOCNode Title="Text Editor Utility Library" Url="html/07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="2aada87e-4059-4604-9a51-a270b5dbc82e" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
+<HelpTOCNode Id="63feaa61-4ca0-4697-bedf-05d90771eb59" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
   <HelpTOCNode Title="OutputWindowDefinition Constructor " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition__ctor.htm" />
   <HelpTOCNode Title="OutputWindowDefinition Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
-  <HelpTOCNode Id="8ed3d24c-66d3-49ed-95d8-a5d5f905a4c6" Title="OutputWindowDefinition Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" HasChildren="true" />
+  <HelpTOCNode Id="90ee1518-044a-434d-8178-a9104caa4bd5" Title="OutputWindowDefinition Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" HasChildren="true" />
 </HelpTOCNode>

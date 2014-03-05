@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="1d0277bc-314f-4205-b571-77636dccc956" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm">
+<HelpTOCNode Id="e732c263-52cf-47ce-ba84-3000e98d3ce9" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm">
   <HelpTOCNode Title="GetService(TService) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__1.htm" />
   <HelpTOCNode Title="GetService(TServiceClass, TServiceInterface) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__2.htm" />
 </HelpTOCNode>
