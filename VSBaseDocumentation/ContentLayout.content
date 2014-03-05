@@ -15,6 +15,7 @@
       <HelpKeyword index="K" term="license agreement" />
     </HelpKeywords>
   </Topic>
+  <Topic id="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae" visible="True" title="Assembly Versioning in Extensible Applications" tocTitle="Assembly Versioning" />
   <Topic id="69c59220-5eff-4177-a632-b7c1b4981501" visible="True" isExpanded="true" title="Packages">
     <Topic id="c2cfc56d-e966-492a-9b12-66c7d01e7146" visible="True" isExpanded="true" title="Shell Service Extensions">
       <Topic id="ef23c357-11af-4eed-a698-0c5a84b8c8cc" visible="True" isExpanded="true" title="Version History">
