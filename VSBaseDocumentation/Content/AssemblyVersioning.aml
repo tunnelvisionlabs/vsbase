@@ -159,7 +159,7 @@
                       intend to support. Using an immutable assembly will limit your extension to working
                       with versions of an application starting with the point when the assembly was first
                       introduced. For example, using APIs defined in
-                      <localUri>Microsoft.VisualStudio.Shell.Interop.11.dll</localUri> will limit your
+                      <localUri>Microsoft.VisualStudio.Shell.Interop.11.0.dll</localUri> will limit your
                       extension to working with Visual Studio 2012 or newer. If you want to use these APIs
                       when available, you can either develop your extension as a versioned or unversioned
                       assembly, and distribute multiple versions of the extension according to the supported
@@ -254,7 +254,7 @@
                       intend to support. Using a versioned assembly will limit your extension to working
                       with versions of an application starting with the point when the assembly was first
                       introduced. For example, using APIs defined in
-                      <localUri>Microsoft.VisualStudio.Shell.Interop.11.dll</localUri> will limit your
+                      <localUri>Microsoft.VisualStudio.Shell.11.0.dll</localUri> will limit your
                       extension to working with Visual Studio 2012 or newer. If you want to use these APIs
                       when available, you can either develop your extension as a versioned or unversioned
                       assembly, and distribute multiple versions of the extension according to the supported
