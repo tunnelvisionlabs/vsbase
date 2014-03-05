@@ -11,73 +11,206 @@
     -->
 
     <introduction>
-      <para>Required introduction</para>
+      <para>
+        The Base Extensions Library for Visual Studio consists of a number separate service and
+        utility libraries designed to simplify Visual Studio extension development. The Managed
+        Extensibility Framework (MEF) places a number of restrictions on the manner in which
+        reusable software components may be developed and shared between multiple extensions,
+        so the library is separated according to the type of feature provided by each package.
+      </para>
     </introduction>
 
-    <!-- Add one or more top-level section elements.  These are collapsible.
-         If using <autoOutline />, add an address attribute to identify it
-         and specify a title so that it can be jumped to with a hyperlink. -->
-    <section address="Section1">
-      <title>Optional section title</title>
+    <section address="MEFServicePackages">
+      <title>Packages Which Provide MEF Services</title>
       <content>
-        <!-- Uncomment this to create a sub-section outline
-        <autoOutline /> -->
-        <para>Add one or more sections with content</para>
+        <para>
+          MEF Service libraries include one or more new services which are provided through an
+          <codeInline>[Export]</codeInline> attribute. Each of these libraries consists of two
+          separate assemblies: an implementation assembly which provides the service and an
+          interfaces assembly which defines interfaces through which other extensions can use
+          and/or extend the behavior of the service.
+        </para>
+        <para>
+          Currently the following MEF Service libraries are included.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <!-- Output Window Service -->
+              <link xlink:href="9452cedb-1942-4d9b-b911-7ef1e882f421"/>
+            </para>
+          </listItem>
+        </list>
       </content>
-      <!-- If a section contains a sections element, its content creates
-           sub-sections.  These are not collapsible.
+    </section>
+
+    <section address="UtilityLibraries">
+      <title>Utility Library Packages</title>
+      <content>
+        <para>
+          Utility libraries do not export any MEF components. As such, these libraries are safe
+          for use in side-by-side loading scenarios. A copy of the assembly should be included
+          in the distribution of your Visual Studio extension. When a utility library package
+          is installed through NuGet, the assembly will be included in the resulting VSIX file
+          by default.
+        </para>
+        <para>
+          Currently the following Utility libraries are included.
+        </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <!-- Shell Service Extensions -->
+              <link xlink:href="c2cfc56d-e966-492a-9b12-66c7d01e7146"/>
+            </para>
+          </listItem>
+        </list>
+      </content>
       <sections>
-          <section address="SubSection1">
-              <title>Sub-section 1</title>
+        <section>
+          <title>Assembly Binding Considerations</title>
+          <content>
+            <para>
+              Special steps are required to ensure that Visual Studio will be able to locate utility
+              library assemblies at runtime. The specific configuration steps to take depend on the
+              minimum version of Visual Studio your extension will support.
+            </para>
+            <alert class="note">
+              <para>
+                These configuration steps should be performed in the project that creates your VSIX extension,
+                even if another assembly actually references the utility library.
+              </para>
+            </alert>
+            <list class="ordered">
+              <listItem>
+                <para>
+                  Regardless of the version of Visual Studio you are supporting, you need to make sure your
+                  extension is configured to generate a <codeInline>pkgdef</codeInline> file. Open your extension's
+                  project file in an XML editor and ensure that the following two properties are set to
+                  <codeInline>true</codeInline>.
+                </para>
+                <code language="xml">
+                  <![CDATA[
+                  <GeneratePkgDefFile>true</GeneratePkgDefFile>
+                  <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+                  ]]>
+                </code>
+              </listItem>
+              <listItem>
+                <para>
+                  The second step to configuring the extension is updating your <localUri>source.extension.vsixmanifest</localUri>
+                  file to include a line to inform Visual Studio that your extension includes a <codeInline>pkgdef</codeInline>
+                  file. If you are using version 1 of this file (i.e. the file starts with <codeInline><![CDATA[<Vsix Version="1.0.0"]]></codeInline>),
+                  make sure the following line is included inside the <codeInline><![CDATA[<Content>]]></codeInline> element.
+                </para>
+                <code language="xml">
+                  <![CDATA[
+                  <VsPackage>|%CurrentProject%|</VsPackage>
+                  ]]>
+                </code>
+                <para>
+                  If your extension uses version 2 of this file, <placeholder>[TODO: fill this in]</placeholder>.
+                </para>
+              </listItem>
+            </list>
+          </content>
+          <sections>
+            <section>
+              <title>Visual Studio 2012 and Newer</title>
               <content>
-                  <para>Sub-section content.</para>
+                <para>
+                  If your extension only supports Visual Studio 2012 and newer, the
+                  <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute</codeEntityReference>
+                  provides the most efficient method for registering utility libraries with Visual Studio.
+                  To use this attribute, simply add a reference to the <externalLink>
+                    <linkText>VSSDK.Shell.11</linkText>
+                    <linkUri>https://www.nuget.org/packages/VSSDK.Shell.11/</linkUri>
+                  </externalLink> (for extensions targeting Visual Studio 2012 and newer) or <externalLink>
+                    <linkText>VSSDK.Shell.12</linkText>
+                    <linkUri>https://www.nuget.org/packages/VSSDK.Shell.12/</linkUri>
+                  </externalLink> (for extensions targeting Visual Studio 2013 and newer) NuGet package. Specific
+                  values for the <placeholder>AssemblyName</placeholder>, <placeholder>AssemblyVersion</placeholder>,
+                  and <placeholder>AssemblyFile</placeholder> placeholders are described in the documentation for
+                  the specific utility library.
+                </para>
+                <code language="csharp">
+                  <![CDATA[
+                  [assembly: ProvideCodeBase(
+                      AssemblyName = "{AssemblyName}",
+                      Version = "{AssemblyVersion}",
+                      CodeBase = "$PackageFolder$\\{AssemblyFile}")]
+                  ]]>
+                </code>
               </content>
-          </section>
-          <section address="SubSection2">
-              <title>Sub-section 2</title>
+            </section>
+            <section>
+              <title>Visual Studio 2010 and Newer</title>
               <content>
-                  <para>Sub-section content.</para>
+                <para>
+                  If your extension supports Visual Studio 2010, you will need to include a copy of the
+                  following registration attribute in your extension code.
+                </para>
+                <code language="csharp">
+                  <![CDATA[
+                  using System;
+                  using System.Reflection;
+                  using System.Runtime.InteropServices;
+                  using Microsoft.VisualStudio.Shell;
+
+                  [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
+                  internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
+                  {
+                      private static string GetPathToKey(RegistrationContext context)
+                      {
+                          Guid componentGuid = GetAssemblyGuid(context.CodeBase);
+                          return string.Concat(@"BindingPaths\", componentGuid.ToString("B").ToUpperInvariant());
+                      }
+
+                      private static Guid GetAssemblyGuid(string codeBase)
+                      {
+                          string assemblyFile = new Uri(codeBase).LocalPath;
+                          Assembly assembly = Assembly.LoadFrom(codeBase);
+                          object[] attributesData = assembly.GetCustomAttributes(typeof(GuidAttribute), false);
+                          if (attributesData.Length == 0)
+                              throw new ArgumentException("The specified assembly did not contain a [Guid] attribute.");
+
+                          return new Guid(((GuidAttribute)attributesData[0]).Value);
+                      }
+
+                      public override void Register(RegistrationContext context)
+                      {
+                          if (context == null)
+                              throw new ArgumentNullException("context");
+
+                          using (Key childKey = context.CreateKey(GetPathToKey(context)))
+                          {
+                              childKey.SetValue(context.ComponentPath, string.Empty);
+                          }
+                      }
+
+                      public override void Unregister(RegistrationContext context)
+                      {
+                          if (context == null)
+                              throw new ArgumentNullException("context");
+
+                          context.RemoveKey(GetPathToKey(context));
+                      }
+                  }
+                  ]]>
+                </code>
+                <para>
+                  To use the attribute make sure your <localUri>AssemblyInfo.cs</localUri> contains the following
+                  line.
+                </para>
+                <code language="csharp"><![CDATA[[assembly: ProvideBindingPath]]]></code>
               </content>
-          </section>
-      </sections> -->
+            </section>
+          </sections>
+        </section>
+      </sections>
     </section>
 
     <relatedTopics>
-      <!-- One or more of the following:
-           - A local link
-           - An external link
-           - A code entity reference
-
-      <link xlink:href="Other Topic's ID"/>
-      <link xlink:href="Other Topic's ID">Link inner text</link>
-
-      <externalLink>
-          <linkText>Link text</linkText>
-          <linkAlternateText>Optional alternate link text</linkAlternateText>
-          <linkUri>URI</linkUri>
-      </externalLink>
-
-      <codeEntityReference>API member ID</codeEntityReference>
-
-      Examples:
-
-      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8270" />
-      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
-
-      <externalLink>
-          <linkText>SHFB on CodePlex</linkText>
-          <linkAlternateText>Go to CodePlex</linkAlternateText>
-          <linkUri>http://shfb.codeplex.com</linkUri>
-      </externalLink>
-
-      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
-      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
-      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
-      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
-      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
-      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
-      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
-      -->
     </relatedTopics>
   </developerConceptualDocument>
 </topic>

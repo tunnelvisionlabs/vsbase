@@ -42,6 +42,8 @@
     /// }
     /// </code>
     /// </example>
+    /// <threadsafety/>
+    /// <preliminary/>
     public class OutputWindowDefinition
     {
         /// <summary>

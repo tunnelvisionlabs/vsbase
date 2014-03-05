@@ -13,6 +13,9 @@
         The Output Window package provides support for extensions to create and use the Output Window
         in Visual Studio using MEF.
       </para>
+      <para>
+        Library Status: Under Development (not yet released)
+      </para>
     </introduction>
 
     <section address="Installation">
@@ -42,10 +45,13 @@
           file.
         </para>
         <code language="xml">
-          <![CDATA[<Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
-  <Name>Visual Studio Output Window Services</Name>
-  <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
-</Reference>]]></code>
+          <![CDATA[
+          <Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
+            <Name>Visual Studio Output Window Services</Name>
+            <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
+          </Reference>
+          ]]>
+        </code>
         <alert class="note">
           <para>
             A future release of this extension may include a feature to configure the <localUri>source.extension.vsixmanifest</localUri>

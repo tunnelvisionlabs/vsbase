@@ -11,6 +11,8 @@ namespace Tvl.VisualStudio.OutputWindow
     /// These window panes are not actually created within the IDE until an extension
     /// requests access to it using <see cref="IOutputWindowService.TryGetPane"/>.
     /// </summary>
+    /// <threadsafety/>
+    /// <preliminary/>
     public static class OutputWindowPaneDefinitions
     {
         /// <summary>
