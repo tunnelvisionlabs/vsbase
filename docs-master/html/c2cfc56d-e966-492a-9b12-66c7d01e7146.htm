@@ -10,142 +10,29 @@
     <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" title="VS Base Extensions Library" tocid="roottoc">VS Base Extensions Library</a></div><div class="toclevel0" data-toclevel="0" style="padding-left: 0px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="69c59220-5eff-4177-a632-b7c1b4981501.htm" title="Packages" tocid="69c59220-5eff-4177-a632-b7c1b4981501">Packages</a></div><div class="toclevel1 current" data-toclevel="1" style="padding-left: 13px;" data-childrenloaded="true"><a class="toc_expanded" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" title="Shell Service Extensions" tocid="c2cfc56d-e966-492a-9b12-66c7d01e7146">Shell Service Extensions</a></div><div class="toclevel2" data-toclevel="2" style="padding-left: 26px; display: block;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm" title="Version History" tocid="ef23c357-11af-4eed-a698-0c5a84b8c8cc">Version History</a></div></div></div><div id="TocResize" class="OH_TocResize"><img id="ResizeImageIncrease" src="../icons/open.gif" onclick="onIncreaseToc()" alt="Expand" title="Expand"><img id="ResizeImageReset" src="../icons/close.gif" style="display:none" onclick="onResetToc()" alt="Minimize" title="Minimize"></div><div class="OH_outerContent" id="OuterContent" style="margin-left: 280px;"><h1 class="title">Shell Service Extensions</h1><div id="mainSection"><div id="mainBody"><span class="introStyle"></span><div class="summary"><p>Shell Services utility library for Visual Studio extension developers.</p></div><div class="introduction"><p>
         The Shell Services package provides extension methods to simplify access to services provided by
         service providers, as well as access to global services provided by the Visual Studio IDE.
+      </p><p>
+        Library Status: Under Development (not yet released)
       </p></div><a id="Installation"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Installation and Distribution</div></div><p>
           This package may be installed through NuGet. The package ID is <span class="code">Tvl.VisualStudio.ShellServices.10</span>.
         </p><p>
-          This package does not export any MEF artifacts, so it is safe for side-by-side loading scenarios.
-          A copy of the assembly should be included in the distribution of your Visual Studio extension.
-          When the package is installed through NuGet, the assembly will be included in the resulting VSIX
-          file by default.
-        </p><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Assembly Binding Considerations</div></div><p>
-              Special steps are required to ensure that Visual Studio will be able to locate this utility
-              assembly at runtime. The specific configuration steps to take depend on the minimum version
-              of Visual Studio your extension will support.
-            </p><div class="alert"><table><tr><th><img class="mtps-img-src" src="./../icons/alert_note.gif" alt="Note"> <strong>Note</strong></th></tr><tr><td>
-                These configuration steps should be performed in the project that creates your VSIX extension,
-                even if another assembly actually references the Shell Services utility assembly.
-              </td></tr></table></div><ol><li><p>
-                  Regardless of the version of Visual Studio you are supporting, you need to make sure your
-                  extension is configured to generate a <span class="code">pkgdef</span> file. Open your extension's
-                  project file in an XML editor and ensure that the following two properties are set to
-                  <span class="code">true</span>.
-                </p><div id="ID0EABEAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0EABEAEAAAAA_tabs"><div id="ID0EABEAEAAAAA_tab1" class="codeSnippetContainerTabSingle" dir="ltr" EnableCopyCode="true"><a xmlns="">XML</a></div></div><div id="ID0EABEAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EABEAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0EABEAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0EABEAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0EABEAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0EABEAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0EABEAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0EABEAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre><span class="highlight-xml-bracket">&lt;</span><span class="highlight-xml-tag">GeneratePkgDefFile</span><span class="highlight-xml-bracket">&gt;</span>true<span class="highlight-xml-bracket">&lt;/</span><span class="highlight-xml-tag">GeneratePkgDefFile</span><span class="highlight-xml-bracket">&gt;</span> 
-<span class="highlight-xml-bracket">&lt;</span><span class="highlight-xml-tag">CopyBuildOutputToOutputDirectory</span><span class="highlight-xml-bracket">&gt;</span>true<span class="highlight-xml-bracket">&lt;/</span><span class="highlight-xml-tag">CopyBuildOutputToOutputDirectory</span><span class="highlight-xml-bracket">&gt;</span></pre></div><div id="ID0EABEAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>&lt;GeneratePkgDefFile&gt;true&lt;/GeneratePkgDefFile&gt; 
-&lt;CopyBuildOutputToOutputDirectory&gt;true&lt;/CopyBuildOutputToOutputDirectory&gt;</pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0EABEAEAAAAA');</script></li><li><p>
-                  The second step to configuring the extension is updating your <em>source.extension.vsixmanifest</em>
-                  file to include a line to inform Visual Studio that your extension includes a <span class="code">pkgdef</span>
-                  file. If you are using version 1 of this file (i.e. the file starts with <span class="code">&lt;Vsix Version="1.0.0"</span>),
-                  make sure the following line is included inside the <span class="code">&lt;Content&gt;</span> element.
-                </p><div id="ID0EBAEAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0EBAEAEAAAAA_tabs"><div id="ID0EBAEAEAAAAA_tab1" class="codeSnippetContainerTabSingle" dir="ltr" EnableCopyCode="true"><a xmlns="">XML</a></div></div><div id="ID0EBAEAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EBAEAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0EBAEAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0EBAEAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0EBAEAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0EBAEAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0EBAEAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0EBAEAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre><span class="highlight-xml-bracket">&lt;</span><span class="highlight-xml-tag">VsPackage</span><span class="highlight-xml-bracket">&gt;</span>|%CurrentProject%|<span class="highlight-xml-bracket">&lt;/</span><span class="highlight-xml-tag">VsPackage</span><span class="highlight-xml-bracket">&gt;</span></pre></div><div id="ID0EBAEAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>&lt;VsPackage&gt;|%CurrentProject%|&lt;/VsPackage&gt;</pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0EBAEAEAAAAA');</script><p>
-                  If your extension uses version 2 of this file, <span class="placeholder">[TODO: fill this in]</span>.
-                </p></li></ol><h4 class="subHeading">Visual Studio 2012 and Newer</h4><div class="subsection"><p>
-                  If your extension only supports Visual Studio 2012 and newer, the
-                  <span sdata="cer" target="T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute"><a href="http://msdn2.microsoft.com/en-us/library/hh255336" target="_blank">ProvideCodeBaseAttribute</a></span>
-                  provides the most efficient method for registering the utility assembly with Visual Studio.
-                  To use this attribute, simply add a reference to the <a class="mtps-external-link" href="https://www.nuget.org/packages/VSSDK.Shell.11/" target="_blank">VSSDK.Shell.11</a> (for extensions targeting Visual Studio 2012 and newer) or <a class="mtps-external-link" href="https://www.nuget.org/packages/VSSDK.Shell.12/" target="_blank">VSSDK.Shell.12</a> (for extensions targeting Visual Studio 2013 and newer) NuGet package.
-                </p><div id="ID0EACAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0EACAEAAAAA_tabs"><div id="ID0EACAEAAAAA_tab1" class="codeSnippetContainerTabActive" dir="ltr" EnableCopyCode="true"><a href="#" onclick="javascript:ChangeTab('ID0EACAEAAAAA','C#','1','4');return false;">C#</a></div><div id="ID0EACAEAAAAA_tab2" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>C++</a></div><div id="ID0EACAEAAAAA_tab3" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>F#</a></div><div id="ID0EACAEAAAAA_tab4" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>VB</a></div></div><div id="ID0EACAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0EACAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0EACAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0EACAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0EACAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0EACAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0EACAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre>[assembly: ProvideCodeBase(
+          This is a Utility Library package, as described on the <a href="69c59220-5eff-4177-a632-b7c1b4981501.htm" target="">Packages</a> page. If you are
+          registering this assembly using the <span sdata="cer" target="T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute"><span class="nolink">ProvideCodeBaseAttribute</span></span>
+          attribute, use the following code to replace the described placeholders.
+        </p><div id="ID0EAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0EAEAAAAA_tabs"><div id="ID0EAEAAAAA_tab1" class="codeSnippetContainerTabActive" dir="ltr" EnableCopyCode="true"><a href="#" onclick="javascript:ChangeTab('ID0EAEAAAAA','C#','1','4');return false;">C#</a></div><div id="ID0EAEAAAAA_tab2" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>C++</a></div><div id="ID0EAEAAAAA_tab3" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>F#</a></div><div id="ID0EAEAAAAA_tab4" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>VB</a></div></div><div id="ID0EAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0EAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0EAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0EAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0EAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0EAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0EAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre>[assembly: ProvideCodeBase(
     AssemblyName = <span class="highlight-literal">"Tvl.VisualStudio.ShellServices.10"</span>,
     Version = <span class="highlight-literal">"1.0.0.0"</span>,
-    CodeBase = <span class="highlight-literal">"$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll"</span>)]</pre></div><div id="ID0EACAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>[assembly: ProvideCodeBase(
+    CodeBase = <span class="highlight-literal">"$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll"</span>)]</pre></div><div id="ID0EAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>[assembly: ProvideCodeBase(
     AssemblyName = "Tvl.VisualStudio.ShellServices.10",
     Version = "1.0.0.0",
-    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll")]</pre></div><div id="ID0EACAEAAAAA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EACAEAAAAA_code_Plain_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EACAEAAAAA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EACAEAAAAA_code_Plain_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EACAEAAAAA_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EACAEAAAAA_code_Plain_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0EACAEAAAAA');</script></div><h4 class="subHeading">Visual Studio 2010 and Newer</h4><div class="subsection"><p>
-                  If your extension supports Visual Studio 2010, you will need to include a copy of the
-                  following registration attribute in your extension code.
-                </p><div id="ID0ECAAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0ECAAEAAAAA_tabs"><div id="ID0ECAAEAAAAA_tab1" class="codeSnippetContainerTabActive" dir="ltr" EnableCopyCode="true"><a href="#" onclick="javascript:ChangeTab('ID0ECAAEAAAAA','C#','1','4');return false;">C#</a></div><div id="ID0ECAAEAAAAA_tab2" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>C++</a></div><div id="ID0ECAAEAAAAA_tab3" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>F#</a></div><div id="ID0ECAAEAAAAA_tab4" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>VB</a></div></div><div id="ID0ECAAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0ECAAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0ECAAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0ECAAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0ECAAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0ECAAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0ECAAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0ECAAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre><span class="highlight-keyword">using</span> System;
-<span class="highlight-keyword">using</span> System.Reflection;
-<span class="highlight-keyword">using</span> System.Runtime.InteropServices;
-<span class="highlight-keyword">using</span> Microsoft.VisualStudio.Shell;
-
-[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = <span class="highlight-keyword">false</span>)]
-<span class="highlight-keyword">internal</span> <span class="highlight-keyword">sealed</span> <span class="highlight-keyword">class</span> ProvideBindingPathAttribute : RegistrationAttribute
-{
-    <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">string</span> GetPathToKey(RegistrationContext context)
-    {
-        Guid componentGuid = GetAssemblyGuid(context.CodeBase);
-        <span class="highlight-keyword">return</span> <span class="highlight-keyword">string</span>.Concat(<span class="highlight-literal">@"BindingPaths\"</span>, componentGuid.ToString(<span class="highlight-literal">"B"</span>).ToUpperInvariant());
-    }
-
-    <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> Guid GetAssemblyGuid(<span class="highlight-keyword">string</span> codeBase)
-    {
-        <span class="highlight-keyword">string</span> assemblyFile = <span class="highlight-keyword">new</span> Uri(codeBase).LocalPath;
-        Assembly assembly = Assembly.LoadFrom(codeBase);
-        <span class="highlight-keyword">object</span>[] attributesData = assembly.GetCustomAttributes(<span class="highlight-keyword">typeof</span>(GuidAttribute), <span class="highlight-keyword">false</span>);
-        <span class="highlight-keyword">if</span> (attributesData.Length == <span class="highlight-number">0</span>)
-            <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> ArgumentException(<span class="highlight-literal">"The specified assembly did not contain a [Guid] attribute."</span>);
-
-        <span class="highlight-keyword">return</span> <span class="highlight-keyword">new</span> Guid(((GuidAttribute)attributesData[<span class="highlight-number">0</span>]).Value);
-    }
-
-    <span class="highlight-keyword">public</span> <span class="highlight-keyword">override</span> <span class="highlight-keyword">void</span> Register(RegistrationContext context)
-    {
-        <span class="highlight-keyword">if</span> (context == <span class="highlight-keyword">null</span>)
-            <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> ArgumentNullException(<span class="highlight-literal">"context"</span>);
-
-        <span class="highlight-keyword">using</span> (Key childKey = context.CreateKey(GetPathToKey(context)))
-        {
-            childKey.SetValue(context.ComponentPath, <span class="highlight-keyword">string</span>.Empty);
-        }
-    }
-
-    <span class="highlight-keyword">public</span> <span class="highlight-keyword">override</span> <span class="highlight-keyword">void</span> Unregister(RegistrationContext context)
-    {
-        <span class="highlight-keyword">if</span> (context == <span class="highlight-keyword">null</span>)
-            <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> ArgumentNullException(<span class="highlight-literal">"context"</span>);
-
-        context.RemoveKey(GetPathToKey(context));
-    }
-}</pre></div><div id="ID0ECAAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>using System;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Shell;
-
-[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
-internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
-{
-    private static string GetPathToKey(RegistrationContext context)
-    {
-        Guid componentGuid = GetAssemblyGuid(context.CodeBase);
-        return string.Concat(@"BindingPaths\", componentGuid.ToString("B").ToUpperInvariant());
-    }
-
-    private static Guid GetAssemblyGuid(string codeBase)
-    {
-        string assemblyFile = new Uri(codeBase).LocalPath;
-        Assembly assembly = Assembly.LoadFrom(codeBase);
-        object[] attributesData = assembly.GetCustomAttributes(typeof(GuidAttribute), false);
-        if (attributesData.Length == 0)
-            throw new ArgumentException("The specified assembly did not contain a [Guid] attribute.");
-
-        return new Guid(((GuidAttribute)attributesData[0]).Value);
-    }
-
-    public override void Register(RegistrationContext context)
-    {
-        if (context == null)
-            throw new ArgumentNullException("context");
-
-        using (Key childKey = context.CreateKey(GetPathToKey(context)))
-        {
-            childKey.SetValue(context.ComponentPath, string.Empty);
-        }
-    }
-
-    public override void Unregister(RegistrationContext context)
-    {
-        if (context == null)
-            throw new ArgumentNullException("context");
-
-        context.RemoveKey(GetPathToKey(context));
-    }
-}</pre></div><div id="ID0ECAAEAAAAA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0ECAAEAAAAA_code_Plain_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0ECAAEAAAAA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0ECAAEAAAAA_code_Plain_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0ECAAEAAAAA_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0ECAAEAAAAA_code_Plain_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0ECAAEAAAAA');</script><p>
-                  To use the attribute make sure your <em>AssemblyInfo.cs</em> contains the following
-                  line.
-                </p><div id="ID0EAAAEAAAAA" class="codeSnippetContainer"><div class="codeSnippetContainerTabs" id="ID0EAAAEAAAAA_tabs"><div id="ID0EAAAEAAAAA_tab1" class="codeSnippetContainerTabActive" dir="ltr" EnableCopyCode="true"><a href="#" onclick="javascript:ChangeTab('ID0EAAAEAAAAA','C#','1','4');return false;">C#</a></div><div id="ID0EAAAEAAAAA_tab2" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>C++</a></div><div id="ID0EAAAEAAAAA_tab3" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>F#</a></div><div id="ID0EAAAEAAAAA_tab4" class="codeSnippetContainerTabPhantom" dir="ltr" EnableCopyCode="true" disabled="true"><a>VB</a></div></div><div id="ID0EAAAEAAAAA_codecollection" class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAAAEAAAAA_ViewColorized" href="#" onclick="javascript:ExchangeTitleContent('ID0EAAAEAAAAA','4')" title="View Colorized" style="display: none">View Colorized</a><a id="ID0EAAAEAAAAA_copycode" href="#" onclick="javascript:CopyToClipboard('ID0EAAAEAAAAA','4')" title="Copy to Clipboard">Copy to Clipboard</a><a id="ID0EAAAEAAAAA_PrintText" class="OH_PrintText" href="#" onclick="javascript:Print('ID0EAAAEAAAAA','4')" title="Print">Print</a></div></div><div id="ID0EAAAEAAAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre>[assembly: ProvideBindingPath]</pre></div><div id="ID0EAAAEAAAAA_code_Plain_Div1" class="codeSnippetContainerCode" style="display: none"><pre>[assembly: ProvideBindingPath]</pre></div><div id="ID0EAAAEAAAAA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAAAEAAAAA_code_Plain_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAAAEAAAAA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAAAEAAAAA_code_Plain_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAAAEAAAAA_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAAAEAAAAA_code_Plain_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0EAAAEAAAAA');</script></div><a id="Use"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Using the Extension Methods</div></div><p>
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll")]</pre></div><div id="ID0EAEAAAAA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAEAAAAA_code_Plain_Div2" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAEAAAAA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAEAAAAA_code_Plain_Div3" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAEAAAAA_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div><div id="ID0EAEAAAAA_code_Plain_Div4" class="codeSnippetContainerCode" style="display: none"><pre></pre></div></div></div><script>addSpecificTextLanguageTagSet('ID0EAEAAAAA');</script><a id="Use"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Using the Extension Methods</div></div><p>
           Extension methods for the following types are included.
         </p><ul><li><span sdata="cer" target="T:System.IServiceProvider"><a href="http://msdn2.microsoft.com/en-us/library/zbywf1tw" target="_blank">System<span id="ID0EBAACACAAAAA"> </span><script type="text/javascript">
 					addToLanSpecTextIdSet("ID0EBAACACAAAAA?vb=.|cpp=::|cs=.|fs=.|nu=.");
-				</script>IServiceProvider</a></span></li><li><span sdata="cer" target="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider"><a href="http://msdn2.microsoft.com/en-us/library/ms363650" target="_blank">IServiceProvider</a></span></li><li><span sdata="cer" target="T:Microsoft.VisualStudio.Shell.SVsServiceProvider"><a href="http://msdn2.microsoft.com/en-us/library/ee848656" target="_blank">SVsServiceProvider</a></span></li></ul><a id="Implementation"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Implementation Details</div></div><p>
+				</script>IServiceProvider</a></span></li><li><span sdata="cer" target="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider"><a href="http://msdn2.microsoft.com/en-us/library/ms363650" target="_blank">Microsoft.VisualStudio.OLE.Interop<span id="ID0EBAABACAAAAA"> </span><script type="text/javascript">
+					addToLanSpecTextIdSet("ID0EBAABACAAAAA?vb=.|cpp=::|cs=.|fs=.|nu=.");
+				</script>IServiceProvider</a></span></li><li><span sdata="cer" target="T:Microsoft.VisualStudio.Shell.SVsServiceProvider"><a href="http://msdn2.microsoft.com/en-us/library/ee848656" target="_blank">Microsoft.VisualStudio.Shell<span id="ID0EBAAAACAAAAA"> </span><script type="text/javascript">
+					addToLanSpecTextIdSet("ID0EBAAAACAAAAA?vb=.|cpp=::|cs=.|fs=.|nu=.");
+				</script>SVsServiceProvider</a></span></li></ul><a id="Implementation"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Implementation Details</div></div><p>
           This package simplifies access to these global services by ensuring the correct access method is used.
           For example, consider the differences required for accessing each of the following services.
         </p><ul><li><span sdata="cer" target="T:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg"><a href="http://msdn2.microsoft.com/en-us/library/bb167160" target="_blank">IVsAddProjectItemDlg</a></span>: This global
@@ -173,7 +60,11 @@ internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
               above, but the naming convention is different.
             </li><li><span sdata="cer" target="T:Microsoft.VisualStudio.Language.Intellisense.IGlyphService"><a href="http://msdn2.microsoft.com/en-us/library/dd885429" target="_blank">IGlyphService</a></span>: This global
               service is accessed by first obtaining an instance of <span sdata="cer" target="T:Microsoft.VisualStudio.ComponentModelHost.IComponentModel"><a href="http://msdn2.microsoft.com/en-us/library/ee830950" target="_blank">IComponentModel</a></span>
-              from the service provider, and then calling the <span sdata="cer" target="M:Microsoft.VisualStudio.ComponentModelHost.IComponentModel.GetService``1"><a href="http://msdn2.microsoft.com/en-us/library/ee830930" target="_blank">GetService``1<span id="ID0EAABAAAAAAAA"> </span><script type="text/javascript">
+              from the service provider, and then calling the <span sdata="cer" target="M:Microsoft.VisualStudio.ComponentModelHost.IComponentModel.GetService``1"><a href="http://msdn2.microsoft.com/en-us/library/ee830930" target="_blank">GetService<span id="ID0EDABAAAAAAAA"> </span><script type="text/javascript">
+					addToLanSpecTextIdSet("ID0EDABAAAAAAAA?vb=(Of |cpp=<|cs=<|fs=<'|nu=(");
+				</script>T<span id="ID0EBABAAAAAAAA"> </span><script type="text/javascript">
+					addToLanSpecTextIdSet("ID0EBABAAAAAAAA?vb=)|cpp=>|cs=>|fs=>|nu=)");
+				</script><span id="ID0EAABAAAAAAAA"> </span><script type="text/javascript">
 					addToLanSpecTextIdSet("ID0EAABAAAAAAAA?vb=|cpp=()|cs=()|fs=()|nu=()");
 				</script></a></span>
               method. This pattern is common for global services that are provided through the Managed Extensibility Framework (MEF) rather than

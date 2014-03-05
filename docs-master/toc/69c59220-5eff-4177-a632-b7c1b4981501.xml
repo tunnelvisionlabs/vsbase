@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="3a2f9cdd-6921-4173-8765-c795190723b6" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
-  <HelpTOCNode Id="e4ec00f6-ba39-46d0-a421-242bcd7abf1c" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
+<HelpTOCNode Id="e56ed5f3-789f-4291-a200-9e8fadb0f26a" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
+  <HelpTOCNode Id="40539399-7643-465a-902c-2cfa21b6b462" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm" HasChildren="true" />
   <HelpTOCNode Title="Output Window Service" Url="html/9452cedb-1942-4d9b-b911-7ef1e882f421.htm" />
+  <HelpTOCNode Title="Shell Utility Library" Url="html/3d25ef44-296a-4523-8286-ce65f8b47c76.htm" />
+  <HelpTOCNode Title="Text Editor Utility Library" Url="html/07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm" />
+  <HelpTOCNode Title="Commenter Service" Url="html/01698620-4fc8-4cb0-bb42-5b3a84b8dd66.htm" />
 </HelpTOCNode>

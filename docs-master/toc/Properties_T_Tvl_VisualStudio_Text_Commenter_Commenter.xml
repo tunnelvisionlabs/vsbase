@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOCNode Id="e02221bb-a7bb-4c0c-9ba9-c81a1f1102d0" Title="Commenter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+  <HelpTOCNode Title="BlockFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_BlockFormats.htm" />
+  <HelpTOCNode Title="CommentFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_CommentFormats.htm" />
+  <HelpTOCNode Title="LineFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_LineFormats.htm" />
+  <HelpTOCNode Title="PreferredBlockFormat Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredBlockFormat.htm" />
+  <HelpTOCNode Title="PreferredLineFormat Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredLineFormat.htm" />
+  <HelpTOCNode Title="TextUndoHistoryRegistry Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextUndoHistoryRegistry.htm" />
+  <HelpTOCNode Title="TextView Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextView.htm" />
+  <HelpTOCNode Title="UseLineComments Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_UseLineComments.htm" />
+</HelpTOCNode>

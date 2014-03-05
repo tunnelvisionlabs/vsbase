@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOCNode Id="4d67d3ca-fc63-4843-9942-797ba7cc46d9" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
+  <HelpTOCNode Id="880449bb-24e3-4d95-ad78-a52a3905529e" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="1f61b769-764c-4f06-9599-5f788b45f73f" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
+  <HelpTOCNode Id="de09d036-a989-4554-9689-9151cc54e193" Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="e181d9ef-bdd8-4874-ac1c-60e510d03b27" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
+</HelpTOCNode>

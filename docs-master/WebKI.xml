@@ -1,10 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
   <HelpKINode Title="Activate method" Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Activate.htm" />
+  <HelpKINode Title="AllowNesting property" Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" />
   <HelpKINode Title="AsVsServiceProvider method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_AsVsServiceProvider.htm" />
+  <HelpKINode Title="BlockCommentFormat class">
+    <HelpKINode Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
+    <HelpKINode Title="about BlockCommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BlockCommentFormat.AllowNesting property" Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" />
+  <HelpKINode Title="BlockCommentFormat.BlockCommentFormat constructor" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm" />
+  <HelpKINode Title="BlockCommentFormat.EndText property" Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" />
+  <HelpKINode Title="BlockCommentFormat.StartText property" Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" />
+  <HelpKINode Title="BlockFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_BlockFormats.htm" />
   <HelpKINode Title="Build field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Build.htm" />
+  <HelpKINode Title="CommandFilter class">
+    <HelpKINode Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm" />
+    <HelpKINode Title="about CommandFilter class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandFilter.CommandFilter constructor" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter__ctor.htm" />
+  <HelpKINode Title="CommandFilter.Connect method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Connect.htm" />
+  <HelpKINode Title="CommandFilter.Disconnect method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Disconnect.htm" />
+  <HelpKINode Title="CommandFilter.Dispose method" Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm" />
+  <HelpKINode Title="CommandFilter.Enabled property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_Enabled.htm" />
+  <HelpKINode Title="CommandFilter.HandlePostExec method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePostExec.htm" />
+  <HelpKINode Title="CommandFilter.HandlePreExec method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePreExec.htm" />
+  <HelpKINode Title="CommandFilter.IsDisposed property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposed.htm" />
+  <HelpKINode Title="CommandFilter.IsDisposing property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposing.htm" />
+  <HelpKINode Title="CommandFilter.QueryCommandStatus method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryCommandStatus.htm" />
+  <HelpKINode Title="CommandFilter.QueryParameterList method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryParameterList.htm" />
+  <HelpKINode Title="CommandFilter.ThrowIfDisposed method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_ThrowIfDisposed.htm" />
+  <HelpKINode Title="CommentBlock method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentBlock.htm" />
+  <HelpKINode Title="Commenter class">
+    <HelpKINode Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" />
+    <HelpKINode Title="about Commenter class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Commenter.BlockFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_BlockFormats.htm" />
+  <HelpKINode Title="Commenter.CommentBlock method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentBlock.htm" />
+  <HelpKINode Title="Commenter.Commenter constructor" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" />
+  <HelpKINode Title="Commenter.CommentFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_CommentFormats.htm" />
+  <HelpKINode Title="Commenter.CommentLines method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentLines.htm" />
+  <HelpKINode Title="Commenter.CommentSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpan.htm" />
+  <HelpKINode Title="Commenter.CommentSpans method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpans.htm" />
+  <HelpKINode Title="Commenter.LineFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_LineFormats.htm" />
+  <HelpKINode Title="Commenter.PreferredBlockFormat property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredBlockFormat.htm" />
+  <HelpKINode Title="Commenter.PreferredLineFormat property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredLineFormat.htm" />
+  <HelpKINode Title="Commenter.ScanToNonWhitespaceChar method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_ScanToNonWhitespaceChar.htm" />
+  <HelpKINode Title="Commenter.TextUndoHistoryRegistry property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextUndoHistoryRegistry.htm" />
+  <HelpKINode Title="Commenter.TextView property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextView.htm" />
+  <HelpKINode Title="Commenter.TrimSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TrimSpan.htm" />
+  <HelpKINode Title="Commenter.TryUncommentBlock method" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" />
+  <HelpKINode Title="Commenter.UncommentLines method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentLines.htm" />
+  <HelpKINode Title="Commenter.UncommentSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpan.htm" />
+  <HelpKINode Title="Commenter.UncommentSpans method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpans.htm" />
+  <HelpKINode Title="Commenter.UseLineComments property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_UseLineComments.htm" />
+  <HelpKINode Title="CommentFormat class">
+    <HelpKINode Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" />
+    <HelpKINode Title="about CommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Tvl_VisualStudio_Text_Commenter_CommentFormat__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommentFormat.CommentFormat constructor" Url="html/M_Tvl_VisualStudio_Text_Commenter_CommentFormat__ctor.htm" />
+  <HelpKINode Title="CommentFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_CommentFormats.htm" />
+  <HelpKINode Title="CommentLines method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentLines.htm" />
+  <HelpKINode Title="CommentSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpan.htm" />
+  <HelpKINode Title="CommentSpans method">
+    <HelpKINode Title="Commenter.CommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpans.htm" />
+    <HelpKINode Title="ICommenter.CommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_CommentSpans.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Connect method">
+    <HelpKINode Title="CommandFilter.Connect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Connect.htm" />
+    <HelpKINode Title="TextViewCommandFilter.Connect Method " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Connect.htm" />
+  </HelpKINode>
   <HelpKINode Title="Debug field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Debug.htm" />
+  <HelpKINode Title="Disconnect method">
+    <HelpKINode Title="CommandFilter.Disconnect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Disconnect.htm" />
+    <HelpKINode Title="TextViewCommandFilter.Disconnect Method " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Disconnect.htm" />
+  </HelpKINode>
   <HelpKINode Title="DisplayName property" Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition_DisplayName.htm" />
+  <HelpKINode Title="Dispose method" Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm" />
+  <HelpKINode Title="Enabled property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_Enabled.htm" />
+  <HelpKINode Title="EndText property" Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" />
   <HelpKINode Title="General field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" />
   <HelpKINode Title="GetActivityLog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetActivityLog.htm" />
   <HelpKINode Title="GetAddProjectItemDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddProjectItemDialog.htm" />
@@ -18,6 +102,7 @@
   <HelpKINode Title="GetCommandNameMapping method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandNameMapping.htm" />
   <HelpKINode Title="GetCommandWindow method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindow.htm" />
   <HelpKINode Title="GetCommandWindowsCollection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindowsCollection.htm" />
+  <HelpKINode Title="GetCommenter method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider_GetCommenter.htm" />
   <HelpKINode Title="GetComponentModel method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModel.htm" />
   <HelpKINode Title="GetComponentSelectorDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog.htm" />
   <HelpKINode Title="GetComponentSelectorDialog2 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog2.htm" />
@@ -118,7 +203,22 @@
   <HelpKINode Title="GetWebPreview method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebPreview.htm" />
   <HelpKINode Title="GetWebProxy method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebProxy.htm" />
   <HelpKINode Title="GetWebUrlMru method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebUrlMru.htm" />
+  <HelpKINode Title="HandlePostExec method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePostExec.htm" />
+  <HelpKINode Title="HandlePreExec method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePreExec.htm" />
   <HelpKINode Title="Hide method" Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Hide.htm" />
+  <HelpKINode Title="ICommenter interface">
+    <HelpKINode Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" />
+    <HelpKINode Title="about ICommenter interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommenter.CommentSpans method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_CommentSpans.htm" />
+  <HelpKINode Title="ICommenter.UncommentSpans method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_UncommentSpans.htm" />
+  <HelpKINode Title="ICommenterProvider interface">
+    <HelpKINode Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" />
+    <HelpKINode Title="about ICommenterProvider interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommenterProvider.GetCommenter method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider_GetCommenter.htm" />
   <HelpKINode Title="IOutputWindowPane interface">
     <HelpKINode Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" />
     <HelpKINode Title="about IOutputWindowPane interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" />
@@ -136,7 +236,19 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm" />
   </HelpKINode>
   <HelpKINode Title="IOutputWindowService.TryGetPane method" Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService_TryGetPane.htm" />
+  <HelpKINode Title="IsDisposed property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposed.htm" />
+  <HelpKINode Title="IsDisposing property" Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposing.htm" />
   <HelpKINode Title="license agreement" Url="html/3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" />
+  <HelpKINode Title="LineCommentFormat class">
+    <HelpKINode Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
+    <HelpKINode Title="about LineCommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Tvl_VisualStudio_Text_Commenter_LineCommentFormat__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LineCommentFormat.LineCommentFormat constructor" Url="html/M_Tvl_VisualStudio_Text_Commenter_LineCommentFormat__ctor.htm" />
+  <HelpKINode Title="LineCommentFormat.StartText property" Url="html/P_Tvl_VisualStudio_Text_Commenter_LineCommentFormat_StartText.htm" />
+  <HelpKINode Title="LineFormats property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_LineFormats.htm" />
   <HelpKINode Title="Name property" Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Name.htm" />
   <HelpKINode Title="OutputWindowDefinition class">
     <HelpKINode Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
@@ -157,6 +269,11 @@
   <HelpKINode Title="PredefinedOutputWindowPanes.General field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" />
   <HelpKINode Title="PredefinedOutputWindowPanes.TvlDiagnostics field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlDiagnostics.htm" />
   <HelpKINode Title="PredefinedOutputWindowPanes.TvlIntellisense field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlIntellisense.htm" />
+  <HelpKINode Title="PreferredBlockFormat property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredBlockFormat.htm" />
+  <HelpKINode Title="PreferredLineFormat property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_PreferredLineFormat.htm" />
+  <HelpKINode Title="QueryCommandStatus method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryCommandStatus.htm" />
+  <HelpKINode Title="QueryParameterList method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryParameterList.htm" />
+  <HelpKINode Title="ScanToNonWhitespaceChar method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_ScanToNonWhitespaceChar.htm" />
   <HelpKINode Title="ServiceProviderExtensions class">
     <HelpKINode Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" />
     <HelpKINode Title="about ServiceProviderExtensions class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" />
@@ -167,20 +284,59 @@
   <HelpKINode Title="ServiceProviderExtensions.TryGetGlobalService(Of TServiceClass, TServiceInterface) method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
   <HelpKINode Title="ServiceProviderExtensions.TryGetGlobalService&lt;TServiceClass, TServiceInterface&gt; method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
   <HelpKINode Title="ServiceProviderExtensions.TryGetOleServiceProvider method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetOleServiceProvider.htm" />
+  <HelpKINode Title="StartText property">
+    <HelpKINode Title="BlockCommentFormat.StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" />
+    <HelpKINode Title="LineCommentFormat.StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_LineCommentFormat_StartText.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextUndoHistoryRegistry property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextUndoHistoryRegistry.htm" />
+  <HelpKINode Title="TextView property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_TextView.htm" />
+  <HelpKINode Title="TextViewAdapter property" Url="html/P_Tvl_VisualStudio_Text_TextViewCommandFilter_TextViewAdapter.htm" />
+  <HelpKINode Title="TextViewCommandFilter class">
+    <HelpKINode Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" />
+    <HelpKINode Title="about TextViewCommandFilter class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextViewCommandFilter.Connect method" Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Connect.htm" />
+  <HelpKINode Title="TextViewCommandFilter.Disconnect method" Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Disconnect.htm" />
+  <HelpKINode Title="TextViewCommandFilter.TextViewAdapter property" Url="html/P_Tvl_VisualStudio_Text_TextViewCommandFilter_TextViewAdapter.htm" />
+  <HelpKINode Title="TextViewCommandFilter.TextViewCommandFilter constructor" Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter__ctor.htm" />
+  <HelpKINode Title="ThrowIfDisposed method" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_ThrowIfDisposed.htm" />
+  <HelpKINode Title="TrimSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TrimSpan.htm" />
   <HelpKINode Title="TryGetGlobalService(Of TServiceClass, TServiceInterface) method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
   <HelpKINode Title="TryGetGlobalService&lt;TServiceClass, TServiceInterface&gt; method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
   <HelpKINode Title="TryGetOleServiceProvider method" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetOleServiceProvider.htm" />
   <HelpKINode Title="TryGetPane method" Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService_TryGetPane.htm" />
+  <HelpKINode Title="TryUncommentBlock method" Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" />
   <HelpKINode Title="Tvl.VisualStudio.OutputWindow.Interfaces namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" />
   <HelpKINode Title="Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowPane interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm" />
   <HelpKINode Title="Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm" />
   <HelpKINode Title="Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
   <HelpKINode Title="Tvl.VisualStudio.OutputWindow.Interfaces.PredefinedOutputWindowPanes class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm" />
   <HelpKINode Title="Tvl.VisualStudio.Shell namespace" Url="html/N_Tvl_VisualStudio_Shell.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Shell.CommandFilter class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm" />
   <HelpKINode Title="Tvl.VisualStudio.Shell.ServiceProviderExtensions class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" />
   <HelpKINode Title="Tvl.VisualStudio.Shell.VsServiceProviderExtensions class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text namespace" Url="html/N_Tvl_VisualStudio_Text.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.BlockCommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.Commenter class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.CommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.Interfaces namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenter interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.Commenter.LineCommentFormat class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
+  <HelpKINode Title="Tvl.VisualStudio.Text.TextViewCommandFilter class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" />
   <HelpKINode Title="TvlDiagnostics field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlDiagnostics.htm" />
   <HelpKINode Title="TvlIntellisense field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlIntellisense.htm" />
+  <HelpKINode Title="UncommentLines method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentLines.htm" />
+  <HelpKINode Title="UncommentSpan method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpan.htm" />
+  <HelpKINode Title="UncommentSpans method">
+    <HelpKINode Title="Commenter.UncommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpans.htm" />
+    <HelpKINode Title="ICommenter.UncommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_UncommentSpans.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UseLineComments property" Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_UseLineComments.htm" />
   <HelpKINode Title="version">
     <HelpKINode Title="1.0.0.0" Url="html/02a44dd4-efaf-4844-99cb-13db77fb4c02.htm" />
     <HelpKINode Title="history" Url="html/ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm" />
