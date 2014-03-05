@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="61da7bac-0837-41e5-adb6-8c7695654e8d" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
+<HelpTOCNode Id="9f5af058-f48a-42e9-ba27-6a28a4a07e07" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
   <HelpTOCNode Title="AllowNesting Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" />
   <HelpTOCNode Title="EndText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" />
   <HelpTOCNode Title="StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" />

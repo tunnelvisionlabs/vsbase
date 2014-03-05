@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="1f61b769-764c-4f06-9599-5f788b45f73f" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
-  <HelpTOCNode Id="708da032-bfe6-4822-89ec-c0909f89f2f0" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" HasChildren="true" />
-  <HelpTOCNode Id="37823657-10ff-4ea8-a77d-53f151316df9" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
-  <HelpTOCNode Id="e02221bb-a7bb-4c0c-9ba9-c81a1f1102d0" Title="Commenter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
+<HelpTOCNode Id="ce448408-4aa0-4253-9729-a9fe47d646fb" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+  <HelpTOCNode Id="256482c5-1ebc-4ffd-afb5-353f53891a85" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" HasChildren="true" />
+  <HelpTOCNode Id="becbe685-1460-4fc6-8c57-ae14e1a62131" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
+  <HelpTOCNode Id="0bad5a2e-a888-45fe-afb7-7e45db30d03a" Title="Commenter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
 </HelpTOCNode>

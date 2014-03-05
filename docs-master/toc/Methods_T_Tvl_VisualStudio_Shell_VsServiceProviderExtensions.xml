@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="2f602c3f-f586-4488-bf76-29869dbf75fb" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+<HelpTOCNode Id="23209a7e-b79b-4200-91f2-f83c4c424b79" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
   <HelpTOCNode Title="GetActivityLog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetActivityLog.htm" />
   <HelpTOCNode Title="GetAddProjectItemDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddProjectItemDialog.htm" />
   <HelpTOCNode Title="GetAddWebReferenceDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddWebReferenceDialog.htm" />

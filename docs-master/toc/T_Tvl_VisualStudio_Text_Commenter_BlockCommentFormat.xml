@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="880449bb-24e3-4d95-ad78-a52a3905529e" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
-  <HelpTOCNode Id="7d6c9941-d81e-463c-8051-f556689e6105" Title="BlockCommentFormat Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm" HasChildren="true" />
+<HelpTOCNode Id="7741744c-8d4a-45f5-8e15-f383c0660238" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
+  <HelpTOCNode Id="e3e12dac-5576-45c9-86b6-1e97f2510247" Title="BlockCommentFormat Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm" HasChildren="true" />
   <HelpTOCNode Title="BlockCommentFormat Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
-  <HelpTOCNode Id="61da7bac-0837-41e5-adb6-8c7695654e8d" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="9f5af058-f48a-42e9-ba27-6a28a4a07e07" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
 </HelpTOCNode>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="5bfcb0fc-8a75-474b-8d15-1179f6b525cc" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm">
-  <HelpTOCNode Id="b5bfa7bf-1b12-462a-8749-20f1b646c204" Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" />
-  <HelpTOCNode Id="da2fa161-f6b6-41e5-ab60-3a45beece1f9" Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" HasChildren="true" />
+<HelpTOCNode Id="cac5532a-04a0-4874-a722-9ad0a99bc46c" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm">
+  <HelpTOCNode Id="f2119094-127b-4ec9-bfa4-7443f57f7819" Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" />
+  <HelpTOCNode Id="938f1974-9d46-4c55-b941-ccff3b16a119" Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" HasChildren="true" />
 </HelpTOCNode>

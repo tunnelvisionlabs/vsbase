@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="3187ce7c-be8e-4d0b-8226-3fee9f38058e" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm">
+<HelpTOCNode Id="dc2465e6-cfdb-4089-a7ed-eaaae46581eb" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm">
   <HelpTOCNode Title="TryUncommentBlock Method (SnapshotSpan, ITextEdit, ReadOnlyCollection(BlockCommentFormat), SnapshotSpan)" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" />
   <HelpTOCNode Title="TryUncommentBlock Method (SnapshotSpan, ITextEdit, BlockCommentFormat, SnapshotSpan)" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock_1.htm" />
 </HelpTOCNode>
