@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="67e47c2b-176e-4c0c-82fd-6fb8d63e6f1d" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+<HelpTOCNode Id="d9439b80-1e36-415f-89f5-2f592f72a46f" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
   <HelpTOCNode Title="AsVsServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_AsVsServiceProvider.htm" />
-  <HelpTOCNode Id="e732c263-52cf-47ce-ba84-3000e98d3ce9" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm" HasChildren="true" />
+  <HelpTOCNode Id="fdcdeb9e-27b8-4804-b496-909c00146448" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm" HasChildren="true" />
   <HelpTOCNode Title="TryGetGlobalService(TServiceClass, TServiceInterface) Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetGlobalService__2.htm" />
   <HelpTOCNode Title="TryGetOleServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetOleServiceProvider.htm" />
 </HelpTOCNode>

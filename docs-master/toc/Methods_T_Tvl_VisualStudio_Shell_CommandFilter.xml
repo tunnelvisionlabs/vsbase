@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="8cb7b56e-87d3-4870-97a0-7aff2410355d" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+<HelpTOCNode Id="ac45ba23-de7a-453d-a64b-bbbf059ab60e" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
   <HelpTOCNode Title="Connect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Connect.htm" />
   <HelpTOCNode Title="Disconnect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Disconnect.htm" />
-  <HelpTOCNode Id="9a067369-e885-4411-a890-a79236f31aaf" Title="Dispose Method " Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm" HasChildren="true" />
+  <HelpTOCNode Id="f1defa31-c627-479b-a224-c382e0592de4" Title="Dispose Method " Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm" HasChildren="true" />
   <HelpTOCNode Title="HandlePostExec Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePostExec.htm" />
   <HelpTOCNode Title="HandlePreExec Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_HandlePreExec.htm" />
   <HelpTOCNode Title="QueryCommandStatus Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryCommandStatus.htm" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="15305e4e-3ec0-44a5-acdc-a86ef8405fd0" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
-  <HelpTOCNode Id="6c6781ee-ae65-4640-89af-4f54757263c3" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
-  <HelpTOCNode Id="eb52e849-1509-4514-858c-cc0d26751721" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
-  <HelpTOCNode Id="9cad061a-85e3-43b5-a430-7602c46f8e9a" Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" HasChildren="true" />
-  <HelpTOCNode Id="ef77ad3a-de4b-4b68-ae0e-8c8a6b148dad" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
+<HelpTOCNode Id="318af69f-06e5-4c3a-8eed-f7fc183be62f" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
+  <HelpTOCNode Id="4bd8b66b-41b1-43af-a10a-d8cd60f0f3a4" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="94f2440a-389f-4aa9-81cf-13d42fb0641c" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
+  <HelpTOCNode Id="50195ace-0072-4673-a1a8-26dcc18511ae" Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" HasChildren="true" />
+  <HelpTOCNode Id="9db69912-94f6-4cd8-8eb3-d0b84f82acd9" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
 </HelpTOCNode>

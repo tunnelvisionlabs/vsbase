@@ -148,4 +148,99 @@
                 </p><ul><li><strong>DO</strong> create separate versions of your extension for each released
                       version of the unversioned assembly that you intend to support, even if the use of the
                       unversioned assembly is not exposed through the API.
-                    </li></ul></div></div></div></div></div><div id="OH_footer" class="OH_footer"><p></p><div class="OH_feedbacklink"><a href="mailto:?subject=Tunnel+Vision+Labs%27+Base+Extensions+Library+for+Visual+Studio+Assembly+Versioning+in+Extensible+Applications+100+EN-US&amp;body=Your%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report%2c%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed%2c%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.">Send Feedback</a> on this topic.</div></div><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript">$(document).ready(function () {DocumentReady();});</script></body></html>
+                    </li></ul></div><a id="ApplicationsAndExtensions"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Applications vs. Extensions</div></div><p>
+              Application developers and extension developers tend to face distinct challenges when
+              creating assemblies. For the purposes of this discussion, we'll examine the Visual
+              Studio 2010 and Visual Studio 2012 <span class="term">applications</span>, and the
+              <a href="9452cedb-1942-4d9b-b911-7ef1e882f421.htm" target="">Output Window Service</a> and
+              <a class="mtps-external-link" href="http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08" target="_blank">Inheritance Margin</a> <span class="term">extensions</span>. Visual Studio 2010 and Visual Studio 2012
+              are two consecutive major releases of an extensible application. The Inheritance Margin
+              extension is a single extension developed to support both of these versions of Visual Studio,
+              but is not intended for other extensions to these applications to reuse or extend the features
+              provided by it. The Output Window extension is a single extension developed to support both
+              versions of Visual Studio, but also provides service and support code intended for reuse in
+              many other extensions created for either (or both) versions of the application.
+            </p><h4 class="subHeading">Application Developers</h4><div class="subsection"><p>
+                  Application developers have two primary advantages in writing assemblies. First, it is much
+                  easier to write versioned assemblies when the application has complete control over the
+                  assembly binding redirection configuration. While some applications offer third-party
+                  extensions a mechanism to update the binding redirection configuration (e.g. Visual Studio
+                  2012 with the <span sdata="cer" target="T:Microsoft.VisualStudio.Shell.ProvideBindingRedirectionAttribute"><span class="nolink">ProvideBindingRedirectionAttribute</span></span>),
+                  extension for other applications (e.g. Visual Studio 2010 are restricted to the use of
+                  immutable and unversioned assemblies. Second, application developers are able to operate
+                  under a more "natural" release lifecycle. For example, the
+                  <em>Microsoft.VisualStudio.Text.Logic.dll</em> assembly which first shipped with
+                  Visual Studio 2010 was updated for a new release with Visual Studio 2012. Microsoft was
+                  never in a position to try making multiple versions of this assembly operate within the same
+                  release of Visual Studio, and also never needed to create a single common version of this
+                  assembly to operate in both Visual Studio 2010 and Visual Studio 2012. Updates to Visual
+                  Studio provide the opportunity to correct bugs in this assembly (and others), while at the
+                  same time ensuring that all dependencies are loading the most recent version of the assembly
+                  at runtime.
+                </p><p>
+                  Application developers have additional responsibilities in regards to supporting extension
+                  developers that should be carefully considered prior to releasing the extensible application.
+                  When a single extension works seamlessly across multiple versions of an application, the
+                  extension developer has lower maintenance overhead to support the extension. In most cases,
+                  extensions relying only on immutable and versioned assemblies will be able to trivially
+                  support new releases of the application. Extensions which rely on unversioned applications
+                  require special consideration, and potentially a new build and distribution, in order to
+                  support an updated application. These advantages of creating an immutable or versioned
+                  assembly must be carefully weighed against the additional challenges imposed by the long-term
+                  restrictions implied by those kinds of assemblies.
+                </p><div class="alert"><table><tr><th><img class="mtps-img-src" src="./../icons/alert_note.gif" alt="Tip"> <strong>Tip</strong></th></tr><tr><td>
+                    Defining types for extending your application in immutable or versioned assemblies reduces
+                    the maintenance burden on extension developers when new versions of your application are
+                    released. This in turn increases the number of extensions available for many versions of
+                    the application, and reduces the chance that customers relying on extensions will be unable
+                    to upgrade to the latest version of your product.
+                  </td></tr></table></div></div><h4 class="subHeading">Isolated Extension Developers</h4><div class="subsection"><p>
+                  Most extensions written for extensible applications are isolated extensions. These extensions
+                  build on the support provided by the application, but generally do not make special
+                  considerations for other extensions which may be running, or provide any special manner of
+                  further extending their functionality. The Inheritance Margin extension is a prime example
+                  of an extension developed in this manner.
+                </p></div><h4 class="subHeading">Shared Extension Developers</h4><div class="subsection"><p>
+                  Shared extension development is one of the most challenging and least understood areas of
+                  extensible applications. However, there are many cases where an extension developer should
+                  consider developing a shared extension.
+                </p><ul><li><strong>Providing New Features:</strong> Extensions which provide a highly-polished
+                      user interface for bold new features, such as the Peek Help feature provided in
+                      Productivity Power Tools for Visual Studio 2013, are prime candidates for development as a
+                      shared extension. Extensibility is especially important when users will not have another
+                      way to provide an extended version of this feature. For example, the Inheritance Margin
+                      adds a new feature to Visual Studio which <em>could</em> apply to
+                      many languages, but the current implementation is limited to C#. Installing this extension
+                      would not prevent a user from developing a second extension which independently provided
+                      the same feature for Visual Basic users, so creating a shared extension for this feature
+                      is likely not essential. On the other hand, the Peek Help feature exposes API documentation
+                      within the C# editor, but is limited to the documentation available on MSDN. Without a
+                      method to directly extend this feature, 3<small><small><sup>rd</sup></small></small>-party library
+                      developers will be unable to provide their documentation through this interface without
+                      changing to a new keyboard binding, or duplicating the ability to load documentation from
+                      MSDN.
+                    </li><li><strong>Exposing Existing Features:</strong> The Output Window extension does
+                      not add any new features to Visual Studio. Instead, it provides extension developers
+                      using MEF components with a simple, reliable way to use a Visual Studio feature which
+                      tends to cause unnecessary complexity in extension code. When developers of multiple
+                      extensions find themselves facing the same challenges and duplicating their solutions,
+                      a shared extension which dramatically simplifies the solution is highly appealing.
+                    </li></ul><p>
+                  The primary limitation shared extension developers are likely to face is an application
+                  which does not provide a method for extending the assembly binding redirection configuration.
+                  Visual Studio 2012 provides this feature by writing <em>devenv.exe</em> in
+                  native code, and using the <a class="mtps-external-link" href="http://msdn.microsoft.com/en-us/library/ms404385.aspx" target="_blank">Unmanaged Hosting API</a> to configure and start the managed runtime environment. Assembly binding
+                  redirection is an <em>essential</em> feature supporting the creation
+                  of versioned assemblies; so extension developers for applications which do not provide
+                  this feature will always be forced to write either immutable or unversioned assemblies.
+                </p><p>
+                  The other limitation governing shared extensions is imposed by the assembly binding rules
+                  for strong-named assemblies and along with the fact that MEF imports and exports components
+                  by contract names formed from the name of the type and/or member which is exported. This
+                  behavior means that the contract types, i.e. the type provided in the
+                  <span sdata="cer" target="T:System.ComponentModel.Composition.ExportAttribute"><a href="http://msdn2.microsoft.com/en-us/library/dd234971" target="_blank">ExportAttribute</a></span>
+                  for a component, must be defined in an immutable or versioned assembly.
+                </p><div class="alert"><table><tr><th><img class="mtps-img-src" src="./../icons/alert_caution.gif" alt="Important note"> <strong>Important</strong></th></tr><tr><td>
+                    The MEF contract types for most 3<small><small><sup>rd</sup></small></small>-party extensions must be
+                    defined in immutable assemblies.
+                  </td></tr></table></div></div></div></div></div></div><div id="OH_footer" class="OH_footer"><p></p><div class="OH_feedbacklink"><a href="mailto:?subject=Tunnel+Vision+Labs%27+Base+Extensions+Library+for+Visual+Studio+Assembly+Versioning+in+Extensible+Applications+100+EN-US&amp;body=Your%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report%2c%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed%2c%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.">Send Feedback</a> on this topic.</div></div><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript">$(document).ready(function () {DocumentReady();});</script></body></html>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="32a769af-1d84-423a-b435-84274162bf64" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
-  <HelpTOCNode Id="8297aa22-a984-4bb9-b78e-e19c56b73236" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" />
-  <HelpTOCNode Id="30d95736-056f-425c-a99c-3d89be294923" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" />
-  <HelpTOCNode Id="3ee81edb-9b0b-4aa0-bc7f-426ee8da97f8" Title="Tvl.VisualStudio.Text Namespace" Url="html/N_Tvl_VisualStudio_Text.htm" HasChildren="true" />
-  <HelpTOCNode Id="15305e4e-3ec0-44a5-acdc-a86ef8405fd0" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm" HasChildren="true" />
-  <HelpTOCNode Id="85c9a4ce-a035-46cf-b1b4-ae2eae23ead4" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm" HasChildren="true" />
+<HelpTOCNode Id="0c6d522f-0293-463c-9e3e-71088c7a5c77" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
+  <HelpTOCNode Id="ff04277f-ff82-4797-80fc-c6156deae33f" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" />
+  <HelpTOCNode Id="620ea739-852f-4c07-9844-956c0cbb6446" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" />
+  <HelpTOCNode Id="3635da7d-29a8-457b-836a-b82d1860bb12" Title="Tvl.VisualStudio.Text Namespace" Url="html/N_Tvl_VisualStudio_Text.htm" HasChildren="true" />
+  <HelpTOCNode Id="318af69f-06e5-4c3a-8eed-f7fc183be62f" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm" HasChildren="true" />
+  <HelpTOCNode Id="c67370b2-d859-4da6-afc5-00e678471841" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm" HasChildren="true" />
 </HelpTOCNode>

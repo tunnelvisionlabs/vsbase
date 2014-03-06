@@ -4,9 +4,9 @@
   <HelpTOCNode Title="Welcome" Url="html/262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" />
   <HelpTOCNode Title="License" Url="html/3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" />
   <HelpTOCNode Title="Assembly Versioning" Url="html/edbfd3ce-43f4-4f3f-a90c-bc22bda19fae.htm" />
-  <HelpTOCNode Id="5e6991a0-0b9e-48bd-bb95-28318804119e" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
-    <HelpTOCNode Id="66019f62-f340-43f6-babe-af0742e78737" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm">
-      <HelpTOCNode Id="88adb74f-f15d-4f7f-a79a-0b204a41fea5" Title="Version History" Url="html/ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm">
+  <HelpTOCNode Id="a83ce80c-7bb4-4844-b2f1-501240206a5b" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm">
+    <HelpTOCNode Id="bd9fc195-e58e-4808-a584-bfba622262ad" Title="Shell Service Extensions" Url="html/c2cfc56d-e966-492a-9b12-66c7d01e7146.htm">
+      <HelpTOCNode Id="ce7cafdb-3613-498c-928e-e5d0d1229121" Title="Version History" Url="html/ef23c357-11af-4eed-a698-0c5a84b8c8cc.htm">
         <HelpTOCNode Title="Version 1.0.0.0" Url="html/02a44dd4-efaf-4844-99cb-13db77fb4c02.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
@@ -15,33 +15,33 @@
     <HelpTOCNode Title="Text Editor Utility Library" Url="html/07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm" />
     <HelpTOCNode Title="Commenter Service" Url="html/01698620-4fc8-4cb0-bb42-5b3a84b8dd66.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="32a769af-1d84-423a-b435-84274162bf64" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
-    <HelpTOCNode Id="8297aa22-a984-4bb9-b78e-e19c56b73236" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm">
-      <HelpTOCNode Id="d3bc085d-ced2-47f7-84c9-e9fe5d98056a" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
-        <HelpTOCNode Id="131d88cc-fb54-4792-8cb5-9a50f741dbd4" Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+  <HelpTOCNode Id="0c6d522f-0293-463c-9e3e-71088c7a5c77" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
+    <HelpTOCNode Id="ff04277f-ff82-4797-80fc-c6156deae33f" Title="Tvl.VisualStudio.OutputWindow.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm">
+      <HelpTOCNode Id="d0044be8-fe76-4b75-8ee0-c581bd789b81" Title="IOutputWindowPane Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+        <HelpTOCNode Id="8c58ad64-7f2c-4aeb-b2e3-d4f58b016789" Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
           <HelpTOCNode Title="Activate Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Activate.htm" />
           <HelpTOCNode Title="Hide Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Hide.htm" />
           <HelpTOCNode Title="Write Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Write.htm" />
           <HelpTOCNode Title="WriteLine Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_WriteLine.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="050e1d00-845a-4cc5-92c8-842a842642e8" Title="IOutputWindowPane Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+        <HelpTOCNode Id="d5c94bbc-31fc-430a-82a6-d5e778da5b51" Title="IOutputWindowPane Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
           <HelpTOCNode Title="Name Property " Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Name.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c15d19ee-ac52-41b2-83d8-9460102abec1" Title="IOutputWindowService Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
-        <HelpTOCNode Id="9c1fffe7-21ca-4f71-b74b-e173368972b2" Title="IOutputWindowService Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
+      <HelpTOCNode Id="6df9cfff-f5f5-4c3d-9bcd-922900f9cb06" Title="IOutputWindowService Interface" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
+        <HelpTOCNode Id="fec6fe1d-f65d-4773-b73e-5f02ad861010" Title="IOutputWindowService Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService.htm">
           <HelpTOCNode Title="TryGetPane Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowService_TryGetPane.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="63feaa61-4ca0-4697-bedf-05d90771eb59" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
+      <HelpTOCNode Id="d945e5ce-8bf8-401c-910c-29048721c8e0" Title="OutputWindowDefinition Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
         <HelpTOCNode Title="OutputWindowDefinition Constructor " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition__ctor.htm" />
         <HelpTOCNode Title="OutputWindowDefinition Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm" />
-        <HelpTOCNode Id="90ee1518-044a-434d-8178-a9104caa4bd5" Title="OutputWindowDefinition Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
+        <HelpTOCNode Id="8d2857a4-b421-4c51-a431-85aa4c5b3502" Title="OutputWindowDefinition Properties" Url="html/Properties_T_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition.htm">
           <HelpTOCNode Title="DisplayName Property " Url="html/P_Tvl_VisualStudio_OutputWindow_Interfaces_OutputWindowDefinition_DisplayName.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="edf45547-9757-4041-a848-393b14c1d7cd" Title="PredefinedOutputWindowPanes Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
-        <HelpTOCNode Id="81619530-34ab-440a-878e-69bef48a0e9f" Title="PredefinedOutputWindowPanes Fields" Url="html/Fields_T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
+      <HelpTOCNode Id="a22cb8ad-e019-47c4-be1f-6a42c9b26849" Title="PredefinedOutputWindowPanes Class" Url="html/T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
+        <HelpTOCNode Id="ecb5a370-bb8e-408d-b6db-2cb7c49c8c6a" Title="PredefinedOutputWindowPanes Fields" Url="html/Fields_T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
           <HelpTOCNode Title="Build Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Build.htm" />
           <HelpTOCNode Title="Debug Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Debug.htm" />
           <HelpTOCNode Title="General Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" />
@@ -50,13 +50,13 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="30d95736-056f-425c-a99c-3d89be294923" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
-      <HelpTOCNode Id="6db37c84-d4a7-4d0a-bf9b-94c5c2754d9f" Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+    <HelpTOCNode Id="620ea739-852f-4c07-9844-956c0cbb6446" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
+      <HelpTOCNode Id="f95d97b5-e642-4522-8210-c22fa4f94757" Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm">
         <HelpTOCNode Title="CommandFilter Constructor " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter__ctor.htm" />
-        <HelpTOCNode Id="8cb7b56e-87d3-4870-97a0-7aff2410355d" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+        <HelpTOCNode Id="ac45ba23-de7a-453d-a64b-bbbf059ab60e" Title="CommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
           <HelpTOCNode Title="Connect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Connect.htm" />
           <HelpTOCNode Title="Disconnect Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Disconnect.htm" />
-          <HelpTOCNode Id="9a067369-e885-4411-a890-a79236f31aaf" Title="Dispose Method " Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm">
+          <HelpTOCNode Id="f1defa31-c627-479b-a224-c382e0592de4" Title="Dispose Method " Url="html/Overload_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm">
             <HelpTOCNode Title="Dispose Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Dispose.htm" />
             <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_Dispose_1.htm" />
           </HelpTOCNode>
@@ -66,16 +66,16 @@
           <HelpTOCNode Title="QueryParameterList Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_QueryParameterList.htm" />
           <HelpTOCNode Title="ThrowIfDisposed Method " Url="html/M_Tvl_VisualStudio_Shell_CommandFilter_ThrowIfDisposed.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="864d33f7-10a9-4b3a-829e-e832c53ec5e8" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
+        <HelpTOCNode Id="95f908a7-6002-46b7-878c-8a173e70f1b7" Title="CommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Shell_CommandFilter.htm">
           <HelpTOCNode Title="Enabled Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_Enabled.htm" />
           <HelpTOCNode Title="IsDisposed Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposed.htm" />
           <HelpTOCNode Title="IsDisposing Property " Url="html/P_Tvl_VisualStudio_Shell_CommandFilter_IsDisposing.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="af8f94e1-caaa-4e2f-ac00-6602f495b7ee" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
-        <HelpTOCNode Id="67e47c2b-176e-4c0c-82fd-6fb8d63e6f1d" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+      <HelpTOCNode Id="22cf0a28-eb0d-4448-b991-d6f4a5ed13f8" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+        <HelpTOCNode Id="d9439b80-1e36-415f-89f5-2f592f72a46f" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
           <HelpTOCNode Title="AsVsServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_AsVsServiceProvider.htm" />
-          <HelpTOCNode Id="e732c263-52cf-47ce-ba84-3000e98d3ce9" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm">
+          <HelpTOCNode Id="fdcdeb9e-27b8-4804-b496-909c00146448" Title="GetService Method " Url="html/Overload_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService.htm">
             <HelpTOCNode Title="GetService(TService) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__1.htm" />
             <HelpTOCNode Title="GetService(TServiceClass, TServiceInterface) Method (IServiceProvider)" Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_GetService__2.htm" />
           </HelpTOCNode>
@@ -83,8 +83,8 @@
           <HelpTOCNode Title="TryGetOleServiceProvider Method " Url="html/M_Tvl_VisualStudio_Shell_ServiceProviderExtensions_TryGetOleServiceProvider.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="b6a804d9-015d-4fcc-a9b5-5b0f8037c727" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
-        <HelpTOCNode Id="37f4af41-8f3d-4789-8e07-9003ab88725e" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+      <HelpTOCNode Id="103189a7-2c72-4137-a90b-ba4c8aeff727" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+        <HelpTOCNode Id="34a8cad5-3d48-4112-bdad-6cec3161a0f8" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
           <HelpTOCNode Title="GetActivityLog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetActivityLog.htm" />
           <HelpTOCNode Title="GetAddProjectItemDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddProjectItemDialog.htm" />
           <HelpTOCNode Title="GetAddWebReferenceDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddWebReferenceDialog.htm" />
@@ -199,44 +199,44 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="3ee81edb-9b0b-4aa0-bc7f-426ee8da97f8" Title="Tvl.VisualStudio.Text Namespace" Url="html/N_Tvl_VisualStudio_Text.htm">
-      <HelpTOCNode Id="2f7cdf79-9810-423c-90d4-47bb0021695e" Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
+    <HelpTOCNode Id="3635da7d-29a8-457b-836a-b82d1860bb12" Title="Tvl.VisualStudio.Text Namespace" Url="html/N_Tvl_VisualStudio_Text.htm">
+      <HelpTOCNode Id="143ec0ca-04a5-4e71-b448-e7141cceb8c1" Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
         <HelpTOCNode Title="TextViewCommandFilter Constructor " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter__ctor.htm" />
-        <HelpTOCNode Id="1a1684f8-7cd0-419e-b713-7c19aa2add3e" Title="TextViewCommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
+        <HelpTOCNode Id="f8a2289f-6525-4800-8d1c-da804d396f54" Title="TextViewCommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
           <HelpTOCNode Title="Connect Method " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Connect.htm" />
           <HelpTOCNode Title="Disconnect Method " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter_Disconnect.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="262f095c-1306-4da7-a0dd-484d2f7ed46c" Title="TextViewCommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
+        <HelpTOCNode Id="9c22402d-9eb9-4af7-a0e0-585ba4f37f33" Title="TextViewCommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
           <HelpTOCNode Title="TextViewAdapter Property " Url="html/P_Tvl_VisualStudio_Text_TextViewCommandFilter_TextViewAdapter.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="15305e4e-3ec0-44a5-acdc-a86ef8405fd0" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
-      <HelpTOCNode Id="6c6781ee-ae65-4640-89af-4f54757263c3" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
-        <HelpTOCNode Id="46d7018e-8913-4e87-9de3-c00b96836ee1" Title="BlockCommentFormat Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm">
+    <HelpTOCNode Id="318af69f-06e5-4c3a-8eed-f7fc183be62f" Title="Tvl.VisualStudio.Text.Commenter Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
+      <HelpTOCNode Id="4bd8b66b-41b1-43af-a10a-d8cd60f0f3a4" Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
+        <HelpTOCNode Id="1780c826-de8f-4233-8942-0a4800ad1868" Title="BlockCommentFormat Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm">
           <HelpTOCNode Title="BlockCommentFormat Constructor (String, String)" Url="html/M_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor.htm" />
           <HelpTOCNode Title="BlockCommentFormat Constructor (String, String, Boolean)" Url="html/M_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat__ctor_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="BlockCommentFormat Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" />
-        <HelpTOCNode Id="d9ce8023-6342-4de3-b983-1a6a8ab5c851" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
+        <HelpTOCNode Id="6e3fe91e-0eaf-44d1-9ae6-a23c83cc6cb5" Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
           <HelpTOCNode Title="AllowNesting Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" />
           <HelpTOCNode Title="EndText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" />
           <HelpTOCNode Title="StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="eb52e849-1509-4514-858c-cc0d26751721" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
-        <HelpTOCNode Id="87f971cc-6f10-4234-ad6e-ab4837ef24d3" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm">
+      <HelpTOCNode Id="94f2440a-389f-4aa9-81cf-13d42fb0641c" Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+        <HelpTOCNode Id="d779e917-8eaa-4a41-a474-f2647db52648" Title="Commenter Constructor " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm">
           <HelpTOCNode Title="Commenter Constructor (ITextView, ITextUndoHistoryRegistry, IEnumerable(CommentFormat))" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter__ctor.htm" />
           <HelpTOCNode Title="Commenter Constructor (ITextView, ITextUndoHistoryRegistry, CommentFormat[])" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="8bd6e5e0-bfda-472a-b4fa-88ef648e67ce" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+        <HelpTOCNode Id="74428172-d6c6-4bf4-ab8d-eb6b9687bcb1" Title="Commenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
           <HelpTOCNode Title="CommentBlock Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentBlock.htm" />
           <HelpTOCNode Title="CommentLines Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentLines.htm" />
           <HelpTOCNode Title="CommentSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpan.htm" />
           <HelpTOCNode Title="CommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_CommentSpans.htm" />
           <HelpTOCNode Title="ScanToNonWhitespaceChar Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_ScanToNonWhitespaceChar.htm" />
           <HelpTOCNode Title="TrimSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TrimSpan.htm" />
-          <HelpTOCNode Id="70549897-7455-47d9-8827-2320a8846766" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm">
+          <HelpTOCNode Id="f95e9cdc-5b37-4a99-bede-05ccfd451981" Title="TryUncommentBlock Method " Url="html/Overload_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm">
             <HelpTOCNode Title="TryUncommentBlock Method (SnapshotSpan, ITextEdit, ReadOnlyCollection(BlockCommentFormat), SnapshotSpan)" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock.htm" />
             <HelpTOCNode Title="TryUncommentBlock Method (SnapshotSpan, ITextEdit, BlockCommentFormat, SnapshotSpan)" Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_TryUncommentBlock_1.htm" />
           </HelpTOCNode>
@@ -244,7 +244,7 @@
           <HelpTOCNode Title="UncommentSpan Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpan.htm" />
           <HelpTOCNode Title="UncommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Commenter_UncommentSpans.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="c82bc66c-309c-477f-a775-b4efa517a34c" Title="Commenter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
+        <HelpTOCNode Id="3bc6d31f-3b04-4b22-b4ad-b40791e7e949" Title="Commenter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_Commenter.htm">
           <HelpTOCNode Title="BlockFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_BlockFormats.htm" />
           <HelpTOCNode Title="CommentFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_CommentFormats.htm" />
           <HelpTOCNode Title="LineFormats Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_LineFormats.htm" />
@@ -255,27 +255,27 @@
           <HelpTOCNode Title="UseLineComments Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_Commenter_UseLineComments.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9cad061a-85e3-43b5-a430-7602c46f8e9a" Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm">
+      <HelpTOCNode Id="50195ace-0072-4673-a1a8-26dcc18511ae" Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm">
         <HelpTOCNode Title="CommentFormat Constructor " Url="html/M_Tvl_VisualStudio_Text_Commenter_CommentFormat__ctor.htm" />
         <HelpTOCNode Title="CommentFormat Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ef77ad3a-de4b-4b68-ae0e-8c8a6b148dad" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
+      <HelpTOCNode Id="9db69912-94f6-4cd8-8eb3-d0b84f82acd9" Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
         <HelpTOCNode Title="LineCommentFormat Constructor " Url="html/M_Tvl_VisualStudio_Text_Commenter_LineCommentFormat__ctor.htm" />
         <HelpTOCNode Title="LineCommentFormat Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" />
-        <HelpTOCNode Id="5bf0af4b-7b34-492a-a177-a13a62a4f4f4" Title="LineCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
+        <HelpTOCNode Id="de2f3796-69e7-477f-8dca-697a1ccaddbf" Title="LineCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm">
           <HelpTOCNode Title="StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_LineCommentFormat_StartText.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="85c9a4ce-a035-46cf-b1b4-ae2eae23ead4" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm">
-      <HelpTOCNode Id="799a19cf-eb21-478c-aac4-5dd9419c48c3" Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
-        <HelpTOCNode Id="216eb69b-8227-4344-badd-cc98d46318d4" Title="ICommenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
+    <HelpTOCNode Id="c67370b2-d859-4da6-afc5-00e678471841" Title="Tvl.VisualStudio.Text.Commenter.Interfaces Namespace" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm">
+      <HelpTOCNode Id="62c7e40c-8764-4959-a5bd-be52263f9cbc" Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
+        <HelpTOCNode Id="5c03ff72-add7-4814-8ecf-7bbcf03c2f8c" Title="ICommenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
           <HelpTOCNode Title="CommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_CommentSpans.htm" />
           <HelpTOCNode Title="UncommentSpans Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter_UncommentSpans.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="41bb732b-38bc-43d8-a497-56ef90dc9dfc" Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm">
-        <HelpTOCNode Id="269f4fd5-6a4f-48ea-a4c9-7b661465e4a7" Title="ICommenterProvider Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm">
+      <HelpTOCNode Id="d679353d-e306-44a3-9687-54362f06baed" Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm">
+        <HelpTOCNode Id="bf04f54b-6b1e-460a-b772-4686b5313a99" Title="ICommenterProvider Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm">
           <HelpTOCNode Title="GetCommenter Method " Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider_GetCommenter.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
