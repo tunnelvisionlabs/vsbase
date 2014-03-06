@@ -356,6 +356,153 @@
             </section>
           </sections>
         </section>
+
+        <section address="ApplicationsAndExtensions">
+          <title>Applications vs. Extensions</title>
+          <content>
+            <para>
+              Application developers and extension developers tend to face distinct challenges when
+              creating assemblies. For the purposes of this discussion, we'll examine the Visual
+              Studio 2010 and Visual Studio 2012 <newTerm>applications</newTerm>, and the
+              <link xlink:href="9452cedb-1942-4d9b-b911-7ef1e882f421"/> and
+              <externalLink>
+                <linkText>Inheritance Margin</linkText>
+                <linkUri>http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08</linkUri>
+              </externalLink>&#160;<newTerm>extensions</newTerm>. Visual Studio 2010 and Visual Studio 2012
+              are two consecutive major releases of an extensible application. The Inheritance Margin
+              extension is a single extension developed to support both of these versions of Visual Studio,
+              but is not intended for other extensions to these applications to reuse or extend the features
+              provided by it. The Output Window extension is a single extension developed to support both
+              versions of Visual Studio, but also provides service and support code intended for reuse in
+              many other extensions created for either (or both) versions of the application.
+            </para>
+          </content>
+          <sections>
+            <section>
+              <title>Application Developers</title>
+              <content>
+                <para>
+                  Application developers have two primary advantages in writing assemblies. First, it is much
+                  easier to write versioned assemblies when the application has complete control over the
+                  assembly binding redirection configuration. While some applications offer third-party
+                  extensions a mechanism to update the binding redirection configuration (e.g. Visual Studio
+                  2012 with the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideBindingRedirectionAttribute</codeEntityReference>),
+                  extension for other applications (e.g. Visual Studio 2010 are restricted to the use of
+                  immutable and unversioned assemblies. Second, application developers are able to operate
+                  under a more "natural" release lifecycle. For example, the
+                  <localUri>Microsoft.VisualStudio.Text.Logic.dll</localUri> assembly which first shipped with
+                  Visual Studio 2010 was updated for a new release with Visual Studio 2012. Microsoft was
+                  never in a position to try making multiple versions of this assembly operate within the same
+                  release of Visual Studio, and also never needed to create a single common version of this
+                  assembly to operate in both Visual Studio 2010 and Visual Studio 2012. Updates to Visual
+                  Studio provide the opportunity to correct bugs in this assembly (and others), while at the
+                  same time ensuring that all dependencies are loading the most recent version of the assembly
+                  at runtime.
+                </para>
+                <para>
+                  Application developers have additional responsibilities in regards to supporting extension
+                  developers that should be carefully considered prior to releasing the extensible application.
+                  When a single extension works seamlessly across multiple versions of an application, the
+                  extension developer has lower maintenance overhead to support the extension. In most cases,
+                  extensions relying only on immutable and versioned assemblies will be able to trivially
+                  support new releases of the application. Extensions which rely on unversioned applications
+                  require special consideration, and potentially a new build and distribution, in order to
+                  support an updated application. These advantages of creating an immutable or versioned
+                  assembly must be carefully weighed against the additional challenges imposed by the long-term
+                  restrictions implied by those kinds of assemblies.
+                </para>
+                <alert class="tip">
+                  <para>
+                    Defining types for extending your application in immutable or versioned assemblies reduces
+                    the maintenance burden on extension developers when new versions of your application are
+                    released. This in turn increases the number of extensions available for many versions of
+                    the application, and reduces the chance that customers relying on extensions will be unable
+                    to upgrade to the latest version of your product.
+                  </para>
+                </alert>
+              </content>
+            </section>
+            <section>
+              <title>Isolated Extension Developers</title>
+              <content>
+                <para>
+                  Most extensions written for extensible applications are isolated extensions. These extensions
+                  build on the support provided by the application, but generally do not make special
+                  considerations for other extensions which may be running, or provide any special manner of
+                  further extending their functionality. The Inheritance Margin extension is a prime example
+                  of an extension developed in this manner.
+                </para>
+              </content>
+            </section>
+            <section>
+              <title>Shared Extension Developers</title>
+              <content>
+                <para>
+                  Shared extension development is one of the most challenging and least understood areas of
+                  extensible applications. However, there are many cases where an extension developer should
+                  consider developing a shared extension.
+                </para>
+                <list class="bullet">
+                  <listItem>
+                    <para>
+                      <legacyBold>Providing New Features:</legacyBold> Extensions which provide a highly-polished
+                      user interface for bold new features, such as the Peek Help feature provided in
+                      Productivity Power Tools for Visual Studio 2013, are prime candidates for development as a
+                      shared extension. Extensibility is especially important when users will not have another
+                      way to provide an extended version of this feature. For example, the Inheritance Margin
+                      adds a new feature to Visual Studio which <legacyItalic>could</legacyItalic> apply to
+                      many languages, but the current implementation is limited to C#. Installing this extension
+                      would not prevent a user from developing a second extension which independently provided
+                      the same feature for Visual Basic users, so creating a shared extension for this feature
+                      is likely not essential. On the other hand, the Peek Help feature exposes API documentation
+                      within the C# editor, but is limited to the documentation available on MSDN. Without a
+                      method to directly extend this feature, 3<superscript>rd</superscript>-party library
+                      developers will be unable to provide their documentation through this interface without
+                      changing to a new keyboard binding, or duplicating the ability to load documentation from
+                      MSDN.
+                    </para>
+                  </listItem>
+                  <listItem>
+                    <para>
+                      <legacyBold>Exposing Existing Features:</legacyBold> The Output Window extension does
+                      not add any new features to Visual Studio. Instead, it provides extension developers
+                      using MEF components with a simple, reliable way to use a Visual Studio feature which
+                      tends to cause unnecessary complexity in extension code. When developers of multiple
+                      extensions find themselves facing the same challenges and duplicating their solutions,
+                      a shared extension which dramatically simplifies the solution is highly appealing.
+                    </para>
+                  </listItem>
+                </list>
+                <para>
+                  The primary limitation shared extension developers are likely to face is an application
+                  which does not provide a method for extending the assembly binding redirection configuration.
+                  Visual Studio 2012 provides this feature by writing <localUri>devenv.exe</localUri> in
+                  native code, and using the <externalLink>
+                    <linkText>Unmanaged Hosting API</linkText>
+                    <linkUri>http://msdn.microsoft.com/en-us/library/ms404385.aspx</linkUri>
+                  </externalLink> to configure and start the managed runtime environment. Assembly binding
+                  redirection is an <legacyItalic>essential</legacyItalic> feature supporting the creation
+                  of versioned assemblies; so extension developers for applications which do not provide
+                  this feature will always be forced to write either immutable or unversioned assemblies.
+                </para>
+                <para>
+                  The other limitation governing shared extensions is imposed by the assembly binding rules
+                  for strong-named assemblies and along with the fact that MEF imports and exports components
+                  by contract names formed from the name of the type and/or member which is exported. This
+                  behavior means that the contract types, i.e. the type provided in the
+                  <codeEntityReference>T:System.ComponentModel.Composition.ExportAttribute</codeEntityReference>
+                  for a component, must be defined in an immutable or versioned assembly.
+                </para>
+                <alert class="important">
+                  <para>
+                    The MEF contract types for most 3<superscript>rd</superscript>-party extensions must be
+                    defined in immutable assemblies.
+                  </para>
+                </alert>
+              </content>
+            </section>
+          </sections>
+        </section>
       </sections>
     </section>
 
