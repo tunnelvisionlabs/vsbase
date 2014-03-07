@@ -44,6 +44,7 @@
       <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.Logic.dll" />
       <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.dll" />
       <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.Wpf.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.CoreUtility.10.10.0.0\lib\net40\Microsoft.VisualStudio.CoreUtility.dll" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
