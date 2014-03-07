@@ -327,7 +327,7 @@
                       <legacyBold>DO NOT</legacyBold> export MEF components from unversioned assemblies. If the
                       runtime loads multiple versions of your assembly (or a different version than you expected),
                       extensions could suddenly fail en-masse. This avoids the problem described by <externalLink>
-                        <linkText>Jared Par</linkText>
+                        <linkText>Jared Parsons</linkText>
                         <linkAlternateText>Authoring a Utility Library for Visual Studio</linkAlternateText>
                         <linkUri>http://blogs.msdn.com/b/jaredpar/archive/2012/05/07/authoring-a-utility-library-for-visual-studio.aspx</linkUri>
                       </externalLink> as he developed a utility library for Visual Studio.
