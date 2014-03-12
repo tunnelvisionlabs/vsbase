@@ -5,6 +5,7 @@
     using System.Runtime.InteropServices;
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.TextManager.Interop;
+    using Tvl.VisualStudio.Shell;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
     using ITextBuffer = Microsoft.VisualStudio.Text.ITextBuffer;
     using OLECMDEXECOPT = Microsoft.VisualStudio.OLE.Interop.OLECMDEXECOPT;
@@ -70,7 +71,7 @@
         /// and <see cref="VsCommands2K.UNCOMMENT_BLOCK"/> commands. The commands are
         /// enabled when <see cref="ITextBuffer.CheckEditAccess"/> is <see langword="true"/>.
         /// </remarks>
-        protected override OLECMDF QueryCommandStatus(ref Guid group, uint id)
+        protected override OLECMDF QueryCommandStatus(ref Guid group, uint id, OleCommandText oleCommandText)
         {
             if (group == typeof(VsCommands2K).GUID)
             {
@@ -86,7 +87,7 @@
                 }
             }
 
-            return base.QueryCommandStatus(ref group, id);
+            return base.QueryCommandStatus(ref group, id, oleCommandText);
         }
 
         /// <inheritdoc/>

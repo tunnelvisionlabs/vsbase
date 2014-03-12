@@ -241,8 +241,9 @@
         /// </remarks>
         /// <param name="commandGroup">The command group.</param>
         /// <param name="commandId">The command ID.</param>
+        /// <param name="oleCommandText">A wrapper around the <see cref="OLECMDTEXT"/> object passed to <see cref="IOleCommandTarget.QueryStatus"/>, or <see langword="null"/> if this parameter should be ignored.</param>
         /// <returns>A collection of <see cref="OLECMDF"/> flags indicating the current status of a particular command, or 0 if the command is not supported by the current command filter.</returns>
-        protected virtual OLECMDF QueryCommandStatus(ref Guid commandGroup, uint commandId)
+        protected virtual OLECMDF QueryCommandStatus(ref Guid commandGroup, uint commandId, OleCommandText oleCommandText)
         {
             return default(OLECMDF);
         }
@@ -272,23 +273,26 @@
         /// <inheritdoc/>
         int IOleCommandTarget.QueryStatus(ref Guid guidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
         {
-            Guid cmdGroup = guidCmdGroup;
-            for (uint i = 0; i < cCmds; i++)
+            using (OleCommandText oleCommandText = OleCommandText.FromQueryStatus(pCmdText))
             {
-                OLECMDF status = QueryCommandStatus(ref cmdGroup, prgCmds[i].cmdID);
-                if (status == default(OLECMDF) && _next != null)
+                Guid cmdGroup = guidCmdGroup;
+                for (uint i = 0; i < cCmds; i++)
                 {
-                    int hr = _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
-                    if (ErrorHandler.Failed(hr))
-                        return hr;
+                    OLECMDF status = QueryCommandStatus(ref cmdGroup, prgCmds[i].cmdID, oleCommandText);
+                    if (status == default(OLECMDF) && _next != null)
+                    {
+                        int hr = _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
+                        if (ErrorHandler.Failed(hr))
+                            return hr;
+                    }
+                    else
+                    {
+                        prgCmds[i].cmdf = (uint)status;
+                    }
                 }
-                else
-                {
-                    prgCmds[i].cmdf = (uint)status;
-                }
-            }
 
-            return VSConstants.S_OK;
+                return VSConstants.S_OK;
+            }
         }
     }
 }
