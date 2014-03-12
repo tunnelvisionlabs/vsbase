@@ -257,10 +257,19 @@
             switch (lo)
             {
             case (ushort)OLECMDEXECOPT.OLECMDEXECOPT_SHOWHELP:
-                if ((nCmdexecopt >> 16) == VsMenus.VSCmdOptQueryParameterList)
+                if (hi == VsMenus.VSCmdOptQueryParameterList)
                 {
-                    return QueryParameterList(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    int hr = QueryParameterList(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (!ErrorHandler.Succeeded(hr) && _next != null)
+                        return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+
+                    return hr;
                 }
+                else if (_next != null)
+                {
+                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                }
+
                 break;
 
             default:
