@@ -4,10 +4,6 @@
     xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    <!--<summary>
-      <para>MEF Output Window services library for Visual Studio extension developers.</para>
-    </summary>-->
-
     <introduction>
       <para>
         The Output Window package provides support for extensions to create and use the Output Window
@@ -120,8 +116,10 @@
             <para>
               Custom output window panes may be declared by exporting the <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition</codeEntityReference>
               contract using MEF. Output window panes declared in this manner initially hidden from the Output Window each time Visual Studio starts.
-              The pane will become available in the Output Window automatically the first time <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService.TryGetPane(System.String)</codeEntityReference> is called with the name of the custom pane.
-              For more information and examples, see the documentation for <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition</codeEntityReference>.
+              The pane will become available in the Output Window automatically the first time
+              <codeEntityReference>M:Tvl.VisualStudio.OutputWindow.Interfaces.IOutputWindowService.TryGetPane(System.String)</codeEntityReference>
+              is called with the name of the custom pane. For more information and examples, see the documentation for
+              <codeEntityReference>T:Tvl.VisualStudio.OutputWindow.Interfaces.OutputWindowDefinition</codeEntityReference>.
             </para>
           </content>
         </section>
