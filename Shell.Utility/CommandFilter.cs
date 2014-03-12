@@ -278,13 +278,14 @@
                 OLECMDF status = QueryCommandStatus(ref cmdGroup, prgCmds[i].cmdID);
                 if (status == default(OLECMDF) && _next != null)
                 {
-                    if (_next != null)
-                        return _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
-                    else
-                        return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
+                    int hr = _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
+                    if (ErrorHandler.Failed(hr))
+                        return hr;
                 }
-
-                prgCmds[i].cmdf = (uint)status;
+                else
+                {
+                    prgCmds[i].cmdf = (uint)status;
+                }
             }
 
             return VSConstants.S_OK;
