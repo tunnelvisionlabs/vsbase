@@ -233,6 +233,11 @@
             return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
         }
 
+        protected virtual int ShowHelp(ref Guid commandGroup, uint commandId, OLECMDEXECOPT executionOptions, IntPtr pvaIn, IntPtr pvaOut)
+        {
+            return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
+        }
+
         /// <summary>
         /// Gets the current status of a particular command.
         /// </summary>
@@ -265,18 +270,18 @@
 
                     return hr;
                 }
-                else if (_next != null)
+                else
                 {
-                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
-                }
+                    int hr = ShowHelp(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (!ErrorHandler.Succeeded(hr) && _next != null)
+                        return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
 
-                break;
+                    return hr;
+                }
 
             default:
                 return ExecCommand(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
             }
-
-            return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
         }
 
         /// <inheritdoc/>
