@@ -206,7 +206,7 @@
     <None Include="..\..\keys\vsbase.snk">
       <Link>vsbase.snk</Link>
     </None>
-    <None Include="packages.OutputWindow.config" />
+    <None Include="packages.OutputWindow.Extension.config" />
     <None Include="source.extension.vsixmanifest" />
     <Content Include="Tvl.VisualStudio.OutputWindow.targets">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
