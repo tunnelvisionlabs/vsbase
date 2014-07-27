@@ -7,11 +7,11 @@
     <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
-      This package provides extension methods for global services available through Visual Studio's service provider interfaces.
+      This package provides extension methods for global services available through Visual Studio's service provider interfaces in Visual Studio 2010+.
 
       This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
     </description>
-    <summary>Visual Studio service provider extension methods for extension developers</summary>
+    <summary>Service provider extension methods for Visual Studio 2010+ extension developers</summary>
     <tags>vs2010 vs2012 vs2013</tags>
     <dependencies>
       <!-- Visual Studio 2010 -->
@@ -44,13 +44,13 @@
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.10.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.10.pdb" target="lib\net40"/>
-    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.10.xml" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.ShellServices.10.dll" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.ShellServices.10.pdb" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.ShellServices.10.xml" target="lib\net40"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.10.Contracts.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.10.Contracts.pdb" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.10.Contracts.dll" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.10.Contracts.pdb" target="lib\net40"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>

@@ -202,9 +202,9 @@
       <Project>{b265d713-0369-43da-9044-9ba4666657c3}</Project>
       <Name>Commenter.Implementation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.10.csproj">
       <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
-      <Name>Commenter.Interfaces</Name>
+      <Name>Commenter.Interfaces.10</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
