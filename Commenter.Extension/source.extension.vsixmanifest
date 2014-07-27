@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="Tvl.VisualStudio.Commenter.f3fd3e6d-611c-4703-b160-0c425aafbacf">
+  <Identifier Id="Tvl.VisualStudio.Commenter.F3FD3E6D-611C-4703-B160-0C425AAFBACF">
     <Name>Visual Studio Commenter Services</Name>
     <Author>Sam Harwell</Author>
     <Version>1.0.0</Version>
