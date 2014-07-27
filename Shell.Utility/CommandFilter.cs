@@ -17,6 +17,7 @@
     /// <threadsafety/>
     /// <preliminary/>
     [ComVisible(true)]
+    [CLSCompliant(false)]
     public abstract class CommandFilter : IOleCommandTarget, IDisposable
     {
         /// <summary>
