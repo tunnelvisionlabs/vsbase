@@ -9,3 +9,6 @@ obj/
 # Per-user files created by Visual Studio
 *.user
 *.suo
+
+# Roslyn IntelliSense Cache
+*.sln.ide/
