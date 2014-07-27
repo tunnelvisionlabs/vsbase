@@ -7,7 +7,7 @@
     <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
-      The Shell Utility Library provides helper classes for Visual Studio Extensions written in managed code that interact with the text editor.
+      The Text Editor Utility Library provides helper classes for Visual Studio Extensions written in managed code that interact with the text editor.
 
       This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
     </description>
