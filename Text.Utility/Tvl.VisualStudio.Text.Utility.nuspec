@@ -15,7 +15,7 @@
     <tags>vs2010 vs2012 vs2013</tags>
     <dependencies>
       <!-- Visual Studio 2010 -->
-      <dependency id="VSSDK.IDE.10" version="[10.0.0,11.0.0)"/>
+      <dependency id="VSSDK.IDE.10" version="[10.0.2,11.0.0)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.Text.Utility.dll):
         Microsoft.VisualStudio.OLE.Interop
@@ -25,9 +25,9 @@
         Microsoft.VisualStudio.Text.UI
         Tvl.VisualStudio.Commenter.Interfaces
       -->
-      <dependency id="VSSDK.OLE.Interop.10" version="[10.0.0,11.0.0)"/>
-      <dependency id="VSSDK.TextManager.Interop.10" version="[10.0.0,11.0.0)"/>
-      <dependency id="VSSDK.Text.10" version="[10.0.0,11.0.0)"/>
+      <dependency id="VSSDK.OLE.Interop" version="[7.0.2,8.0.0)"/>
+      <dependency id="VSSDK.TextManager.Interop" version="[7.0.2,8.0.0)"/>
+      <dependency id="VSSDK.Text.10" version="[10.0.2,11.0.0)"/>
       <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="[1.0.0,1.1.0)"/>
     </dependencies>
     <references>
