@@ -14,13 +14,14 @@
     <summary>Visual Studio shell utility library</summary>
     <tags>vs2010 vs2012 vs2013</tags>
     <dependencies>
+      <!-- The implementation uses features added in VS 2010, even though they aren't exposed through the API of this assembly. -->
       <!-- Visual Studio 2010 -->
       <dependency id="VSSDK.IDE.10" version="[10.0.0,11.0.0)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.Shell.Utility.dll):
         Microsoft.VisualStudio.OLE.Interop
       -->
-      <dependency id="VSSDK.OLE.Interop.10" version="[10.0.0,11.0.0)"/>
+      <dependency id="VSSDK.OLE.Interop" version="[7.0.2,8.0.0)"/>
     </dependencies>
     <references>
       <reference file="Tvl.VisualStudio.Shell.Utility.dll"/>

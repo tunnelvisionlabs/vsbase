@@ -27,24 +27,24 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\packages\VSSDK.OLE.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.OLE.Interop.dll" xmlns="" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.Shell.Interop.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Immutable.10.10.0.0\lib\net40\Microsoft.VisualStudio.Shell.Immutable.10.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.TextManager.Interop.9.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.TextManager.Interop.10.0.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.10.10.0.0\lib\net20\Microsoft.VisualStudio.TextManager.Interop.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Language.10.10.0.0\lib\net40\Microsoft.VisualStudio.Language.Intellisense.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Language.10.10.0.0\lib\net40\Microsoft.VisualStudio.Language.StandardClassification.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.ComponentModelHost.10.10.0.0\lib\net40\Microsoft.VisualStudio.ComponentModelHost.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.Data.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.Logic.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.Wpf.dll" />
-      <DocumentationSource sourceFile="..\packages\VSSDK.CoreUtility.10.10.0.0\lib\net40\Microsoft.VisualStudio.CoreUtility.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.OLE.Interop.7.0.2\lib\net20\Microsoft.VisualStudio.OLE.Interop.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.8.8.0.2\lib\net20\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.9.9.0.2\lib\net20\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.10.10.0.2\lib\net20\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Interop.7.0.2\lib\net20\Microsoft.VisualStudio.Shell.Interop.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Shell.Immutable.10.10.0.2\lib\net40\Microsoft.VisualStudio.Shell.Immutable.10.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.8.8.0.2\lib\net20\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.9.9.0.2\lib\net20\Microsoft.VisualStudio.TextManager.Interop.9.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.10.10.0.2\lib\net20\Microsoft.VisualStudio.TextManager.Interop.10.0.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.TextManager.Interop.7.0.2\lib\net20\Microsoft.VisualStudio.TextManager.Interop.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Language.10.10.0.2\lib\net40\Microsoft.VisualStudio.Language.Intellisense.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Language.10.10.0.2\lib\net40\Microsoft.VisualStudio.Language.StandardClassification.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.ComponentModelHost.10.10.0.2\lib\net40\Microsoft.VisualStudio.ComponentModelHost.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.2\lib\net40\Microsoft.VisualStudio.Text.Data.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.2\lib\net40\Microsoft.VisualStudio.Text.Logic.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.2\lib\net40\Microsoft.VisualStudio.Text.UI.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.Text.10.10.0.2\lib\net40\Microsoft.VisualStudio.Text.UI.Wpf.dll" />
+      <DocumentationSource sourceFile="..\packages\VSSDK.CoreUtility.10.10.0.2\lib\net40\Microsoft.VisualStudio.CoreUtility.dll" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
