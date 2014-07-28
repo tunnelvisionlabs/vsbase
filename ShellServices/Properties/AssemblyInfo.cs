@@ -5,11 +5,21 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+#if DEV10
 [assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.10")]
+[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.10")]
+#elif DEV11
+[assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.11")]
+[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.11")]
+#elif DEV12
+[assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.12")]
+[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.12")]
+#else
+#error Unknown target version.
+#endif
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunnel Vision Laboratories, LLC")]
-[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.10")]
 [assembly: AssemblyCopyright("Copyright © Sam Harwell 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
