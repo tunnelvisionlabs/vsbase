@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Tvl.VisualStudio.Text.Utility</id>
+    <id>Tvl.VisualStudio.Text.Utility.10</id>
     <version>0.0.0</version>
     <authors>Sam Harwell</authors>
     <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
-      The Text Editor Utility Library provides helper classes for Visual Studio Extensions written in managed code that interact with the text editor.
+      The Text Editor Utility Library provides helper classes for Visual Studio Extensions written in managed code that interact with the text editor in Visual Studio 2010+.
 
       This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
     </description>
-    <summary>Visual Studio text utility library</summary>
+    <summary>Text editor utility library for Visual Studio 2010+</summary>
     <tags>vs2010 vs2012 vs2013</tags>
     <dependencies>
       <!-- Visual Studio 2010 -->
@@ -29,6 +29,12 @@
       <dependency id="VSSDK.TextManager.Interop" version="[7.0.2,8.0.0)"/>
       <dependency id="VSSDK.Text.10" version="[10.0.2,11.0.0)"/>
       <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="[1.0.0,1.1.0)"/>
+      <!--
+      The following dependencies are not exposed, but they include assemblies which are
+      not provided by Visual Studio itself and must therefore be provided by the extension
+      which references this package.
+      -->
+      <dependency id="Tvl.VisualStudio.Shell.Utility.10" version="[1.0.0,1.1.0)"/>
     </dependencies>
     <references>
       <reference file="Tvl.VisualStudio.Text.Utility.dll"/>
@@ -36,13 +42,13 @@
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.pdb" target="lib\net40"/>
-    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.xml" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.dll" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.pdb" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.xml" target="lib\net40"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.pdb" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.dll" target="lib\net40"/>
+    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.pdb" target="lib\net40"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>

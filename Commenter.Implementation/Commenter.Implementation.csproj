@@ -190,17 +190,17 @@
     <None Include="packages.Commenter.Implementation.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.10.csproj">
       <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
-      <Name>Commenter.Interfaces</Name>
+      <Name>Commenter.Interfaces.10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shell.Utility\Shell.Utility.csproj">
+    <ProjectReference Include="..\Shell.Utility\Shell.Utility.10.csproj">
       <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
-      <Name>Shell.Utility</Name>
+      <Name>Shell.Utility.10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Text.Utility\Text.Utility.csproj">
+    <ProjectReference Include="..\Text.Utility\Text.Utility.10.csproj">
       <Project>{144c8488-5425-4759-8f44-0a67e0567a19}</Project>
-      <Name>Text.Utility</Name>
+      <Name>Text.Utility.10</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

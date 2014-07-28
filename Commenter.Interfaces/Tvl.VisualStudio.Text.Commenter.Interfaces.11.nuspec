@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Tvl.VisualStudio.Text.Commenter.Interfaces.11</id>
+    <version>0.0.0</version>
+    <authors>Sam Harwell</authors>
+    <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      This package provides the immutable interfaces for MEF-support for commenting and uncommenting code in Visual Studio 2012+.
+    </description>
+    <summary>MEF-support for Code Commenting in Visual Studio 2012+</summary>
+    <tags>vs2012 vs2013</tags>
+    <dependencies>
+      <!-- Visual Studio 2012 -->
+      <dependency id="VSSDK.IDE.11" version="[11.0.2,12.0.0)"/>
+      <!--
+      Exposed Dependencies (Tvl.VisualStudio.Text.Commenter.Interfaces.dll):
+        Microsoft.VisualStudio.Text.Data.dll
+        Microsoft.VisualStudio.Text.UI.dll
+      -->
+      <dependency id="VSSDK.Text.11" version="[11.0.2,12.0.0)"/>
+    </dependencies>
+    <references>
+      <reference file="Tvl.VisualStudio.Text.Commenter.Interfaces.dll"/>
+    </references>
+  </metadata>
+  <files>
+    <!-- Tools -->
+    <file src="install.ps1" target="tools"/>
+
+    <!-- Assemblies -->
+    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.dll" target="lib\net45"/>
+    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.pdb" target="lib\net45"/>
+    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.xml" target="lib\net45"/>
+
+    <!-- Code Contracts Assemblies -->
+    <file src="bin\vs2012\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.dll" target="lib\net45"/>
+    <file src="bin\vs2012\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.pdb" target="lib\net45"/>
+
+    <!-- Source Code -->
+    <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
+  </files>
+</package>

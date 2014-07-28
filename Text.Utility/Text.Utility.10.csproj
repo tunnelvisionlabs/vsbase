@@ -14,16 +14,17 @@
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <BaseIntermediateOutputPath>obj\vs2010\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\vs2010\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Tvl.VisualStudio.Text.Utility.xml</DocumentationFile>
+    <DocumentationFile>bin\vs2010\Debug\Tvl.VisualStudio.Text.Utility.xml</DocumentationFile>
     <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
     <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
     <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
@@ -54,11 +55,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\vs2010\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Tvl.VisualStudio.Text.Utility.xml</DocumentationFile>
+    <DocumentationFile>bin\vs2010\Release\Tvl.VisualStudio.Text.Utility.xml</DocumentationFile>
     <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
     <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
     <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
@@ -185,17 +186,17 @@
     <None Include="..\..\keys\vsbase.snk">
       <Link>vsbase.snk</Link>
     </None>
-    <None Include="packages.Text.Utility.config" />
-    <None Include="Tvl.VisualStudio.Text.Utility.nuspec" />
+    <None Include="packages.Text.Utility.10.config" />
+    <None Include="Tvl.VisualStudio.Text.Utility.10.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.10.csproj">
       <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
-      <Name>Commenter.Interfaces</Name>
+      <Name>Commenter.Interfaces.10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shell.Utility\Shell.Utility.csproj">
+    <ProjectReference Include="..\Shell.Utility\Shell.Utility.10.csproj">
       <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
-      <Name>Shell.Utility</Name>
+      <Name>Shell.Utility.10</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

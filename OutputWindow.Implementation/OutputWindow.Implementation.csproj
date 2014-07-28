@@ -175,7 +175,7 @@
       <Project>{52c5e011-ea71-4799-924b-845ce1c9ca06}</Project>
       <Name>OutputWindow.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ShellServices.10\ShellServices.10.csproj">
+    <ProjectReference Include="..\ShellServices\ShellServices.10.csproj">
       <Project>{3539ac4e-0666-4a6e-873d-03fd8f2d8cbd}</Project>
       <Name>ShellServices.10</Name>
     </ProjectReference>
