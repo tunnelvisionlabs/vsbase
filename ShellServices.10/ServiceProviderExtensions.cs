@@ -67,6 +67,7 @@
         /// <param name="serviceProvider">The service provider.</param>
         /// <returns>An instance of <see cref="IOleServiceProvider"/> returned by the service provider, or <see langword="null"/> if the service provider was unable to provide the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
         public static IOleServiceProvider TryGetOleServiceProvider(this IServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
@@ -84,6 +85,7 @@
         /// <returns>An instance of the service, or <see langword="null"/> if the service provider was unable to provide the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
         /// <exception cref="InvalidCastException">If the instance returned by the service provider for <typeparamref name="TServiceClass"/> could not be cast to <typeparamref name="TServiceInterface"/>.</exception>
+        [CLSCompliant(false)]
         public static TServiceInterface TryGetGlobalService<TServiceClass, TServiceInterface>(this IOleServiceProvider serviceProvider)
             where TServiceInterface : class
         {

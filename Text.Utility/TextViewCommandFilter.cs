@@ -16,6 +16,7 @@
     /// <threadsafety/>
     /// <preliminary/>
     [ComVisible(true)]
+    [CLSCompliant(false)]
     public abstract class TextViewCommandFilter : CommandFilter
     {
         /// <summary>

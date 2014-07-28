@@ -31,6 +31,7 @@
         /// <param name="serviceProvider">The service provider.</param>
         /// <returns>The <see cref="IComponentModel"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
         public static IComponentModel GetComponentModel(this SVsServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");

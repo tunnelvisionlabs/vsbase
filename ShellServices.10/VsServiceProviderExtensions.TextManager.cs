@@ -14,6 +14,7 @@
         /// <param name="serviceProvider">The service provider.</param>
         /// <returns>The <see cref="IVsExpansionManager"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
         public static IVsExpansionManager GetExpansionManager(this SVsServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
@@ -32,6 +33,7 @@
         /// <param name="serviceProvider">The service provider.</param>
         /// <returns>The <see cref="IVsTextManager"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
         public static IVsTextManager GetTextManager(this SVsServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
@@ -44,6 +46,7 @@
         /// <param name="serviceProvider">The service provider.</param>
         /// <returns>The <see cref="IVsTextManager2"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
         public static IVsTextManager2 GetTextManager2(this SVsServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
