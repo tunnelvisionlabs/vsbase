@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Tvl.VisualStudio.Shell.Utility.10</id>
+    <id>Tvl.VisualStudio.Shell.Utility.12</id>
     <version>0.0.0</version>
     <authors>Sam Harwell</authors>
     <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
-      The Shell Utility Library provides helper classes for Visual Studio 2010+ Extensions written in managed code that interact with the shell.
+      The Shell Utility Library provides helper classes for Visual Studio 2013+ Extensions written in managed code that interact with the shell.
 
       This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
     </description>
-    <summary>Shell utility library for Visual Studio 2010+</summary>
-    <tags>vs2010 vs2012 vs2013</tags>
+    <summary>Shell utility library for Visual Studio 2013+</summary>
+    <tags>vs2013</tags>
     <dependencies>
-      <!-- Visual Studio 2010 -->
-      <dependency id="VSSDK.IDE.10" version="[10.0.2,11.0.0)"/>
+      <!-- Visual Studio 2013 -->
+      <dependency id="VSSDK.IDE.12" version="[12.0.2,13.0.0)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.Shell.Utility.dll):
         Microsoft.VisualStudio.OLE.Interop
@@ -28,13 +28,13 @@
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.pdb" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.xml" target="lib\net40"/>
+    <file src="bin\vs2013\$Configuration$\Tvl.VisualStudio.Shell.Utility.dll" target="lib\net45"/>
+    <file src="bin\vs2013\$Configuration$\Tvl.VisualStudio.Shell.Utility.pdb" target="lib\net45"/>
+    <file src="bin\vs2013\$Configuration$\Tvl.VisualStudio.Shell.Utility.xml" target="lib\net45"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.pdb" target="lib\net40"/>
+    <file src="bin\vs2013\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.dll" target="lib\net45"/>
+    <file src="bin\vs2013\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.pdb" target="lib\net45"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
