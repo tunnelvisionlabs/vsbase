@@ -29,6 +29,11 @@
       <dependency id="VSSDK.TextManager.Interop" version="[7.0.2,8.0.0)"/>
       <dependency id="VSSDK.Text.10" version="[10.0.2,11.0.0)"/>
       <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="[1.0.0,1.1.0)"/>
+      <!--
+      The following dependencies are not exposed, but they include assemblies which are
+      not provided by Visual Studio itself and must therefore be provided by the extension
+      which references this package.
+      -->
       <dependency id="Tvl.VisualStudio.Shell.Utility.10" version="[1.0.0,1.1.0)"/>
     </dependencies>
     <references>
