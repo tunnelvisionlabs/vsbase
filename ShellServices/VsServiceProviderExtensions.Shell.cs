@@ -713,7 +713,7 @@
             return serviceProvider.GetService<SVsLaunchPadFactory, IVsLaunchPadFactory>();
         }
 
-#if DEV12PLUS
+#if DEV12PLUS && false
 #warning need to test this method
         /// <summary>
         /// Gets the global <see cref="IVsLongIdleManager"/> service.
