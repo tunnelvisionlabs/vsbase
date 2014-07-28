@@ -18,43 +18,68 @@
       <title>Installation and Distribution</title>
       <content>
         <para>
-          This package is available through NuGet under the following package IDs.
+          To ensure broad compatibility across a wide range of project configurations and Visual Studio versions, the
+          Output Window Service is distributed through several different NuGet packages.
         </para>
         <list class="bullet">
           <listItem>
             <para>
-              <codeInline>Tvl.VisualStudio.OutputWindow</codeInline>: This package should be installed into the project
-              that creates your VSIX file. If your Visual Studio extension is not broken into multiple sub-projects,
-              this is the only Output Window package you will need to explicitly install to use these features.
+              <link xlink:href="#ExtensionPackage">Output Window Service Extension</link>: Installation of this package
+              is required to ensure the Output Window Service functionality is available to your extension within Visual
+              Studio.
             </para>
           </listItem>
           <listItem>
             <para>
-              <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>: This package should be installed for
-              any project that uses the Output Window service.
+              <link xlink:href="#InterfacesPackage">Output Window Interfaces Library</link>: Installation of this package
+              is required if your Visual Studio extension uses or provides any Output Window functionality.
             </para>
           </listItem>
         </list>
-        <para>
-          After installing the appropriate NuGet package(s), you will need to configure your extension to
-          inform Visual Studio of the dependency by including the following block in your <localUri>source.extension.vsixmanifest</localUri>
-          file.
-        </para>
-        <code language="xml">
-          <![CDATA[
-          <Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
-            <Name>Visual Studio Output Window Services</Name>
-            <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
-          </Reference>
-          ]]>
-        </code>
-        <alert class="note">
-          <para>
-            A future release of this extension may include a feature to configure the <localUri>source.extension.vsixmanifest</localUri>
-            file automatically.
-          </para>
-        </alert>
       </content>
+      <sections>
+        <section address="ExtensionPackage">
+          <title>Output Window Service Extension</title>
+          <content>
+            <para>
+              In the project which creates your VSIX file (i.e. the project which contains the <localUri>source.extension.vsixmanifest</localUri>
+              file, add a NuGet reference to the <codeInline>Tvl.VisualStudio.OutputWindow</codeInline> package. After installing the NuGet package,
+              you will need to configure your extension to inform Visual Studio of the dependency by including the following block in your
+              <localUri>source.extension.vsixmanifest</localUri> file.
+            </para>
+            <alert class="important">
+              <para>
+                This code assumes the use of a "Version 1" VSIX manifest, targeting Visual Studio 2010 and newer. The reference declaration for
+                a "Version 2" manifest may differ from the syntax provided here.
+              </para>
+            </alert>
+            <code language="xml">
+              <![CDATA[
+              <Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
+                <Name>Visual Studio Output Window Services</Name>
+                <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
+              </Reference>
+              ]]>
+            </code>
+            <alert class="note">
+              <para>
+                A future release of this extension may include a feature to configure the <localUri>source.extension.vsixmanifest</localUri>
+                file automatically.
+              </para>
+            </alert>
+          </content>
+        </section>
+        <section address="InterfacesPackage">
+          <title>Commenter Interfaces Library</title>
+          <content>
+            <para>
+              The Output Window Interfaces Library should be installed in any package which uses the Output Window Service. The library is
+              available in the <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline> NuGet package, which supports extensions
+              targeting any combination of Visual Studio versions starting with 2010.
+            </para>
+          </content>
+        </section>
+      </sections>
     </section>
 
     <section address="Use">

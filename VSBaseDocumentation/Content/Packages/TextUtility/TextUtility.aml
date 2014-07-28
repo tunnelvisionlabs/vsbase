@@ -12,7 +12,7 @@
 
     <introduction>
       <para>
-        The Shell Utility Library provides helper classes for Visual Studio Extensions written in managed code
+        The Text Editor Utility Library provides helper classes for Visual Studio Extensions written in managed code
         that interact with the text editor.
       </para>
       <para>
@@ -24,8 +24,26 @@
       <title>Installation and Distribution</title>
       <content>
         <para>
-          This package may be installed through NuGet. The package ID is <codeInline>Tvl.VisualStudio.Text.Utility</codeInline>.
+          This package may be installed through NuGet. Separate packages are available depending on the
+          specific version of Visual Studio an extension is targeting.
         </para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.Text.Utility.10</codeInline>: For extensions targeting Visual Studio 2010 and newer.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.Text.Utility.11</codeInline>: For extensions targeting Visual Studio 2012 and newer.
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeInline>Tvl.VisualStudio.Text.Utility.12</codeInline>: For extensions targeting Visual Studio 2013 and newer.
+            </para>
+          </listItem>
+        </list>
         <para>
           This is a Utility Library package, as described on the <link xlink:href="69c59220-5eff-4177-a632-b7c1b4981501"/> page. If you are
           registering this assembly using the <codeEntityReference>T:Microsoft.VisualStudio.Shell.ProvideCodeBaseAttribute</codeEntityReference>
