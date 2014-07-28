@@ -8,7 +8,6 @@
     /// This interface defines the required metadata associated with an MEF-exported
     /// <see cref="OutputWindowDefinition"/>.
     /// </summary>
-    /// <preliminary/>
     public interface IOutputWindowDefinitionMetadata
     {
         /// <summary>

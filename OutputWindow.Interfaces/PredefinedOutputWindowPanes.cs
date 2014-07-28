@@ -4,7 +4,6 @@
     /// This class defines constants for the names of some of the predefined output window panes.
     /// </summary>
     /// <threadsafety/>
-    /// <preliminary/>
     public static class PredefinedOutputWindowPanes
     {
         /// <summary>
