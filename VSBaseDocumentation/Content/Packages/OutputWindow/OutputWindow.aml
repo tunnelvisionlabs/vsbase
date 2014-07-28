@@ -126,29 +126,6 @@
       </sections>
     </section>
 
-    <section address="Debugging">
-      <title>Debugging Extensions</title>
-      <content>
-        <para>
-          While Visual Studio's VSIX Installer automatically installs nested VSIX references (which is the method by which
-          the Output Window Services extension is delivered), the Visual Studio SDK will not perform this installation
-          automatically in the experimental instance. After launching the experimental instance for the first time (or
-          after you reset it), you will need to install the <externalLink>
-            <linkText>Visual Studio Output Window Service</linkText>
-            <linkUri>TODO</linkUri>
-          </externalLink> extension from the Visual Studio Gallery and restart the experimental instance before your
-          extension will work.
-        </para>
-        <alert class="note">
-          <para>
-            A future release of this extension may improve support in this area by updating the <codeInline>.targets</codeInline>
-            file included in the implementation to automatically deploy the nested VSIX to the experimental instance
-            for debugging purposes. Stay tuned!
-          </para>
-        </alert>
-      </content>
-    </section>
-
     <section address="Implementation">
       <title>Implementation Details</title>
       <content>
