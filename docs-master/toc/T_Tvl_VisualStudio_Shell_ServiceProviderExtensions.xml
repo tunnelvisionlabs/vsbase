@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="22cf0a28-eb0d-4448-b991-d6f4a5ed13f8" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
-  <HelpTOCNode Id="d9439b80-1e36-415f-89f5-2f592f72a46f" Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
+<HelpTOCNode Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm">
+  <HelpTOCNode Title="ServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
 </HelpTOCNode>

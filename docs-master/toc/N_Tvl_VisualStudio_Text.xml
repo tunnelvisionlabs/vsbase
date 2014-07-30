@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="3635da7d-29a8-457b-836a-b82d1860bb12" Title="Tvl.VisualStudio.Text Namespace" Url="html/N_Tvl_VisualStudio_Text.htm">
-  <HelpTOCNode Id="143ec0ca-04a5-4e71-b448-e7141cceb8c1" Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
+<HelpTOCNode Title="Tvl.VisualStudio.Text" Url="html/N_Tvl_VisualStudio_Text.htm">
+  <HelpTOCNode Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
 </HelpTOCNode>

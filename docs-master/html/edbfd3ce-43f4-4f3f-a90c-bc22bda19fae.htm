@@ -1,70 +1,63 @@
-﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="SHORTCUT ICON" href="./../icons/favicon.ico"><link rel="stylesheet" type="text/css" href="./../styles/branding.css"><link rel="stylesheet" type="text/css" href="./../styles/branding-en-US.css"><style type="text/css">
-			body
-			{
-			border-left:5px solid #e6e6e6;
-			overflow-x:scroll;
-			overflow-y:scroll;
-			}
-		</style><script src="./../scripts/branding.js" type="text/javascript"><!----></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Assembly Versioning in Extensible Applications</title><meta name="Language" content="en-us"><meta name="Microsoft.Help.Id" content="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae"><meta name="Description" content="This page expands on the assembly versioning information originally described by Schabse LaksExtending Visual Studio, part 3: Assembly Versioninghttp://blog.slaks.net/2014-02-21/extending-visual-studio-part-3-assembly-versioning/."><meta name="Microsoft.Help.ContentType" content="Concepts"><meta name="BrandingAware" content="'true'"><link type="text/css" rel="stylesheet" href="ms-help://Hx/HxRuntime/HxLink.css"><meta name="SelfBranded" content="true"></head><body onload="onLoad()" class="primary-mtps-offline-document"><header class="ux-header"><div class="header-top-bar">Tunnel Vision Labs' Base Extensions Library for Visual Studio</div></header><div class="OH_outerDiv" style="padding: 35px 20px 0 20px;"><div class="OH_leftNav" id="LeftNav">
+﻿<html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="shortcut icon" href="../icons/favicon.ico"><link rel="stylesheet" type="text/css" href="../styles/branding.css"><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css"><script type="text/javascript" src="../scripts/branding.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Assembly Versioning in Extensible Applications</title><meta name="Language" content="en-us"><meta name="Microsoft.Help.Id" content="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae"><meta name="Description" content="This page expands on the assembly versioning information originally described by Schabse LaksExtending Visual Studio, part 3: Assembly Versioninghttp://blog.slaks.net/2014-02-21/extending-visual-studio-part-3-assembly-versioning/."><meta name="Microsoft.Help.ContentType" content="Concepts"><meta name="BrandingAware" content="'true'"><meta name="SelfBranded" content="true"></head><body onload="onLoad()"><header class="ux-header"><div class="header-top-bar">Tunnel Vision Labs' Base Extensions Library for Visual Studio</div></header><div class="OH_outerDiv" style="padding: 35px 20px 0 20px;"><div class="OH_leftNav" id="LeftNav">
   <div id="tocnav">
-    <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;" data-childrenloaded="true"><a class="toc_expanded" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" title="VS Base Extensions Library" tocid="roottoc">VS Base Extensions Library</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" title="Welcome" tocid="262e0a6e-ce5a-4f40-8f5e-3889dbb63784">Welcome</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" title="License" tocid="3927d416-9f25-4fdd-9807-daa0bf4b054d">License</a></div><div class="toclevel1 current" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae.htm" title="Assembly Versioning" tocid="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae">Assembly Versioning</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="69c59220-5eff-4177-a632-b7c1b4981501.htm" title="Packages" tocid="69c59220-5eff-4177-a632-b7c1b4981501">Packages</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#"></a><a data-tochassubtree="true" href="R_Project_VSBaseDocumentation.htm" title="API Reference" tocid="R_Project_VSBaseDocumentation">API Reference</a></div></div></div><div id="TocResize" class="OH_TocResize"><img id="ResizeImageIncrease" src="../icons/open.gif" onclick="onIncreaseToc()" alt="Expand" title="Expand"><img id="ResizeImageReset" src="../icons/close.gif" style="display:none" onclick="onResetToc()" alt="Minimize" title="Minimize"></div><div class="OH_outerContent" id="OuterContent" style="margin-left: 280px;"><h1 class="title">Assembly Versioning in Extensible Applications</h1><div id="mainSection"><div id="mainBody"><span class="introStyle"></span><div class="introduction"><p>
+    <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;" data-childrenloaded="true"><a class="toc_expanded" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" title="VS Base Extensions Library" tocid="roottoc">VS Base Extensions Library</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" title="Welcome" tocid="262e0a6e-ce5a-4f40-8f5e-3889dbb63784">Welcome</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" title="License" tocid="3927d416-9f25-4fdd-9807-daa0bf4b054d">License</a></div><div class="toclevel1 current" data-toclevel="1" style="padding-left: 13px;"><span class="toc_empty"></span><a data-tochassubtree="false" href="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae.htm" title="Assembly Versioning" tocid="edbfd3ce-43f4-4f3f-a90c-bc22bda19fae">Assembly Versioning</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="69c59220-5eff-4177-a632-b7c1b4981501.htm" title="Packages" tocid="69c59220-5eff-4177-a632-b7c1b4981501">Packages</a></div><div class="toclevel1" data-toclevel="1" style="padding-left: 13px;"><a class="toc_collapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="R_Project_VSBaseDocumentation.htm" title="API Reference" tocid="R_Project_VSBaseDocumentation">API Reference</a></div></div></div><div id="TocResize" class="OH_TocResize"><img id="ResizeImageIncrease" src="../icons/open.gif" onclick="onIncreaseToc()" alt="Expand" title="Expand"><img id="ResizeImageReset" src="../icons/close.gif" style="display:none" onclick="onResetToc()" alt="Minimize" title="Minimize"></div><div class="OH_outerContent" id="OuterContent" style="margin-left: 280px;"><h1 class="title">Assembly Versioning in Extensible Applications</h1><div id="mainSection"><div id="mainBody"><span class="introStyle"></span><div class="introduction"><p>
         This page expands on the assembly versioning information originally described by
-        <a class="mtps-external-link" title="Extending Visual Studio, part 3: Assembly Versioning" href="http://blog.slaks.net/2014-02-21/extending-visual-studio-part-3-assembly-versioning/" target="_blank">Schabse Laks</a>. In addition to a thorough breakdown of the advantages and
+        <a href="http://blog.slaks.net/2014-02-21/extending-visual-studio-part-3-assembly-versioning/" title="Extending Visual Studio, part 3: Assembly Versioning" target="_blank">Schabse Laks</a>. In addition to a thorough breakdown of the advantages and
         limitations created by different policies towards assembly versioning, this page
         includes best practices for developing and consuming different kinds of assemblies.
-      </p></div><a id="AssemblyKinds"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Assembly Types</div></div><dl class="authored"><dt>Immutable Assembly</dt><dd>
+      </p></div><a id="AssemblyKinds"></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Assembly Types</div></div><dl class="authored"><dt>Immutable Assembly</dt><dd><p>
               An assembly which, once released, never changes its public API or strong name.
               New releases of an application ship the original version of any immutable assemblies
               which are still in use.
-            </dd><dt>Versioned Assembly</dt><dd>
+            </p></dd><dt>Versioned Assembly</dt><dd><p>
               An assembly which may change over time, and new versions of the assembly include
               only backwards-compatible changes. Extensible applications use assembly binding
               redirection to ensure only the newest version of the assembly is used at runtime.
-            </dd><dt>Unversioned Assembly</dt><dd>
+            </p></dd><dt>Unversioned Assembly</dt><dd><p>
               Unversioned assemblies are associated with a particular version of an extensible
               application. Third-party assemblies may make use of APIs defined in unversioned
               assemblies; however, this will limit the use of the third-party assembly to the
               same specific version of the extensible application that the unversioned assembly
               was build for.
-            </dd></dl><a id="ImmutableAssemblies"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Immutable Assemblies</div></div><p>
+            </p></dd></dl><a id="ImmutableAssemblies"></a><h4 class="subHeading">Immutable Assemblies</h4><div class="subsection"><p>
               Immutable assemblies are the most straightforward assemblies to consume in an
               extension. These dependencies introduce only a minimal amount of constraints on
               assemblies which use them.
-            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><strong>COM-Interop assemblies</strong>, such as <em>EnvDTE.dll</em>
+            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><p><strong>COM-Interop assemblies</strong>, such as <em>EnvDTE.dll</em>
                       or <em>Microsoft.VisualStudio.Shell.Interop.9.0.dll</em>.
-                    </li><li><strong>Expressly immutable assemblies</strong>, such as
+                    </p></li><li><p><strong>Expressly immutable assemblies</strong>, such as
                       <em>Microsoft.VisualStudio.Shell.Immutable.10.0.dll</em>.
-                    </li><li><strong>Interface assemblies for cross-version services</strong>, such
+                    </p></li><li><p><strong>Interface assemblies for cross-version services</strong>, such
                       as the <em>Tvl.VisualStudio.OutputWindow.Interfaces.dll</em> assembly
                       used by the Output Window Service.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>creating</em>
                   immutable assemblies for extensible applications.
-                </p><ul><li><strong>DO</strong> limit the content of immutable assemblies only
+                </p><ul><li><p><strong>DO</strong> limit the content of immutable assemblies only
                       to the minimal amount of code required to ensure maximum portability. Bugs
                       or limitations present in shipping versions of immutable assemblies cannot
                       be corrected after release.
-                    </li><li><strong>DO NOT</strong> ship two versions of an immutable assembly,
+                    </p></li><li><p><strong>DO NOT</strong> ship two versions of an immutable assembly,
                       i.e. the <em>strong name</em> of the assembly should
                       never change. Remember that the strong name of an assembly is formed from
-                      both the <span sdata="cer" target="T:System.Reflection.AssemblyVersionAttribute"><a href="http://msdn2.microsoft.com/en-us/library/zb298d28" target="_blank">AssemblyVersionAttribute</a></span>
+                      both the <a href="http://msdn2.microsoft.com/en-us/library/zb298d28" target="_blank">AssemblyVersionAttribute</a>
                       and the key used for signing the assembly.
-                    </li><li><strong>DO NOT</strong> make changes to the public API of an immutable
+                    </p></li><li><p><strong>DO NOT</strong> make changes to the public API of an immutable
                       assembly. This includes changes which are generally considered non-breaking,
                       such as the introduction of an interface that did not previously exist.
-                    </li><li><strong>AVOID</strong> making changes to the internal implementation of
+                    </p></li><li><p><strong>AVOID</strong> making changes to the internal implementation of
                       items in an immutable assembly, and do not assume that the changes will take
                       effect. Since the strong name of the assembly will not be changed by the update,
                       there is no way to ensure that the application will load the updated version
                       of the assembly at runtime.
-                    </li><li>
+                    </p></li><li><p>
                       The source code for an immutable assembly may change, but generally only for
                       the purpose of updating the documentation and/or distribution mechanism(s)
                       for the assembly.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>consuming</em>
                   immutable assemblies as part of extending an extensible application.
-                </p><ul><li><strong>AVOID</strong> using APIs defined in immutable assemblies introduced
+                </p><ul><li><p><strong>AVOID</strong> using APIs defined in immutable assemblies introduced
                       later than the <em>minimum</em> version of the application you
                       intend to support. Using an immutable assembly will limit your extension to working
                       with versions of an application starting with the point when the assembly was first
@@ -74,7 +67,7 @@
                       when available, you can either develop your extension as a versioned or unversioned
                       assembly, and distribute multiple versions of the extension according to the supported
                       version of the application.
-                    </li></ul></div><a id="VersionedAssemblies"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Versioned Assemblies</div></div><p>
+                    </p></li></ul></div></div><a id="VersionedAssemblies"></a><h4 class="subHeading">Versioned Assemblies</h4><div class="subsection"><p>
               Versioned assemblies are straightforward to consume in an extension, and tend to have strict
               backward compatibility guarantees even across multiple versions of the extensible application.
               By taking advantage of assembly binding redirection, extensions developed for previous versions
@@ -86,32 +79,32 @@
               types used in the exposed API of the assembly. If the exposed API includes a reference to a
               versioned assembly, the shared assembly must be built multiple times, once for each version
               of the versioned assembly that has shipped to date. For example, the
-              <a href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm" target="">Text Editor Utility Library</a> includes separate versions
+              <a href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm">Text Editor Utility Library</a> includes separate versions
               referencing the multiple versions of <em>Microsoft.VisualStudio.Text.Logic.dll</em>
               that have shipped to date.
-            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><strong>Public assemblies for extension development</strong>, such as
+            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><p><strong>Public assemblies for extension development</strong>, such as
                       <em>Microsoft.VisualStudio.CoreUtility.dll</em> and
                       <em>Microsoft.VisualStudio.Text.Logic.dll</em>.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>creating</em>
                   versioned assemblies for extensible applications.
-                </p><ul><li><strong>DO</strong> provide assembly binding redirection for the assembly to make
+                </p><ul><li><p><strong>DO</strong> provide assembly binding redirection for the assembly to make
                       sure the runtime always only loads the most recent version of the assembly, even if one or
                       more assemblies in the application (or extensions) were compiled with a reference to a
                       previous release.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>consuming</em>
                   versioned assemblies as part of extending an extensible application.
-                </p><ul><li>
+                </p><ul><li><p>
                       If your assembly will be used by other extensions and references members of the versioned
                       assembly in its exposed API, <strong>DO</strong> create multiple versions of your
                       assembly according to the versions of the versioned assembly that have been created to
-                      date. For example, the <a href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm" target="">Text Editor Utility Library</a> may be
+                      date. For example, the <a href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d.htm">Text Editor Utility Library</a> may be
                       used by other Visual Studio extensions, and exposes the
                       <em>Microsoft.VisualStudio.Text.Data.dll</em> versioned assembly in its API.
                       For this reason, separate versions of this library are released for extensions targeting
                       a minimum Visual Studio version of 2010, 2012, and 2013.
-                    </li><li><strong>AVOID</strong> using APIs defined in versioned assemblies introduced
+                    </p></li><li><p><strong>AVOID</strong> using APIs defined in versioned assemblies introduced
                       later than the <em>minimum</em> version of the application you
                       intend to support. Using a versioned assembly will limit your extension to working
                       with versions of an application starting with the point when the assembly was first
@@ -121,39 +114,39 @@
                       when available, you can either develop your extension as a versioned or unversioned
                       assembly, and distribute multiple versions of the extension according to the supported
                       version of the application.
-                    </li></ul></div><a id="UnversionedAssemblies"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Unversioned Assemblies</div></div><p>
+                    </p></li></ul></div></div><a id="UnversionedAssemblies"></a><h4 class="subHeading">Unversioned Assemblies</h4><div class="subsection"><p>
               Unversioned assemblies are the easiest assemblies to develop and deploy for fixed versions of
               an extensible application, but pose unique challenges when attempting to share an assembly
               between multiple extensions all targeting the same application.
-            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><strong>Private assemblies included with an extensible application</strong>,
+            </p><h4 class="subHeading">Examples</h4><div class="subsection"><ul><li><p><strong>Private assemblies included with an extensible application</strong>,
                       such as <em>Microsoft.VisualStudio.Languages.CSharp.dll</em> and
                       <em>Microsoft.VisualStudio.Language.CallHierarchy.dll</em>.
-                    </li><li><strong>Assemblies which reference an unversioned assembly</strong>, such
-                      as the <a class="mtps-external-link" href="http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08" target="_blank">Inheritance Margin</a> extension which references the <em>Microsoft.VisualStudio.Languages.CSharp.dll</em>
+                    </p></li><li><p><strong>Assemblies which reference an unversioned assembly</strong>, such
+                      as the <a href="http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08" target="_blank">Inheritance Margin</a> extension which references the <em>Microsoft.VisualStudio.Languages.CSharp.dll</em>
                       assembly.
-                    </li><li><strong>Shared assemblies designed for side-by-side loading</strong>,
+                    </p></li><li><p><strong>Shared assemblies designed for side-by-side loading</strong>,
                       such as <em>Tvl.VisualStudio.Text.Utility.10.0.dll</em> and
                       <em>Tvl.VisualStudio.Shell.Utility.10.0.dll</em>.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Producers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>creating</em>
                   unversioned assemblies for extensible applications.
-                </p><ul><li><strong>DO</strong> design your assembly to support side-by-side loading scenarios,
+                </p><ul><li><p><strong>DO</strong> design your assembly to support side-by-side loading scenarios,
                       with unique strong names given to different shipped versions of your assembly.
-                    </li><li><strong>DO NOT</strong> export MEF components from unversioned assemblies. If the
+                    </p></li><li><p><strong>DO NOT</strong> export MEF components from unversioned assemblies. If the
                       runtime loads multiple versions of your assembly (or a different version than you expected),
-                      extensions could suddenly fail en-masse. This avoids the problem described by <a class="mtps-external-link" title="Authoring a Utility Library for Visual Studio" href="http://blogs.msdn.com/b/jaredpar/archive/2012/05/07/authoring-a-utility-library-for-visual-studio.aspx" target="_blank">Jared Parsons</a> as he developed a utility library for Visual Studio.
-                    </li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
+                      extensions could suddenly fail en-masse. This avoids the problem described by <a href="http://blogs.msdn.com/b/jaredpar/archive/2012/05/07/authoring-a-utility-library-for-visual-studio.aspx" title="Authoring a Utility Library for Visual Studio" target="_blank">Jared Parsons</a> as he developed a utility library for Visual Studio.
+                    </p></li></ul></div><h4 class="subHeading">Best Practices for Consumers</h4><div class="subsection"><p>
                   The following are some best practices for developers <em>consuming</em>
                   unversioned assemblies as part of extending an extensible application.
-                </p><ul><li><strong>DO</strong> create separate versions of your extension for each released
+                </p><ul><li><p><strong>DO</strong> create separate versions of your extension for each released
                       version of the unversioned assembly that you intend to support, even if the use of the
                       unversioned assembly is not exposed through the API.
-                    </li></ul></div><a id="ApplicationsAndExtensions"><!----></a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Applications vs. Extensions</div></div><p>
+                    </p></li></ul></div></div><a id="ApplicationsAndExtensions"></a><h4 class="subHeading">Applications vs. Extensions</h4><div class="subsection"><p>
               Application developers and extension developers tend to face distinct challenges when
               creating assemblies. For the purposes of this discussion, we'll examine the Visual
               Studio 2010 and Visual Studio 2012 <span class="term">applications</span>, and the
-              <a href="9452cedb-1942-4d9b-b911-7ef1e882f421.htm" target="">Output Window Service</a> and
-              <a class="mtps-external-link" href="http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08" target="_blank">Inheritance Margin</a> <span class="term">extensions</span>. Visual Studio 2010 and Visual Studio 2012
+              <a href="9452cedb-1942-4d9b-b911-7ef1e882f421.htm">Output Window Service</a> and
+              <a href="http://visualstudiogallery.msdn.microsoft.com/3a55d546-0cb2-4991-a002-e6be8ce09f08" target="_blank">Inheritance Margin</a> <span class="term">extensions</span>. Visual Studio 2010 and Visual Studio 2012
               are two consecutive major releases of an extensible application. The Inheritance Margin
               extension is a single extension developed to support both of these versions of Visual Studio,
               but is not intended for other extensions to these applications to reuse or extend the features
@@ -165,7 +158,7 @@
                   easier to write versioned assemblies when the application has complete control over the
                   assembly binding redirection configuration. While some applications offer third-party
                   extensions a mechanism to update the binding redirection configuration (e.g. Visual Studio
-                  2012 with the <span sdata="cer" target="T:Microsoft.VisualStudio.Shell.ProvideBindingRedirectionAttribute"><span class="nolink">ProvideBindingRedirectionAttribute</span></span>),
+                  2012 with the <a href="http://msdn2.microsoft.com/en-us/library/hh265700" target="_blank">ProvideBindingRedirectionAttribute</a>),
                   extension for other applications (e.g. Visual Studio 2010 are restricted to the use of
                   immutable and unversioned assemblies. Second, application developers are able to operate
                   under a more "natural" release lifecycle. For example, the
@@ -188,13 +181,13 @@
                   support an updated application. These advantages of creating an immutable or versioned
                   assembly must be carefully weighed against the additional challenges imposed by the long-term
                   restrictions implied by those kinds of assemblies.
-                </p><div class="alert"><table><tr><th><img class="mtps-img-src" src="./../icons/alert_note.gif" alt="Tip"> <strong>Tip</strong></th></tr><tr><td>
+                </p><div class="alert"><table><tr><th><img src="../icons/alert_note.gif" alt="Tip"> <strong>Tip</strong></th></tr><tr><td><p>
                     Defining types for extending your application in immutable or versioned assemblies reduces
                     the maintenance burden on extension developers when new versions of your application are
                     released. This in turn increases the number of extensions available for many versions of
                     the application, and reduces the chance that customers relying on extensions will be unable
                     to upgrade to the latest version of your product.
-                  </td></tr></table></div></div><h4 class="subHeading">Isolated Extension Developers</h4><div class="subsection"><p>
+                  </p></td></tr></table></div></div><h4 class="subHeading">Isolated Extension Developers</h4><div class="subsection"><p>
                   Most extensions written for extensible applications are isolated extensions. These extensions
                   build on the support provided by the application, but generally do not make special
                   considerations for other extensions which may be running, or provide any special manner of
@@ -204,7 +197,7 @@
                   Shared extension development is one of the most challenging and least understood areas of
                   extensible applications. However, there are many cases where an extension developer should
                   consider developing a shared extension.
-                </p><ul><li><strong>Providing New Features:</strong> Extensions which provide a highly-polished
+                </p><ul><li><p><strong>Providing New Features:</strong> Extensions which provide a highly-polished
                       user interface for bold new features, such as the Peek Help feature provided in
                       Productivity Power Tools for Visual Studio 2013, are prime candidates for development as a
                       shared extension. Extensibility is especially important when users will not have another
@@ -219,17 +212,17 @@
                       developers will be unable to provide their documentation through this interface without
                       changing to a new keyboard binding, or duplicating the ability to load documentation from
                       MSDN.
-                    </li><li><strong>Exposing Existing Features:</strong> The Output Window extension does
+                    </p></li><li><p><strong>Exposing Existing Features:</strong> The Output Window extension does
                       not add any new features to Visual Studio. Instead, it provides extension developers
                       using MEF components with a simple, reliable way to use a Visual Studio feature which
                       tends to cause unnecessary complexity in extension code. When developers of multiple
                       extensions find themselves facing the same challenges and duplicating their solutions,
                       a shared extension which dramatically simplifies the solution is highly appealing.
-                    </li></ul><p>
+                    </p></li></ul><p>
                   The primary limitation shared extension developers are likely to face is an application
                   which does not provide a method for extending the assembly binding redirection configuration.
                   Visual Studio 2012 provides this feature by writing <em>devenv.exe</em> in
-                  native code, and using the <a class="mtps-external-link" href="http://msdn.microsoft.com/en-us/library/ms404385.aspx" target="_blank">Unmanaged Hosting API</a> to configure and start the managed runtime environment. Assembly binding
+                  native code, and using the <a href="http://msdn.microsoft.com/en-us/library/ms404385.aspx" target="_blank">Unmanaged Hosting API</a> to configure and start the managed runtime environment. Assembly binding
                   redirection is an <em>essential</em> feature supporting the creation
                   of versioned assemblies; so extension developers for applications which do not provide
                   this feature will always be forced to write either immutable or unversioned assemblies.
@@ -238,9 +231,9 @@
                   for strong-named assemblies and along with the fact that MEF imports and exports components
                   by contract names formed from the name of the type and/or member which is exported. This
                   behavior means that the contract types, i.e. the type provided in the
-                  <span sdata="cer" target="T:System.ComponentModel.Composition.ExportAttribute"><a href="http://msdn2.microsoft.com/en-us/library/dd234971" target="_blank">ExportAttribute</a></span>
+                  <a href="http://msdn2.microsoft.com/en-us/library/dd234971" target="_blank">ExportAttribute</a>
                   for a component, must be defined in an immutable or versioned assembly.
-                </p><div class="alert"><table><tr><th><img class="mtps-img-src" src="./../icons/alert_caution.gif" alt="Important note"> <strong>Important</strong></th></tr><tr><td>
+                </p><div class="alert"><table><tr><th><img src="../icons/alert_caution.gif" alt="Important note"> <strong>Important</strong></th></tr><tr><td><p>
                     The MEF contract types for most 3<small><small><sup>rd</sup></small></small>-party extensions must be
                     defined in immutable assemblies.
-                  </td></tr></table></div></div></div></div></div></div><div id="OH_footer" class="OH_footer"><p></p><div class="OH_feedbacklink"><a href="mailto:?subject=Tunnel+Vision+Labs%27+Base+Extensions+Library+for+Visual+Studio+Assembly+Versioning+in+Extensible+Applications+100+EN-US&amp;body=Your%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report%2c%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed%2c%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.">Send Feedback</a> on this topic.</div></div><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript">$(document).ready(function () {DocumentReady();});</script></body></html>
+                  </p></td></tr></table></div></div></div></div></div></div></div><div id="OH_footer" class="OH_footer"></div><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript">$(document).ready(function () {DocumentReady();});</script></body></html>

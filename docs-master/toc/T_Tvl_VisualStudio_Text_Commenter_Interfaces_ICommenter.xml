@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="62c7e40c-8764-4959-a5bd-be52263f9cbc" Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
-  <HelpTOCNode Id="5c03ff72-add7-4814-8ecf-7bbcf03c2f8c" Title="ICommenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" />
+<HelpTOCNode Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm">
+  <HelpTOCNode Title="ICommenter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" />
 </HelpTOCNode>

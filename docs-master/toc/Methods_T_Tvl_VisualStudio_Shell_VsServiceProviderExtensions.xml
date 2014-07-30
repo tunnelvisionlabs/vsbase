@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="34a8cad5-3d48-4112-bdad-6cec3161a0f8" Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
+<HelpTOCNode Title="VsServiceProviderExtensions Methods" Url="html/Methods_T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm">
   <HelpTOCNode Title="GetActivityLog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetActivityLog.htm" />
   <HelpTOCNode Title="GetAddProjectItemDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddProjectItemDialog.htm" />
   <HelpTOCNode Title="GetAddWebReferenceDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetAddWebReferenceDialog.htm" />
@@ -13,6 +13,7 @@
   <HelpTOCNode Title="GetCommandWindow Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindow.htm" />
   <HelpTOCNode Title="GetCommandWindowsCollection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindowsCollection.htm" />
   <HelpTOCNode Title="GetComponentModel Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModel.htm" />
+  <HelpTOCNode Title="GetComponentModelHost Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModelHost.htm" />
   <HelpTOCNode Title="GetComponentSelectorDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog.htm" />
   <HelpTOCNode Title="GetComponentSelectorDialog2 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog2.htm" />
   <HelpTOCNode Title="GetConfigurationManagerDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetConfigurationManagerDialog.htm" />
@@ -32,6 +33,8 @@
   <HelpTOCNode Title="GetFontAndColorCacheManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorCacheManager.htm" />
   <HelpTOCNode Title="GetFontAndColorStorage Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorStorage.htm" />
   <HelpTOCNode Title="GetFontAndColorUtilities Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorUtilities.htm" />
+  <HelpTOCNode Title="GetFrameworkMultiTargeting Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkMultiTargeting.htm" />
+  <HelpTOCNode Title="GetFrameworkRetargetingDialog Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkRetargetingDialog.htm" />
   <HelpTOCNode Title="GetGlyphService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetGlyphService.htm" />
   <HelpTOCNode Title="GetHelpSystem Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHelpSystem.htm" />
   <HelpTOCNode Title="GetHtmlConverter Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHtmlConverter.htm" />
@@ -43,6 +46,8 @@
   <HelpTOCNode Title="GetInvisibleEditorManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetInvisibleEditorManager.htm" />
   <HelpTOCNode Title="GetLaunchPad Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPad.htm" />
   <HelpTOCNode Title="GetLaunchPadFactory Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPadFactory.htm" />
+  <HelpTOCNode Title="GetMacroRecorder Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacroRecorder.htm" />
+  <HelpTOCNode Title="GetMacros Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacros.htm" />
   <HelpTOCNode Title="GetMDTypeResolutionService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMDTypeResolutionService.htm" />
   <HelpTOCNode Title="GetMenuEditor Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMenuEditor.htm" />
   <HelpTOCNode Title="GetMonitorSelection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMonitorSelection.htm" />
@@ -100,12 +105,14 @@
   <HelpTOCNode Title="GetToolsOptions Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolsOptions.htm" />
   <HelpTOCNode Title="GetTrackProjectDocuments2 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments2.htm" />
   <HelpTOCNode Title="GetTrackProjectDocuments3 Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments3.htm" />
+  <HelpTOCNode Title="GetTrackProjectRetargeting Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectRetargeting.htm" />
   <HelpTOCNode Title="GetTrackSelection Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackSelection.htm" />
   <HelpTOCNode Title="GetUIHierarchyWindowClipboardHelper Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIHierarchyWindowClipboardHelper.htm" />
   <HelpTOCNode Title="GetUIShell Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShell.htm" />
   <HelpTOCNode Title="GetUIShellDocumentWindowManager Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellDocumentWindowManager.htm" />
   <HelpTOCNode Title="GetUIShellOpenDocument Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellOpenDocument.htm" />
   <HelpTOCNode Title="GetUpgradeLogger Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUpgradeLogger.htm" />
+  <HelpTOCNode Title="GetVba Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetVba.htm" />
   <HelpTOCNode Title="GetWebBrowsingService Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebBrowsingService.htm" />
   <HelpTOCNode Title="GetWebFavorites Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebFavorites.htm" />
   <HelpTOCNode Title="GetWebPreview Method " Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebPreview.htm" />

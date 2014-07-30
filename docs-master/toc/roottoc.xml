@@ -3,6 +3,6 @@
   <HelpTOCNode Title="Welcome" Url="html/262e0a6e-ce5a-4f40-8f5e-3889dbb63784.htm" />
   <HelpTOCNode Title="License" Url="html/3927d416-9f25-4fdd-9807-daa0bf4b054d.htm" />
   <HelpTOCNode Title="Assembly Versioning" Url="html/edbfd3ce-43f4-4f3f-a90c-bc22bda19fae.htm" />
-  <HelpTOCNode Id="a83ce80c-7bb4-4844-b2f1-501240206a5b" Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm" HasChildren="true" />
-  <HelpTOCNode Id="0c6d522f-0293-463c-9e3e-71088c7a5c77" Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm" HasChildren="true" />
+  <HelpTOCNode Title="Packages" Url="html/69c59220-5eff-4177-a632-b7c1b4981501.htm" HasChildren="true" />
+  <HelpTOCNode Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm" HasChildren="true" />
 </HelpTOC>

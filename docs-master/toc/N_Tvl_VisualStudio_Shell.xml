@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="620ea739-852f-4c07-9844-956c0cbb6446" Title="Tvl.VisualStudio.Shell Namespace" Url="html/N_Tvl_VisualStudio_Shell.htm">
-  <HelpTOCNode Id="f95d97b5-e642-4522-8210-c22fa4f94757" Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
-  <HelpTOCNode Id="22cf0a28-eb0d-4448-b991-d6f4a5ed13f8" Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
-  <HelpTOCNode Id="103189a7-2c72-4137-a90b-ba4c8aeff727" Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" HasChildren="true" />
+<HelpTOCNode Title="Tvl.VisualStudio.Shell" Url="html/N_Tvl_VisualStudio_Shell.htm">
+  <HelpTOCNode Title="CommandFilter Class" Url="html/T_Tvl_VisualStudio_Shell_CommandFilter.htm" HasChildren="true" />
+  <HelpTOCNode Title="ServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_ServiceProviderExtensions.htm" HasChildren="true" />
+  <HelpTOCNode Title="VsServiceProviderExtensions Class" Url="html/T_Tvl_VisualStudio_Shell_VsServiceProviderExtensions.htm" HasChildren="true" />
 </HelpTOCNode>

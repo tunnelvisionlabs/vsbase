@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="143ec0ca-04a5-4e71-b448-e7141cceb8c1" Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
+<HelpTOCNode Title="TextViewCommandFilter Class" Url="html/T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm">
   <HelpTOCNode Title="TextViewCommandFilter Constructor " Url="html/M_Tvl_VisualStudio_Text_TextViewCommandFilter__ctor.htm" />
-  <HelpTOCNode Id="f8a2289f-6525-4800-8d1c-da804d396f54" Title="TextViewCommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
-  <HelpTOCNode Id="9c22402d-9eb9-4af7-a0e0-585ba4f37f33" Title="TextViewCommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
+  <HelpTOCNode Title="TextViewCommandFilter Methods" Url="html/Methods_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
+  <HelpTOCNode Title="TextViewCommandFilter Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_TextViewCommandFilter.htm" HasChildren="true" />
 </HelpTOCNode>

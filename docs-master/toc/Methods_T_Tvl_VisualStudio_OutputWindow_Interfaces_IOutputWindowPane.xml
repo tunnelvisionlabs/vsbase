@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Id="8c58ad64-7f2c-4aeb-b2e3-d4f58b016789" Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
+<HelpTOCNode Title="IOutputWindowPane Methods" Url="html/Methods_T_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane.htm">
   <HelpTOCNode Title="Activate Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Activate.htm" />
   <HelpTOCNode Title="Hide Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Hide.htm" />
   <HelpTOCNode Title="Write Method " Url="html/M_Tvl_VisualStudio_OutputWindow_Interfaces_IOutputWindowPane_Write.htm" />

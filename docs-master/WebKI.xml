@@ -104,6 +104,7 @@
   <HelpKINode Title="GetCommandWindowsCollection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindowsCollection.htm" />
   <HelpKINode Title="GetCommenter method" Url="html/M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider_GetCommenter.htm" />
   <HelpKINode Title="GetComponentModel method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModel.htm" />
+  <HelpKINode Title="GetComponentModelHost method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModelHost.htm" />
   <HelpKINode Title="GetComponentSelectorDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog.htm" />
   <HelpKINode Title="GetComponentSelectorDialog2 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog2.htm" />
   <HelpKINode Title="GetConfigurationManagerDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetConfigurationManagerDialog.htm" />
@@ -123,6 +124,8 @@
   <HelpKINode Title="GetFontAndColorCacheManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorCacheManager.htm" />
   <HelpKINode Title="GetFontAndColorStorage method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorStorage.htm" />
   <HelpKINode Title="GetFontAndColorUtilities method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorUtilities.htm" />
+  <HelpKINode Title="GetFrameworkMultiTargeting method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkMultiTargeting.htm" />
+  <HelpKINode Title="GetFrameworkRetargetingDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkRetargetingDialog.htm" />
   <HelpKINode Title="GetGlyphService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetGlyphService.htm" />
   <HelpKINode Title="GetHelpSystem method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHelpSystem.htm" />
   <HelpKINode Title="GetHtmlConverter method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHtmlConverter.htm" />
@@ -134,6 +137,8 @@
   <HelpKINode Title="GetInvisibleEditorManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetInvisibleEditorManager.htm" />
   <HelpKINode Title="GetLaunchPad method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPad.htm" />
   <HelpKINode Title="GetLaunchPadFactory method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPadFactory.htm" />
+  <HelpKINode Title="GetMacroRecorder method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacroRecorder.htm" />
+  <HelpKINode Title="GetMacros method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacros.htm" />
   <HelpKINode Title="GetMDTypeResolutionService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMDTypeResolutionService.htm" />
   <HelpKINode Title="GetMenuEditor method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMenuEditor.htm" />
   <HelpKINode Title="GetMonitorSelection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMonitorSelection.htm" />
@@ -192,12 +197,14 @@
   <HelpKINode Title="GetToolsOptions method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolsOptions.htm" />
   <HelpKINode Title="GetTrackProjectDocuments2 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments2.htm" />
   <HelpKINode Title="GetTrackProjectDocuments3 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments3.htm" />
+  <HelpKINode Title="GetTrackProjectRetargeting method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectRetargeting.htm" />
   <HelpKINode Title="GetTrackSelection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackSelection.htm" />
   <HelpKINode Title="GetUIHierarchyWindowClipboardHelper method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIHierarchyWindowClipboardHelper.htm" />
   <HelpKINode Title="GetUIShell method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShell.htm" />
   <HelpKINode Title="GetUIShellDocumentWindowManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellDocumentWindowManager.htm" />
   <HelpKINode Title="GetUIShellOpenDocument method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellOpenDocument.htm" />
   <HelpKINode Title="GetUpgradeLogger method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUpgradeLogger.htm" />
+  <HelpKINode Title="GetVba method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetVba.htm" />
   <HelpKINode Title="GetWebBrowsingService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebBrowsingService.htm" />
   <HelpKINode Title="GetWebFavorites method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebFavorites.htm" />
   <HelpKINode Title="GetWebPreview method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebPreview.htm" />
@@ -360,6 +367,7 @@
   <HelpKINode Title="VsServiceProviderExtensions.GetCommandWindow method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindow.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetCommandWindowsCollection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetCommandWindowsCollection.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetComponentModel method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModel.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetComponentModelHost method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentModelHost.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetComponentSelectorDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetComponentSelectorDialog2 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetComponentSelectorDialog2.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetConfigurationManagerDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetConfigurationManagerDialog.htm" />
@@ -379,6 +387,8 @@
   <HelpKINode Title="VsServiceProviderExtensions.GetFontAndColorCacheManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorCacheManager.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetFontAndColorStorage method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorStorage.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetFontAndColorUtilities method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFontAndColorUtilities.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetFrameworkMultiTargeting method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkMultiTargeting.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetFrameworkRetargetingDialog method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetFrameworkRetargetingDialog.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetGlyphService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetGlyphService.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetHelpSystem method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHelpSystem.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetHtmlConverter method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetHtmlConverter.htm" />
@@ -390,6 +400,8 @@
   <HelpKINode Title="VsServiceProviderExtensions.GetInvisibleEditorManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetInvisibleEditorManager.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetLaunchPad method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPad.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetLaunchPadFactory method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetLaunchPadFactory.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetMacroRecorder method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacroRecorder.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetMacros method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMacros.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetMDTypeResolutionService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMDTypeResolutionService.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetMenuEditor method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMenuEditor.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetMonitorSelection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetMonitorSelection.htm" />
@@ -447,12 +459,14 @@
   <HelpKINode Title="VsServiceProviderExtensions.GetToolsOptions method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetToolsOptions.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetTrackProjectDocuments2 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments2.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetTrackProjectDocuments3 method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectDocuments3.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetTrackProjectRetargeting method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackProjectRetargeting.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetTrackSelection method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetTrackSelection.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetUIHierarchyWindowClipboardHelper method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIHierarchyWindowClipboardHelper.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetUIShell method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShell.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetUIShellDocumentWindowManager method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellDocumentWindowManager.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetUIShellOpenDocument method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUIShellOpenDocument.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetUpgradeLogger method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetUpgradeLogger.htm" />
+  <HelpKINode Title="VsServiceProviderExtensions.GetVba method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetVba.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetWebBrowsingService method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebBrowsingService.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetWebFavorites method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebFavorites.htm" />
   <HelpKINode Title="VsServiceProviderExtensions.GetWebPreview method" Url="html/M_Tvl_VisualStudio_Shell_VsServiceProviderExtensions_GetWebPreview.htm" />
