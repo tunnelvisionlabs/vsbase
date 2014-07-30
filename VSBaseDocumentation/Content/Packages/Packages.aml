@@ -58,7 +58,7 @@
               automatically in the experimental instance. After launching the experimental instance for the first time (or
               after you reset it), you will need to install the <externalLink>
                 <linkText>VSBase Services Debugging Support</linkText>
-                <linkUri>TODO</linkUri>
+                <linkUri>http://visualstudiogallery.msdn.microsoft.com/fca95a59-3fc6-444e-b20c-cc67828774cd</linkUri>
               </externalLink> extension from the Visual Studio Gallery and restart the experimental instance before your
               extension will work.
             </para>
