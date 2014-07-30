@@ -14,7 +14,6 @@
     /// for easy access to the various global services provided by Visual Studio.
     /// </summary>
     /// <threadsafety/>
-    /// <preliminary/>
     public static partial class VsServiceProviderExtensions
     {
 #if false // this service needs to be provided throw a "ShellServices.10Only" assembly...
