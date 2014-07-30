@@ -60,6 +60,47 @@
             return serviceProvider.GetService<SVsAppCommandLine, IVsAppCommandLine>();
         }
 
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsAppContainerDeveloperLicensing"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsAppContainerDeveloperLicensing"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsAppContainerDeveloperLicensing GetAppContainerDeveloperLicensing(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsAppContainerDeveloperLicensing, IVsAppContainerDeveloperLicensing>();
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IVsAppContainerProjectDeploy"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsAppContainerProjectDeploy"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsAppContainerProjectDeploy GetAppContainerProjectDeploy(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsAppContainerProjectDeploy, IVsAppContainerProjectDeploy>();
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IAppxManifestDesignerService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IAppxManifestDesignerService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IAppxManifestDesignerService GetAppxManifestDesignerService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SAppxManifestDesignerService, IAppxManifestDesignerService>();
+        }
+#endif
+
         /// <summary>
         /// Gets the global <see cref="IVsAssemblyNameUnification"/> service.
         /// </summary>
@@ -165,6 +206,19 @@
         }
 
         /// <summary>
+        /// Gets the global <see cref="IVsComponentModelHost"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsComponentModelHost"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsComponentModelHost GetComponentModelHost(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsComponentModelHost, IVsComponentModelHost>();
+        }
+
+        /// <summary>
         /// Gets the global <see cref="IVsComponentSelectorDlg"/> service.
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
@@ -242,6 +296,34 @@
             return serviceProvider.GetService<SVsDebugLaunch, IVsDebugLaunch>();
         }
 
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsDebugRemoteDiscoveryUI"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsDebugRemoteDiscoveryUI"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsDebugRemoteDiscoveryUI GetDebugRemoteDiscoveryUI(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsDebugRemoteDiscoveryUI, IVsDebugRemoteDiscoveryUI>();
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IVsDebugTargetSelectionService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsDebugTargetSelectionService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsDebugTargetSelectionService GetDebugTargetSelectionService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsDebugTargetSelectionService, IVsDebugTargetSelectionService>();
+        }
+#endif
+
         /// <summary>
         /// Gets the global <see cref="IVsDetermineWizardTrust"/> service.
         /// </summary>
@@ -254,6 +336,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsDetermineWizardTrust, IVsDetermineWizardTrust>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsDifferenceService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsDifferenceService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsDifferenceService GetDifferenceService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsDifferenceService, IVsDifferenceService>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsDiscoveryService"/> service.
@@ -319,6 +416,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsFileChangeEx, IVsFileChangeEx>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsFileMergeService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsFileMergeService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsFileMergeService GetFileMergeService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsFileMergeService, IVsFileMergeService>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsFilterAddProjectItemDlg"/> service.
@@ -399,6 +511,47 @@
         }
 
         /// <summary>
+        /// Gets the global <see cref="IVsFrameworkMultiTargeting"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsFrameworkMultiTargeting"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsFrameworkMultiTargeting GetFrameworkMultiTargeting(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsFrameworkMultiTargeting, IVsFrameworkMultiTargeting>();
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IVsFrameworkRetargetingDlg"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsFrameworkRetargetingDlg"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsFrameworkRetargetingDlg GetFrameworkRetargetingDialog(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsFrameworkRetargetingDlg, IVsFrameworkRetargetingDlg>();
+        }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsGlobalSearch"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsGlobalSearch"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsGlobalSearch GetGlobalSearch(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsGlobalSearch, IVsGlobalSearch>();
+        }
+#endif
+
+        /// <summary>
         /// Gets the global <see cref="IVsHelpSystem"/> service.
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
@@ -410,6 +563,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsHelpService, IVsHelpSystem>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsHierarchyManipulation"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsHierarchyManipulation"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsHierarchyManipulation GetHierarchyManipulation(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsHierarchyManipulation, IVsHierarchyManipulation>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsHTMLConverter"/> service.
@@ -423,6 +591,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsHTMLConverter, IVsHTMLConverter>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsImageService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsImageService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsImageService GetImageService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsImageService, IVsImageService>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsIME"/> service.
@@ -528,6 +711,48 @@
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsLaunchPadFactory, IVsLaunchPadFactory>();
+        }
+
+#if DEV12PLUS && false
+#warning need to test this method
+        /// <summary>
+        /// Gets the global <see cref="IVsLongIdleManager"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsLongIdleManager"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsLongIdleManager GetLongIdleManager(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsLongIdleManager, IVsLongIdleManager>();
+        }
+#endif
+
+        /// <summary>
+        /// Gets the global <see cref="IVsMacroRecorder"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsMacroRecorder"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsMacroRecorder GetMacroRecorder(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsMacroRecorder, IVsMacroRecorder>();
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IVsMacros"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsMacros"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsMacros GetMacros(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsMacros, IVsMacros>();
         }
 
         /// <summary>
@@ -714,6 +939,21 @@
             return serviceProvider.GetService<SVsProfileDataManager, IVsProfileDataManager>();
         }
 
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsProfilerLauncher"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsProfilerLauncher"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsProfilerLauncher GetProfilerLauncher(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsProfilerLauncher, IVsProfilerLauncher>();
+        }
+#endif
+
         /// <summary>
         /// Gets the global <see cref="IVsProfilesManagerUI"/> service.
         /// </summary>
@@ -726,6 +966,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsProfilesManagerUI, IVsProfilesManagerUI>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="VsProjectCapabilityExpressionMatcher"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsBooleanSymbolExpressionEvaluator"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsBooleanSymbolExpressionEvaluator GetProjectCapabilityExpressionMatcher(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<VsProjectCapabilityExpressionMatcher, IVsBooleanSymbolExpressionEvaluator>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsPropertyPageFrame"/> service.
@@ -752,6 +1007,21 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsQueryEditQuerySave, IVsQueryEditQuerySave2>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsReferenceManager"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsReferenceManager"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsReferenceManager GetReferenceManager(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsReferenceManager, IVsReferenceManager>();
+        }
+#endif
 
         /// <summary>
         /// Gets the global <see cref="IVsRegisterProjectDebugTargetProvider"/> service.
@@ -1105,6 +1375,21 @@
             return serviceProvider.GetService<SVsTaskList, IVsTaskList>();
         }
 
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsTaskSchedulerService"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsTaskSchedulerService"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsTaskSchedulerService GetTaskSchedulerService(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsTaskSchedulerService, IVsTaskSchedulerService>();
+        }
+#endif
+
         /// <summary>
         /// Gets the global <see cref="IVsTextOut"/> service.
         /// </summary>
@@ -1223,6 +1508,19 @@
         }
 
         /// <summary>
+        /// Gets the global <see cref="IVsTrackProjectRetargeting"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsTrackProjectRetargeting"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsTrackProjectRetargeting GetTrackProjectRetargeting(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsTrackProjectRetargeting, IVsTrackProjectRetargeting>();
+        }
+
+        /// <summary>
         /// Gets the global <see cref="IVsTrackSelectionEx"/> service.
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
@@ -1301,6 +1599,19 @@
         }
 
         /// <summary>
+        /// Gets the global <see cref="IVsVba"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsVba"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsVba GetVba(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsVba, IVsVba>();
+        }
+
+        /// <summary>
         /// Gets the global <see cref="IVsWebBrowsingService"/> service.
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
@@ -1364,5 +1675,20 @@
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
             return serviceProvider.GetService<SVsWebURLMRU, IVsWebURLMRU>();
         }
+
+#if DEV11PLUS
+        /// <summary>
+        /// Gets the global <see cref="IVsWindowSearchHostFactory"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="IVsWindowSearchHostFactory"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [CLSCompliant(false)]
+        public static IVsWindowSearchHostFactory GetWindowSearchHostFactory(this SVsServiceProvider serviceProvider)
+        {
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<SVsWindowSearchHostFactory, IVsWindowSearchHostFactory>();
+        }
+#endif
     }
 }

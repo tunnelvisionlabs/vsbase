@@ -12,7 +12,6 @@ namespace Tvl.VisualStudio.OutputWindow
     /// requests access to it using <see cref="IOutputWindowService.TryGetPane"/>.
     /// </summary>
     /// <threadsafety/>
-    /// <preliminary/>
     public static class OutputWindowPaneDefinitions
     {
         /// <summary>
