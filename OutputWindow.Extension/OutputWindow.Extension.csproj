@@ -165,6 +165,11 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="Tvl.VisualStudio.OutputWindow.Interfaces, Version=2.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tvl.VisualStudio.OutputWindow.Interfaces.2.0.0\lib\net40\Tvl.VisualStudio.OutputWindow.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <PropertyGroup>
@@ -198,10 +203,6 @@
     <ProjectReference Include="..\OutputWindow.Implementation\OutputWindow.Implementation.csproj">
       <Project>{0c198da7-9d1b-4db6-b0ad-5b72331d2a20}</Project>
       <Name>OutputWindow.Implementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj">
-      <Project>{52c5e011-ea71-4799-924b-845ce1c9ca06}</Project>
-      <Name>OutputWindow.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
