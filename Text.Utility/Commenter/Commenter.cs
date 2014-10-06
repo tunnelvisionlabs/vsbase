@@ -6,7 +6,6 @@
     using System.Diagnostics.Contracts;
     using System.Linq;
     using Microsoft.VisualStudio.Text;
-    using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Operations;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
 
@@ -20,9 +19,9 @@
     public class Commenter : ICommenter
     {
         /// <summary>
-        /// This is the backing field for the <see cref="TextView"/> property.
+        /// This is the backing field for the <see cref="TextBuffer"/> property.
         /// </summary>
-        private readonly ITextView _textView;
+        private readonly ITextBuffer _textBuffer;
 
         /// <summary>
         /// This is the backing field for the <see cref="TextUndoHistoryRegistry"/> property.
@@ -50,13 +49,13 @@
         private readonly bool _useLineComments;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text view, undo history, and comment formats.
+        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text buffer, undo history, and comment formats.
         /// </summary>
-        /// <param name="textView">The text view.</param>
+        /// <param name="textBuffer">The text buffer.</param>
         /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.</param>
         /// <param name="commentFormats">A collection of <see cref="CommentFormat"/> instances describing the comment formats supported by this commenter.</param>
         /// <exception cref="ArgumentNullException">
-        /// If <paramref name="textView"/> is <see langword="null"/>.
+        /// If <paramref name="textBuffer"/> is <see langword="null"/>.
         /// <para>-or-</para>
         /// <para>If <paramref name="textUndoHistoryRegistry"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
@@ -65,22 +64,22 @@
         /// <exception cref="ArgumentException">
         /// If <paramref name="commentFormats"/> contains any <see langword="null"/> entries.
         /// </exception>
-        public Commenter(ITextView textView, ITextUndoHistoryRegistry textUndoHistoryRegistry, params CommentFormat[] commentFormats)
-            : this(textView, textUndoHistoryRegistry, commentFormats.AsEnumerable())
+        public Commenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, params CommentFormat[] commentFormats)
+            : this(textBuffer, textUndoHistoryRegistry, commentFormats.AsEnumerable())
         {
-            Contract.Requires(textView != null);
+            Contract.Requires(textBuffer != null);
             Contract.Requires(textUndoHistoryRegistry != null);
             Contract.Requires(commentFormats != null);
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text view, undo history, and comment formats.
+        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text buffer, undo history, and comment formats.
         /// </summary>
-        /// <param name="textView">The text view.</param>
+        /// <param name="textBuffer">The text buffer.</param>
         /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.</param>
         /// <param name="commentFormats">A collection of <see cref="CommentFormat"/> instances describing the comment formats supported by this commenter.</param>
         /// <exception cref="ArgumentNullException">
-        /// If <paramref name="textView"/> is <see langword="null"/>.
+        /// If <paramref name="textBuffer"/> is <see langword="null"/>.
         /// <para>-or-</para>
         /// <para>If <paramref name="textUndoHistoryRegistry"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
@@ -89,14 +88,14 @@
         /// <exception cref="ArgumentException">
         /// If <paramref name="commentFormats"/> contains any <see langword="null"/> entries.
         /// </exception>
-        public Commenter(ITextView textView, ITextUndoHistoryRegistry textUndoHistoryRegistry, IEnumerable<CommentFormat> commentFormats)
+        public Commenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, IEnumerable<CommentFormat> commentFormats)
         {
-            Contract.Requires<ArgumentNullException>(textView != null, "textView");
+            Contract.Requires<ArgumentNullException>(textBuffer != null, "textBuffer");
             Contract.Requires<ArgumentNullException>(textUndoHistoryRegistry != null, "textUndoHistoryRegistry");
             Contract.Requires<ArgumentNullException>(commentFormats != null, "commentFormats");
             Contract.Requires<ArgumentException>(!commentFormats.Contains(null));
 
-            this._textView = textView;
+            this._textBuffer = textBuffer;
             this._textUndoHistoryRegistry = textUndoHistoryRegistry;
             this._commentFormats = commentFormats.ToList().AsReadOnly();
             this._blockFormats = _commentFormats.OfType<BlockCommentFormat>().ToList().AsReadOnly();
@@ -105,14 +104,14 @@
         }
 
         /// <summary>
-        /// Gets the underlying <see cref="ITextView"/> for this commenter.
+        /// Gets the underlying <see cref="ITextBuffer"/> for this commenter.
         /// </summary>
-        public ITextView TextView
+        public ITextBuffer TextBuffer
         {
             get
             {
-                Contract.Ensures(Contract.Result<ITextView>() != null);
-                return _textView;
+                Contract.Ensures(Contract.Result<ITextBuffer>() != null);
+                return _textBuffer;
             }
         }
 
@@ -221,7 +220,7 @@
             if (spans.Count == 0)
                 return new NormalizedSnapshotSpanCollection();
 
-            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextView);
+            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
             using (var transaction = undoHistory.CreateTransaction("Comment Selection"))
             {
                 ITextSnapshot snapshot = spans[0].Snapshot;
@@ -237,14 +236,14 @@
                     edit.Apply();
                 }
 
-                if (snapshot != TextView.TextSnapshot)
+                if (snapshot != TextBuffer.CurrentSnapshot)
                     transaction.Complete();
             }
 
             if (result.Count > 1)
                 result.RemoveAll(span => span.IsEmpty);
 
-            var target = TextView.TextBuffer.CurrentSnapshot;
+            var target = TextBuffer.CurrentSnapshot;
             for (int i = 0; i < result.Count; i++)
             {
                 result[i] = result[i].TranslateTo(target, SpanTrackingMode.EdgeInclusive);
@@ -261,7 +260,7 @@
             if (spans.Count == 0)
                 return new NormalizedSnapshotSpanCollection();
 
-            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextView);
+            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
             using (var transaction = undoHistory.CreateTransaction("Uncomment Selection"))
             {
                 ITextSnapshot snapshot = spans[0].Snapshot;
@@ -277,14 +276,14 @@
                     edit.Apply();
                 }
 
-                if (snapshot != TextView.TextSnapshot)
+                if (snapshot != TextBuffer.CurrentSnapshot)
                     transaction.Complete();
             }
 
             if (result.Count > 1)
                 result.RemoveAll(span => span.IsEmpty);
 
-            var target = TextView.TextBuffer.CurrentSnapshot;
+            var target = TextBuffer.CurrentSnapshot;
             for (int i = 0; i < result.Count; i++)
             {
                 result[i] = result[i].TranslateTo(target, SpanTrackingMode.EdgeInclusive);

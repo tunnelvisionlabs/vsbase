@@ -172,7 +172,7 @@
                   [ContentType("SimpleC")]
                   public sealed class SimpleCCommenterProvider : ICommenterProvider
                   {
-                      public ICommenter GetCommenter(ITextView textView)
+                      public ICommenter GetCommenter(ITextBuffer textBuffer)
                       {
                           // TODO: provide a commenter
                           throw new NotImplementedException();
@@ -197,7 +197,7 @@
               <listItem>
                 <para>
                   Implement the
-                  <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.GetCommenter(Microsoft.VisualStudio.Text.Editor.ITextView)</codeEntityReference>
+                  <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.GetCommenter(Microsoft.VisualStudio.Text.ITextBuffer)</codeEntityReference>
                   method by returning an instance of
                   <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>. The
                   <codeEntityReference>T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry</codeEntityReference>
@@ -225,11 +225,11 @@
                           set;
                       }
 
-                      public ICommenter GetCommenter(ITextView textView)
+                      public ICommenter GetCommenter(ITextBuffer textBuffer)
                       {
                           Func<Commenter> factory =
-                              () => new Commenter(textView, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
-                          return textView.Properties.GetOrCreateSingletonProperty<Commenter>(factory);
+                              () => new Commenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
+                          return textBuffer.Properties.GetOrCreateSingletonProperty<Commenter>(factory);
                       }
                   }
                   ]]>
