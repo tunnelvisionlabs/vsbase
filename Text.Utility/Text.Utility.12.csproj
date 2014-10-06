@@ -206,9 +206,9 @@
     <None Include="Tvl.VisualStudio.Text.Utility.12.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.12.csproj">
-      <Project>{addfe283-a45f-409d-b3ce-d7190b466596}</Project>
-      <Name>Commenter.Interfaces.12</Name>
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
+      <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
+      <Name>Commenter.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shell.Utility\Shell.Utility.12.csproj">
       <Project>{3a6e8ab6-d68d-41e9-8a73-5f8040f5a8c8}</Project>

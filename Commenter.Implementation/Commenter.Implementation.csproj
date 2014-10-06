@@ -190,9 +190,9 @@
     <None Include="packages.Commenter.Implementation.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.10.csproj">
+    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
       <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
-      <Name>Commenter.Interfaces.10</Name>
+      <Name>Commenter.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shell.Utility\Shell.Utility.10.csproj">
       <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
