@@ -172,7 +172,7 @@
                   [ContentType("SimpleC")]
                   public sealed class SimpleCCommenterProvider : ICommenterProvider
                   {
-                      public ICommenter GetCommenter(ITextBuffer textBuffer)
+                      public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
                       {
                           // TODO: provide a commenter
                           throw new NotImplementedException();
@@ -197,7 +197,7 @@
               <listItem>
                 <para>
                   Implement the
-                  <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.GetCommenter(Microsoft.VisualStudio.Text.ITextBuffer)</codeEntityReference>
+                  <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.TryCreateCommenter(Microsoft.VisualStudio.Text.ITextBuffer)</codeEntityReference>
                   method by returning an instance of
                   <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>. The
                   <codeEntityReference>T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry</codeEntityReference>
@@ -225,7 +225,7 @@
                           set;
                       }
 
-                      public ICommenter GetCommenter(ITextBuffer textBuffer)
+                      public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
                       {
                           Func<Commenter> factory =
                               () => new Commenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);

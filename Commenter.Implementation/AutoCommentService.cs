@@ -49,10 +49,10 @@
         /// <remarks>
         /// <para>When a text view is created, this method first checks if the content type of the underlying
         /// <see cref="ITextBuffer"/> matches a content type associated with any of the
-        /// <see cref="CommenterProviders"/>. If so, <see cref="ICommenterProvider.GetCommenter"/> is called to obtain
-        /// the <see cref="ICommenter"/> to associate with the text buffer for the view. The commenter is then used to
-        /// initialize a <see cref="CommenterFilter"/> that provides support for the comment and uncomment commands for
-        /// the text view.</para>
+        /// <see cref="CommenterProviders"/>. If so, <see cref="ICommenterProvider.TryCreateCommenter"/> is called to
+        /// obtain the <see cref="ICommenter"/> to associate with the text buffer for the view. The commenter is then
+        /// used to initialize a <see cref="CommenterFilter"/> that provides support for the comment and uncomment
+        /// commands for the text view.</para>
         ///
         /// <para>
         /// If any of these operations fails, no changes are applied to the text view.
@@ -74,7 +74,7 @@
             if (provider == null)
                 return;
 
-            var commenter = provider.Value.GetCommenter(textView.TextBuffer);
+            var commenter = provider.Value.TryCreateCommenter(textView.TextBuffer);
             if (commenter == null)
                 return;
 

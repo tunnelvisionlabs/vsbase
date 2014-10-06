@@ -17,7 +17,12 @@
         /// </summary>
         /// <param name="textBuffer">The text buffer.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="textBuffer"/> is <see langword="null"/>.</exception>
-        /// <returns>An instance of <see cref="ICommenter"/>, or <see langword="null"/> if this provider cannot provide a commenter for the specified text buffer.</returns>
-        ICommenter GetCommenter(ITextBuffer textBuffer);
+        /// <returns>
+        /// <para>An instance of <see cref="ICommenter"/>.</para>
+        /// <para>-or-</para>
+        /// <para><see langword="null"/> if this provider cannot provide a commenter for the specified text
+        /// buffer.</para>
+        /// </returns>
+        ICommenter TryCreateCommenter(ITextBuffer textBuffer);
     }
 }

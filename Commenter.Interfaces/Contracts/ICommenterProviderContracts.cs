@@ -11,7 +11,7 @@
     public abstract class ICommenterProviderContracts : ICommenterProvider
     {
         /// <inheritdoc/>
-        public ICommenter GetCommenter(ITextBuffer textBuffer)
+        public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
         {
             Contract.Requires<ArgumentNullException>(textBuffer != null, "textBuffer");
 
