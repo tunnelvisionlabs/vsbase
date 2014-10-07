@@ -3,6 +3,7 @@
     using System;
     using System.Diagnostics.Contracts;
     using System.Runtime.InteropServices;
+    using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.TextManager.Interop;
     using Tvl.VisualStudio.Shell;
@@ -128,10 +129,14 @@
         protected virtual void CommentSelection()
         {
             bool reversed = TextView.Selection.IsReversed;
-            var newSelection = Commenter.CommentSpans(TextView.Selection.SelectedSpans);
+            var newSelection = Commenter.CommentSpans(TextView.Selection.VirtualSelectedSpans);
             // TODO: detect rectangle selection if present
             if (newSelection.Count > 0)
-                TextView.Selection.Select(newSelection[0], reversed);
+            {
+                VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
+                VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
+                TextView.Selection.Select(anchorPoint, activePoint);
+            }
         }
 
         /// <summary>
@@ -145,10 +150,14 @@
         protected virtual void UncommentSelection()
         {
             bool reversed = TextView.Selection.IsReversed;
-            var newSelection = Commenter.UncommentSpans(TextView.Selection.SelectedSpans);
+            var newSelection = Commenter.UncommentSpans(TextView.Selection.VirtualSelectedSpans);
             // TODO: detect rectangle selection if present
             if (newSelection.Count > 0)
-                TextView.Selection.Select(newSelection[0], reversed);
+            {
+                VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
+                VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
+                TextView.Selection.Select(anchorPoint, activePoint);
+            }
         }
     }
 }

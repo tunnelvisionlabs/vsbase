@@ -1,6 +1,7 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts
 {
     using System;
+    using System.Collections.ObjectModel;
     using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Text;
 
@@ -13,19 +14,19 @@
         #region ICommenter Members
 
         /// <inheritdoc/>
-        public NormalizedSnapshotSpanCollection CommentSpans(NormalizedSnapshotSpanCollection spans)
+        public ReadOnlyCollection<VirtualSnapshotSpan> CommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
             Contract.Requires<ArgumentNullException>(spans != null, "spans");
-            Contract.Ensures(Contract.Result<NormalizedSnapshotSpanCollection>() != null);
+            Contract.Ensures(Contract.Result<ReadOnlyCollection<VirtualSnapshotSpan>>() != null);
 
             throw new NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public NormalizedSnapshotSpanCollection UncommentSpans(NormalizedSnapshotSpanCollection spans)
+        public ReadOnlyCollection<VirtualSnapshotSpan> UncommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
             Contract.Requires<ArgumentNullException>(spans != null, "spans");
-            Contract.Ensures(Contract.Result<NormalizedSnapshotSpanCollection>() != null);
+            Contract.Ensures(Contract.Result<ReadOnlyCollection<VirtualSnapshotSpan>>() != null);
 
             throw new NotImplementedException();
         }

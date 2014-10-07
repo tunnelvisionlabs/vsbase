@@ -213,12 +213,12 @@
         }
 
         /// <inheritdoc/>
-        public virtual NormalizedSnapshotSpanCollection CommentSpans(NormalizedSnapshotSpanCollection spans)
+        public virtual ReadOnlyCollection<VirtualSnapshotSpan> CommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
-            List<SnapshotSpan> result = new List<SnapshotSpan>();
+            List<VirtualSnapshotSpan> result = new List<VirtualSnapshotSpan>();
 
             if (spans.Count == 0)
-                return new NormalizedSnapshotSpanCollection();
+                return new ReadOnlyCollection<VirtualSnapshotSpan>(new VirtualSnapshotSpan[0]);
 
             var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
             using (var transaction = undoHistory.CreateTransaction("Comment Selection"))
@@ -249,16 +249,16 @@
                 result[i] = result[i].TranslateTo(target, SpanTrackingMode.EdgeInclusive);
             }
 
-            return new NormalizedSnapshotSpanCollection(result);
+            return result.AsReadOnly();
         }
 
         /// <inheritdoc/>
-        public virtual NormalizedSnapshotSpanCollection UncommentSpans(NormalizedSnapshotSpanCollection spans)
+        public virtual ReadOnlyCollection<VirtualSnapshotSpan> UncommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
-            List<SnapshotSpan> result = new List<SnapshotSpan>();
+            List<VirtualSnapshotSpan> result = new List<VirtualSnapshotSpan>();
 
             if (spans.Count == 0)
-                return new NormalizedSnapshotSpanCollection();
+                return new ReadOnlyCollection<VirtualSnapshotSpan>(new VirtualSnapshotSpan[0]);
 
             var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
             using (var transaction = undoHistory.CreateTransaction("Uncomment Selection"))
@@ -289,7 +289,7 @@
                 result[i] = result[i].TranslateTo(target, SpanTrackingMode.EdgeInclusive);
             }
 
-            return new NormalizedSnapshotSpanCollection(result);
+            return result.AsReadOnly();
         }
 
         /// <summary>
@@ -320,20 +320,20 @@
         /// <param name="span">The span of text to comment.</param>
         /// <param name="edit">The <see cref="ITextEdit"/> to apply the changes to.</param>
         /// <returns>A <see cref="SnapshotSpan"/> containing the commented code.</returns>
-        protected virtual SnapshotSpan CommentSpan(SnapshotSpan span, ITextEdit edit)
+        protected virtual VirtualSnapshotSpan CommentSpan(VirtualSnapshotSpan span, ITextEdit edit)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
 
             span = span.TranslateTo(edit.Snapshot, SpanTrackingMode.EdgeExclusive);
 
-            var startContainingLine = span.Start.GetContainingLine();
-            var endContainingLine = span.End.GetContainingLine();
+            var startContainingLine = span.Start.Position.GetContainingLine();
+            var endContainingLine = span.End.Position.GetContainingLine();
 
             if (UseLineComments
                 && (span.IsEmpty ||
-                    (string.IsNullOrWhiteSpace(startContainingLine.GetText().Substring(0, span.Start - startContainingLine.Start))
-                        && (string.IsNullOrWhiteSpace(endContainingLine.GetText().Substring(0, span.End - endContainingLine.Start))
-                            || string.IsNullOrWhiteSpace(endContainingLine.GetText().Substring(span.End - endContainingLine.Start)))
+                    (string.IsNullOrWhiteSpace(startContainingLine.GetText().Substring(0, span.Start.Position - startContainingLine.Start))
+                        && (string.IsNullOrWhiteSpace(endContainingLine.GetText().Substring(0, span.End.Position - endContainingLine.Start))
+                            || string.IsNullOrWhiteSpace(endContainingLine.GetText().Substring(span.End.Position - endContainingLine.Start)))
                    )))
             {
                 span = CommentLines(span, edit, PreferredLineFormat);
@@ -363,34 +363,34 @@
         /// <param name="edit"></param>
         /// <param name="format"></param>
         /// <returns></returns>
-        protected virtual SnapshotSpan CommentLines(SnapshotSpan span, ITextEdit edit, LineCommentFormat format)
+        protected virtual VirtualSnapshotSpan CommentLines(VirtualSnapshotSpan span, ITextEdit edit, LineCommentFormat format)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
             Contract.Requires<ArgumentNullException>(format != null, "format");
 
-            if (span.End.GetContainingLine().LineNumber > span.Start.GetContainingLine().LineNumber && span.End.GetContainingLine().Start == span.End)
+            if (span.End.Position.GetContainingLine().LineNumber > span.Start.Position.GetContainingLine().LineNumber && span.End.Position.GetContainingLine().Start == span.End.Position)
             {
-                SnapshotPoint start = span.Start;
-                SnapshotPoint end = span.Snapshot.GetLineFromLineNumber(span.End.GetContainingLine().LineNumber - 1).Start;
+                VirtualSnapshotPoint start = span.Start;
+                VirtualSnapshotPoint end = new VirtualSnapshotPoint(span.Snapshot.GetLineFromLineNumber(span.End.Position.GetContainingLine().LineNumber - 1).Start);
                 if (end < start)
                     start = end;
 
-                span = new SnapshotSpan(start, end);
+                span = new VirtualSnapshotSpan(start, end);
             }
 
-            int minindex = (from i in Enumerable.Range(span.Start.GetContainingLine().LineNumber, span.End.GetContainingLine().LineNumber - span.Start.GetContainingLine().LineNumber + 1)
+            int minindex = (from i in Enumerable.Range(span.Start.Position.GetContainingLine().LineNumber, span.End.Position.GetContainingLine().LineNumber - span.Start.Position.GetContainingLine().LineNumber + 1)
                             where span.Snapshot.GetLineFromLineNumber(i).GetText().Trim().Length > 0
                             select ScanToNonWhitespaceChar(span.Snapshot.GetLineFromLineNumber(i)))
                            .Min();
 
             //comment each line
-            for (int line = span.Start.GetContainingLine().LineNumber; line <= span.End.GetContainingLine().LineNumber; line++)
+            for (int line = span.Start.Position.GetContainingLine().LineNumber; line <= span.End.Position.GetContainingLine().LineNumber; line++)
             {
                 if (span.Snapshot.GetLineFromLineNumber(line).GetText().Trim().Length > 0)
                     edit.Insert(span.Snapshot.GetLineFromLineNumber(line).Start + minindex, format.StartText);
             }
 
-            span = new SnapshotSpan(span.Start.GetContainingLine().Start, span.End.GetContainingLine().End);
+            span = new VirtualSnapshotSpan(new SnapshotSpan(span.Start.Position.GetContainingLine().Start, span.End.Position.GetContainingLine().End));
             return span;
         }
 
@@ -407,7 +407,7 @@
         /// <para>-or-</para>
         /// <para>If <paramref name="format"/> is <see langword="null"/>.</para>
         /// </exception>
-        protected virtual SnapshotSpan CommentBlock(SnapshotSpan span, ITextEdit edit, BlockCommentFormat format)
+        protected virtual VirtualSnapshotSpan CommentBlock(VirtualSnapshotSpan span, ITextEdit edit, BlockCommentFormat format)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
             Contract.Requires<ArgumentNullException>(format != null, "format");
@@ -415,13 +415,15 @@
             //special case no selection
             if (span.IsEmpty)
             {
-                span = new SnapshotSpan(span.Start.GetContainingLine().Start + ScanToNonWhitespaceChar(span.Start.GetContainingLine()), span.End.GetContainingLine().End);
+                VirtualSnapshotPoint start = new VirtualSnapshotPoint(span.Start.Position.GetContainingLine().Start + ScanToNonWhitespaceChar(span.Start.Position.GetContainingLine()));
+                VirtualSnapshotPoint end = span.IsInVirtualSpace ? span.End : new VirtualSnapshotPoint(span.End.Position.GetContainingLine().End);
+                span = new VirtualSnapshotSpan(start, end);
             }
 
             // add start comment
-            edit.Insert(span.Start, format.StartText);
+            edit.Insert(span.Start.Position, format.StartText);
             // add end comment
-            edit.Insert(span.End, format.EndText);
+            edit.Insert(span.End.Position, format.EndText);
 
             return span;
         }
@@ -433,14 +435,14 @@
         /// <param name="edit">The <see cref="ITextEdit"/> instance to use for applying changes.</param>
         /// <returns>The span of text which was uncommented.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="edit"/> is <see langword="null"/>.</exception>
-        protected virtual SnapshotSpan UncommentSpan(SnapshotSpan span, ITextEdit edit)
+        protected virtual VirtualSnapshotSpan UncommentSpan(VirtualSnapshotSpan span, ITextEdit edit)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
 
             span = span.TranslateTo(edit.Snapshot, SpanTrackingMode.EdgeExclusive);
             bool useLineComments = true;
-            var startContainingLine = span.Start.GetContainingLine();
-            var endContainingLine = span.End.GetContainingLine();
+            var startContainingLine = span.Start.Position.GetContainingLine();
+            var endContainingLine = span.End.Position.GetContainingLine();
 
             // special case: empty span
             if (span.IsEmpty)
@@ -450,7 +452,7 @@
             }
             else
             {
-                SnapshotSpan resultSpan;
+                VirtualSnapshotSpan resultSpan;
                 if (TryUncommentBlock(span, edit, BlockFormats, out resultSpan))
                     return resultSpan;
 
@@ -463,24 +465,24 @@
             return span;
         }
 
-        protected virtual SnapshotSpan UncommentLines(SnapshotSpan span, ITextEdit edit, ReadOnlyCollection<LineCommentFormat> formats)
+        protected virtual VirtualSnapshotSpan UncommentLines(VirtualSnapshotSpan span, ITextEdit edit, ReadOnlyCollection<LineCommentFormat> formats)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
             Contract.Requires<ArgumentNullException>(formats != null, "formats");
             Contract.Requires(Contract.ForAll(formats, i => i != null));
 
-            if (span.End.GetContainingLine().LineNumber > span.Start.GetContainingLine().LineNumber && span.End == span.End.GetContainingLine().Start)
+            if (span.End.Position.GetContainingLine().LineNumber > span.Start.Position.GetContainingLine().LineNumber && span.End.Position == span.End.Position.GetContainingLine().Start)
             {
-                SnapshotPoint start = span.Start;
-                SnapshotPoint end = span.Snapshot.GetLineFromLineNumber(span.End.GetContainingLine().LineNumber - 1).Start;
+                VirtualSnapshotPoint start = span.Start;
+                VirtualSnapshotPoint end = new VirtualSnapshotPoint(span.Snapshot.GetLineFromLineNumber(span.End.Position.GetContainingLine().LineNumber - 1).Start);
                 if (end < start)
                     start = end;
 
-                span = new SnapshotSpan(start, end);
+                span = new VirtualSnapshotSpan(start, end);
             }
 
             // Remove line comments
-            for (int line = span.Start.GetContainingLine().LineNumber; line <= span.End.GetContainingLine().LineNumber; line++)
+            for (int line = span.Start.Position.GetContainingLine().LineNumber; line <= span.End.Position.GetContainingLine().LineNumber; line++)
             {
                 int i = ScanToNonWhitespaceChar(span.Snapshot.GetLineFromLineNumber(line));
                 string text = span.Snapshot.GetLineFromLineNumber(line).GetText();
@@ -496,11 +498,11 @@
                 }
             }
 
-            span = new SnapshotSpan(span.Start.GetContainingLine().Start, span.End.GetContainingLine().End);
+            span = new VirtualSnapshotSpan(new SnapshotSpan(span.Start.Position.GetContainingLine().Start, span.End.Position.GetContainingLine().End));
             return span;
         }
 
-        protected virtual bool TryUncommentBlock(SnapshotSpan span, ITextEdit edit, ReadOnlyCollection<BlockCommentFormat> formats, out SnapshotSpan result)
+        protected virtual bool TryUncommentBlock(VirtualSnapshotSpan span, ITextEdit edit, ReadOnlyCollection<BlockCommentFormat> formats, out VirtualSnapshotSpan result)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
             Contract.Requires<ArgumentNullException>(formats != null, "formats");
@@ -512,11 +514,11 @@
                     return true;
             }
 
-            result = default(SnapshotSpan);
+            result = default(VirtualSnapshotSpan);
             return false;
         }
 
-        protected virtual bool TryUncommentBlock(SnapshotSpan span, ITextEdit edit, BlockCommentFormat format, out SnapshotSpan result)
+        protected virtual bool TryUncommentBlock(VirtualSnapshotSpan span, ITextEdit edit, BlockCommentFormat format, out VirtualSnapshotSpan result)
         {
             Contract.Requires<ArgumentNullException>(edit != null, "edit");
             Contract.Requires<ArgumentNullException>(format != null, "format");
@@ -524,43 +526,49 @@
             string blockStart = format.StartText;
             string blockEnd = format.EndText;
 
-            int startLen = span.Start.GetContainingLine().Length;
-            int endLen = span.End.GetContainingLine().Length;
+            int startLen = span.Start.Position.GetContainingLine().Length;
+            int endLen = span.End.Position.GetContainingLine().Length;
 
             TrimSpan(ref span);
 
             //special case no selection, try and uncomment the current line.
             if (span.IsEmpty)
             {
-                span = new SnapshotSpan(span.Start.GetContainingLine().Start + ScanToNonWhitespaceChar(span.Start.GetContainingLine()), span.End.GetContainingLine().End);
+                VirtualSnapshotPoint start = new VirtualSnapshotPoint(span.Start.Position.GetContainingLine().Start + ScanToNonWhitespaceChar(span.Start.Position.GetContainingLine()));
+                VirtualSnapshotPoint end = span.IsInVirtualSpace ? span.End : new VirtualSnapshotPoint(span.End.Position.GetContainingLine().End);
+                span = new VirtualSnapshotSpan(start, end);
             }
 
             // Check that comment start and end blocks are possible.
-            if ((span.Start - span.Start.GetContainingLine().Start) + blockStart.Length <= startLen && (span.End - span.End.GetContainingLine().Start) - blockStart.Length >= 0)
+            if ((span.Start.Position - span.Start.Position.GetContainingLine().Start) + blockStart.Length <= startLen && (span.End.Position - span.End.Position.GetContainingLine().Start) - blockStart.Length >= 0)
             {
                 string startText = span.Snapshot.GetText(span.Start.Position, blockStart.Length);
 
                 if (startText == blockStart)
                 {
-                    SnapshotSpan linespan = span;
-                    linespan = new SnapshotSpan(span.End - blockEnd.Length, span.End);
+                    SnapshotSpan linespan = span.SnapshotSpan;
+                    linespan = new SnapshotSpan(span.End.Position - blockEnd.Length, span.End.Position);
                     string endText = linespan.GetText();
                     if (endText == blockEnd)
                     {
                         //yes, block comment selected; remove it
                         edit.Delete(linespan);
                         edit.Delete(span.Start.Position, blockStart.Length);
-                        result = span;
+                        result = new VirtualSnapshotSpan(span.SnapshotSpan);
                         return true;
                     }
                 }
             }
 
-            result = default(SnapshotSpan);
+            result = default(VirtualSnapshotSpan);
             return false;
         }
 
-        protected static void TrimSpan(ref SnapshotSpan span)
+        /// <summary>
+        /// Update the specified <paramref name="span"/> to not include any leading or trailing whitespace characters.
+        /// </summary>
+        /// <param name="span">The span to trim.</param>
+        protected static void TrimSpan(ref VirtualSnapshotSpan span)
         {
             string text = span.GetText();
             int length = text.Trim().Length;
@@ -570,7 +578,14 @@
                 offset++;
 
             if (offset > 0 || length != text.Length)
-                span = new SnapshotSpan(span.Start + offset, length);
+            {
+                VirtualSnapshotPoint start = offset > 0 ? new VirtualSnapshotPoint(span.Start.Position + offset) : span.Start;
+
+                bool removedSpacesFromEnd = length < text.Length - offset;
+                VirtualSnapshotPoint end = removedSpacesFromEnd ? new VirtualSnapshotPoint(start.Position + length) : span.End;
+
+                span = new VirtualSnapshotSpan(start, end);
+            }
         }
 
         protected static int ScanToNonWhitespaceChar(ITextSnapshotLine line)
@@ -584,6 +599,7 @@
             {
                 i++;
             }
+
             return i;
         }
     }
