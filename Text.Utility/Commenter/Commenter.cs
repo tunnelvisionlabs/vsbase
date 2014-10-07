@@ -489,7 +489,7 @@
                 foreach (var format in formats)
                 {
                     int clen = format.StartText.Length;
-                    if ((text.Length > i + clen) && text.Substring(i, clen) == format.StartText)
+                    if ((text.Length > i + clen) && text.Substring(i, clen).Equals(format.StartText, StringComparison.Ordinal))
                     {
                         // remove line comment.
                         edit.Delete(span.Snapshot.GetLineFromLineNumber(line).Start.Position + i, clen);
@@ -544,12 +544,12 @@
             {
                 string startText = span.Snapshot.GetText(span.Start.Position, blockStart.Length);
 
-                if (startText == blockStart)
+                if (startText.Equals(blockStart, StringComparison.Ordinal))
                 {
                     SnapshotSpan linespan = span.SnapshotSpan;
                     linespan = new SnapshotSpan(span.End.Position - blockEnd.Length, span.End.Position);
                     string endText = linespan.GetText();
-                    if (endText == blockEnd)
+                    if (endText.Equals(blockEnd, StringComparison.Ordinal))
                     {
                         //yes, block comment selected; remove it
                         edit.Delete(linespan);
