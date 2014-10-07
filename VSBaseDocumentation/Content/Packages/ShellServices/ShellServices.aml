@@ -50,19 +50,6 @@
         <list class="bullet">
           <listItem>
             <para>
-              For extensions targeting Visual Studio 2010 and newer.
-            </para>
-            <code language="csharp">
-              <![CDATA[
-              [assembly: ProvideCodeBase(
-                  AssemblyName = "Tvl.VisualStudio.ShellServices.10",
-                  Version = "1.0.0.0",
-                  CodeBase = "$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll")]
-              ]]>
-            </code>
-          </listItem>
-          <listItem>
-            <para>
               For extensions targeting Visual Studio 2012 and newer.
             </para>
             <code language="csharp">
