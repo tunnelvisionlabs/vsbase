@@ -16,7 +16,7 @@
     /// </summary>
     /// <threadsafety/>
     /// <preliminary/>
-    public class Commenter : ICommenter
+    public class FormatCommenter : ICommenter
     {
         /// <summary>
         /// This is the backing field for the <see cref="TextBuffer"/> property.
@@ -49,7 +49,7 @@
         private readonly bool _useLineComments;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text buffer, undo history, and comment formats.
+        /// Initializes a new instance of the <see cref="FormatCommenter"/> class for the specified text buffer, undo history, and comment formats.
         /// </summary>
         /// <param name="textBuffer">The text buffer.</param>
         /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.</param>
@@ -64,7 +64,7 @@
         /// <exception cref="ArgumentException">
         /// If <paramref name="commentFormats"/> contains any <see langword="null"/> entries.
         /// </exception>
-        public Commenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, params CommentFormat[] commentFormats)
+        public FormatCommenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, params CommentFormat[] commentFormats)
             : this(textBuffer, textUndoHistoryRegistry, commentFormats.AsEnumerable())
         {
             Contract.Requires(textBuffer != null);
@@ -73,7 +73,7 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Commenter"/> class for the specified text buffer, undo history, and comment formats.
+        /// Initializes a new instance of the <see cref="FormatCommenter"/> class for the specified text buffer, undo history, and comment formats.
         /// </summary>
         /// <param name="textBuffer">The text buffer.</param>
         /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.</param>
@@ -88,7 +88,7 @@
         /// <exception cref="ArgumentException">
         /// If <paramref name="commentFormats"/> contains any <see langword="null"/> entries.
         /// </exception>
-        public Commenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, IEnumerable<CommentFormat> commentFormats)
+        public FormatCommenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, IEnumerable<CommentFormat> commentFormats)
         {
             Contract.Requires<ArgumentNullException>(textBuffer != null, "textBuffer");
             Contract.Requires<ArgumentNullException>(textUndoHistoryRegistry != null, "textUndoHistoryRegistry");

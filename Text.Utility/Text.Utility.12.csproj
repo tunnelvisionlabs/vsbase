@@ -192,8 +192,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commenter\BlockCommentFormat.cs" />
-    <Compile Include="Commenter\Commenter.cs" />
     <Compile Include="Commenter\CommentFormat.cs" />
+    <Compile Include="Commenter\FormatCommenter.cs" />
     <Compile Include="Commenter\LineCommentFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextViewCommandFilter.cs" />

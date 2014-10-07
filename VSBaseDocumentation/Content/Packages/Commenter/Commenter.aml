@@ -146,11 +146,11 @@
           <content>
             <para>
               The easiest way to provide commenting features is to use the standard
-              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>
+              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>
               implementation of the
               <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenter</codeEntityReference>
               interface. The following steps show how to create an instance of
-              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>
+              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>
               and provide it to the Commenter Service by exporting an instance of
               <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider</codeEntityReference>.
             </para>
@@ -199,10 +199,10 @@
                   Implement the
                   <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.TryCreateCommenter(Microsoft.VisualStudio.Text.ITextBuffer)</codeEntityReference>
                   method by returning an instance of
-                  <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>. The
+                  <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>. The
                   <codeEntityReference>T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry</codeEntityReference>
                   service is imported in order for
-                  <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>
+                  <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>
                   to correctly support the Undo and Redo commands. The following code is the complete implementation of
                   <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider</codeEntityReference>
                   required to support the Comment and Uncomment commands for a simple language.
@@ -227,9 +227,9 @@
 
                       public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
                       {
-                          Func<Commenter> factory =
-                              () => new Commenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
-                          return textBuffer.Properties.GetOrCreateSingletonProperty<Commenter>(factory);
+                          Func<FormatCommenter> factory =
+                              () => new FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
+                          return textBuffer.Properties.GetOrCreateSingletonProperty<FormatCommenter>(factory);
                       }
                   }
                   ]]>
@@ -283,7 +283,7 @@
     <relatedTopics>
       <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider</codeEntityReference>
       <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenter</codeEntityReference>
-      <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Commenter</codeEntityReference>
+      <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>
     </relatedTopics>
   </developerConceptualDocument>
 </topic>
