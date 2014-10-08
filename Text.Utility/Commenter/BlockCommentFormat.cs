@@ -2,15 +2,20 @@
 {
     using System;
     using System.Diagnostics.Contracts;
+    using Tvl.VisualStudio.Text.Commenter.Interfaces;
 
     /// <summary>
     /// This class defines the basic structure of a "block comment" in a language.
     /// </summary>
     /// <remarks>
-    /// For the purpose of this implementation, a block comment is a comment that
-    /// extends from a predefined starting prefix to a predefined ending suffix.
-    /// The <see cref="AllowNesting"/> property specifies whether the language
-    /// allows block comments in this format to be nested.
+    /// <para>For the purpose of this implementation, a block comment is a comment that extends from a predefined
+    /// starting prefix to a predefined ending suffix. The <see cref="AllowNesting"/> property specifies whether the
+    /// language allows block comments in this format to be nested.</para>
+    /// <note type="note">
+    /// <para>The exact semantics of a block comment are not dictated by this data structure. The implementation of
+    /// <see cref="ICommenter"/> provided by an extension for a particular content type is responsible for the behavior
+    /// of comments.</para>
+    /// </note>
     /// </remarks>
     /// <threadsafety/>
     /// <preliminary/>
@@ -32,19 +37,18 @@
         private readonly bool _allowNesting;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlockCommentFormat"/> class with the
-        /// specified prefix and suffix. The <see cref="AllowNesting"/> property is initialized
-        /// to <see langword="false"/>.
+        /// Initializes a new instance of the <see cref="BlockCommentFormat"/> class with the specified prefix and
+        /// suffix. The <see cref="AllowNesting"/> property is initialized to <see langword="false"/>.
         /// </summary>
         /// <param name="startText">The prefix for a block comment in this format.</param>
         /// <param name="endText">The suffix for a block comment in this format.</param>
         /// <exception cref="ArgumentNullException">
-        /// If <paramref name="startText"/> is <see langword="null"/>.
+        /// <para>If <paramref name="startText"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="endText"/> is <see langword="null"/>.</para>
         /// </exception>
         /// <exception cref="ArgumentException">
-        /// If <paramref name="startText"/> is empty.
+        /// <para>If <paramref name="startText"/> is empty.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="endText"/> is empty.</para>
         /// </exception>
@@ -58,20 +62,20 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlockCommentFormat"/> class with the
-        /// specified prefix, suffix, and value indicating whether block comments in this
-        /// format may appear nested in the source code.
+        /// Initializes a new instance of the <see cref="BlockCommentFormat"/> class with the specified prefix, suffix,
+        /// and value indicating whether block comments in this format may appear nested in the source code.
         /// </summary>
         /// <param name="startText">The prefix for a block comment in this format.</param>
         /// <param name="endText">The suffix for a block comment in this format.</param>
-        /// <param name="allowNesting"><see langword="true"/> if comments in this format may be nested; otherwise, <see langword="false"/>.</param>
+        /// <param name="allowNesting"><see langword="true"/> if comments in this format may be nested; otherwise,
+        /// <see langword="false"/>.</param>
         /// <exception cref="ArgumentNullException">
-        /// If <paramref name="startText"/> is <see langword="null"/>.
+        /// <para>If <paramref name="startText"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="endText"/> is <see langword="null"/>.</para>
         /// </exception>
         /// <exception cref="ArgumentException">
-        /// If <paramref name="startText"/> is empty.
+        /// <para>If <paramref name="startText"/> is empty.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="endText"/> is empty.</para>
         /// </exception>

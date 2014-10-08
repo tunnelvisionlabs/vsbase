@@ -83,39 +83,10 @@
           <title>Commenter Interfaces Library</title>
           <content>
             <para>
-              The Commenter Interfaces Library should be installed in any package which uses the Commenter Service. The library is available
-              under several different NuGet packages. Only one version of the library should be installed in a project, selected according
-              to the specific version(s) of Visual Studio a project intends to support.
+              The Commenter Interfaces Library should be installed in any package which uses the Commenter Service. The
+              library is available in the <codeInline>Tvl.VisualStudio.Commenter.Interfaces</codeInline> NuGet package,
+              which supports extensions targeting any combination of Visual Studio versions starting with 2010.
             </para>
-            <list class="bullet">
-              <listItem>
-                <para>
-                  <codeInline>Tvl.VisualStudio.Commenter.Interfaces.10</codeInline>: For projects which support Visual Studio 2010 and newer.
-                  In particular, this package should be used in projects which depend on the <externalLink>
-                    <linkText>VSSDK.Text.10</linkText>
-                    <linkUri>http://www.nuget.org/packages/VSSDK.Text.10</linkUri>
-                  </externalLink> package.
-                </para>
-              </listItem>
-              <listItem>
-                <para>
-                  <codeInline>Tvl.VisualStudio.Commenter.Interfaces.11</codeInline>: For projects which support Visual Studio 2012 and newer.
-                  In particular, this package should be used in projects which depend on the <externalLink>
-                    <linkText>VSSDK.Text.11</linkText>
-                    <linkUri>http://www.nuget.org/packages/VSSDK.Text.11</linkUri>
-                  </externalLink> package.
-                </para>
-              </listItem>
-              <listItem>
-                <para>
-                  <codeInline>Tvl.VisualStudio.Commenter.Interfaces.12</codeInline>: For projects which support Visual Studio 2013 and newer.
-                  In particular, this package should be used in projects which depend on the <externalLink>
-                    <linkText>VSSDK.Text.12</linkText>
-                    <linkUri>http://www.nuget.org/packages/VSSDK.Text.12</linkUri>
-                  </externalLink> package.
-                </para>
-              </listItem>
-            </list>
           </content>
         </section>
         <section address="TextUtility">
@@ -136,7 +107,7 @@
       <title>Using the Commenter Service</title>
       <content>
         <para>
-          This services allows extension developers to easily support the Comment and Uncomment commands
+          This service allows extension developers to easily support the Comment and Uncomment commands
           for new languages in Visual Studio.
         </para>
       </content>
@@ -238,6 +209,42 @@
             </list>
           </content>
         </section>
+
+        <section>
+          <title>Providing a Commenter for a Language Without Block Comments</title>
+          <content>
+            <para>
+              The standard commenter supports any combination of line and/or block comments. The following example shows
+              a class which provides a commenter for Visual Basic files, which supports line comments but not block
+              comments.
+            </para>
+            <code language="csharp">
+              <![CDATA[
+              [Export(typeof(ICommenterProvider))]
+              [ContentType("SimpleVB")]
+              public sealed class SimpleBatCommenterProvider : ICommenterProvider
+              {
+                  private static readonly LineCommentFormat LineCommentFormat =
+                      new LineCommentFormat("'");
+
+                  [Import]
+                  private ITextUndoHistoryRegistry TextUndoHistoryRegistry
+                  {
+                      get;
+                      set;
+                  }
+
+                  public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
+                  {
+                      Func<FormatCommenter> factory =
+                          () => new FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat);
+                      return textBuffer.Properties.GetOrCreateSingletonProperty<FormatCommenter>(factory);
+                  }
+              }
+              ]]>
+            </code>
+          </content>
+        </section>
       </sections>
     </section>
 
@@ -256,8 +263,8 @@
           <listItem>
             <para>
               <legacyBold>Assembly Versioning:</legacyBold> To ensure long-term compatibility of this extension with many other
-              extensions, all communication between the MEF-exported Output Window service and consumers of the API is performed
-              through a dedicated interfaces assembly, <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>. Following
+              extensions, all communication between the MEF-exported Commenter service and consumers of the API is performed
+              through a dedicated interfaces assembly, <codeInline>Tvl.VisualStudio.Commenter.Interfaces</codeInline>. Following
               the initial release of this extension, the contracts defined by this assembly (e.g. the strong name and API) will
               <legacyItalic>never change</legacyItalic>. If the source for this assembly is ever updated, it will only be in ways
               that are guaranteed to not cause problems for existing installations, such as updated XML documentation or updating
@@ -266,13 +273,13 @@
           </listItem>
           <listItem>
             <para>
-              <legacyBold>Assembly Binding:</legacyBold> Since the <codeInline>Tvl.VisualStudio.OutputWindow.Interfaces</codeInline>
+              <legacyBold>Assembly Binding:</legacyBold> Since the <codeInline>Tvl.VisualStudio.Commenter.Interfaces</codeInline>
               assembly does not appear in a <codeInline>&lt;MefComponent&gt;</codeInline> element within <localUri>source.extension.vsixmanifest</localUri>,
               there are a number of situations with traditional deployments where Visual Studio may be unable to locate the assembly
-              at runtime. To avoid this situation, the <codeInline>Tvl.VisualStudio.OutputWindow</codeInline> extension created
-              for the implementation of the Output Window Service registers its installation folder in the Visual Studio binding path
+              at runtime. To avoid this situation, the <codeInline>Tvl.VisualStudio.Commenter</codeInline> extension created
+              for the implementation of the Commenter Service registers its installation folder in the Visual Studio binding path
               using the <codeInline>[ProvideBindingPath]</codeInline> registration attribute. This feature ensures that the
-              Output Window interfaces assembly will be available to all Visual Studio extensions, regardless of the manner in which
+              Commenter interfaces assembly will be available to all Visual Studio extensions, regardless of the manner in which
               they are deployed.
             </para>
           </listItem>
