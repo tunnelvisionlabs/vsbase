@@ -167,7 +167,7 @@
         {
             int rc = VSConstants.S_OK;
 
-            if (!HandlePreExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut) && _next != null)
+            if (!HandlePreExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut))
             {
                 // Pass it along the chain.
                 rc = this.InnerExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut);
@@ -265,18 +265,18 @@
                 if (hi == VsMenus.VSCmdOptQueryParameterList)
                 {
                     int hr = QueryParameterList(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
-                    if (!ErrorHandler.Succeeded(hr) && _next != null)
-                        return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (ErrorHandler.Succeeded(hr))
+                        return hr;
 
-                    return hr;
+                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
                 }
                 else
                 {
                     int hr = ShowHelp(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
-                    if (!ErrorHandler.Succeeded(hr) && _next != null)
-                        return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (ErrorHandler.Succeeded(hr))
+                        return hr;
 
-                    return hr;
+                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
                 }
 
             default:
