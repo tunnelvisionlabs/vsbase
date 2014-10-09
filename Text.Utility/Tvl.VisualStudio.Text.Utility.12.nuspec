@@ -15,7 +15,7 @@
     <tags>vs2013</tags>
     <dependencies>
       <!-- Visual Studio 2013 -->
-      <dependency id="VSSDK.IDE.12" version="[12.0.2,13.0.0)"/>
+      <dependency id="VSSDK.IDE.12" version="[12.0.3,13.0.0)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.Text.Utility.dll):
         Microsoft.VisualStudio.OLE.Interop
@@ -25,9 +25,9 @@
         Microsoft.VisualStudio.Text.UI
         Tvl.VisualStudio.Commenter.Interfaces
       -->
-      <dependency id="VSSDK.OLE.Interop" version="[7.0.2,8.0.0)"/>
-      <dependency id="VSSDK.TextManager.Interop" version="[7.0.2,8.0.0)"/>
-      <dependency id="VSSDK.Text.12" version="[12.0.2,13.0.0)"/>
+      <dependency id="VSSDK.OLE.Interop" version="[7.0.3,8.0.0)"/>
+      <dependency id="VSSDK.TextManager.Interop" version="[7.0.3,8.0.0)"/>
+      <dependency id="VSSDK.Text" version="[12.0.3,)"/>
       <dependency id="Tvl.VisualStudio.Commenter.Interfaces.12" version="[1.0.0,1.1.0)"/>
       <!--
       The following dependencies are not exposed, but they include assemblies which are
