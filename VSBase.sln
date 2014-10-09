@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputWindow.Interfaces", "OutputWindow.Interfaces\OutputWindow.Interfaces.csproj", "{52C5E011-EA71-4799-924B-845CE1C9CA06}"
 EndProject
@@ -25,6 +25,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{16CE8FAB-F192-4E9C-88D0-3365475E519A}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "VSBaseDocumentation", "VSBaseDocumentation\VSBaseDocumentation.shfbproj", "{6A379261-D0A2-427C-8E7F-48895E875B1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{52C5E011-EA71-4799-924B-845CE1C9CA06} = {52C5E011-EA71-4799-924B-845CE1C9CA06}
+		{66D70F43-3051-4EDB-B730-9E6412332CA3} = {66D70F43-3051-4EDB-B730-9E6412332CA3}
+		{3539AC4E-0666-4A6E-873D-03FD8F2D8CBD} = {3539AC4E-0666-4A6E-873D-03FD8F2D8CBD}
+		{144C8488-5425-4759-8F44-0A67E0567A19} = {144C8488-5425-4759-8F44-0A67E0567A19}
+		{AB447CC7-0D6F-4C0A-8783-293B5379464B} = {AB447CC7-0D6F-4C0A-8783-293B5379464B}
+	EndProjectSection
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "AdditionalSdkDocumentation", "AdditionalSdkDocumentation\AdditionalSdkDocumentation.shfbproj", "{9985E075-5ACF-48A3-9402-3FC2F114D71D}"
 EndProject
