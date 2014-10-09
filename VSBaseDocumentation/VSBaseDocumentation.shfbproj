@@ -45,7 +45,7 @@
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>True</RootNamespaceContainer>
-    <PresentationStyle>VS2013Alt</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>MemberName</NamingMethod>
     <HelpTitle>Tunnel Vision Labs&amp;#39%3b Base Extensions Library for Visual Studio</HelpTitle>
@@ -62,9 +62,6 @@
       </ComponentConfig>
     </ComponentConfigurations>
     <PlugInConfigurations>
-      <PlugInConfig id="Lightweight TOC" enabled="True" xmlns="">
-        <configuration />
-      </PlugInConfig>
       <PlugInConfig id="Additional Reference Links" enabled="True">
         <configuration>
           <targets>
