@@ -56,5 +56,12 @@
         {
             Assert.IsInstanceOfType(ServiceProvider.GetLongIdleManager(), typeof(IVsLongIdleManager));
         }
+
+        [TestMethod]
+        [HostType("VS IDE")]
+        public void TestGetProjectMRU()
+        {
+            Assert.IsInstanceOfType(ServiceProvider.GetProjectMRU(), typeof(IVsProjectMRU));
+        }
     }
 }
