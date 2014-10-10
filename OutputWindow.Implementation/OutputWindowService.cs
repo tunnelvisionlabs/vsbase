@@ -11,6 +11,7 @@
     using DispatcherPriority = System.Windows.Threading.DispatcherPriority;
     using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
     using IVsOutputWindowPane = Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane;
+    using SVsGeneralOutputWindowPane = Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane;
     using SVsServiceProvider = Microsoft.VisualStudio.Shell.SVsServiceProvider;
     using Thread = System.Threading.Thread;
     using VSConstants = Microsoft.VisualStudio.VSConstants;
@@ -47,6 +48,13 @@
 
         public IOutputWindowPane TryGetPane(string name)
         {
+            if (PredefinedOutputWindowPanes.General.Equals(name))
+            {
+                IVsOutputWindowPane generalPane = GlobalServiceProvider.GetService<SVsGeneralOutputWindowPane, IVsOutputWindowPane>();
+                if (generalPane != null)
+                    return new VsOutputWindowPaneAdapter(generalPane);
+            }
+
             var outputWindow = GlobalServiceProvider.GetOutputWindow();
             if (outputWindow == null)
                 return null;
