@@ -16,31 +16,15 @@
     <dependencies>
       <!-- Visual Studio 2012 -->
       <dependency id="VSSDK.IDE.11" version="[11.0.3,12.0.0)"/>
+      <!-- Depend on Shell Services for previous environments -->
+      <dependency id="Tvl.VisualStudio.ShellServices.10" version="[$version$,)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.ShellServices.11.dll):
-        Microsoft.VisualStudio.ComponentModelHost
-        Microsoft.VisualStudio.Language.Intellisense
-        Microsoft.VisualStudio.OLE.Interop
         Microsoft.VisualStudio.Shell.Immutable.10.0
-        Microsoft.VisualStudio.Shell.Interop
-        Microsoft.VisualStudio.Shell.Interop.8.0
-        Microsoft.VisualStudio.Shell.Interop.9.0
-        Microsoft.VisualStudio.Shell.Interop.10.0
         Microsoft.VisualStudio.Shell.Interop.11.0
-        Microsoft.VisualStudio.TextManager.Interop
-        Microsoft.VisualStudio.TextManager.Interop.8.0
       -->
-      <dependency id="VSSDK.ComponentModelHost" version="[11.0.3,)"/>
-      <dependency id="VSSDK.Language" version="[11.0.3,)"/>
-      <dependency id="VSSDK.OLE.Interop" version="[7.0.3,8.0.0)"/>
       <dependency id="VSSDK.Shell.Immutable.10" version="[10.0.3,11.0.0)"/>
-      <dependency id="VSSDK.Shell.Interop" version="[7.0.3,8.0.0)"/>
-      <dependency id="VSSDK.Shell.Interop.8" version="[8.0.3,9.0.0)"/>
-      <dependency id="VSSDK.Shell.Interop.9" version="[9.0.3,10.0.0)"/>
-      <dependency id="VSSDK.Shell.Interop.10" version="[10.0.3,11.0.0)"/>
       <dependency id="VSSDK.Shell.Interop.11" version="[11.0.3,12.0.0)"/>
-      <dependency id="VSSDK.TextManager.Interop" version="[7.0.3,8.0.0)"/>
-      <dependency id="VSSDK.TextManager.Interop.8" version="[8.0.3,9.0.0)"/>
     </dependencies>
     <references>
       <reference file="Tvl.VisualStudio.ShellServices.11.dll"/>

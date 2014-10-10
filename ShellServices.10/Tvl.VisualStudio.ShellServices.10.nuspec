@@ -18,6 +18,7 @@
       <dependency id="VSSDK.IDE.10" version="[10.0.3,11.0.0)"/>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.ShellServices.10.dll):
+        EnvDTE
         Microsoft.VisualStudio.ComponentModelHost
         Microsoft.VisualStudio.Language.Intellisense
         Microsoft.VisualStudio.OLE.Interop

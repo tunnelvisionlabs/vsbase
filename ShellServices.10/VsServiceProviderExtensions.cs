@@ -16,7 +16,7 @@
     /// <threadsafety/>
     public static partial class VsServiceProviderExtensions
     {
-#if false // this service needs to be provided throw a "ShellServices.10Only" assembly...
+#if false // this service needs to be provided through a "ShellServices.10Only" assembly...
         public static ICallHierarchy GetCallHierarchy(this SVsServiceProvider serviceProvider)
         {
             Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
