@@ -205,10 +205,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VsServiceProviderExtensions.cs">
+    <Compile Include="VsServiceProviderExtensions12.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="VsServiceProviderExtensions.Shell.cs" />
+    <Compile Include="VsServiceProviderExtensions12.Shell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\keys\vsbase.snk">
