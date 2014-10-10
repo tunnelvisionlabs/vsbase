@@ -48,13 +48,13 @@
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.ShellServices.11.dll" target="lib\net45"/>
-    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.ShellServices.11.pdb" target="lib\net45"/>
-    <file src="bin\vs2012\$Configuration$\Tvl.VisualStudio.ShellServices.11.xml" target="lib\net45"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.11.dll" target="lib\net45"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.11.pdb" target="lib\net45"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.11.xml" target="lib\net45"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\vs2012\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.11.Contracts.dll" target="lib\net45"/>
-    <file src="bin\vs2012\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.11.Contracts.pdb" target="lib\net45"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.11.Contracts.dll" target="lib\net45"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.11.Contracts.pdb" target="lib\net45"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
