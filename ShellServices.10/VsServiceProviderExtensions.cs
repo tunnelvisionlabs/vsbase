@@ -1,7 +1,9 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
+    using EnvDTE;
     using Microsoft.VisualStudio.ComponentModelHost;
     using Microsoft.VisualStudio.Shell;
     using IGlyphService = Microsoft.VisualStudio.Language.Intellisense.IGlyphService;
@@ -37,27 +39,19 @@
             return serviceProvider.GetService<SComponentModel, IComponentModel>();
         }
 
-#if false
-        // DTE shouldn't be Dte
-        [SuppressMessage("Microsoft.Naming", "CA1709")]
+        /// <summary>
+        /// Gets the global <see cref="DTE"/> service.
+        /// </summary>
+        /// <param name="serviceProvider">The service provider.</param>
+        /// <returns>The <see cref="DTE"/> service provided by the service provider, or <see langword="null"/> if the service provider was not able to provide an instance of the service.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
+        [SuppressMessage("Microsoft.Naming", "CA1709", Justification = "DTE shouldn't be Dte")]
+        [CLSCompliant(false)]
         public static DTE GetDTE(this SVsServiceProvider serviceProvider)
         {
-            if (serviceProvider == null) throw new ArgumentNullException("serviceProvider"); Contract.EndContractBlock();
-            {
-                return serviceProvider.GetService<EnvDTE._DTE, DTE>();
-            }
+            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            return serviceProvider.GetService<_DTE, DTE>();
         }
-
-        // DTE2 shouldn't be Dte2
-        [SuppressMessage("Microsoft.Naming", "CA1709")]
-        public static DTE2 GetDTE2(this SVsServiceProvider serviceProvider)
-        {
-            if (serviceProvider == null) throw new ArgumentNullException("serviceProvider"); Contract.EndContractBlock();
-            {
-                return serviceProvider.GetService<EnvDTE._DTE, DTE2>();
-            }
-        }
-#endif
 
         /// <summary>
         /// Gets the global <see cref="IGlyphService"/> service.

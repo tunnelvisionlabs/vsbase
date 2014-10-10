@@ -12,6 +12,7 @@
     using Microsoft.VisualStudio.TextManager.Interop;
     using Microsoft.VSSDK.Tools.VsIdeTesting;
     using Tvl.VisualStudio.Shell;
+    using DTE = EnvDTE.DTE;
     using IOleComponentManager = Microsoft.VisualStudio.OLE.Interop.IOleComponentManager;
     using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
     using Path = System.IO.Path;
@@ -219,6 +220,13 @@
         public void TestGetDiscoveryService()
         {
             Assert.IsInstanceOfType(ServiceProvider.GetDiscoveryService(), typeof(IVsDiscoveryService));
+        }
+
+        [TestMethod]
+        [HostType("VS IDE")]
+        public void TestGetDTE()
+        {
+            Assert.IsInstanceOfType(ServiceProvider.GetDTE(), typeof(DTE));
         }
 
         [TestMethod]
