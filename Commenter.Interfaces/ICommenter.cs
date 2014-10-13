@@ -1,6 +1,7 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter.Interfaces
 {
     using System;
+    using System.Collections.ObjectModel;
     using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Text;
 
@@ -18,7 +19,7 @@
         /// <param name="spans">The collection of spans to comment out.</param>
         /// <returns>A collection of spans encompassing the resulting comments.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="spans"/> is <see langword="null"/>.</exception>
-        NormalizedSnapshotSpanCollection CommentSpans(NormalizedSnapshotSpanCollection spans);
+        ReadOnlyCollection<VirtualSnapshotSpan> CommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans);
 
         /// <summary>
         /// Uncomments spans of code.
@@ -26,6 +27,6 @@
         /// <param name="spans">The collection of spans to uncomment.</param>
         /// <returns>A collection of spans encompassing the resulting uncommented code.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="spans"/> is <see langword="null"/>.</exception>
-        NormalizedSnapshotSpanCollection UncommentSpans(NormalizedSnapshotSpanCollection spans);
+        ReadOnlyCollection<VirtualSnapshotSpan> UncommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans);
     }
 }

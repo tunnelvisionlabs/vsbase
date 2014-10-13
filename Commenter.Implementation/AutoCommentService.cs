@@ -14,8 +14,8 @@
     /// <summary>
     /// This class provides the core implementation of the commenting service in Visual Studio
     /// by importing instances of <see cref="ICommenterProvider"/> and attaching a
-    /// <see cref="CommenterFilter"/> to the text view an <see cref="ICommenter"/> is
-    /// available for the text view.
+    /// <see cref="CommenterFilter"/> to the text view if an <see cref="ICommenter"/> is
+    /// available for the underlying text buffer of the text view.
     /// </summary>
     [Export(typeof(IVsTextViewCreationListener))]
     [ContentType("text")]
@@ -47,16 +47,22 @@
 
         /// <inheritdoc/>
         /// <remarks>
-        /// When a text view is created, this method first checks if the content type of the
-        /// underlying <see cref="ITextBuffer"/> matches a content type associated with any
-        /// of the <see cref="CommenterProviders"/>. If so, <see cref="ICommenterProvider.GetCommenter"/>
-        /// is called to obtain the <see cref="ICommenter"/> to associate with the text view.
-        /// The commenter is then used to initialize a <see cref="CommenterFilter"/> that
-        /// provides support for the comment and uncomment commands for the text view.
+        /// <para>When a text view is created, this method first checks if the content type of the underlying
+        /// <see cref="ITextBuffer"/> matches a content type associated with any of the
+        /// <see cref="CommenterProviders"/>. If so, <see cref="ICommenterProvider.TryCreateCommenter"/> is called to
+        /// obtain the <see cref="ICommenter"/> to associate with the text buffer for the view. The commenter is then
+        /// used to initialize a <see cref="CommenterFilter"/> that provides support for the comment and uncomment
+        /// commands for the text view.</para>
         ///
         /// <para>
         /// If any of these operations fails, no changes are applied to the text view.
         /// </para>
+        ///
+        /// <note type="note">
+        /// <para>The current implementation does not support projection buffer scenarios involving multiple content
+        /// types. However, the <see cref="ICommenterProvider"/> and <see cref="ICommenter"/> interfaces do not prevent
+        /// such a feature from being implemented in a future release.</para>
+        /// </note>
         /// </remarks>
         public void VsTextViewCreated(IVsTextView textViewAdapter)
         {
@@ -68,7 +74,7 @@
             if (provider == null)
                 return;
 
-            var commenter = provider.Value.GetCommenter(textView);
+            var commenter = provider.Value.TryCreateCommenter(textView.TextBuffer);
             if (commenter == null)
                 return;
 
