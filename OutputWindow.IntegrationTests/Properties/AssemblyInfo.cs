@@ -1,18 +1,19 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ShellServices.12.IntegrationTests")]
+[assembly: AssemblyTitle("OutputWindow.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunnel Vision Laboratories, LLC")]
-[assembly: AssemblyProduct("ShellServices.12.IntegrationTests")]
+[assembly: AssemblyProduct("OutputWindow.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © Sam Harwell 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: CLSCompliant(false)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -20,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("922bd8c6-0c89-4c62-ba6a-5a554f8dccf2")]
+[assembly: Guid("696323fc-4c47-4721-984f-3661d2f4ee82")]
 
 // Version information for an assembly consists of the following four values:
 //
