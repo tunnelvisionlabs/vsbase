@@ -333,7 +333,6 @@
         /// <para>The default implementation uses block comments if <em>all</em> of the following are true.</para>
         /// <list type="bullet">
         /// <item>We are not using line comments.</item>
-        /// <item>Some text is selected (i.e. <paramref name="span"/> is not empty).</item>
         /// <item><see cref="PreferredBlockFormat"/> is not <see langword="null"/>.</item>
         /// </list>
         /// </remarks>
@@ -358,10 +357,7 @@
             {
                 span = CommentLines(span, edit, PreferredLineFormat);
             }
-            else if (
-                span.Length > 0
-                && PreferredBlockFormat != null
-                )
+            else if (PreferredBlockFormat != null)
             {
                 span = CommentBlock(span, edit, PreferredBlockFormat);
             }
