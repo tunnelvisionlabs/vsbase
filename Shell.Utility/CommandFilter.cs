@@ -8,6 +8,7 @@
     using OLECMD = Microsoft.VisualStudio.OLE.Interop.OLECMD;
     using OLECMDEXECOPT = Microsoft.VisualStudio.OLE.Interop.OLECMDEXECOPT;
     using OLECMDF = Microsoft.VisualStudio.OLE.Interop.OLECMDF;
+    using OLECMDTEXT = Microsoft.VisualStudio.OLE.Interop.OLECMDTEXT;
     using OleConstants = Microsoft.VisualStudio.OLE.Interop.Constants;
     using VsMenus = Microsoft.VisualStudio.Shell.VsMenus;
 
@@ -163,11 +164,28 @@
                 throw new ObjectDisposedException(GetType().Name);
         }
 
+        /// <summary>
+        /// This method provides the primary implementation for <see cref="IOleCommandTarget.Exec"/> in all cases where
+        /// <see cref="OLECMDEXECOPT.OLECMDEXECOPT_SHOWHELP"/> was not requested.
+        /// </summary>
+        /// <param name="guidCmdGroup">The command group.</param>
+        /// <param name="nCmdID">The command ID.</param>
+        /// <param name="nCmdexecopt">The OLE command execution options.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <returns>
+        /// <para>This method returns <see cref="VSConstants.S_OK"/> on success.</para>
+        /// <para>-or-</para>
+        /// <para><see cref="OleConstants.OLECMDERR_E_NOTSUPPORTED"/> if the command is not handled by this command
+        /// filter, and no other command filters are available to process the request.</para>
+        /// </returns>
         private int ExecCommand(ref Guid guidCmdGroup, uint nCmdID, OLECMDEXECOPT nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
         {
             int rc = VSConstants.S_OK;
 
-            if (!HandlePreExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut) && _next != null)
+            if (!HandlePreExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut))
             {
                 // Pass it along the chain.
                 rc = this.InnerExec(ref guidCmdGroup, nCmdID, nCmdexecopt, pvaIn, pvaOut);
@@ -184,13 +202,15 @@
         /// This method supports the implementation for commands which are directly implemented by this command filter.
         /// </summary>
         /// <remarks>
-        /// The default implementation returns <see langword="false"/> for all commands.
+        /// <para>The default implementation returns <see langword="false"/> for all commands.</para>
         /// </remarks>
         /// <param name="commandGroup">The command group.</param>
         /// <param name="commandId">The command ID.</param>
         /// <param name="executionOptions">The OLE command execution options.</param>
-        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are specific to a particular command.</param>
-        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are specific to a particular command.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
         /// <returns>
         /// <see langword="true"/> if this command filter handled the command; otherwise, <see langword="false"/>
         /// to call the next <see cref="IOleCommandTarget"/> in the chain.
@@ -200,6 +220,23 @@
             return false;
         }
 
+        /// <summary>
+        /// Pass a command on to the next command filter in the chain, if available.
+        /// </summary>
+        /// <param name="commandGroup">The command group.</param>
+        /// <param name="commandId">The command ID.</param>
+        /// <param name="executionOptions">The OLE command execution options.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <returns>
+        /// <para>This method returns the result of calling <see cref="IOleCommandTarget.Exec"/> on the next command
+        /// filter in the chain.</para>
+        /// <para>-or-</para>
+        /// <para><see cref="OleConstants.OLECMDERR_E_NOTSUPPORTED"/> if no other command filters are available to
+        /// process the request.</para>
+        /// </returns>
         private int InnerExec(ref Guid commandGroup, uint commandId, OLECMDEXECOPT executionOptions, IntPtr pvaIn, IntPtr pvaOut)
         {
             if (_next != null)
@@ -209,11 +246,13 @@
         }
 
         /// <summary>
-        /// This method supports specialized handling in response to commands that are successfully handled by another command target.
+        /// This method supports specialized handling in response to commands that are successfully handled by another
+        /// command target.
         /// </summary>
         /// <remarks>
-        /// This method is only called if <see cref="HandlePreExec"/> for the current instance returned <see langword="false"/> and
-        /// the next command target in the chain returned a value indicating the command execution succeeded.
+        /// <para>This method is only called if <see cref="HandlePreExec"/> for the current instance returned
+        /// <see langword="false"/> and the next command target in the chain returned a value indicating the command
+        /// execution succeeded.</para>
         ///
         /// <para>
         /// The default implementation is empty.
@@ -222,13 +261,50 @@
         /// <param name="commandGroup">The command group.</param>
         /// <param name="commandId">The command ID.</param>
         /// <param name="executionOptions">The OLE command execution options.</param>
-        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are specific to a particular command.</param>
-        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are specific to a particular command.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
         protected virtual void HandlePostExec(ref Guid commandGroup, uint commandId, OLECMDEXECOPT executionOptions, IntPtr pvaIn, IntPtr pvaOut)
         {
         }
 
+        /// <summary>
+        /// The expected behavior of this method is not clear.
+        /// </summary>
+        /// <remarks>
+        /// <para>The default implementation returns <see cref="OleConstants.OLECMDERR_E_NOTSUPPORTED"/> for all
+        /// commands.</para>
+        /// </remarks>
+        /// <param name="commandGroup">The command group.</param>
+        /// <param name="commandId">The command ID.</param>
+        /// <param name="executionOptions">The OLE command execution options.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <returns>The expected behavior of this method is not clear.</returns>
         protected virtual int QueryParameterList(ref Guid commandGroup, uint commandId, OLECMDEXECOPT executionOptions, IntPtr pvaIn, IntPtr pvaOut)
+        {
+            return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
+        }
+
+        /// <summary>
+        /// The expected behavior of this method is not clear.
+        /// </summary>
+        /// <remarks>
+        /// <para>The default implementation returns <see cref="OleConstants.OLECMDERR_E_NOTSUPPORTED"/> for all
+        /// commands.</para>
+        /// </remarks>
+        /// <param name="commandGroup">The command group.</param>
+        /// <param name="commandId">The command ID.</param>
+        /// <param name="executionOptions">The OLE command execution options.</param>
+        /// <param name="pvaIn">An optional pointer to the command argument(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <param name="pvaOut">An optional pointer to the command result(s). The semantics of this parameter are
+        /// specific to a particular command.</param>
+        /// <returns>The expected behavior of this method is not clear.</returns>
+        protected virtual int ShowHelp(ref Guid commandGroup, uint commandId, OLECMDEXECOPT executionOptions, IntPtr pvaIn, IntPtr pvaOut)
         {
             return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
         }
@@ -237,12 +313,17 @@
         /// Gets the current status of a particular command.
         /// </summary>
         /// <remarks>
-        /// The base implementation returns 0 for all commands, indicating the command is not supported by this command filter.
+        /// The base implementation returns 0 for all commands, indicating the command is not supported by this command
+        /// filter.
         /// </remarks>
         /// <param name="commandGroup">The command group.</param>
         /// <param name="commandId">The command ID.</param>
-        /// <returns>A collection of <see cref="OLECMDF"/> flags indicating the current status of a particular command, or 0 if the command is not supported by the current command filter.</returns>
-        protected virtual OLECMDF QueryCommandStatus(ref Guid commandGroup, uint commandId)
+        /// <param name="oleCommandText">A wrapper around the <see cref="OLECMDTEXT"/> object passed to
+        /// <see cref="IOleCommandTarget.QueryStatus"/>, or <see langword="null"/> if this parameter should be
+        /// ignored.</param>
+        /// <returns>A combination of values from the <see cref="OLECMDF"/> enumeration indicating the current status of
+        /// a particular command, or 0 if the command is not recognized by the current command filter.</returns>
+        protected virtual OLECMDF QueryCommandStatus(ref Guid commandGroup, uint commandId, OleCommandText oleCommandText)
         {
             return default(OLECMDF);
         }
@@ -256,38 +337,51 @@
             switch (lo)
             {
             case (ushort)OLECMDEXECOPT.OLECMDEXECOPT_SHOWHELP:
-                if ((nCmdexecopt >> 16) == VsMenus.VSCmdOptQueryParameterList)
+                if (hi == VsMenus.VSCmdOptQueryParameterList)
                 {
-                    return QueryParameterList(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    int hr = QueryParameterList(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (ErrorHandler.Succeeded(hr))
+                        return hr;
+
+                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
                 }
-                break;
+                else
+                {
+                    int hr = ShowHelp(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                    if (ErrorHandler.Succeeded(hr))
+                        return hr;
+
+                    return InnerExec(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
+                }
 
             default:
                 return ExecCommand(ref guidCmdGroup, nCmdID, (OLECMDEXECOPT)nCmdexecopt, pvaIn, pvaOut);
             }
-
-            return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
         }
 
         /// <inheritdoc/>
         int IOleCommandTarget.QueryStatus(ref Guid guidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
         {
-            Guid cmdGroup = guidCmdGroup;
-            for (uint i = 0; i < cCmds; i++)
+            using (OleCommandText oleCommandText = OleCommandText.FromQueryStatus(pCmdText))
             {
-                OLECMDF status = QueryCommandStatus(ref cmdGroup, prgCmds[i].cmdID);
-                if (status == default(OLECMDF) && _next != null)
+                Guid cmdGroup = guidCmdGroup;
+                for (uint i = 0; i < cCmds; i++)
                 {
-                    if (_next != null)
-                        return _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
+                    OLECMDF status = QueryCommandStatus(ref cmdGroup, prgCmds[i].cmdID, oleCommandText);
+                    if (status == default(OLECMDF) && _next != null)
+                    {
+                        int hr = _next.QueryStatus(ref cmdGroup, cCmds, prgCmds, pCmdText);
+                        if (ErrorHandler.Failed(hr))
+                            return hr;
+                    }
                     else
-                        return (int)OleConstants.OLECMDERR_E_NOTSUPPORTED;
+                    {
+                        prgCmds[i].cmdf = (uint)status;
+                    }
                 }
 
-                prgCmds[i].cmdf = (uint)status;
+                return VSConstants.S_OK;
             }
-
-            return VSConstants.S_OK;
         }
     }
 }
