@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Tvl.VisualStudio.OutputWindow;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tvl.VisualStudio.OutputWindow")]
+[assembly: AssemblyTitle("ShellServices.12.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunnel Vision Laboratories, LLC")]
-[assembly: AssemblyProduct("Tvl.VisualStudio.OutputWindow")]
+[assembly: AssemblyProduct("ShellServices.12.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © Sam Harwell 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,8 @@ using Tvl.VisualStudio.OutputWindow;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-[assembly: Guid("AFEED8FC-7461-4CC2-821C-8163AAAD30C6")]
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("922bd8c6-0c89-4c62-ba6a-5a554f8dccf2")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,11 +32,5 @@ using Tvl.VisualStudio.OutputWindow;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
-[assembly: AssemblyInformationalVersion("2.0.0.0-dev")]
-
-[ProvideBindingPath]
-internal class BindingPathClass
-{
-}
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

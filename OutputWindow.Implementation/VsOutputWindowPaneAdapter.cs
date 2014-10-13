@@ -5,6 +5,9 @@
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.Shell.Interop;
     using Tvl.VisualStudio.OutputWindow.Interfaces;
+    using Application = System.Windows.Application;
+    using DispatcherPriority = System.Windows.Threading.DispatcherPriority;
+    using Thread = System.Threading.Thread;
 
     internal sealed class VsOutputWindowPaneAdapter : IOutputWindowPane
     {
@@ -21,13 +24,21 @@
         {
             get
             {
-                string name = null;
-                ErrorHandler.ThrowOnFailure(this._pane.GetName(ref name));
-                return name;
+                if (Application.Current.Dispatcher.Thread == Thread.CurrentThread)
+                    return GetName();
+
+                return (string)Application.Current.Dispatcher.Invoke(DispatcherPriority.Normal, (Func<string>)GetName);
             }
+
             set
             {
-                ErrorHandler.ThrowOnFailure(this._pane.SetName(value));
+                if (Application.Current.Dispatcher.Thread == Thread.CurrentThread)
+                {
+                    SetName(value);
+                    return;
+                }
+
+                Application.Current.Dispatcher.Invoke(DispatcherPriority.Normal, (Action<string>)SetName, value);
             }
         }
 
@@ -52,6 +63,18 @@
                 text += Environment.NewLine;
 
             Write(text);
+        }
+
+        private string GetName()
+        {
+            string name = null;
+            ErrorHandler.ThrowOnFailure(_pane.GetName(ref name));
+            return name;
+        }
+
+        private void SetName(string value)
+        {
+            ErrorHandler.ThrowOnFailure(this._pane.SetName(value));
         }
     }
 }

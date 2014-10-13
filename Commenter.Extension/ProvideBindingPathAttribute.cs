@@ -15,7 +15,7 @@
     /// This would register the "PackageFolder" (i.e. the location of the pkgdef file) as a directory to be probed
     /// for assemblies to load.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class, AllowMultiple = false)]
     internal sealed class ProvideBindingPathAttribute : RegistrationAttribute
     {
         private static string GetPathToKey(RegistrationContext context)

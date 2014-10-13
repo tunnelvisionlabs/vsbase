@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestSettings name="VsIdeHostSettings.VS2013" id="1435d82b-0dae-4853-a844-3963d0ec5bf1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Description>These settings apply to tests run in the Visual Studio 2013 experimental hive.</Description>
+  <Deployment enabled="false" />
+  <Execution>
+    <Hosts type="VS IDE">
+      <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="12.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
+    </Hosts>
+  </Execution>
+  <Properties />
+</TestSettings>
