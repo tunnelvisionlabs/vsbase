@@ -78,6 +78,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		VsIdeHostSettings.VS2013.testsettings = VsIdeHostSettings.VS2013.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commenter.IntegrationTests", "Commenter.IntegrationTests\Commenter.IntegrationTests.csproj", "{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -212,6 +214,12 @@ Global
 		{B538259D-CECA-452E-8578-48544F1E366C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B538259D-CECA-452E-8578-48544F1E366C}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
 		{B538259D-CECA-452E-8578-48544F1E366C}.ReleaseNoDoc|Any CPU.Build.0 = Release|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.ReleaseNoDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C}.ReleaseNoDoc|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,5 +247,6 @@ Global
 		{4490ACFF-457F-4E8A-A57C-722C8C8ADBDC} = {88730001-746D-4C4F-B9C0-6DE933AE393E}
 		{43805B93-AA8A-4AD3-84D9-61E80EA70BDA} = {88730001-746D-4C4F-B9C0-6DE933AE393E}
 		{B538259D-CECA-452E-8578-48544F1E366C} = {88730001-746D-4C4F-B9C0-6DE933AE393E}
+		{1D1B8C30-FD95-48E5-86DD-858C6FCF528C} = {88730001-746D-4C4F-B9C0-6DE933AE393E}
 	EndGlobalSection
 EndGlobal

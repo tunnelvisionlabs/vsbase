@@ -5,6 +5,7 @@
     using System.Runtime.InteropServices;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Editor;
+    using Microsoft.VisualStudio.Text.Operations;
     using Microsoft.VisualStudio.TextManager.Interop;
     using Tvl.VisualStudio.Shell;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
@@ -28,19 +29,28 @@
         /// <param name="textViewAdapter"></param>
         /// <param name="textView">The text view.</param>
         /// <param name="commenter">The commenter implementation.</param>
+        /// <param name="editorOperations">The <see cref="IEditorOperations"/> instance for the text view.</param>
+        /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by
+        /// Visual Studio.</param>
         /// <exception cref="ArgumentNullException">
-        /// If <paramref name="textViewAdapter"/> is <see langword="null"/>.
+        /// <para>If <paramref name="textViewAdapter"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="textView"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="commenter"/> is <see langword="null"/>.</para>
+        /// <para>-or-</para>
+        /// <para>If <paramref name="editorOperations"/> is <see langword="null"/>.</para>
+        /// <para>-or-</para>
+        /// <para>If <paramref name="textUndoHistoryRegistry"/> is <see langword="null"/>.</para>
         /// </exception>
-        public CommenterFilter(IVsTextView textViewAdapter, ITextView textView, ICommenter commenter)
+        public CommenterFilter(IVsTextView textViewAdapter, ITextView textView, ICommenter commenter, IEditorOperations editorOperations, ITextUndoHistoryRegistry textUndoHistoryRegistry)
             : base(textViewAdapter)
         {
             Contract.Requires(textViewAdapter != null);
             Contract.Requires<ArgumentNullException>(textView != null, "textView");
             Contract.Requires<ArgumentNullException>(commenter != null, "commenter");
+            Contract.Requires<ArgumentNullException>(editorOperations != null, "editorOperations");
+            Contract.Requires<ArgumentNullException>(textUndoHistoryRegistry != null, "textUndoHistoryRegistry");
 
             this.TextView = textView;
             this.Commenter = commenter;
@@ -61,6 +71,30 @@
         /// commenting and uncommenting operations.
         /// </summary>
         public ICommenter Commenter
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// Gets the <see cref="IEditorOperations"/> instance associated with the text view.
+        /// </summary>
+        /// <value>
+        /// The <see cref="IEditorOperations"/> instance associated with the text view.
+        /// </value>
+        public IEditorOperations EditorOperations
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.
+        /// </summary>
+        /// <value>
+        /// The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.
+        /// </value>
+        public ITextUndoHistoryRegistry TextUndoHistoryRegistry
         {
             get;
             private set;
@@ -128,14 +162,23 @@
         /// </remarks>
         protected virtual void CommentSelection()
         {
-            bool reversed = TextView.Selection.IsReversed;
-            var newSelection = Commenter.CommentSpans(TextView.Selection.VirtualSelectedSpans);
-            // TODO: detect rectangle selection if present
-            if (newSelection.Count > 0)
+            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextView.TextBuffer);
+            using (var transaction = undoHistory.CreateTransaction("Comment Selection"))
             {
-                VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
-                VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
-                TextView.Selection.Select(anchorPoint, activePoint);
+                EditorOperations.AddBeforeTextBufferChangePrimitive();
+
+                bool reversed = TextView.Selection.IsReversed;
+                var newSelection = Commenter.CommentSpans(TextView.Selection.VirtualSelectedSpans);
+                // TODO: detect rectangle selection if present
+                if (newSelection.Count > 0)
+                {
+                    VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
+                    VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
+                    EditorOperations.SelectAndMoveCaret(anchorPoint, activePoint);
+                }
+
+                EditorOperations.AddAfterTextBufferChangePrimitive();
+                transaction.Complete();
             }
         }
 
@@ -149,14 +192,23 @@
         /// </remarks>
         protected virtual void UncommentSelection()
         {
-            bool reversed = TextView.Selection.IsReversed;
-            var newSelection = Commenter.UncommentSpans(TextView.Selection.VirtualSelectedSpans);
-            // TODO: detect rectangle selection if present
-            if (newSelection.Count > 0)
+            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextView.TextBuffer);
+            using (var transaction = undoHistory.CreateTransaction("Uncomment Selection"))
             {
-                VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
-                VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
-                TextView.Selection.Select(anchorPoint, activePoint);
+                EditorOperations.AddBeforeTextBufferChangePrimitive();
+
+                bool reversed = TextView.Selection.IsReversed;
+                var newSelection = Commenter.UncommentSpans(TextView.Selection.VirtualSelectedSpans);
+                // TODO: detect rectangle selection if present
+                if (newSelection.Count > 0)
+                {
+                    VirtualSnapshotPoint anchorPoint = reversed ? newSelection[0].End : newSelection[0].Start;
+                    VirtualSnapshotPoint activePoint = reversed ? newSelection[0].Start : newSelection[0].End;
+                    TextView.Selection.Select(anchorPoint, activePoint);
+                }
+
+                EditorOperations.AddAfterTextBufferChangePrimitive();
+                transaction.Complete();
             }
         }
     }

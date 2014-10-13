@@ -7,6 +7,7 @@
     using Microsoft.VisualStudio.Editor;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Editor;
+    using Microsoft.VisualStudio.Text.Operations;
     using Microsoft.VisualStudio.TextManager.Interop;
     using Microsoft.VisualStudio.Utilities;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
@@ -23,26 +24,96 @@
     internal sealed class AutoCommentService : IVsTextViewCreationListener
     {
         /// <summary>
-        /// Gets the global <see cref="IVsEditorAdaptersFactoryService"/> component provided
-        /// by Visual Studio.
+        /// This is the backing field for the <see cref="EditorAdaptersFactoryService"/> property.
         /// </summary>
-        [Import]
-        private IVsEditorAdaptersFactoryService EditorAdaptersFactoryService
+        private IVsEditorAdaptersFactoryService _editorAdaptersFactoryService;
+
+        /// <summary>
+        /// This is the backing field for the <see cref="EditorOperationsFactoryService"/> property.
+        /// </summary>
+        private IEditorOperationsFactoryService _editorOperationsFactoryService;
+
+        /// <summary>
+        /// This is the backing field for the <see cref="TextUndoHistoryRegistry"/> property.
+        /// </summary>
+        private ITextUndoHistoryRegistry _textUndoHistoryRegistry;
+
+        /// <summary>
+        /// This is the backing field for the <see cref="CommenterProviders"/> property.
+        /// </summary>
+        private List<Lazy<ICommenterProvider, IContentTypeMetadata>> _commenterProviders;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AutoCommentService"/> class with the specified components.
+        /// </summary>
+        /// <param name="editorAdaptersFactoryService">The global <see cref="IVsEditorAdaptersFactoryService"/>
+        /// component provided by Visual Studio.</param>
+        /// <param name="editorOperationsFactoryService">The global <see cref="IEditorOperationsFactoryService"/>
+        /// component provided by Visual Studio.</param>
+        /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> component provided
+        /// by Visual Studio.</param>
+        /// <param name="commenterProviders">A collection of <see cref="ICommenterProvider"/> components exported by
+        /// this and other extensions, along with any content type metadata associated with the component through the
+        /// use of <see cref="ContentTypeAttribute"/>.</param>
+        public AutoCommentService(
+            [Import] IVsEditorAdaptersFactoryService editorAdaptersFactoryService,
+            [Import] IEditorOperationsFactoryService editorOperationsFactoryService,
+            [Import] ITextUndoHistoryRegistry textUndoHistoryRegistry,
+            [ImportMany] List<Lazy<ICommenterProvider, IContentTypeMetadata>> commenterProviders)
         {
-            get;
-            set;
+            _editorAdaptersFactoryService = editorAdaptersFactoryService;
+            _editorOperationsFactoryService = editorOperationsFactoryService;
+            _textUndoHistoryRegistry = textUndoHistoryRegistry;
+            _commenterProviders = commenterProviders;
         }
 
         /// <summary>
-        /// Gets a collection of <see cref="ICommenterProvider"/> components exported by
-        /// this and other extensions, along with any content type metadata associated
-        /// with the component through the use of <see cref="ContentTypeAttribute"/>.
+        /// Gets the global <see cref="IVsEditorAdaptersFactoryService"/> component provided
+        /// by Visual Studio.
         /// </summary>
-        [ImportMany]
+        private IVsEditorAdaptersFactoryService EditorAdaptersFactoryService
+        {
+            get
+            {
+                return _editorAdaptersFactoryService;
+            }
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="IEditorOperationsFactoryService"/> component provided
+        /// by Visual Studio.
+        /// </summary>
+        private IEditorOperationsFactoryService EditorOperationsFactoryService
+        {
+            get
+            {
+                return _editorOperationsFactoryService;
+            }
+        }
+
+        /// <summary>
+        /// Gets the global <see cref="ITextUndoHistoryRegistry"/> component provided
+        /// by Visual Studio.
+        /// </summary>
+        private ITextUndoHistoryRegistry TextUndoHistoryRegistry
+        {
+            get
+            {
+                return _textUndoHistoryRegistry;
+            }
+        }
+
+        /// <summary>
+        /// Gets a collection of <see cref="ICommenterProvider"/> components exported by this and other extensions,
+        /// along with any content type metadata associated with the component through the use of
+        /// <see cref="ContentTypeAttribute"/>.
+        /// </summary>
         private List<Lazy<ICommenterProvider, IContentTypeMetadata>> CommenterProviders
         {
-            get;
-            set;
+            get
+            {
+                return _commenterProviders;
+            }
         }
 
         /// <inheritdoc/>
@@ -78,7 +149,9 @@
             if (commenter == null)
                 return;
 
-            CommenterFilter filter = new CommenterFilter(textViewAdapter, textView, commenter);
+            IEditorOperations editorOperations = EditorOperationsFactoryService.GetEditorOperations(textView);
+
+            CommenterFilter filter = new CommenterFilter(textViewAdapter, textView, commenter, editorOperations, TextUndoHistoryRegistry);
             filter.Enabled = true;
             textView.Properties.AddProperty(typeof(CommenterFilter), filter);
         }

@@ -6,7 +6,6 @@
     using System.Diagnostics.Contracts;
     using System.Linq;
     using Microsoft.VisualStudio.Text;
-    using Microsoft.VisualStudio.Text.Operations;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
 
     /// <summary>
@@ -22,11 +21,6 @@
         /// This is the backing field for the <see cref="TextBuffer"/> property.
         /// </summary>
         private readonly ITextBuffer _textBuffer;
-
-        /// <summary>
-        /// This is the backing field for the <see cref="TextUndoHistoryRegistry"/> property.
-        /// </summary>
-        private readonly ITextUndoHistoryRegistry _textUndoHistoryRegistry;
 
         /// <summary>
         /// This is the backing field for the <see cref="CommentFormats"/> property.
@@ -53,38 +47,31 @@
         /// history, and comment formats.
         /// </summary>
         /// <param name="textBuffer">The text buffer.</param>
-        /// <param name="textUndoHistoryRegistry">The global <see cref="ITextUndoHistoryRegistry"/> service provided by
-        /// Visual Studio.</param>
         /// <param name="commentFormats">A collection of <see cref="CommentFormat"/> instances describing the comment
         /// formats supported by this commenter.</param>
         /// <exception cref="ArgumentNullException">
         /// <para>If <paramref name="textBuffer"/> is <see langword="null"/>.</para>
-        /// <para>-or-</para>
-        /// <para>If <paramref name="textUndoHistoryRegistry"/> is <see langword="null"/>.</para>
         /// <para>-or-</para>
         /// <para>If <paramref name="commentFormats"/> is <see langword="null"/>.</para>
         /// </exception>
         /// <exception cref="ArgumentException">
         /// If <paramref name="commentFormats"/> contains any <see langword="null"/> entries.
         /// </exception>
-        public FormatCommenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, params CommentFormat[] commentFormats)
-            : this(textBuffer, textUndoHistoryRegistry, commentFormats.AsEnumerable())
+        public FormatCommenter(ITextBuffer textBuffer, params CommentFormat[] commentFormats)
+            : this(textBuffer, commentFormats.AsEnumerable())
         {
             Contract.Requires(textBuffer != null);
-            Contract.Requires(textUndoHistoryRegistry != null);
             Contract.Requires(commentFormats != null);
         }
 
-        /// <inheritdoc cref="FormatCommenter(ITextBuffer, ITextUndoHistoryRegistry, CommentFormat[])"/>
-        public FormatCommenter(ITextBuffer textBuffer, ITextUndoHistoryRegistry textUndoHistoryRegistry, IEnumerable<CommentFormat> commentFormats)
+        /// <inheritdoc cref="FormatCommenter(ITextBuffer, CommentFormat[])"/>
+        public FormatCommenter(ITextBuffer textBuffer, IEnumerable<CommentFormat> commentFormats)
         {
             Contract.Requires<ArgumentNullException>(textBuffer != null, "textBuffer");
-            Contract.Requires<ArgumentNullException>(textUndoHistoryRegistry != null, "textUndoHistoryRegistry");
             Contract.Requires<ArgumentNullException>(commentFormats != null, "commentFormats");
             Contract.Requires<ArgumentException>(!commentFormats.Contains(null));
 
             this._textBuffer = textBuffer;
-            this._textUndoHistoryRegistry = textUndoHistoryRegistry;
             this._commentFormats = commentFormats.ToList().AsReadOnly();
             this._blockFormats = _commentFormats.OfType<BlockCommentFormat>().ToList().AsReadOnly();
             this._lineFormats = _commentFormats.OfType<LineCommentFormat>().ToList().AsReadOnly();
@@ -216,21 +203,6 @@
             }
         }
 
-        /// <summary>
-        /// Gets the global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.
-        /// </summary>
-        /// <value>
-        /// The global <see cref="ITextUndoHistoryRegistry"/> service provided by Visual Studio.
-        /// </value>
-        protected ITextUndoHistoryRegistry TextUndoHistoryRegistry
-        {
-            get
-            {
-                Contract.Ensures(Contract.Result<ITextUndoHistoryRegistry>() != null);
-                return _textUndoHistoryRegistry;
-            }
-        }
-
         /// <inheritdoc/>
         public virtual ReadOnlyCollection<VirtualSnapshotSpan> CommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
@@ -239,24 +211,16 @@
             if (spans.Count == 0)
                 return new ReadOnlyCollection<VirtualSnapshotSpan>(new VirtualSnapshotSpan[0]);
 
-            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
-            using (var transaction = undoHistory.CreateTransaction("Comment Selection"))
+            ITextSnapshot snapshot = spans[0].Snapshot;
+            using (var edit = snapshot.TextBuffer.CreateEdit())
             {
-                ITextSnapshot snapshot = spans[0].Snapshot;
-
-                using (var edit = snapshot.TextBuffer.CreateEdit())
+                foreach (var span in spans)
                 {
-                    foreach (var span in spans)
-                    {
-                        var selection = CommentSpan(span, edit);
-                        result.Add(selection);
-                    }
-
-                    edit.Apply();
+                    var selection = CommentSpan(span, edit);
+                    result.Add(selection);
                 }
 
-                if (snapshot != TextBuffer.CurrentSnapshot)
-                    transaction.Complete();
+                edit.Apply();
             }
 
             if (result.Count > 1)
@@ -279,24 +243,16 @@
             if (spans.Count == 0)
                 return new ReadOnlyCollection<VirtualSnapshotSpan>(new VirtualSnapshotSpan[0]);
 
-            var undoHistory = TextUndoHistoryRegistry.RegisterHistory(TextBuffer);
-            using (var transaction = undoHistory.CreateTransaction("Uncomment Selection"))
+            ITextSnapshot snapshot = spans[0].Snapshot;
+            using (var edit = snapshot.TextBuffer.CreateEdit())
             {
-                ITextSnapshot snapshot = spans[0].Snapshot;
-
-                using (var edit = snapshot.TextBuffer.CreateEdit())
+                foreach (var span in spans)
                 {
-                    foreach (var span in spans)
-                    {
-                        var selection = UncommentSpan(span, edit);
-                        result.Add(selection);
-                    }
-
-                    edit.Apply();
+                    var selection = UncommentSpan(span, edit);
+                    result.Add(selection);
                 }
 
-                if (snapshot != TextBuffer.CurrentSnapshot)
-                    transaction.Complete();
+                edit.Apply();
             }
 
             if (result.Count > 1)
@@ -333,7 +289,6 @@
         /// <para>The default implementation uses block comments if <em>all</em> of the following are true.</para>
         /// <list type="bullet">
         /// <item>We are not using line comments.</item>
-        /// <item>Some text is selected (i.e. <paramref name="span"/> is not empty).</item>
         /// <item><see cref="PreferredBlockFormat"/> is not <see langword="null"/>.</item>
         /// </list>
         /// </remarks>
@@ -358,10 +313,7 @@
             {
                 span = CommentLines(span, edit, PreferredLineFormat);
             }
-            else if (
-                span.Length > 0
-                && PreferredBlockFormat != null
-                )
+            else if (PreferredBlockFormat != null)
             {
                 span = CommentBlock(span, edit, PreferredBlockFormat);
             }

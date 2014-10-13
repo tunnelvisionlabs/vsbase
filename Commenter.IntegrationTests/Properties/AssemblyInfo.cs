@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ShellServices.11.IntegrationTests")]
-[assembly: AssemblyProduct("ShellServices.11.IntegrationTests")]
+[assembly: AssemblyTitle("Commenter.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunnel Vision Laboratories, LLC")]
+[assembly: AssemblyProduct("Commenter.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © Sam Harwell 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9776b857-3497-4981-a17a-30ae27e4d78d")]
+[assembly: Guid("308c510f-5639-4021-8797-27ab1d8c31c5")]
 
 // Version information for an assembly consists of the following four values:
 //
