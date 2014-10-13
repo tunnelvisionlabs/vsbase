@@ -3,6 +3,9 @@ bin/
 obj/
 /VSBaseDocumentation/Help/
 
+# Test Results
+TestResults/
+
 # Solution packages directory
 /packages/
 

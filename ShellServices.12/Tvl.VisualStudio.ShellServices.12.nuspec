@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Tvl.VisualStudio.ShellServices.12</id>
+    <version>0.0.0</version>
+    <authors>Sam Harwell</authors>
+    <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      This package provides extension methods for global services available through Visual Studio's service provider interfaces in Visual Studio 2013+.
+
+      This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
+    </description>
+    <summary>Service provider extension methods for Visual Studio 2013+ extension developers</summary>
+    <tags>vs2013</tags>
+    <dependencies>
+      <!-- Visual Studio 2013 -->
+      <dependency id="VSSDK.IDE.12" version="[12.0.3,13.0.0)"/>
+      <!-- Depend on Shell Services for previous environments -->
+      <dependency id="Tvl.VisualStudio.ShellServices.10" version="[$version$,)"/>
+      <dependency id="Tvl.VisualStudio.ShellServices.11" version="[$version$,)"/>
+      <!--
+      Exposed Dependencies (Tvl.VisualStudio.ShellServices.12.dll):
+        Microsoft.VisualStudio.Shell.Immutable.10.0
+        Microsoft.VisualStudio.Shell.Interop.12.0
+      -->
+      <dependency id="VSSDK.Shell.Immutable.10" version="[10.0.3,11.0.0)"/>
+      <dependency id="VSSDK.Shell.Interop.12" version="[12.0.3,13.0.0)"/>
+    </dependencies>
+    <references>
+      <reference file="Tvl.VisualStudio.ShellServices.12.dll"/>
+    </references>
+  </metadata>
+  <files>
+    <!-- Assemblies -->
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.12.dll" target="lib\net45"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.12.pdb" target="lib\net45"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.ShellServices.12.xml" target="lib\net45"/>
+
+    <!-- Code Contracts assemblies -->
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.12.Contracts.dll" target="lib\net45"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.ShellServices.12.Contracts.pdb" target="lib\net45"/>
+
+    <!-- Source Code -->
+    <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
+  </files>
+</package>

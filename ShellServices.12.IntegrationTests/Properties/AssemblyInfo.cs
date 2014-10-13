@@ -5,25 +5,15 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-#if DEV10
-[assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.10")]
-[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.10")]
-#elif DEV11
-[assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.11")]
-[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.11")]
-#elif DEV12
-[assembly: AssemblyTitle("Tvl.VisualStudio.ShellServices.12")]
-[assembly: AssemblyProduct("Tvl.VisualStudio.ShellServices.12")]
-#else
-#error Unknown target version.
-#endif
+[assembly: AssemblyTitle("ShellServices.12.IntegrationTests")]
+[assembly: AssemblyProduct("ShellServices.12.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunnel Vision Laboratories, LLC")]
 [assembly: AssemblyCopyright("Copyright © Sam Harwell 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -31,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("68ce578a-3be8-450c-bc85-7490971f9cd4")]
+[assembly: Guid("922bd8c6-0c89-4c62-ba6a-5a554f8dccf2")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -44,5 +34,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
-[assembly: AssemblyInformationalVersion("1.0.1.0-dev")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
