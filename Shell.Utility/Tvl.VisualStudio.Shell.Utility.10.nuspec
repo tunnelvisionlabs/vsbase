@@ -17,24 +17,24 @@
       <!-- Visual Studio 2010 -->
       <dependency id="VSSDK.IDE.10" version="[10.0.3,11.0.0)"/>
       <!--
-      Exposed Dependencies (Tvl.VisualStudio.Shell.Utility.dll):
+      Exposed Dependencies (Tvl.VisualStudio.Shell.Utility.10.dll):
         Microsoft.VisualStudio.OLE.Interop
       -->
       <dependency id="VSSDK.OLE.Interop" version="[7.0.3,8.0.0)"/>
     </dependencies>
     <references>
-      <reference file="Tvl.VisualStudio.Shell.Utility.dll"/>
+      <reference file="Tvl.VisualStudio.Shell.Utility.10.dll"/>
     </references>
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.pdb" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Shell.Utility.xml" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Shell.Utility.10.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Shell.Utility.10.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Shell.Utility.10.xml" target="lib\net40"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.10.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Shell.Utility.Contracts.10.pdb" target="lib\net40"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>

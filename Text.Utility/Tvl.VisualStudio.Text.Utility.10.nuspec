@@ -17,7 +17,7 @@
       <!-- Visual Studio 2010 -->
       <dependency id="VSSDK.IDE.10" version="[10.0.3,11.0.0)"/>
       <!--
-      Exposed Dependencies (Tvl.VisualStudio.Text.Utility.dll):
+      Exposed Dependencies (Tvl.VisualStudio.Text.Utility.10.dll):
         Microsoft.VisualStudio.OLE.Interop
         Microsoft.VisualStudio.TextManager.Interop
         Microsoft.VisualStudio.Text.Data
@@ -37,18 +37,18 @@
       <dependency id="Tvl.VisualStudio.Shell.Utility.10" version="[1.0.0,1.1.0)"/>
     </dependencies>
     <references>
-      <reference file="Tvl.VisualStudio.Text.Utility.dll"/>
+      <reference file="Tvl.VisualStudio.Text.Utility.10.dll"/>
     </references>
   </metadata>
   <files>
     <!-- Assemblies -->
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.pdb" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\Tvl.VisualStudio.Text.Utility.xml" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.10.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.10.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Utility.10.xml" target="lib\net40"/>
 
     <!-- Code Contracts assemblies -->
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.dll" target="lib\net40"/>
-    <file src="bin\vs2010\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.Contracts.pdb" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.10.Contracts.dll" target="lib\net40"/>
+    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Utility.10.Contracts.pdb" target="lib\net40"/>
 
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
