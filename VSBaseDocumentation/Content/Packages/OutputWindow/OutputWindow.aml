@@ -49,16 +49,28 @@
             </para>
             <alert class="important">
               <para>
-                This code assumes the use of a "Version 1" VSIX manifest, targeting Visual Studio 2010 and newer. The reference declaration for
-                a "Version 2" manifest may differ from the syntax provided here.
+                At this time, two versions of the VSIX manifest file are available. Make sure to use the code snippet
+                relevant to the version used by your project. A version 1 manifest starts with
+                <codeInline>&lt;Vsix Version="1.0.0"</codeInline>, and a version 2 manifest starts with
+                <codeInline>&lt;PackageManifest Version="2.0.0"</codeInline>.
               </para>
             </alert>
-            <code language="xml">
+            <code language="xml" title="Version 1 Manifest">
               <![CDATA[
               <Reference Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
                 <Name>Visual Studio Output Window Services</Name>
                 <VsixPath>Tvl.VisualStudio.OutputWindow.vsix</VsixPath>
               </Reference>
+              ]]>
+            </code>
+            <code language="xml" title="Version 2 Manifest">
+              <![CDATA[
+              <Dependency d:Source="File"
+                DisplayName="Visual Studio Output Window Services"
+                Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0"
+                Version="[2.0.1,)"
+                d:InstallSource="Embed"
+                Location="Tvl.VisualStudio.OutputWindow.vsix" />
               ]]>
             </code>
             <alert class="note">
