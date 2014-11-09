@@ -9,7 +9,6 @@
     /// This interface provides methods for commenting and uncommenting spans of text within
     /// a text editor.
     /// </summary>
-    /// <preliminary/>
     [ContractClass(typeof(Contracts.ICommenterContracts))]
     public interface ICommenter
     {

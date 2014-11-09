@@ -11,7 +11,6 @@
     /// This class provides a managed wrapper around an <see cref="OLECMDTEXT"/> structure.
     /// </summary>
     /// <threadsafety static="true" instance="false"/>
-    /// <preliminary/>
     [CLSCompliant(false)]
     public sealed class OleCommandText : IDisposable
     {

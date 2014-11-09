@@ -14,7 +14,6 @@
     /// formats.
     /// </summary>
     /// <threadsafety/>
-    /// <preliminary/>
     public class FormatCommenter : ICommenter
     {
         /// <summary>

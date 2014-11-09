@@ -34,7 +34,6 @@
     /// </code>
     /// </remarks>
     /// <threadsafety static="true" instance="false"/>
-    /// <preliminary/>
     [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class, AllowMultiple = false)]
     public sealed class ProvideBindingPathAttribute : RegistrationAttribute
     {

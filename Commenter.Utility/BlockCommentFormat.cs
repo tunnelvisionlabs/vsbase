@@ -18,7 +18,6 @@
     /// </note>
     /// </remarks>
     /// <threadsafety/>
-    /// <preliminary/>
     public class BlockCommentFormat : CommentFormat
     {
         /// <summary>
