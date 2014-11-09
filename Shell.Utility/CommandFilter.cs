@@ -131,6 +131,8 @@
             {
                 Enabled = false;
             }
+
+            IsDisposed = true;
         }
 
         /// <summary>
