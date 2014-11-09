@@ -174,6 +174,11 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="Tvl.VisualStudio.Text.Commenter.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tvl.VisualStudio.Commenter.Interfaces.1.0.0\lib\net40\Tvl.VisualStudio.Text.Commenter.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -189,10 +194,6 @@
     <None Include="packages.Commenter.Implementation.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commenter.Interfaces\Commenter.Interfaces.csproj">
-      <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
-      <Name>Commenter.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Shell.Utility\Shell.Utility.10.csproj">
       <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
       <Name>Shell.Utility.10</Name>
