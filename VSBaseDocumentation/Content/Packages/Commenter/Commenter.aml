@@ -41,7 +41,7 @@
           </listItem>
           <listItem>
             <para>
-              <link xlink:href="#TextUtility">Text Editor Utility Library</link>: Installation of this package is
+              <link xlink:href="#CommenterUtility">Commenter Utility Library</link>: Installation of this package is
               optional, as described below.
             </para>
           </listItem>
@@ -101,14 +101,15 @@
             </para>
           </content>
         </section>
-        <section address="TextUtility">
-          <title>Text Editor Utility Library</title>
+        <section address="CommenterUtility">
+          <title>Commenter Utility Library</title>
           <content>
             <para>
-              The <link xlink:href="07a54f98-14af-49e8-96b4-7a15a7fcfe2d"/> includes a default implementation of
-              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenter</codeEntityReference> which is suitable for most
-              languages that use line and/or block comments. The installation instructions for this utility library should be followed for
-              any project which needs to export a standard commenter component for a new content type.
+              The Commenter Utility Library includes a default implementation of
+              <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenter</codeEntityReference> which
+              is suitable for most languages that use line and/or block comments. The installation instructions for this
+              utility library should be followed for any project which needs to export a standard commenter component
+              for a new content type.
             </para>
           </content>
         </section>

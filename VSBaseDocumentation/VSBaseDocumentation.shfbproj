@@ -32,6 +32,7 @@
       <DocumentationSource sourceFile="..\ShellServices.12\ShellServices.12.csproj" />
       <DocumentationSource sourceFile="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj" />
       <DocumentationSource sourceFile="..\Commenter.Interfaces\Commenter.Interfaces.csproj" />
+      <DocumentationSource sourceFile="..\Commenter.Utility\Commenter.Utility.10.csproj" />
       <DocumentationSource sourceFile="..\Shell.Utility\Shell.Utility.10.csproj" />
       <DocumentationSource sourceFile="..\Text.Utility\Text.Utility.10.csproj" />
     </DocumentationSources>
