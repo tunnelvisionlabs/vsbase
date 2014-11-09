@@ -13,7 +13,7 @@
     <RootNamespace>VSBaseDocumentation</RootNamespace>
     <Name>VSBaseDocumentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
+    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>VSBaseDocumentation</HtmlHelpName>
     <Language>en-US</Language>
@@ -28,6 +28,8 @@
     </TransformComponentArguments>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\ShellServices.10\ShellServices.10.csproj" />
+      <DocumentationSource sourceFile="..\ShellServices.11\ShellServices.11.csproj" />
+      <DocumentationSource sourceFile="..\ShellServices.12\ShellServices.12.csproj" />
       <DocumentationSource sourceFile="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj" />
       <DocumentationSource sourceFile="..\Commenter.Interfaces\Commenter.Interfaces.csproj" />
       <DocumentationSource sourceFile="..\Shell.Utility\Shell.Utility.10.csproj" />

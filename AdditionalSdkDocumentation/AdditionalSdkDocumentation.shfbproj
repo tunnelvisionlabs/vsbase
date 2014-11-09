@@ -13,7 +13,7 @@
     <RootNamespace>AdditionalSdkDocumentation</RootNamespace>
     <Name>AdditionalSdkDocumentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
+    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>AdditionalSdkDocumentation</HtmlHelpName>
     <Language>en-US</Language>
