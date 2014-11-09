@@ -111,7 +111,7 @@
               Accessing MEF services from a package requires using the
               <codeEntityReference>T:Microsoft.VisualStudio.ComponentModelHost.IComponentModel</codeEntityReference>
               global service. For example, within an implementation of
-              <codeEntityReference>M:Microsoft.VisualStudio.Shell.Package.Initialize()</codeEntityReference>, the
+              <codeEntityReference>M:Microsoft.VisualStudio.Shell.Package.Initialize</codeEntityReference>, the
               following code could be used to obtain an instance of the
               <codeEntityReference>T:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService</codeEntityReference>
               service, which is only provided as an MEF-exported component.
