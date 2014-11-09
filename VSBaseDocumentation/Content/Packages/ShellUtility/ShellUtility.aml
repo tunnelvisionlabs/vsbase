@@ -24,8 +24,7 @@
       <title>Installation and Distribution</title>
       <content>
         <para>
-          This package may be installed through NuGet. Separate packages are available depending on the
-          specific version of Visual Studio an extension is targeting.
+          This package may be installed through NuGet using the following package ID.
         </para>
         <list class="bullet">
           <listItem>

@@ -36,7 +36,7 @@
           <listItem>
             <para>
               <link xlink:href="#InterfacesPackage">Commenter Interfaces Library</link>: Installation of this package
-              is required if your Visual Studio extension uses or provides any Commenter functionality.
+              is required if your project uses or provides any Commenter functionality.
             </para>
           </listItem>
           <listItem>
