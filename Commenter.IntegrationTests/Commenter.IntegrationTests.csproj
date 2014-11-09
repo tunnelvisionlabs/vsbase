@@ -143,13 +143,13 @@
       <Project>{ab447cc7-0d6f-4c0a-8783-293b5379464b}</Project>
       <Name>Commenter.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Commenter.Utility\Commenter.Utility.10.csproj">
+      <Project>{855d73d3-3bce-4939-ac64-ff1db55d247a}</Project>
+      <Name>Commenter.Utility.10</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShellServices.10\ShellServices.10.csproj">
       <Project>{3539ac4e-0666-4a6e-873d-03fd8f2d8cbd}</Project>
       <Name>ShellServices.10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Text.Utility\Text.Utility.10.csproj">
-      <Project>{144c8488-5425-4759-8f44-0a67e0567a19}</Project>
-      <Name>Text.Utility.10</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
