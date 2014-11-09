@@ -27,7 +27,7 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\ShellServices\ShellServices.10.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\ShellServices.10\ShellServices.10.csproj" />
       <DocumentationSource sourceFile="..\OutputWindow.Interfaces\OutputWindow.Interfaces.csproj" />
       <DocumentationSource sourceFile="..\Commenter.Interfaces\Commenter.Interfaces.csproj" />
       <DocumentationSource sourceFile="..\Shell.Utility\Shell.Utility.10.csproj" />
