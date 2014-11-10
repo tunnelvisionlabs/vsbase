@@ -177,6 +177,7 @@
     <Compile Include="CommentFormat.cs" />
     <Compile Include="FormatCommenter.cs" />
     <Compile Include="LineCommentFormat.cs" />
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
