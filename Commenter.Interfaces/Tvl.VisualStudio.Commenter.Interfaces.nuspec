@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Tvl.VisualStudio.Text.Commenter.Interfaces</id>
+    <id>Tvl.VisualStudio.Commenter.Interfaces</id>
     <version>0.0.0</version>
     <authors>Sam Harwell</authors>
     <licenseUrl>https://raw.github.com/tunnelvisionlabs/vsbase/master/LICENSE</licenseUrl>
