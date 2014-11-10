@@ -141,7 +141,7 @@
     </None>
     <None Include="install.ps1" />
     <None Include="packages.Commenter.Interfaces.config" />
-    <None Include="Tvl.VisualStudio.Text.Commenter.Interfaces.nuspec" />
+    <None Include="Tvl.VisualStudio.Commenter.Interfaces.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

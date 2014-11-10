@@ -16,7 +16,6 @@
     /// This is the base class for implementations of <see cref="IOleCommandTarget"/> in managed code.
     /// </summary>
     /// <threadsafety/>
-    /// <preliminary/>
     [ComVisible(true)]
     [CLSCompliant(false)]
     public abstract class CommandFilter : IOleCommandTarget, IDisposable

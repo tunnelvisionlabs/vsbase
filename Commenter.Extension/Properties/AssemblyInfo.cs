@@ -33,7 +33,7 @@ using Tvl.VisualStudio.Commenter;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0.0-dev")]
+[assembly: AssemblyInformationalVersion("1.0.0.0")]
 
 [ProvideBindingPath]
 internal class BindingPathClass

@@ -17,7 +17,6 @@
     /// </note>
     /// </remarks>
     /// <threadsafety/>
-    /// <preliminary/>
     public class LineCommentFormat : CommentFormat
     {
         /// <summary>
