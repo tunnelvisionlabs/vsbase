@@ -54,6 +54,8 @@
 
             this.TextView = textView;
             this.Commenter = commenter;
+            this.EditorOperations = editorOperations;
+            this.TextUndoHistoryRegistry = textUndoHistoryRegistry;
             textView.Closed += (sender, e) => Dispose();
         }
 

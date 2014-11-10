@@ -55,16 +55,17 @@
         /// <param name="commenterProviders">A collection of <see cref="ICommenterProvider"/> components exported by
         /// this and other extensions, along with any content type metadata associated with the component through the
         /// use of <see cref="ContentTypeAttribute"/>.</param>
+        [ImportingConstructor]
         public AutoCommentService(
             [Import] IVsEditorAdaptersFactoryService editorAdaptersFactoryService,
             [Import] IEditorOperationsFactoryService editorOperationsFactoryService,
             [Import] ITextUndoHistoryRegistry textUndoHistoryRegistry,
-            [ImportMany] List<Lazy<ICommenterProvider, IContentTypeMetadata>> commenterProviders)
+            [ImportMany] IEnumerable<Lazy<ICommenterProvider, IContentTypeMetadata>> commenterProviders)
         {
             _editorAdaptersFactoryService = editorAdaptersFactoryService;
             _editorOperationsFactoryService = editorOperationsFactoryService;
             _textUndoHistoryRegistry = textUndoHistoryRegistry;
-            _commenterProviders = commenterProviders;
+            _commenterProviders = commenterProviders.ToList();
         }
 
         /// <summary>
