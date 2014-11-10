@@ -184,10 +184,7 @@
                   <codeEntityReference>M:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider.TryCreateCommenter(Microsoft.VisualStudio.Text.ITextBuffer)</codeEntityReference>
                   method by returning an instance of
                   <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>. The
-                  <codeEntityReference>T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry</codeEntityReference>
-                  service is imported in order for
-                  <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.FormatCommenter</codeEntityReference>
-                  to correctly support the Undo and Redo commands. The following code is the complete implementation of
+                  following code is the complete implementation of
                   <codeEntityReference>T:Tvl.VisualStudio.Text.Commenter.Interfaces.ICommenterProvider</codeEntityReference>
                   required to support the Comment and Uncomment commands for a simple language.
                 </para>
@@ -202,18 +199,11 @@
                       private static readonly BlockCommentFormat BlockCommentFormat =
                           new BlockCommentFormat("/*", "*/");
 
-                      [Import]
-                      private ITextUndoHistoryRegistry TextUndoHistoryRegistry
-                      {
-                          get;
-                          set;
-                      }
-
                       public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
                       {
                           Func<FormatCommenter> factory =
-                              () => new FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
-                          return textBuffer.Properties.GetOrCreateSingletonProperty<FormatCommenter>(factory);
+                              () => new FormatCommenter(textBuffer, LineCommentFormat, BlockCommentFormat);
+                          return textBuffer.Properties.GetOrCreateSingletonProperty(factory);
                       }
                   }
                   ]]>
@@ -240,18 +230,11 @@
                   private static readonly LineCommentFormat LineCommentFormat =
                       new LineCommentFormat("'");
 
-                  [Import]
-                  private ITextUndoHistoryRegistry TextUndoHistoryRegistry
-                  {
-                      get;
-                      set;
-                  }
-
                   public ICommenter TryCreateCommenter(ITextBuffer textBuffer)
                   {
                       Func<FormatCommenter> factory =
-                          () => new FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat);
-                      return textBuffer.Properties.GetOrCreateSingletonProperty<FormatCommenter>(factory);
+                          () => new FormatCommenter(textBuffer, LineCommentFormat);
+                      return textBuffer.Properties.GetOrCreateSingletonProperty(factory);
                   }
               }
               ]]>
