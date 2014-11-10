@@ -1,6 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm">
-  <HelpTOCNode Title="AllowNesting Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" />
-  <HelpTOCNode Title="EndText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" />
-  <HelpTOCNode Title="StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" />
-</HelpTOCNode>
+﻿<?xml version="1.0" encoding="utf-8"?><HelpTOCNode Title="BlockCommentFormat Properties" Url="html/Properties_T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm"><HelpTOCNode Title="AllowNesting Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_AllowNesting.htm" /><HelpTOCNode Title="EndText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_EndText.htm" /><HelpTOCNode Title="StartText Property " Url="html/P_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat_StartText.htm" /></HelpTOCNode>

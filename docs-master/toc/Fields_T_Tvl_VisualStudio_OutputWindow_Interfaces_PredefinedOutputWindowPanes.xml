@@ -1,8 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Title="PredefinedOutputWindowPanes Fields" Url="html/Fields_T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm">
-  <HelpTOCNode Title="Build Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Build.htm" />
-  <HelpTOCNode Title="Debug Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Debug.htm" />
-  <HelpTOCNode Title="General Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" />
-  <HelpTOCNode Title="TvlDiagnostics Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlDiagnostics.htm" />
-  <HelpTOCNode Title="TvlIntellisense Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlIntellisense.htm" />
-</HelpTOCNode>
+﻿<?xml version="1.0" encoding="utf-8"?><HelpTOCNode Title="PredefinedOutputWindowPanes Fields" Url="html/Fields_T_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes.htm"><HelpTOCNode Title="Build Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Build.htm" /><HelpTOCNode Title="Debug Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_Debug.htm" /><HelpTOCNode Title="General Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_General.htm" /><HelpTOCNode Title="TvlDiagnostics Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlDiagnostics.htm" /><HelpTOCNode Title="TvlIntellisense Field" Url="html/F_Tvl_VisualStudio_OutputWindow_Interfaces_PredefinedOutputWindowPanes_TvlIntellisense.htm" /></HelpTOCNode>

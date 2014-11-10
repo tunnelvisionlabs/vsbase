@@ -1,8 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm">
-  <HelpTOCNode Title="Tvl.VisualStudio.OutputWindow.Interfaces" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" />
-  <HelpTOCNode Title="Tvl.VisualStudio.Shell" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" />
-  <HelpTOCNode Title="Tvl.VisualStudio.Text" Url="html/N_Tvl_VisualStudio_Text.htm" HasChildren="true" />
-  <HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm" HasChildren="true" />
-  <HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter.Interfaces" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm" HasChildren="true" />
-</HelpTOCNode>
+﻿<?xml version="1.0" encoding="utf-8"?><HelpTOCNode Title="API Reference" Url="html/R_Project_VSBaseDocumentation.htm"><HelpTOCNode Title="Tvl.VisualStudio.OutputWindow.Interfaces" Url="html/N_Tvl_VisualStudio_OutputWindow_Interfaces.htm" HasChildren="true" /><HelpTOCNode Title="Tvl.VisualStudio.Shell" Url="html/N_Tvl_VisualStudio_Shell.htm" HasChildren="true" /><HelpTOCNode Title="Tvl.VisualStudio.Text" Url="html/N_Tvl_VisualStudio_Text.htm" HasChildren="true" /><HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm" HasChildren="true" /><HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter.Interfaces" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm" HasChildren="true" /></HelpTOCNode>

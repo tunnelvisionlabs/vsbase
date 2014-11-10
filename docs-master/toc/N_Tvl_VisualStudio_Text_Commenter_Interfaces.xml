@@ -1,5 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter.Interfaces" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm">
-  <HelpTOCNode Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" />
-  <HelpTOCNode Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" HasChildren="true" />
-</HelpTOCNode>
+﻿<?xml version="1.0" encoding="utf-8"?><HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter.Interfaces" Url="html/N_Tvl_VisualStudio_Text_Commenter_Interfaces.htm"><HelpTOCNode Title="ICommenter Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenter.htm" HasChildren="true" /><HelpTOCNode Title="ICommenterProvider Interface" Url="html/T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm" HasChildren="true" /></HelpTOCNode>

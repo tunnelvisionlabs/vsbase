@@ -1,7 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm">
-  <HelpTOCNode Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" />
-  <HelpTOCNode Title="Commenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_Commenter.htm" HasChildren="true" />
-  <HelpTOCNode Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" HasChildren="true" />
-  <HelpTOCNode Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" />
-</HelpTOCNode>
+﻿<?xml version="1.0" encoding="utf-8"?><HelpTOCNode Title="Tvl.VisualStudio.Text.Commenter" Url="html/N_Tvl_VisualStudio_Text_Commenter.htm"><HelpTOCNode Title="BlockCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_BlockCommentFormat.htm" HasChildren="true" /><HelpTOCNode Title="CommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_CommentFormat.htm" HasChildren="true" /><HelpTOCNode Title="FormatCommenter Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_FormatCommenter.htm" HasChildren="true" /><HelpTOCNode Title="LineCommentFormat Class" Url="html/T_Tvl_VisualStudio_Text_Commenter_LineCommentFormat.htm" HasChildren="true" /></HelpTOCNode>
