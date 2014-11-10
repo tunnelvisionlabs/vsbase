@@ -84,10 +84,7 @@
                   <a href="M_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider_TryCreateCommenter.htm">TryCreateCommenter(ITextBuffer)</a>
                   method by returning an instance of
                   <a href="T_Tvl_VisualStudio_Text_Commenter_FormatCommenter.htm">FormatCommenter</a>. The
-                  <a href="http://msdn2.microsoft.com/en-us/library/ee696334" target="_blank">ITextUndoHistoryRegistry</a>
-                  service is imported in order for
-                  <a href="T_Tvl_VisualStudio_Text_Commenter_FormatCommenter.htm">FormatCommenter</a>
-                  to correctly support the Undo and Redo commands. The following code is the complete implementation of
+                  following code is the complete implementation of
                   <a href="T_Tvl_VisualStudio_Text_Commenter_Interfaces_ICommenterProvider.htm">ICommenterProvider</a>
                   required to support the Comment and Uncomment commands for a simple language.
                 </p><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EAAAAABACAAA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAAAAABACAAA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAAAAABACAAA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAAAABACAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">[Export(<span class="highlight-keyword">typeof</span>(ICommenterProvider))]
@@ -99,18 +96,11 @@
     <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">readonly</span> BlockCommentFormat BlockCommentFormat =
         <span class="highlight-keyword">new</span> BlockCommentFormat(<span class="highlight-literal">"/*"</span>, <span class="highlight-literal">"*/"</span>);
 
-    [Import]
-    <span class="highlight-keyword">private</span> ITextUndoHistoryRegistry TextUndoHistoryRegistry
-    {
-        <span class="highlight-keyword">get</span>;
-        <span class="highlight-keyword">set</span>;
-    }
-
     <span class="highlight-keyword">public</span> ICommenter TryCreateCommenter(ITextBuffer textBuffer)
     {
         Func&lt;FormatCommenter&gt; factory =
-            () =&gt; <span class="highlight-keyword">new</span> FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat, BlockCommentFormat);
-        <span class="highlight-keyword">return</span> textBuffer.Properties.GetOrCreateSingletonProperty&lt;FormatCommenter&gt;(factory);
+            () =&gt; <span class="highlight-keyword">new</span> FormatCommenter(textBuffer, LineCommentFormat, BlockCommentFormat);
+        <span class="highlight-keyword">return</span> textBuffer.Properties.GetOrCreateSingletonProperty(factory);
     }
 }</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAAAABACAAA");</script></li></ol></div><h4 class="subHeading">Providing a Commenter for a Language Without Block Comments</h4><div class="subsection"><p>
               The standard commenter supports any combination of line and/or block comments. The following example shows
@@ -123,18 +113,11 @@
     <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">readonly</span> LineCommentFormat LineCommentFormat =
         <span class="highlight-keyword">new</span> LineCommentFormat(<span class="highlight-literal">"'"</span>);
 
-    [Import]
-    <span class="highlight-keyword">private</span> ITextUndoHistoryRegistry TextUndoHistoryRegistry
-    {
-        <span class="highlight-keyword">get</span>;
-        <span class="highlight-keyword">set</span>;
-    }
-
     <span class="highlight-keyword">public</span> ICommenter TryCreateCommenter(ITextBuffer textBuffer)
     {
         Func&lt;FormatCommenter&gt; factory =
-            () =&gt; <span class="highlight-keyword">new</span> FormatCommenter(textBuffer, TextUndoHistoryRegistry, LineCommentFormat);
-        <span class="highlight-keyword">return</span> textBuffer.Properties.GetOrCreateSingletonProperty&lt;FormatCommenter&gt;(factory);
+            () =&gt; <span class="highlight-keyword">new</span> FormatCommenter(textBuffer, LineCommentFormat);
+        <span class="highlight-keyword">return</span> textBuffer.Properties.GetOrCreateSingletonProperty(factory);
     }
 }</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAAAACAAA");</script></div></div><div class="collapsibleAreaRegion" id="Implementation"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png">Implementation Details</span></div><div id="ID3RBSection" class="collapsibleSection"><p>
           Since this extension exports a new MEF service for use across multiple extensions and multiple versions of
