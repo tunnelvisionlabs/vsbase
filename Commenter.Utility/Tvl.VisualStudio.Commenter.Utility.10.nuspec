@@ -12,7 +12,7 @@
       This assembly should be included in the VSIX package for your extension (this is the default behavior when you reference the package).
     </description>
     <summary>Commenter utility library for Visual Studio 2010+</summary>
-    <tags>vs2010 vs2012 vs2013</tags>
+    <tags>vs2010 vs2012 vs2013 vs2015</tags>
     <dependencies>
       <!-- Visual Studio 2010 -->
       <dependency id="VSSDK.IDE.10" version="[10.0.3,11.0.0)"/>
@@ -24,7 +24,7 @@
         Tvl.VisualStudio.Commenter.Interfaces
       -->
       <dependency id="VSSDK.Text" version="10.0.3"/>
-      <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="1.0.0"/>
+      <dependency id="Tvl.VisualStudio.Commenter.Interfaces" version="1.1.0"/>
     </dependencies>
     <references>
       <reference file="Tvl.VisualStudio.Commenter.Utility.10.dll"/>

@@ -10,7 +10,7 @@
       This package provides the immutable interfaces for MEF-support for Visual Studio's output window.
     </description>
     <summary>MEF-support for Visual Studio Output Window Panes</summary>
-    <tags>vs2010 vs2012 vs2013</tags>
+    <tags>vs2010 vs2012 vs2013 vs2015</tags>
     <dependencies>
       <!--
       Exposed Dependencies (Tvl.VisualStudio.OutputWindow.Interfaces.dll):
@@ -22,9 +22,6 @@
     </references>
   </metadata>
   <files>
-    <!-- Tools -->
-    <file src="install.ps1" target="tools"/>
-
     <!-- Assemblies -->
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.dll" target="lib\net40"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.pdb" target="lib\net40"/>

@@ -10,7 +10,7 @@
       This package provides the immutable interfaces for MEF-support for commenting and uncommenting code in Visual Studio 2010+.
     </description>
     <summary>MEF-support for Code Commenting in Visual Studio 2010+</summary>
-    <tags>vs2010 vs2012 vs2013</tags>
+    <tags>vs2010 vs2012 vs2013 vs2015</tags>
     <dependencies>
       <!-- Visual Studio 2010 -->
       <dependency id="VSSDK.IDE.10" version="[10.0.3,11.0.0)"/>
@@ -26,9 +26,6 @@
     </references>
   </metadata>
   <files>
-    <!-- Tools -->
-    <file src="install.ps1" target="tools"/>
-
     <!-- Assemblies -->
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.dll" target="lib\net40"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.pdb" target="lib\net40"/>
