@@ -26,9 +26,6 @@
     </references>
   </metadata>
   <files>
-    <!-- Tools -->
-    <file src="install.ps1" target="tools"/>
-
     <!-- Assemblies -->
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.dll" target="lib\net40"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.pdb" target="lib\net40"/>

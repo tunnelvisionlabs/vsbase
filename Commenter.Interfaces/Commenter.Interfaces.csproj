@@ -139,7 +139,6 @@
     <None Include="..\..\keys\vsbase.snk">
       <Link>vsbase.snk</Link>
     </None>
-    <None Include="install.ps1" />
     <None Include="packages.Commenter.Interfaces.config" />
     <None Include="Tvl.VisualStudio.Commenter.Interfaces.nuspec" />
   </ItemGroup>
