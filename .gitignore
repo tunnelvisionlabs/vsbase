@@ -14,4 +14,7 @@ TestResults/
 *.suo
 
 # Roslyn IntelliSense Cache
-*.sln.ide/
+.vs/
+
+# NuGet Output Directory
+nuget/
