@@ -21,7 +21,6 @@
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.vsix" target="lib\net40"/>
 
     <!-- Tools -->
-    <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.props" target="build"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.targets" target="build"/>
   </files>
 </package>

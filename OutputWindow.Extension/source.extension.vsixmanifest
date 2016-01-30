@@ -3,7 +3,7 @@
   <Identifier Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0">
     <Name>Visual Studio Output Window Services</Name>
     <Author>Sam Harwell</Author>
-    <Version>2.0.1</Version>
+    <Version>2.1.0</Version>
     <Description xml:space="preserve">Supporting framework for using Visual Studio's output window pane.</Description>
     <Locale>1033</Locale>
     <License>LICENSE</License>
