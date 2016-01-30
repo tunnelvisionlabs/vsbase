@@ -1,0 +1,5 @@
+root = true
+
+[*.{aml,xml,config}]
+indent_style = space
+indent_size = 2
