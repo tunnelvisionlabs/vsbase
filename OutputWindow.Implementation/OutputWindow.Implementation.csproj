@@ -192,9 +192,9 @@
       <HintPath>..\packages\Tvl.VisualStudio.OutputWindow.Interfaces.2.1.0\lib\net40\Tvl.VisualStudio.OutputWindow.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Tvl.VisualStudio.ShellServices.10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Tvl.VisualStudio.ShellServices.10.1.0.0\lib\net40\Tvl.VisualStudio.ShellServices.10.dll</HintPath>
+    <Reference Include="Tvl.VisualStudio.ShellServices.10, Version=2.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tvl.VisualStudio.ShellServices.10.2.0.0\lib\net40\Tvl.VisualStudio.ShellServices.10.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
