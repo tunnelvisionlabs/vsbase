@@ -140,17 +140,24 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commenter.Extension\Commenter.Extension.csproj">
+      <Project>{c3e41787-3957-4cc2-ad04-b89c46bc32bc}</Project>
+      <Name>Commenter.Extension</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>CreateVsixContainer</IncludeOutputGroupsInVSIX>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\OutputWindow.Extension\OutputWindow.Extension.csproj">
+      <Project>{56fd920c-1134-4f8c-bbe4-773642bdd112}</Project>
+      <Name>OutputWindow.Extension</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>CreateVsixContainer</IncludeOutputGroupsInVSIX>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Condition="Exists($(VsSdkTargets))" Project="$(VsSdkTargets)" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Tvl.VisualStudio.Commenter.1.1.0\build\Tvl.VisualStudio.Commenter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tvl.VisualStudio.Commenter.1.1.0\build\Tvl.VisualStudio.Commenter.targets'))" />
-    <Error Condition="!Exists('..\packages\Tvl.VisualStudio.OutputWindow.2.1.0\build\Tvl.VisualStudio.OutputWindow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tvl.VisualStudio.OutputWindow.2.1.0\build\Tvl.VisualStudio.OutputWindow.targets'))" />
-  </Target>
-  <Import Project="..\packages\Tvl.VisualStudio.Commenter.1.1.0\build\Tvl.VisualStudio.Commenter.targets" Condition="Exists('..\packages\Tvl.VisualStudio.Commenter.1.1.0\build\Tvl.VisualStudio.Commenter.targets')" />
-  <Import Project="..\packages\Tvl.VisualStudio.OutputWindow.2.1.0\build\Tvl.VisualStudio.OutputWindow.targets" Condition="Exists('..\packages\Tvl.VisualStudio.OutputWindow.2.1.0\build\Tvl.VisualStudio.OutputWindow.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
