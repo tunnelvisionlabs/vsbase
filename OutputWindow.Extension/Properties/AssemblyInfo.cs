@@ -33,7 +33,7 @@ using Microsoft.VisualStudio.Shell;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.1.0.0")]
-[assembly: AssemblyInformationalVersion("2.1.0")]
+[assembly: AssemblyInformationalVersion("2.1.0-dev")]
 
 [assembly: ProvideCodeBase(
     AssemblyName = "Tvl.VisualStudio.OutputWindow.Implementation",
