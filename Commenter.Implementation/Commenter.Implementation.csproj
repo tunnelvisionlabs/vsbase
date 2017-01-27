@@ -120,6 +120,10 @@
       <Private>False</Private>
       <HintPath>..\packages\VSSDK.OLE.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Settings, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86">
+      <Private>False</Private>
+      <HintPath>..\packages\VSSDK.Settings.10.10.0.4\lib\net40\Microsoft.VisualStudio.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>False</Private>
       <HintPath>..\packages\VSSDK.Shell.11.11.0.4\lib\net45\Microsoft.VisualStudio.Shell.11.0.dll</HintPath>
@@ -193,8 +197,16 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tvl.VisualStudio.Shell.Utility.10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tvl.VisualStudio.Shell.Utility.10.1.0.0\lib\net40\Tvl.VisualStudio.Shell.Utility.10.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Tvl.VisualStudio.Text.Commenter.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Tvl.VisualStudio.Commenter.Interfaces.1.1.0\lib\net40\Tvl.VisualStudio.Text.Commenter.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tvl.VisualStudio.Text.Utility.10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tvl.VisualStudio.Text.Utility.10.1.0.0\lib\net40\Tvl.VisualStudio.Text.Utility.10.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UIAutomationTypes" />
@@ -211,16 +223,6 @@
       <Link>vsbase.snk</Link>
     </None>
     <None Include="packages.Commenter.Implementation.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Shell.Utility\Shell.Utility.10.csproj">
-      <Project>{66d70f43-3051-4edb-b730-9e6412332ca3}</Project>
-      <Name>Shell.Utility.10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Text.Utility\Text.Utility.10.csproj">
-      <Project>{144c8488-5425-4759-8f44-0a67e0567a19}</Project>
-      <Name>Text.Utility.10</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

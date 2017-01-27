@@ -43,3 +43,11 @@ using Microsoft.VisualStudio.Shell;
     AssemblyName = "Tvl.VisualStudio.Text.Commenter.Interfaces",
     Version = "1.0.0.0",
     CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Text.Commenter.Interfaces.dll")]
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.Shell.Utility.10",
+    Version = "1.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Shell.Utility.10.dll")]
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.Text.Utility.10",
+    Version = "1.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Text.Utility.10.dll")]
