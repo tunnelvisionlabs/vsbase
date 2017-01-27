@@ -13,12 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Private Assemblies", "Priva
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public Assemblies", "Public Assemblies", "{E5F869CB-056B-430A-8A7F-2EDEC7CC005F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DF5B528E-5055-4D5E-8FFB-A882A7117BA6}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{16CE8FAB-F192-4E9C-88D0-3365475E519A}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "VSBaseDocumentation", "VSBaseDocumentation\VSBaseDocumentation.shfbproj", "{6A379261-D0A2-427C-8E7F-48895E875B1B}"
