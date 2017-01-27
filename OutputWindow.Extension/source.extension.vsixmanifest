@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0" Version="2.1.0" Language="en-US" Publisher="Sam Harwell" />
+    <Identity Id="Tvl.VisualStudio.OutputWindow.3EF11167-A319-43DB-B1B4-A9778A90FAE0" Version="3.0.0" Language="en-US" Publisher="Sam Harwell" />
     <DisplayName>Visual Studio Output Window Services</DisplayName>
     <Description>Supporting framework for using Visual Studio's output window pane.</Description>
     <MoreInfo>https://github.com/tunnelvisionlabs/vsbase</MoreInfo>
