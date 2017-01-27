@@ -15,7 +15,7 @@
     <tags>vs2013</tags>
     <dependencies>
       <!-- Visual Studio 2013 -->
-      <dependency id="VSSDK.IDE.12" version="[12.0.3,13.0.0)"/>
+      <dependency id="VSSDK.IDE.12" version="[12.0.4,13.0.0)"/>
       <!-- Depend on Shell Services for previous environments -->
       <dependency id="Tvl.VisualStudio.ShellServices.10" version="[$version$,)"/>
       <dependency id="Tvl.VisualStudio.ShellServices.11" version="[$version$,)"/>
@@ -24,8 +24,8 @@
         Microsoft.VisualStudio.Shell.Immutable.10.0
         Microsoft.VisualStudio.Shell.Interop.12.0
       -->
-      <dependency id="VSSDK.Shell.Immutable.10" version="[10.0.3,11.0.0)"/>
-      <dependency id="VSSDK.Shell.Interop.12" version="[12.0.3,13.0.0)"/>
+      <dependency id="VSSDK.Shell.Immutable.10" version="[10.0.4,11.0.0)"/>
+      <dependency id="VSSDK.Shell.Interop.12" version="[12.0.4,13.0.0)"/>
     </dependencies>
     <references>
       <reference file="Tvl.VisualStudio.ShellServices.12.dll"/>

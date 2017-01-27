@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using Tvl.VisualStudio.Commenter;
+using Microsoft.VisualStudio.Shell;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -33,9 +33,13 @@ using Tvl.VisualStudio.Commenter;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.1.0.0")]
-[assembly: AssemblyInformationalVersion("1.1.0")]
+[assembly: AssemblyInformationalVersion("1.1.0-dev")]
 
-[ProvideBindingPath]
-internal class BindingPathClass
-{
-}
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.Text.Commenter.Implementation",
+    Version = "1.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Text.Commenter.Implementation.dll")]
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.Text.Commenter.Interfaces",
+    Version = "1.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.Text.Commenter.Interfaces.dll")]

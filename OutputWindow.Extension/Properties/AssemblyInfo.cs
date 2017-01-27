@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using Tvl.VisualStudio.OutputWindow;
+using Microsoft.VisualStudio.Shell;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -33,9 +33,17 @@ using Tvl.VisualStudio.OutputWindow;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.1.0.0")]
-[assembly: AssemblyInformationalVersion("2.1.0")]
+[assembly: AssemblyInformationalVersion("2.1.0-dev")]
 
-[ProvideBindingPath]
-internal class BindingPathClass
-{
-}
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.OutputWindow.Implementation",
+    Version = "2.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.OutputWindow.Implementation.dll")]
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.OutputWindow.Interfaces",
+    Version = "2.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.OutputWindow.Interfaces.dll")]
+[assembly: ProvideCodeBase(
+    AssemblyName = "Tvl.VisualStudio.ShellServices.10",
+    Version = "2.0.0.0",
+    CodeBase = "$PackageFolder$\\Tvl.VisualStudio.ShellServices.10.dll")]
