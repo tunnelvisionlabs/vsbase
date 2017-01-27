@@ -97,9 +97,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\keys\vsbase.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\build\vsbase.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Contracts\IOutputWindowPaneContracts.cs" />
@@ -112,7 +110,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\keys\vsbase.snk">
+    <None Include="..\build\vsbase.snk">
       <Link>vsbase.snk</Link>
     </None>
     <None Include="packages.OutputWindow.Interfaces.config" />

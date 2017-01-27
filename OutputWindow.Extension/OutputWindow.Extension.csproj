@@ -194,9 +194,6 @@
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -205,7 +202,7 @@
       <Link>LICENSE</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="..\..\keys\vsbase.snk">
+    <None Include="..\build\vsbase.snk">
       <Link>vsbase.snk</Link>
     </None>
     <None Include="packages.OutputWindow.Extension.config" />
@@ -227,7 +224,8 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\keys\vsbase.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\build\vsbase.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
