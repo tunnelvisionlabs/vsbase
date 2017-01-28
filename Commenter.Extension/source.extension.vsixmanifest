@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Tvl.VisualStudio.Commenter.F3FD3E6D-611C-4703-B160-0C425AAFBACF" Version="1.1.0" Language="en-US" Publisher="Sam Harwell" />
+    <Identity Id="Tvl.VisualStudio.Commenter.F3FD3E6D-611C-4703-B160-0C425AAFBACF" Version="2.1.0" Language="en-US" Publisher="Sam Harwell" />
     <DisplayName>Visual Studio Commenter Services</DisplayName>
     <Description>Supporting framework for supporting the Comment and Uncomment commands.</Description>
     <MoreInfo>https://github.com/tunnelvisionlabs/vsbase</MoreInfo>
