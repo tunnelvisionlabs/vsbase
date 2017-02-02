@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.OutputWindow.Implementation
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.Shell.Interop;
     using Tvl.VisualStudio.OutputWindow.Interfaces;
@@ -15,7 +14,8 @@
 
         public VsOutputWindowPaneAdapter(IVsOutputWindowPane pane)
         {
-            Contract.Requires<ArgumentNullException>(pane != null, "pane");
+            if (pane == null)
+                throw new ArgumentNullException(nameof(pane));
 
             this._pane = pane;
         }
@@ -32,6 +32,11 @@
 
             set
             {
+                if (value == null)
+                    throw new ArgumentNullException(nameof(value));
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException($"{nameof(value)} cannot be empty", nameof(value));
+
                 if (Application.Current.Dispatcher.Thread == Thread.CurrentThread)
                 {
                     SetName(value);
@@ -54,11 +59,17 @@
 
         public void Write(string text)
         {
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
+
             ErrorHandler.ThrowOnFailure(this._pane.OutputStringThreadSafe(text));
         }
 
         public void WriteLine(string text)
         {
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
+
             if (!text.EndsWith(Environment.NewLine))
                 text += Environment.NewLine;
 

@@ -48,6 +48,11 @@
 
         public IOutputWindowPane TryGetPane(string name)
         {
+            if (name == null)
+                throw new ArgumentNullException(nameof(name));
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException($"{nameof(name)} cannot be empty", nameof(name));
+
             if (PredefinedOutputWindowPanes.General.Equals(name))
             {
                 IVsOutputWindowPane generalPane = GlobalServiceProvider.GetService<SVsGeneralOutputWindowPane, IVsOutputWindowPane>();
