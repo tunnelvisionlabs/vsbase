@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
 
     /// <summary>
@@ -54,10 +53,14 @@
         public BlockCommentFormat(string startText, string endText)
             : this(startText, endText, false)
         {
-            Contract.Requires<ArgumentNullException>(startText != null, "startText");
-            Contract.Requires<ArgumentNullException>(endText != null, "endText");
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(startText));
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(endText));
+            if (startText == null)
+                throw new ArgumentNullException(nameof(startText));
+            if (endText == null)
+                throw new ArgumentNullException(nameof(endText));
+            if (string.IsNullOrEmpty(startText))
+                throw new ArgumentException($"{nameof(startText)} cannot be empty", nameof(startText));
+            if (string.IsNullOrEmpty(endText))
+                throw new ArgumentException($"{nameof(endText)} cannot be empty", nameof(endText));
         }
 
         /// <summary>
@@ -80,10 +83,14 @@
         /// </exception>
         public BlockCommentFormat(string startText, string endText, bool allowNesting)
         {
-            Contract.Requires<ArgumentNullException>(startText != null, "startText");
-            Contract.Requires<ArgumentNullException>(endText != null, "endText");
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(startText));
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(endText));
+            if (startText == null)
+                throw new ArgumentNullException(nameof(startText));
+            if (endText == null)
+                throw new ArgumentNullException(nameof(endText));
+            if (string.IsNullOrEmpty(startText))
+                throw new ArgumentException($"{nameof(startText)} cannot be empty", nameof(startText));
+            if (string.IsNullOrEmpty(endText))
+                throw new ArgumentException($"{nameof(endText)} cannot be empty", nameof(endText));
 
             _startText = startText;
             _endText = endText;
@@ -97,8 +104,6 @@
         {
             get
             {
-                Contract.Ensures(!string.IsNullOrEmpty(Contract.Result<string>()));
-
                 return _startText;
             }
         }
@@ -110,8 +115,6 @@
         {
             get
             {
-                Contract.Ensures(!string.IsNullOrEmpty(Contract.Result<string>()));
-
                 return _endText;
             }
         }

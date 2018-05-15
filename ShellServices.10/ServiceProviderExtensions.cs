@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using System.Runtime.InteropServices;
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.Shell;
@@ -25,8 +24,8 @@
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
         public static SVsServiceProvider AsVsServiceProvider(this IServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
-            Contract.Ensures(Contract.Result<SVsServiceProvider>() != null);
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
 
             return new VsServiceProviderWrapper(serviceProvider);
         }
@@ -40,7 +39,9 @@
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
         public static TService GetService<TService>(this IServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return GetService<TService, TService>(serviceProvider);
         }
 
@@ -56,7 +57,9 @@
         /// <exception cref="InvalidCastException">If the instance returned by the service provider for <typeparamref name="TServiceClass"/> could not be cast to <typeparamref name="TServiceInterface"/>.</exception>
         public static TServiceInterface GetService<TServiceClass, TServiceInterface>(this IServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return (TServiceInterface)serviceProvider.GetService(typeof(TServiceClass));
         }
 
@@ -69,7 +72,9 @@
         [CLSCompliant(false)]
         public static IOleServiceProvider TryGetOleServiceProvider(this IServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<IOleServiceProvider>();
         }
 
@@ -88,7 +93,8 @@
         public static TServiceInterface TryGetGlobalService<TServiceClass, TServiceInterface>(this IOleServiceProvider serviceProvider)
             where TServiceInterface : class
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
 
             Guid guidService = typeof(TServiceClass).GUID;
             Guid riid = typeof(TServiceClass).GUID;

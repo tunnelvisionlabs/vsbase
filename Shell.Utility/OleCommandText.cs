@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using System.Runtime.InteropServices;
     using OLECMDTEXT = Microsoft.VisualStudio.OLE.Interop.OLECMDTEXT;
     using OLECMDTEXTF = Microsoft.VisualStudio.OLE.Interop.OLECMDTEXTF;
@@ -37,7 +36,9 @@
         /// </exception>
         private unsafe OleCommandText(OLECMDTEXT* oleCmdText)
         {
-            Contract.Requires<ArgumentNullException>(oleCmdText != null, "oleCmdText");
+            if (oleCmdText == null)
+                throw new ArgumentNullException(nameof(oleCmdText));
+
             _oleCmdText = oleCmdText;
         }
 
@@ -145,7 +146,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<string>() != null);
                 ThrowIfDisposed();
 
                 unsafe
@@ -172,7 +172,9 @@
 
             set
             {
-                Contract.Requires<ArgumentNullException>(value != null, "value");
+                if (value == null)
+                    throw new ArgumentNullException(nameof(value));
+
                 ThrowIfDisposed();
 
                 unsafe

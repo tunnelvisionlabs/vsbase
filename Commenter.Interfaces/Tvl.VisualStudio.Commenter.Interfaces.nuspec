@@ -31,10 +31,6 @@
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.pdb" target="lib\net40"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.Text.Commenter.Interfaces.xml" target="lib\net40"/>
 
-    <!-- Code Contracts Assemblies -->
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.Text.Commenter.Interfaces.Contracts.pdb" target="lib\net40"/>
-
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
   </files>

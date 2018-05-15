@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter.Implementation
 {
     using System;
-    using System.Diagnostics.Contracts;
     using System.Runtime.InteropServices;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Editor;
@@ -46,11 +45,16 @@
         public CommenterFilter(IVsTextView textViewAdapter, ITextView textView, ICommenter commenter, IEditorOperations editorOperations, ITextUndoHistoryRegistry textUndoHistoryRegistry)
             : base(textViewAdapter)
         {
-            Contract.Requires(textViewAdapter != null);
-            Contract.Requires<ArgumentNullException>(textView != null, "textView");
-            Contract.Requires<ArgumentNullException>(commenter != null, "commenter");
-            Contract.Requires<ArgumentNullException>(editorOperations != null, "editorOperations");
-            Contract.Requires<ArgumentNullException>(textUndoHistoryRegistry != null, "textUndoHistoryRegistry");
+            if (textViewAdapter == null)
+                throw new ArgumentNullException(nameof(textViewAdapter));
+            if (textView == null)
+                throw new ArgumentNullException(nameof(textView));
+            if (commenter == null)
+                throw new ArgumentNullException(nameof(commenter));
+            if (editorOperations == null)
+                throw new ArgumentNullException(nameof(editorOperations));
+            if (textUndoHistoryRegistry == null)
+                throw new ArgumentNullException(nameof(textUndoHistoryRegistry));
 
             this.TextView = textView;
             this.Commenter = commenter;

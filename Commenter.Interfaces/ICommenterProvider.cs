@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter.Interfaces
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Text;
 
     /// <summary>
@@ -15,7 +14,6 @@
     /// documentation for the <see href="01698620-4fc8-4cb0-bb42-5b3a84b8dd66.htm">Commenter Service</see>.
     /// </para>
     /// </remarks>
-    [ContractClass(typeof(Contracts.ICommenterProviderContracts))]
     public interface ICommenterProvider
     {
         /// <summary>

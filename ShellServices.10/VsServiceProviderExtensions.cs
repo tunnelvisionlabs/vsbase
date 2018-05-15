@@ -2,7 +2,6 @@
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-    using System.Diagnostics.Contracts;
     using EnvDTE;
     using Microsoft.VisualStudio.ComponentModelHost;
     using Microsoft.VisualStudio.Shell;
@@ -21,7 +20,9 @@
 #if false // this service needs to be provided through a "ShellServices.10Only" assembly...
         public static ICallHierarchy GetCallHierarchy(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SCallHierarchy, ICallHierarchy>();
         }
 #endif
@@ -35,7 +36,9 @@
         [CLSCompliant(false)]
         public static IComponentModel GetComponentModel(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SComponentModel, IComponentModel>();
         }
 
@@ -49,7 +52,9 @@
         [CLSCompliant(false)]
         public static DTE GetDTE(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<_DTE, DTE>();
         }
 
@@ -61,7 +66,9 @@
         /// <exception cref="ArgumentNullException">If <paramref name="serviceProvider"/> is <see langword="null"/>.</exception>
         public static IGlyphService GetGlyphService(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetComponentModel().GetService<IGlyphService>();
         }
     }

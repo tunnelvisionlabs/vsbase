@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Text
 {
     using System;
-    using System.Diagnostics.Contracts;
     using System.Runtime.InteropServices;
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.TextManager.Interop;
@@ -30,7 +29,8 @@
         /// <param name="textViewAdapter">The text view this command filter should attach to.</param>
         protected TextViewCommandFilter(IVsTextView textViewAdapter)
         {
-            Contract.Requires<ArgumentNullException>(textViewAdapter != null, "textViewAdapter");
+            if (textViewAdapter == null)
+                throw new ArgumentNullException(nameof(textViewAdapter));
 
             _textViewAdapter = textViewAdapter;
         }
@@ -42,8 +42,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<IVsTextView>() != null);
-
                 return _textViewAdapter;
             }
         }
