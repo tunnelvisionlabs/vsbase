@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Shell;
     using IOleComponentManager = Microsoft.VisualStudio.OLE.Interop.IOleComponentManager;
     using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
@@ -18,7 +17,9 @@
         [CLSCompliant(false)]
         public static IOleComponentManager GetOleComponentManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SOleComponentManager, IOleComponentManager>();
         }
 
@@ -31,7 +32,9 @@
         [CLSCompliant(false)]
         public static IOleServiceProvider GetOleServiceProvider(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<IOleServiceProvider, IOleServiceProvider>();
         }
     }

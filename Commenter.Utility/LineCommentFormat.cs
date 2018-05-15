@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Text.Commenter
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
 
     /// <summary>
@@ -34,8 +33,10 @@
         /// <exception cref="ArgumentException">If <paramref name="startText"/> is empty.</exception>
         public LineCommentFormat(string startText)
         {
-            Contract.Requires<ArgumentNullException>(startText != null, "startText");
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(startText));
+            if (startText == null)
+                throw new ArgumentNullException(nameof(startText));
+            if (string.IsNullOrEmpty(startText))
+                throw new ArgumentException($"{nameof(startText)} cannot be empty", nameof(startText));
 
             _startText = startText;
         }
@@ -47,8 +48,6 @@
         {
             get
             {
-                Contract.Ensures(!string.IsNullOrEmpty(Contract.Result<string>()));
-
                 return _startText;
             }
         }

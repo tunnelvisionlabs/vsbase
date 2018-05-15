@@ -27,10 +27,6 @@
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.pdb" target="lib\net40"/>
     <file src="bin\$Configuration$\Tvl.VisualStudio.OutputWindow.Interfaces.xml" target="lib\net40"/>
 
-    <!-- Code Contracts Assemblies -->
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.OutputWindow.Interfaces.Contracts.dll" target="lib\net40"/>
-    <file src="bin\$Configuration$\CodeContracts\Tvl.VisualStudio.OutputWindow.Interfaces.Contracts.pdb" target="lib\net40"/>
-
     <!-- Source Code -->
     <file src="**\*.cs" exclude="obj\**\*.cs" target="src"/>
   </files>

@@ -2,14 +2,12 @@
 {
     using System;
     using System.Collections.ObjectModel;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Text;
 
     /// <summary>
     /// This interface provides methods for commenting and uncommenting spans of text within
     /// a text editor.
     /// </summary>
-    [ContractClass(typeof(Contracts.ICommenterContracts))]
     public interface ICommenter
     {
         /// <summary>

@@ -2,7 +2,6 @@
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
 
@@ -17,7 +16,8 @@
         [CLSCompliant(false)]
         public static IVsActivityLog GetActivityLog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsActivityLog, IVsActivityLog>();
         }
 
@@ -30,7 +30,8 @@
         [CLSCompliant(false)]
         public static IVsAddProjectItemDlg GetAddProjectItemDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsAddProjectItemDlg, IVsAddProjectItemDlg>();
         }
 
@@ -43,7 +44,8 @@
         [CLSCompliant(false)]
         public static IVsAddWebReferenceDlg GetAddWebReferenceDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsAddWebReferenceDlg, IVsAddWebReferenceDlg>();
         }
 
@@ -56,7 +58,8 @@
         [CLSCompliant(false)]
         public static IVsAppCommandLine GetAppCommandLine(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsAppCommandLine, IVsAppCommandLine>();
         }
 
@@ -69,7 +72,8 @@
         [CLSCompliant(false)]
         public static IVsAssemblyNameUnification GetAssemblyNameUnification(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsAssemblyNameUnification, IVsAssemblyNameUnification>();
         }
 
@@ -82,7 +86,8 @@
         [CLSCompliant(false)]
         public static IVsCallBrowser GetCallBrowser(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCallBrowser, IVsCallBrowser>();
         }
 
@@ -95,7 +100,8 @@
         [CLSCompliant(false)]
         public static IVsNavigationTool GetClassView(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsClassView, IVsNavigationTool>();
         }
 
@@ -108,7 +114,8 @@
         [CLSCompliant(false)]
         public static IVsCodeDefView GetCodeDefView(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCodeDefView, IVsCodeDefView>();
         }
 
@@ -121,7 +128,8 @@
         [CLSCompliant(false)]
         public static IVsCodeShareHandler GetCodeShareHandler(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCodeShareHandler, IVsCodeShareHandler>();
         }
 
@@ -134,7 +142,8 @@
         [CLSCompliant(false)]
         public static IVsCmdNameMapping GetCommandNameMapping(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCmdNameMapping, IVsCmdNameMapping>();
         }
 
@@ -147,7 +156,8 @@
         [CLSCompliant(false)]
         public static IVsCommandWindow GetCommandWindow(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCommandWindow, IVsCommandWindow>();
         }
 
@@ -160,7 +170,8 @@
         [CLSCompliant(false)]
         public static IVsCommandWindowsCollection GetCommandWindowsCollection(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCommandWindowsCollection, IVsCommandWindowsCollection>();
         }
 
@@ -173,7 +184,8 @@
         [CLSCompliant(false)]
         public static IVsComponentModelHost GetComponentModelHost(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsComponentModelHost, IVsComponentModelHost>();
         }
 
@@ -186,7 +198,8 @@
         [CLSCompliant(false)]
         public static IVsComponentSelectorDlg GetComponentSelectorDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsComponentSelectorDlg, IVsComponentSelectorDlg>();
         }
 
@@ -199,7 +212,8 @@
         [CLSCompliant(false)]
         public static IVsComponentSelectorDlg2 GetComponentSelectorDialog2(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsComponentSelectorDlg2, IVsComponentSelectorDlg2>();
         }
 
@@ -212,7 +226,8 @@
         [CLSCompliant(false)]
         public static IVsConfigurationManagerDlg GetConfigurationManagerDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsConfigurationManagerDlg, IVsConfigurationManagerDlg>();
         }
 
@@ -225,7 +240,8 @@
         [CLSCompliant(false)]
         public static IVsCreateAggregateProject GetCreateAggregateProject(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsCreateAggregateProject, IVsCreateAggregateProject>();
         }
 
@@ -238,7 +254,8 @@
         [CLSCompliant(false)]
         public static IVsDebuggableProtocol GetDebuggableProtocol(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsDebuggableProtocol, IVsDebuggableProtocol>();
         }
 
@@ -251,7 +268,8 @@
         [CLSCompliant(false)]
         public static IVsDebugLaunch GetDebugLaunch(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsDebugLaunch, IVsDebugLaunch>();
         }
 
@@ -264,7 +282,8 @@
         [CLSCompliant(false)]
         public static IVsDetermineWizardTrust GetDetermineWizardTrust(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsDetermineWizardTrust, IVsDetermineWizardTrust>();
         }
 
@@ -277,7 +296,8 @@
         [CLSCompliant(false)]
         public static IVsDiscoveryService GetDiscoveryService(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsDiscoveryService, IVsDiscoveryService>();
         }
 
@@ -290,7 +310,8 @@
         [CLSCompliant(false)]
         public static IVsEnumHierarchyItemsFactory GetEnumHierarchyItemsFactory(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsEnumHierarchyItemsFactory, IVsEnumHierarchyItemsFactory>();
         }
 
@@ -303,7 +324,8 @@
         [CLSCompliant(false)]
         public static IVsErrorList GetErrorList(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsErrorList, IVsErrorList>();
         }
 
@@ -316,7 +338,8 @@
         [CLSCompliant(false)]
         public static IVsExternalFilesManager GetExternalFilesManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsExternalFilesManager, IVsExternalFilesManager>();
         }
 
@@ -329,7 +352,8 @@
         [CLSCompliant(false)]
         public static IVsFileChangeEx GetFileChange(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFileChangeEx, IVsFileChangeEx>();
         }
 
@@ -342,7 +366,8 @@
         [CLSCompliant(false)]
         public static IVsFilterAddProjectItemDlg GetFilterAddProjectItemDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFilterAddProjectItemDlg, IVsFilterAddProjectItemDlg>();
         }
 
@@ -355,7 +380,8 @@
         [CLSCompliant(false)]
         public static IVsFilterKeys GetFilterKeys(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFilterKeys, IVsFilterKeys>();
         }
 
@@ -368,7 +394,8 @@
         [CLSCompliant(false)]
         public static IVsFindSymbol GetFindSymbol(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsObjectSearch, IVsFindSymbol>();
         }
 
@@ -381,7 +408,8 @@
         [CLSCompliant(false)]
         public static IVsFontAndColorCacheManager GetFontAndColorCacheManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFontAndColorCacheManager, IVsFontAndColorCacheManager>();
         }
 
@@ -394,7 +422,8 @@
         [CLSCompliant(false)]
         public static IVsFontAndColorStorage GetFontAndColorStorage(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFontAndColorStorage, IVsFontAndColorStorage>();
         }
 
@@ -407,7 +436,8 @@
         [CLSCompliant(false)]
         public static IVsFontAndColorUtilities GetFontAndColorUtilities(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return (IVsFontAndColorUtilities)serviceProvider.GetFontAndColorStorage();
         }
 
@@ -420,7 +450,8 @@
         [CLSCompliant(false)]
         public static IVsFrameworkMultiTargeting GetFrameworkMultiTargeting(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFrameworkMultiTargeting, IVsFrameworkMultiTargeting>();
         }
 
@@ -433,7 +464,8 @@
         [CLSCompliant(false)]
         public static IVsFrameworkRetargetingDlg GetFrameworkRetargetingDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsFrameworkRetargetingDlg, IVsFrameworkRetargetingDlg>();
         }
 
@@ -446,7 +478,8 @@
         [CLSCompliant(false)]
         public static IVsHelpSystem GetHelpSystem(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsHelpService, IVsHelpSystem>();
         }
 
@@ -459,7 +492,8 @@
         [CLSCompliant(false)]
         public static IVsHTMLConverter GetHtmlConverter(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsHTMLConverter, IVsHTMLConverter>();
         }
 
@@ -472,7 +506,8 @@
         [CLSCompliant(false)]
         public static IVsIME GetIme(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsIME, IVsIME>();
         }
 
@@ -487,7 +522,8 @@
         [CLSCompliant(false)]
         public static IVsIntelliMouseHandler GetIntelliMouseHandler(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsIntelliMouseHandler, IVsIntelliMouseHandler>();
         }
 
@@ -500,7 +536,8 @@
         [CLSCompliant(false)]
         public static IVsIntellisenseEngine GetIntellisenseEngine(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsIntellisenseEngine, IVsIntellisenseEngine>();
         }
 
@@ -513,7 +550,8 @@
         [CLSCompliant(false)]
         public static IVsIntellisenseProjectHost GetIntellisenseProjectHost(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsIntellisenseProjectHost, IVsIntellisenseProjectHost>();
         }
 
@@ -526,7 +564,8 @@
         [CLSCompliant(false)]
         public static IVsIntellisenseProjectManager GetIntellisenseProjectManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsIntellisenseProjectManager, IVsIntellisenseProjectManager>();
         }
 
@@ -539,7 +578,8 @@
         [CLSCompliant(false)]
         public static IVsInvisibleEditorManager GetInvisibleEditorManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsInvisibleEditorManager, IVsInvisibleEditorManager>();
         }
 
@@ -552,7 +592,8 @@
         [CLSCompliant(false)]
         public static IVsLaunchPad GetLaunchPad(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsLaunchPad, IVsLaunchPad>();
         }
 
@@ -565,7 +606,8 @@
         [CLSCompliant(false)]
         public static IVsLaunchPadFactory GetLaunchPadFactory(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsLaunchPadFactory, IVsLaunchPadFactory>();
         }
 
@@ -578,7 +620,8 @@
         [CLSCompliant(false)]
         public static IVsMacroRecorder GetMacroRecorder(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsMacroRecorder, IVsMacroRecorder>();
         }
 
@@ -591,7 +634,8 @@
         [CLSCompliant(false)]
         public static IVsMacros GetMacros(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsMacros, IVsMacros>();
         }
 
@@ -604,7 +648,8 @@
         [CLSCompliant(false)]
         public static IVSMDTypeResolutionService GetMDTypeResolutionService(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVSMDTypeResolutionService, IVSMDTypeResolutionService>();
         }
 
@@ -617,7 +662,8 @@
         [CLSCompliant(false)]
         public static IVsMenuEditor GetMenuEditor(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsMenuEditor, IVsMenuEditor>();
         }
 
@@ -630,7 +676,8 @@
         [CLSCompliant(false)]
         public static IVsMonitorUserContext GetMonitorUserContext(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsMonitorUserContext, IVsMonitorUserContext>();
         }
 
@@ -643,7 +690,8 @@
         [CLSCompliant(false)]
         public static IVsMonitorSelection GetMonitorSelection(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<IVsMonitorSelection, IVsMonitorSelection>();
         }
 
@@ -656,7 +704,8 @@
         [CLSCompliant(false)]
         public static IVsNavigationTool GetObjectBrowser(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsObjBrowser, IVsNavigationTool>();
         }
 
@@ -669,7 +718,8 @@
         [CLSCompliant(false)]
         public static IVsObjectManager GetObjectManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsObjectManager, IVsObjectManager>();
         }
 
@@ -682,7 +732,8 @@
         [CLSCompliant(false)]
         public static IVsObjectSearch GetObjectSearch(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsObjectSearch, IVsObjectSearch>();
         }
 
@@ -695,7 +746,8 @@
         [CLSCompliant(false)]
         public static IVsObjectSearchPane GetObjectSearchPane(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetObjectSearch() as IVsObjectSearchPane;
         }
 
@@ -710,7 +762,8 @@
         [CLSCompliant(false)]
         public static IVsOpenProjectOrSolutionDlg GetOpenProjectOrSolutionDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsOpenProjectOrSolutionDlg, IVsOpenProjectOrSolutionDlg>();
         }
 
@@ -723,7 +776,8 @@
         [CLSCompliant(false)]
         public static IVsOutputWindow GetOutputWindow(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsOutputWindow, IVsOutputWindow>();
         }
 
@@ -736,7 +790,8 @@
         [CLSCompliant(false)]
         public static IVsParseCommandLine GetParseCommandLine(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsParseCommandLine, IVsParseCommandLine>();
         }
 
@@ -749,7 +804,8 @@
         [CLSCompliant(false)]
         public static IVsPathVariableResolver GetPathVariableResolver(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsPathVariableResolver, IVsPathVariableResolver>();
         }
 
@@ -762,7 +818,8 @@
         [CLSCompliant(false)]
         public static IVsPreviewChangesService GetPreviewChangesService(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsPreviewChangesService, IVsPreviewChangesService>();
         }
 
@@ -775,7 +832,8 @@
         [CLSCompliant(false)]
         public static IVsProfileDataManager GetProfileDataManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsProfileDataManager, IVsProfileDataManager>();
         }
 
@@ -788,7 +846,8 @@
         [CLSCompliant(false)]
         public static IVsProfilesManagerUI GetProfilesManagerUI(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsProfilesManagerUI, IVsProfilesManagerUI>();
         }
 
@@ -801,7 +860,8 @@
         [CLSCompliant(false)]
         public static IVsPropertyPageFrame GetPropertyPageFrame(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsPropertyPageFrame, IVsPropertyPageFrame>();
         }
 
@@ -814,7 +874,8 @@
         [CLSCompliant(false)]
         public static IVsQueryEditQuerySave2 GetQueryEditQuerySave(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsQueryEditQuerySave, IVsQueryEditQuerySave2>();
         }
 
@@ -827,7 +888,8 @@
         [CLSCompliant(false)]
         public static IVsRegisterProjectDebugTargetProvider GetRegisterProjectDebugTargetProvider(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRegisterDebugTargetProvider, IVsRegisterProjectDebugTargetProvider>();
         }
 
@@ -840,7 +902,8 @@
         [CLSCompliant(false)]
         public static IVsRegisterEditors GetRegisterEditors(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRegisterEditors, IVsRegisterEditors>();
         }
 
@@ -853,7 +916,8 @@
         [CLSCompliant(false)]
         public static IVsRegisterNewDialogFilters GetRegisterNewDialogFilters(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRegisterNewDialogFilters, IVsRegisterNewDialogFilters>();
         }
 
@@ -866,7 +930,8 @@
         [CLSCompliant(false)]
         public static IVsRegisterPriorityCommandTarget GetRegisterPriorityCommandTarget(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRegisterPriorityCommandTarget, IVsRegisterPriorityCommandTarget>();
         }
 
@@ -879,7 +944,8 @@
         [CLSCompliant(false)]
         public static IVsRegisterProjectTypes GetRegisterProjectTypes(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRegisterProjectTypes, IVsRegisterProjectTypes>();
         }
 
@@ -892,7 +958,8 @@
         [CLSCompliant(false)]
         public static IVsResourceManager GetResourceManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsResourceManager, IVsResourceManager>();
         }
 
@@ -905,7 +972,8 @@
         [CLSCompliant(false)]
         public static IVsResourceView GetResourceView(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsResourceView, IVsResourceView>();
         }
 
@@ -918,7 +986,8 @@
         [CLSCompliant(false)]
         public static IVsRunningDocumentTable GetRunningDocumentTable(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsRunningDocumentTable, IVsRunningDocumentTable>();
         }
 
@@ -931,7 +1000,8 @@
         [CLSCompliant(false)]
         public static IVsSccManager2 GetSourceControlManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSccManager, IVsSccManager2>();
         }
 
@@ -944,7 +1014,8 @@
         [CLSCompliant(false)]
         public static IVsSccToolsOptions GetSourceControlToolsOptions(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSccToolsOptions, IVsSccToolsOptions>();
         }
 
@@ -957,7 +1028,8 @@
         [CLSCompliant(false)]
         public static IVsSettingsReader GetSettingsReader(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSettingsReader, IVsSettingsReader>();
         }
 
@@ -970,7 +1042,8 @@
         [CLSCompliant(false)]
         public static IVsShell GetShell(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsShell, IVsShell>();
         }
 
@@ -983,7 +1056,8 @@
         [CLSCompliant(false)]
         public static IVsDebugger2 GetShellDebugger(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsShellDebugger, IVsDebugger2>();
         }
 
@@ -996,7 +1070,8 @@
         [CLSCompliant(false)]
         public static IVsMonitorSelection GetShellMonitorSelection(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsShellMonitorSelection, IVsMonitorSelection>();
         }
 
@@ -1009,7 +1084,8 @@
         [CLSCompliant(false)]
         public static IVsSmartOpenScope GetSmartOpenScope(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSmartOpenScope, IVsSmartOpenScope>();
         }
 
@@ -1022,7 +1098,8 @@
         [CLSCompliant(false)]
         public static IVsSolution GetSolution(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSolution, IVsSolution>();
         }
 
@@ -1035,7 +1112,8 @@
         [CLSCompliant(false)]
         public static IVsSolutionBuildManager GetSolutionBuildManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>();
         }
 
@@ -1049,7 +1127,8 @@
         [CLSCompliant(false)]
         public static IVsSolution GetSolutionObject(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSolutionObject, IVsSolution>();
         }
 
@@ -1062,7 +1141,8 @@
         [CLSCompliant(false)]
         public static IVsSolutionPersistence GetSolutionPersistence(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSolutionPersistence, IVsSolutionPersistence>();
         }
 
@@ -1075,7 +1155,8 @@
         [CLSCompliant(false)]
         public static IVsSQLCLRReferences GetSqlClrReferences(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSQLCLRReferences, IVsSQLCLRReferences>();
         }
 
@@ -1088,7 +1169,8 @@
         [CLSCompliant(false)]
         public static IVsStartPageDownload GetStartPageDownload(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsStartPageDownload, IVsStartPageDownload>();
         }
 
@@ -1101,7 +1183,8 @@
         [CLSCompliant(false)]
         public static IVsStatusbar GetStatusBar(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsStatusbar, IVsStatusbar>();
         }
 
@@ -1114,7 +1197,8 @@
         [CLSCompliant(false)]
         public static IVsStrongNameKeys GetStrongNameKeys(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsStrongNameKeys, IVsStrongNameKeys>();
         }
 
@@ -1127,7 +1211,8 @@
         [CLSCompliant(false)]
         public static IVsStructuredFileIO GetStructuredFileIO(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsStructuredFileIO, IVsStructuredFileIO>();
         }
 
@@ -1140,7 +1225,8 @@
         [CLSCompliant(false)]
         public static IVsSymbolicNavigationManager GetSymbolicNavigationManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsSymbolicNavigationManager, IVsSymbolicNavigationManager>();
         }
 
@@ -1153,7 +1239,8 @@
         [CLSCompliant(false)]
         public static IVsTargetFrameworkAssemblies GetTargetFrameworkAssemblies(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTargetFrameworkAssemblies, IVsTargetFrameworkAssemblies>();
         }
 
@@ -1166,7 +1253,8 @@
         [CLSCompliant(false)]
         public static IVsTaskList GetTaskList(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTaskList, IVsTaskList>();
         }
 
@@ -1179,7 +1267,8 @@
         [CLSCompliant(false)]
         public static IVsTextOut GetTextOut(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTextOut, IVsTextOut>();
         }
 
@@ -1192,7 +1281,8 @@
         [CLSCompliant(false)]
         public static IVsThreadedWaitDialog GetThreadedWaitDialog(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsThreadedWaitDialog, IVsThreadedWaitDialog>();
         }
 
@@ -1205,7 +1295,8 @@
         [CLSCompliant(false)]
         public static IVsThreadPool GetThreadPool(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsThreadPool, IVsThreadPool>();
         }
 
@@ -1218,7 +1309,8 @@
         [CLSCompliant(false)]
         public static IVsToolbox GetToolbox(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsToolbox, IVsToolbox>();
         }
 
@@ -1231,7 +1323,8 @@
         [CLSCompliant(false)]
         public static IVsToolboxDataProvider GetToolboxActiveXDataProvider(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsToolboxActiveXDataProvider, IVsToolboxDataProvider>();
         }
 
@@ -1244,7 +1337,8 @@
         [CLSCompliant(false)]
         public static IVsToolboxDataProviderRegistry GetToolboxDataProviderRegistry(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsToolboxDataProviderRegistry, IVsToolboxDataProviderRegistry>();
         }
 
@@ -1257,7 +1351,8 @@
         [CLSCompliant(false)]
         public static IVsToolsOptions GetToolsOptions(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsToolsOptions, IVsToolsOptions>();
         }
 
@@ -1270,7 +1365,8 @@
         [CLSCompliant(false)]
         public static IVsTrackProjectDocuments2 GetTrackProjectDocuments2(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTrackProjectDocuments, IVsTrackProjectDocuments2>();
         }
 
@@ -1283,7 +1379,8 @@
         [CLSCompliant(false)]
         public static IVsTrackProjectDocuments3 GetTrackProjectDocuments3(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTrackProjectDocuments, IVsTrackProjectDocuments3>();
         }
 
@@ -1296,7 +1393,8 @@
         [CLSCompliant(false)]
         public static IVsTrackProjectRetargeting GetTrackProjectRetargeting(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTrackProjectRetargeting, IVsTrackProjectRetargeting>();
         }
 
@@ -1309,7 +1407,8 @@
         [CLSCompliant(false)]
         public static IVsTrackSelectionEx GetTrackSelection(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsTrackSelectionEx, IVsTrackSelectionEx>();
         }
 
@@ -1322,7 +1421,8 @@
         [CLSCompliant(false)]
         public static IVsUIHierWinClipboardHelper GetUIHierarchyWindowClipboardHelper(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsUIHierWinClipboardHelper, IVsUIHierWinClipboardHelper>();
         }
 
@@ -1335,7 +1435,8 @@
         [CLSCompliant(false)]
         public static IVsUIShell GetUIShell(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsUIShell, IVsUIShell>();
         }
 
@@ -1348,7 +1449,8 @@
         [CLSCompliant(false)]
         public static IVsUIShellDocumentWindowMgr GetUIShellDocumentWindowManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsUIShellDocumentWindowMgr, IVsUIShellDocumentWindowMgr>();
         }
 
@@ -1361,7 +1463,8 @@
         [CLSCompliant(false)]
         public static IVsUIShellOpenDocument GetUIShellOpenDocument(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsUIShellOpenDocument, IVsUIShellOpenDocument>();
         }
 
@@ -1374,7 +1477,8 @@
         [CLSCompliant(false)]
         public static IVsUpgradeLogger GetUpgradeLogger(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsUpgradeLogger, IVsUpgradeLogger>();
         }
 
@@ -1387,7 +1491,8 @@
         [CLSCompliant(false)]
         public static IVsVba GetVba(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsVba, IVsVba>();
         }
 
@@ -1400,7 +1505,8 @@
         [CLSCompliant(false)]
         public static IVsWebBrowsingService GetWebBrowsingService(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsWebBrowsingService, IVsWebBrowsingService>();
         }
 
@@ -1413,7 +1519,8 @@
         [CLSCompliant(false)]
         public static IVsWebFavorites GetWebFavorites(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsWebFavorites, IVsWebFavorites>();
         }
 
@@ -1426,7 +1533,8 @@
         [CLSCompliant(false)]
         public static IVsWebPreview GetWebPreview(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsWebPreview, IVsWebPreview>();
         }
 
@@ -1439,7 +1547,8 @@
         [CLSCompliant(false)]
         public static IVsWebProxy GetWebProxy(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsWebProxy, IVsWebProxy>();
         }
 
@@ -1452,7 +1561,8 @@
         [CLSCompliant(false)]
         public static IVsWebURLMRU GetWebUrlMru(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
             return serviceProvider.GetService<SVsWebURLMRU, IVsWebURLMRU>();
         }
     }

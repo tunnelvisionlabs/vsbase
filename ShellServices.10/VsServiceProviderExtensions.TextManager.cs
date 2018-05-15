@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.TextManager.Interop;
@@ -17,7 +16,8 @@
         [CLSCompliant(false)]
         public static IVsExpansionManager GetExpansionManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
 
             IVsExpansionManager expMgr;
             var tmgr = serviceProvider.GetTextManager() as IVsTextManager2;
@@ -36,7 +36,9 @@
         [CLSCompliant(false)]
         public static IVsTextManager GetTextManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<VsTextManagerClass, IVsTextManager>();
         }
 
@@ -49,7 +51,9 @@
         [CLSCompliant(false)]
         public static IVsTextManager2 GetTextManager2(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<VsTextManagerClass, IVsTextManager2>();
         }
     }

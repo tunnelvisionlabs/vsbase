@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
 
@@ -16,7 +15,9 @@
         [CLSCompliant(false)]
         public static IVsLongIdleManager GetLongIdleManager(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SVsLongIdleManager, IVsLongIdleManager>();
         }
 
@@ -29,7 +30,9 @@
         [CLSCompliant(false)]
         public static IVsProjectMRU GetProjectMRU(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SVsProjectMRU, IVsProjectMRU>();
         }
     }

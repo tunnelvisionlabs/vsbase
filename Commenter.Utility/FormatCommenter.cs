@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Diagnostics.Contracts;
+    using System.Diagnostics;
     using System.Linq;
     using Microsoft.VisualStudio.Text;
     using Tvl.VisualStudio.Text.Commenter.Interfaces;
@@ -59,16 +59,19 @@
         public FormatCommenter(ITextBuffer textBuffer, params CommentFormat[] commentFormats)
             : this(textBuffer, commentFormats.AsEnumerable())
         {
-            Contract.Requires(textBuffer != null);
-            Contract.Requires(commentFormats != null);
+            Debug.Assert(textBuffer != null);
+            Debug.Assert(commentFormats != null);
         }
 
         /// <inheritdoc cref="FormatCommenter(ITextBuffer, CommentFormat[])"/>
         public FormatCommenter(ITextBuffer textBuffer, IEnumerable<CommentFormat> commentFormats)
         {
-            Contract.Requires<ArgumentNullException>(textBuffer != null, "textBuffer");
-            Contract.Requires<ArgumentNullException>(commentFormats != null, "commentFormats");
-            Contract.Requires<ArgumentException>(!commentFormats.Contains(null));
+            if (textBuffer == null)
+                throw new ArgumentNullException(nameof(textBuffer));
+            if (commentFormats == null)
+                throw new ArgumentNullException(nameof(commentFormats));
+            if (commentFormats.Contains(null))
+                throw new ArgumentException($"{nameof(commentFormats)} cannot contain null values", nameof(commentFormats));
 
             this._textBuffer = textBuffer;
             this._commentFormats = commentFormats.ToList().AsReadOnly();
@@ -87,7 +90,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<ITextBuffer>() != null);
                 return _textBuffer;
             }
         }
@@ -102,7 +104,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<ReadOnlyCollection<CommentFormat>>() != null);
                 return _commentFormats;
             }
         }
@@ -117,7 +118,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<ReadOnlyCollection<BlockCommentFormat>>() != null);
                 return _blockFormats;
             }
         }
@@ -153,7 +153,6 @@
         {
             get
             {
-                Contract.Ensures(Contract.Result<ReadOnlyCollection<LineCommentFormat>>() != null);
                 return _lineFormats;
             }
         }
@@ -205,6 +204,9 @@
         /// <inheritdoc/>
         public virtual ReadOnlyCollection<VirtualSnapshotSpan> CommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
+            if (spans == null)
+                throw new ArgumentNullException(nameof(spans));
+
             List<VirtualSnapshotSpan> result = new List<VirtualSnapshotSpan>();
 
             if (spans.Count == 0)
@@ -237,6 +239,9 @@
         /// <inheritdoc/>
         public virtual ReadOnlyCollection<VirtualSnapshotSpan> UncommentSpans(ReadOnlyCollection<VirtualSnapshotSpan> spans)
         {
+            if (spans == null)
+                throw new ArgumentNullException(nameof(spans));
+
             List<VirtualSnapshotSpan> result = new List<VirtualSnapshotSpan>();
 
             if (spans.Count == 0)
@@ -296,7 +301,8 @@
         /// <returns>A <see cref="VirtualSnapshotSpan"/> containing the commented code.</returns>
         protected virtual VirtualSnapshotSpan CommentSpan(VirtualSnapshotSpan span, ITextEdit edit)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
 
             span = span.TranslateTo(edit.Snapshot, SpanTrackingMode.EdgeExclusive);
 
@@ -343,8 +349,10 @@
         /// </exception>
         protected virtual VirtualSnapshotSpan CommentLines(VirtualSnapshotSpan span, ITextEdit edit, LineCommentFormat format)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
-            Contract.Requires<ArgumentNullException>(format != null, "format");
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
+            if (format == null)
+                throw new ArgumentNullException(nameof(format));
 
             if (span.End.Position.GetContainingLine().LineNumber > span.Start.Position.GetContainingLine().LineNumber && span.End.Position.GetContainingLine().Start == span.End.Position)
             {
@@ -387,8 +395,10 @@
         /// </exception>
         protected virtual VirtualSnapshotSpan CommentBlock(VirtualSnapshotSpan span, ITextEdit edit, BlockCommentFormat format)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
-            Contract.Requires<ArgumentNullException>(format != null, "format");
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
+            if (format == null)
+                throw new ArgumentNullException(nameof(format));
 
             //special case no selection
             if (span.IsEmpty)
@@ -415,7 +425,8 @@
         /// <exception cref="ArgumentNullException">If <paramref name="edit"/> is <see langword="null"/>.</exception>
         protected virtual VirtualSnapshotSpan UncommentSpan(VirtualSnapshotSpan span, ITextEdit edit)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
 
             span = span.TranslateTo(edit.Snapshot, SpanTrackingMode.EdgeExclusive);
             bool useLineComments = true;
@@ -467,9 +478,11 @@
         /// values.</exception>
         protected virtual bool TryUncommentLines(VirtualSnapshotSpan span, ITextEdit edit, ReadOnlyCollection<LineCommentFormat> formats, out VirtualSnapshotSpan result)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
-            Contract.Requires<ArgumentNullException>(formats != null, "formats");
-            Contract.Requires(Contract.ForAll(formats, i => i != null));
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
+            if (formats == null)
+                throw new ArgumentNullException(nameof(formats));
+            Debug.Assert(formats.All(i => i != null));
 
             if (span.End.Position.GetContainingLine().LineNumber > span.Start.Position.GetContainingLine().LineNumber && span.End.Position == span.End.Position.GetContainingLine().Start)
             {
@@ -529,9 +542,11 @@
         /// values.</exception>
         protected virtual bool TryUncommentBlock(VirtualSnapshotSpan span, ITextEdit edit, ReadOnlyCollection<BlockCommentFormat> formats, out VirtualSnapshotSpan result)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
-            Contract.Requires<ArgumentNullException>(formats != null, "formats");
-            Contract.Requires(Contract.ForAll(formats, i => i != null));
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
+            if (formats == null)
+                throw new ArgumentNullException(nameof(formats));
+            Debug.Assert(formats.All(i => i != null));
 
             foreach (var format in formats)
             {
@@ -561,8 +576,10 @@
         /// <exception cref="ArgumentNullException">If <paramref name="edit"/> is <see langword="null"/>.</exception>
         protected virtual bool TryUncommentBlock(VirtualSnapshotSpan span, ITextEdit edit, BlockCommentFormat format, out VirtualSnapshotSpan result)
         {
-            Contract.Requires<ArgumentNullException>(edit != null, "edit");
-            Contract.Requires<ArgumentNullException>(format != null, "format");
+            if (edit == null)
+                throw new ArgumentNullException(nameof(edit));
+            if (format == null)
+                throw new ArgumentNullException(nameof(format));
 
             string blockStart = format.StartText;
             string blockEnd = format.EndText;
@@ -642,7 +659,8 @@
         /// <exception cref="ArgumentNullException">If <paramref name="line"/> is <see langword="null"/>.</exception>
         protected static int ScanToNonWhitespaceChar(ITextSnapshotLine line)
         {
-            Contract.Requires<ArgumentNullException>(line != null, "line");
+            if (line == null)
+                throw new ArgumentNullException(nameof(line));
 
             string text = line.GetText();
             int len = text.Length;

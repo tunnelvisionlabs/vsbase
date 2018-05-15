@@ -1,7 +1,6 @@
 ﻿namespace Tvl.VisualStudio.Shell
 {
     using System;
-    using System.Diagnostics.Contracts;
     using Microsoft.VisualStudio.ComponentModelHost;
     using Microsoft.VisualStudio.Shell;
     using IGlyphService = Microsoft.VisualStudio.Language.Intellisense.IGlyphService;
@@ -19,7 +18,9 @@
 #if false // this service needs to be provided through a "ShellServices.12Only" assembly...
         public static ICallHierarchy GetCallHierarchy(this SVsServiceProvider serviceProvider)
         {
-            Contract.Requires<ArgumentNullException>(serviceProvider != null, "serviceProvider");
+            if (serviceProvider == null)
+                throw new ArgumentNullException(nameof(serviceProvider));
+
             return serviceProvider.GetService<SCallHierarchy, ICallHierarchy>();
         }
 #endif
