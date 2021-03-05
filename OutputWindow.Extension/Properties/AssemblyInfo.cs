@@ -31,13 +31,13 @@ using Microsoft.VisualStudio.Shell;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.2.0.0")]
-[assembly: AssemblyFileVersion("3.2.0.0")]
-[assembly: AssemblyInformationalVersion("3.2.0")]
+[assembly: AssemblyVersion("3.3.0.0")]
+[assembly: AssemblyFileVersion("3.3.0.0")]
+[assembly: AssemblyInformationalVersion("3.3.0-dev")]
 
 [assembly: ProvideCodeBase(
     AssemblyName = "Tvl.VisualStudio.OutputWindow.Implementation",
-    Version = "3.2.0.0",
+    Version = "3.3.0.0",
     CodeBase = "$PackageFolder$\\Tvl.VisualStudio.OutputWindow.Implementation.dll")]
 [assembly: ProvideCodeBase(
     AssemblyName = "Tvl.VisualStudio.OutputWindow.Interfaces",
