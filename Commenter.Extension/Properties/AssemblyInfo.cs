@@ -33,7 +33,7 @@ using Microsoft.VisualStudio.Shell;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.2.0.0")]
 [assembly: AssemblyFileVersion("2.2.0.0")]
-[assembly: AssemblyInformationalVersion("2.2.0-dev")]
+[assembly: AssemblyInformationalVersion("2.2.0")]
 
 [assembly: ProvideCodeBase(
     AssemblyName = "Tvl.VisualStudio.Text.Commenter.Implementation",
